@@ -1,0 +1,3208 @@
+@prefix : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/> .
+
+<http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/collabWith
+:collabWith rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :partTeam ;
+            rdf:type owl:SymmetricProperty ;
+            rdfs:domain :Esports ;
+            rdfs:range :Esports .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/firstHalf
+:firstHalf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :partSeason .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasLeft
+:hasLeft rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :roster ;
+         owl:inverseOf :leftBy .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :partTeam ;
+         owl:inverseOf :partOf ;
+         rdfs:domain :Esports .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasPlayer
+:hasPlayer rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :roster ;
+           owl:inverseOf :playerOf ;
+           rdfs:range :Player .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasReached
+:hasReached rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :qualifiy ;
+            owl:inverseOf :reachedBy ;
+            rdfs:domain :MSeries .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasStaff
+:hasStaff rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :roster ;
+          owl:inverseOf :staffOf ;
+          rdfs:range :CoachingStaff .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/leftBy
+:leftBy rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :roster .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/partOf
+:partOf rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :partTeam .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/partSeason
+:partSeason rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/partTeam
+:partTeam rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/playerOf
+:playerOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :roster ;
+          rdfs:domain :Player .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/qualifiy
+:qualifiy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/reachedBy
+:reachedBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :qualifiy .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/roster
+:roster rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/secondHalf
+:secondHalf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :partSeason .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/staffOf
+:staffOf rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :roster ;
+         rdfs:domain :CoachingStaff .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL
+:MPL rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf :Trophy ;
+     rdfs:domain :Esports .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSC
+:MSC rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf :Trophy ;
+     rdfs:domain :Esports .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSeries
+:MSeries rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :Trophy ;
+         rdfs:domain :Esports .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Person
+:Person rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/RankInter
+:RankInter rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :TeamSeason .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/RankMPL
+:RankMPL rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :TeamSeason .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Roles
+:Roles rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :Person .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamSeason
+:TeamSeason rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Trophy
+:Trophy rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Esports .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/alternateIds
+:alternateIds rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :Person .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasAge
+:hasAge rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :Person .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :Person .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasNationality
+:hasNationality rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Person .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/playerInfo
+:playerInfo rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :Person .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CoachingStaff
+:CoachingStaff rdf:type owl:Class ;
+               rdfs:subClassOf :Roster .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/EWC_25
+:EWC_25 rdf:type owl:Class ;
+        rdfs:subClassOf :MSC .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Esports
+:Esports rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/InternationalRank
+:InternationalRank rdf:type owl:Class ;
+                   rdfs:subClassOf :Ranking .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/InternationalTour
+:InternationalTour rdf:type owl:Class ;
+                   rdfs:subClassOf :TournamentTeam .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/M7
+:M7 rdf:type owl:Class ;
+    rdfs:subClassOf :MSeries .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL_ID
+:MPL_ID rdf:type owl:Class ;
+        rdfs:subClassOf :MPL_SEA .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL_ID16
+:MPL_ID16 rdf:type owl:Class ;
+          rdfs:subClassOf :MPL_ID .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL_MY
+:MPL_MY rdf:type owl:Class ;
+        rdfs:subClassOf :MPL_SEA .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL_MY16
+:MPL_MY16 rdf:type owl:Class ;
+          rdfs:subClassOf :MPL_MY .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL_PH
+:MPL_PH rdf:type owl:Class ;
+        rdfs:subClassOf :MPL_SEA .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL_PH16
+:MPL_PH16 rdf:type owl:Class ;
+          rdfs:subClassOf :MPL_PH .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL_SEA
+:MPL_SEA rdf:type owl:Class ;
+         rdfs:subClassOf :RegionalTour .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL_SG
+:MPL_SG rdf:type owl:Class ;
+        rdfs:subClassOf :MPL_SEA .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL_SG10
+:MPL_SG10 rdf:type owl:Class ;
+          rdfs:subClassOf :MPL_SG .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSC
+:MSC rdf:type owl:Class ;
+     rdfs:subClassOf :InternationalTour .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSeries
+:MSeries rdf:type owl:Class ;
+         rdfs:subClassOf :InternationalTour .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Player
+:Player rdf:type owl:Class ;
+        rdfs:subClassOf :Roster .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/PlayoffInter
+:PlayoffInter rdf:type owl:Class ;
+              rdfs:subClassOf :InternationalRank .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/PlayoffRegion
+:PlayoffRegion rdf:type owl:Class ;
+               rdfs:subClassOf :RegionalRank .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ranking
+:Ranking rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/RegionalRank
+:RegionalRank rdf:type owl:Class ;
+              rdfs:subClassOf :Ranking .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/RegionalTour
+:RegionalTour rdf:type owl:Class ;
+              rdfs:subClassOf :TournamentTeam .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Roster
+:Roster rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Top2Inter
+:Top2Inter rdf:type owl:Class ;
+           rdfs:subClassOf :InternationalRank .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Top2Region
+:Top2Region rdf:type owl:Class ;
+            rdfs:subClassOf :RegionalRank .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TournamentTeam
+:TournamentTeam rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/WinnerInter
+:WinnerInter rdf:type owl:Class ;
+             rdfs:subClassOf :InternationalRank .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/WinnerRegion
+:WinnerRegion rdf:type owl:Class ;
+              rdfs:subClassOf :RegionalRank .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#3MarTzy
+<http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#3MarTzy> rdf:type owl:NamedIndividual ;
+                                                                                  :playerOf :TNC_PH16 ;
+                                                                                  :Roles "Exp" ;
+                                                                                  :hasAge 21 ;
+                                                                                  :hasName "Fredimar Serafico" ;
+                                                                                  :hasNationality "Philippines" ;
+                                                                                  :playerInfo "Frediemar \"3MarTzy\" Serafico (born April 30, 2004) is a Filipino player who is currently playing as an EXP Laner for TNC Pro Team." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/ABOY
+:ABOY rdf:type owl:NamedIndividual ;
+      :playerOf :GeekFam_ID16 ;
+      :Roles "Mid" ;
+      :hasAge 21 ;
+      :hasName "Valent Agriansyah Putra" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Valent \"A B O Y\" Putra (born August 6, 2004) is an Indonesian player who is currently playing as a Mid Laner for Geek Fam ID." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/AE_ID16
+:AE_ID16 rdf:type owl:NamedIndividual ,
+                  :MPL_ID16 ;
+         :hasPlayer :Arfy ,
+                    :Cyruz ,
+                    :Hijumee ,
+                    :Ivann ,
+                    :Nino ,
+                    :Rinee ,
+                    :Yazukee ,
+                    :alekk ;
+         :hasReached :MPLFinals ,
+                     :MPLPlayoff ;
+         :hasStaff :Styx ,
+                   :Xepher ;
+         :RankInter 2 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/APBren
+:APBren rdf:type owl:NamedIndividual ;
+        :hasPart :APBren_PH16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/APBren_PH16
+:APBren_PH16 rdf:type owl:NamedIndividual ,
+                      :MPL_PH16 ;
+             :hasPlayer :Aqua ,
+                        :Chovskrt ,
+                        :LordJM ,
+                        :Shizou ,
+                        :jamespangks ,
+                        :xNova ;
+             :hasStaff :Cons ,
+                       :Jeff ;
+             :RankMPL 8 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/APHRO
+:APHRO rdf:type owl:NamedIndividual ;
+       :playerOf :NAVI_ID16 ;
+       :Roles "Roamer" ;
+       :hasNationality "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/AbsoluteZero
+:AbsoluteZero rdf:type owl:NamedIndividual ;
+              :hasPart :AbsoluteZero_SG10 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/AbsoluteZero_SG10
+:AbsoluteZero_SG10 rdf:type owl:NamedIndividual ,
+                            :MPL_SG10 ;
+                   :hasPlayer :Buji ,
+                              :Fateqt ,
+                              :Nan ,
+                              :Nomed ,
+                              :Salas ,
+                              :Suj ,
+                              :reggina ,
+                              :v3ndetta ;
+                   :RankMPL "5-6" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aceng
+:Aceng rdf:type owl:NamedIndividual ;
+       :Roles "Analyst" ;
+       :hasAge "Unknown" ;
+       :hasName "Dian Agusta" ;
+       :hasNationality "Dian \"Aceng/Wongcoco\" Agusta is an Indonesian Analyst who is currently working for Dewa United Heka as an Analyst." ,
+                       "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Adammir
+:Adammir rdf:type owl:NamedIndividual ;
+         :Roles "Head Coach" ;
+         :hasAge 25 ;
+         :hasName "Adam Chong Jin Ee" ;
+         :hasNationality "Singapore" ;
+         :playerInfo "Chong \"Adammir\" Adam (born November 18, 1999) is a Singaporean player who is currently playing as an EXP Laner for Team Flash." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Adi
+:Adi rdf:type owl:NamedIndividual ;
+     :staffOf :Onic_ID16 ;
+     :Roles "Head Coach" ;
+     :hasAge 33 ;
+     :hasName "Adi Asyauri" ;
+     :hasNationality "Indonesia" ;
+     :playerInfo "Adi \"Adi\" Asyauri (also known as Acil) (born September 4, 1992) is an Indonesian Coach who is currently working for ONIC as a Coach. He is a former Dota 2 player." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/AeroEsports
+:AeroEsports rdf:type owl:NamedIndividual ;
+             :hasPart :Aero_MY16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aero_MY16
+:Aero_MY16 rdf:type owl:NamedIndividual ,
+                    :MPL_MY16 ;
+           :hasPlayer :Hazle ,
+                      :Kusey ,
+                      :Kyym ,
+                      :Sick ,
+                      :Smooth ,
+                      :Zqeef ;
+           :hasReached :MPLPlayoff ;
+           :hasStaff :JIFDEGaming ,
+                     :Panda ,
+                     :Tazy ;
+           :RankMPL "5-6" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/AeronnShikii
+:AeronnShikii rdf:type owl:NamedIndividual ;
+              :playerOf :TL_ID16 ;
+              :Roles "Gold" ;
+              :hasAge 20 ;
+              :hasName "Sultan Muhammad" ;
+              :hasNationality "Indonesia" ;
+              :playerInfo "Sultan \"AeronnShikii\" Muhammad (born July 13, 2005) is an Indonesian player who is currently playing as a Gold Laner for Team Liquid ID." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aether
+:Aether rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" ;
+        :hasAge 21 ;
+        :hasName "Jason Keane Zefanya" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "Jason \"Aether\" Zefanya (born October 10, 2004) is an Indonesian player who is currently playing as a Jungler for Evil." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aj
+:Aj rdf:type owl:NamedIndividual ;
+    :playerOf :CG_MY16 ;
+    :Roles "Mid" ;
+    :hasAge 24 ;
+    :hasName "Muhammad Jamaludin" ;
+    :hasNationality "Malaysia" ;
+    :playerInfo "Muhammad \"Aj\" Jamaludin (born October 7, 2001) is a Malaysian player who is currently playing as a Mid Laner for CG Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Alberttt
+:Alberttt rdf:type owl:NamedIndividual ;
+          :playerOf :EVOS_ID16 ;
+          :Roles "Jungler" ;
+          :hasAge 21 ;
+          :hasName "Alberttt Neilsen Iskandar" ;
+          :hasNationality "Indonesia" ;
+          :playerInfo "Albert \"Alberttt\" Iskandar (born January 8, 2004) is an Indonesian player who is currently playing as a Jungler for EVOS." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aldo
+:Aldo rdf:type owl:NamedIndividual ;
+      :hasStaff :NAVI_ID16 ;
+      :Roles "Head Coach" ;
+      :hasAge 28 ;
+      :hasName "Ronaldo Liebertj" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Ronaldo \"Aldo\" Lieberth (also known as Skipper) (born June 2, 1997) is an Indonesian Coach who is currently working for Natus Vincere as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/AlterEgo
+:AlterEgo rdf:type owl:NamedIndividual ;
+          :hasPart :AE_ID16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Amoux
+:Amoux rdf:type owl:NamedIndividual ;
+       :Roles "Head Coach" ;
+       :hasAge 31 ;
+       :hasName "Muhammad Ariff Iswandi Bin Johar" ;
+       :hasNationality "Singapore" ;
+       :playerInfo "Muhammad \"Amoux\" Johar (born February 2, 1994) is a Singaporean Coach and Caster who is currently working for RSG Singapore as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Amzziq
+:Amzziq rdf:type owl:NamedIndividual ;
+        :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Andoryuuu
+:Andoryuuu rdf:type owl:NamedIndividual ;
+           :playerOf :NAVI_ID16 ;
+           :Roles "Jungler" ;
+           :hasName "Andrew Flora" ;
+           :hasNationality "Philippines" ;
+           :playerInfo "Andrew \"Andoryuuu\" Flora is a Filipino player who is currently playing as a Jungler for Natus Vincere." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Apex
+:Apex rdf:type owl:NamedIndividual ;
+      :Roles "Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aqua
+:Aqua rdf:type owl:NamedIndividual ;
+      :playerOf :APBren_PH16 ;
+      :Roles "Mid" ;
+      :hasAge 24 ;
+      :hasName "Arvie Antonio" ;
+      :hasNationality "Philippines" ;
+      :playerInfo "Arvie \"Aqua\" Antonio (born November 17, 2001) is a Filipino player who is currently playing as a Mid Laner for AP.Bren." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/ArSy
+:ArSy rdf:type owl:NamedIndividual ;
+      :Roles "Head Coach" ;
+      :hasAge 30 ;
+      :hasName "Rodel B Cruz" ;
+      :hasNationality "Philippines" ;
+      :playerInfo "Rodel \"Ar Sy\" B.Cruz (born July 15, 1995) is a Filipino Coach who is currently working for Team Liquid PH as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aran
+:Aran rdf:type owl:NamedIndividual ;
+      :playerOf :TL_ID16 ;
+      :Roles "Exp" ;
+      :hasAge 22 ;
+      :hasName "Aldhia Aranda" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Aldhia \"Aran\" Aranda (born February 23, 2003) is an Indonesian player who is currently playing as an EXP Laner for Team Liquid ID." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Arcadia
+:Arcadia rdf:type owl:NamedIndividual ;
+         :staffOf :SRGOG_MY16 ;
+         :Roles "Head Coach" ;
+         :hasAge 33 ;
+         :hasName "Michael Bocadio" ;
+         :hasNationality "Philippines" ;
+         :playerInfo "Michael \"Arcadia\" Bocado (born January 15, 1992) is a Filipino Coach who is currently working for SRG.OG as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Arfy
+:Arfy rdf:type owl:NamedIndividual ;
+      :playerOf :AE_ID16 ;
+      :Roles "Gold" ;
+      :hasName "Arifudin Dingarai" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Arifudin \"Arfy\" Dingarai is an Indonesian player who is currently playing as a Gold Laner for Alter Ego." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/AuroraGaming
+:AuroraGaming rdf:type owl:NamedIndividual ;
+              :hasPart :Aurora_PH16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aurora_PH16
+:Aurora_PH16 rdf:type owl:NamedIndividual ,
+                      :MPL_PH16 ;
+             :hasPlayer :Calad ,
+                        :Demonkite ,
+                        :Domengkite ,
+                        :Edward ,
+                        :Light ,
+                        :Yue ;
+             :hasReached :MPLFinals ,
+                         :MPLPlayoff ;
+             :hasStaff :Calad ,
+                       :DexStar ,
+                       :MasterTheBasics ;
+             :RankMPL 2 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/BONCHAN
+:BONCHAN rdf:type owl:NamedIndividual ;
+         :Roles "Head Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/BRAYYY
+:BRAYYY rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" ;
+        :hasAge 20 ;
+        :hasName "Brayden Teo" ;
+        :hasNationality "Singapore" ;
+        :playerInfo "Brayden \"BRAYYY\" Teo (born June 7, 2005) is a Singaporean player who is currently playing as a Jungler for Team Stallion SG." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/BTRByVitality_ID16
+:BTRByVitality_ID16 rdf:type owl:NamedIndividual ,
+                             :MPL_ID16 ;
+                    :hasPlayer :EMANN ,
+                               :Finn ,
+                               :Moreno ,
+                               :Nnael ,
+                               :Ronn ,
+                               :Shogun ;
+                    :hasReached :MPLPlayoff ;
+                    :hasStaff :Bam ,
+                              :Barbossa ,
+                              :Erpang .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Backdoor
+:Backdoor rdf:type owl:NamedIndividual ;
+          :Roles "Strategic Coach" ;
+          :hasNationality "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Baloyskie
+:Baloyskie rdf:type owl:NamedIndividual ;
+           :playerOf :GeekFam_ID16 ;
+           :Roles "Roamer" ;
+           :alternateIds "Greed" ;
+           :hasAge 27 ;
+           :hasName "llen Jedric O. Baloy" ;
+           :hasNationality "Philippines" ;
+           :playerInfo "Allen \"Baloyskie\" Baloy (formerly known as Greed) (born October 10, 1998) is a Filipino player who is currently playing as a Roamer for Geek Fam ID" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Bam
+:Bam rdf:type owl:NamedIndividual ;
+     :Roles "Head Coach" ;
+     :hasName "Abraham Unida" ;
+     :hasNationality "Philippines" ;
+     :playerInfo "Abraham \"Bam\" Unida is a Filipino Coach who is currently working for Bigetron by Vitality as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Barbossa
+:Barbossa rdf:type owl:NamedIndividual ;
+          :staffOf :BTRByVitality_ID16 ;
+          :Roles "Analyst" ;
+          :hasAge 23 ;
+          :hasName "Arya Nazhari" ;
+          :hasNationality "Indonesia" ;
+          :playerInfo "Arya \"Barbossa\" Nazhari (born May 13, 2002) is an Indonesian Coach who is currently working for Bigetron by Vitality as a Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Bearrr
+:Bearrr rdf:type owl:NamedIndividual ;
+        :Roles "Exp" ;
+        :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Bennyqt
+:Bennyqt rdf:type owl:NamedIndividual ;
+         :playerOf :TNC_PH16 ;
+         :Roles "Gold" ;
+         :hasAge 24 ;
+         :hasNationality "indonesia" ;
+         :playerInfo "Frederic \"Bennyqt\" Gonzales (born September 10, 2001) is a Filipino player who is currently playing as a Gold Laner for TNC Pro Team." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/BigetronEsports
+:BigetronEsports rdf:type owl:NamedIndividual ;
+                 :collabWith :TeamVitality ;
+                 :hasPart :BTRByVitality_ID16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Bitoy
+:Bitoy rdf:type owl:NamedIndividual ;
+       :Roles "Head Coach" ;
+       :hasNationality "Philippines" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Bladee
+:Bladee rdf:type owl:NamedIndividual ;
+        :Roles "Mid" ;
+        :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Bluffzy
+:Bluffzy rdf:type owl:NamedIndividual ;
+         :staffOf :GeekFam_ID16 ;
+         :Roles "Assistant Coach" ;
+         :hasAge 31 ;
+         :hasName "Bluffzy" ;
+         :hasNationality "Philippines" ;
+         :playerInfo "Mark \"Bluffzy\" Reyes (born November 22, 1995) is a Filipino Coach who is currently working for Geek Fam ID as a Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Bondolz
+:Bondolz rdf:type owl:NamedIndividual ;
+         :Roles "Mid" ;
+         :hasAge 20 ;
+         :hasName "Muhammad Amin" ;
+         :hasNationality "Indonesia" ;
+         :playerInfo "Muhammad \"Bondolz\" Amin (born May 30, 2005) is an Indonesian player who is currently playing as a Mid Laner for Monster Vicious." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Branz
+:Branz rdf:type owl:NamedIndividual ;
+       :Roles "Gold" ;
+       :hasAge 20 ;
+       :hasName "Jabran Bagus Wiloko" ;
+       :hasNationality "Indonesia" ;
+       :playerInfo "Jabran \"Branz\" Wiloko (born August 29, 2000) is an Indonesian player who is currently playing as a Gold Laner for EVOS." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Bravo
+:Bravo rdf:type owl:NamedIndividual ;
+       :Roles "Analyst" ;
+       :hasAge 25 ;
+       :hasName "Akbar Tubagus Wira Nida" ;
+       :hasNationality "Indonesia" ;
+       :playerInfo "Akbar \"Bravo\" Nida (born February 7, 2000) is an Indonesian Analyst and EXP Laner who is currently working for EVOS as an Analyst." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Brusko
+:Brusko rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" ;
+        :hasName "Borris James Parro" ;
+        :hasNationality "Philippines" ;
+        :playerInfo "Borris \"Brusko\" Parro is a Filipino player who is currently playing as a Roamer for ONIC Philippines." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Buji
+:Buji rdf:type owl:NamedIndividual ;
+      :Roles "Mid" ;
+      :hasAge 20 ;
+      :hasName "Aaron Ng" ;
+      :hasNationality "Singapore" ;
+      :playerInfo "Aaron \"Buji\" Ng (born July 5, 2005) is a Singaporean player who is currently playing as a Mid Laner for Absolute Zero." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CGEsports
+:CGEsports rdf:type owl:NamedIndividual ;
+           :hasPart :CG_MY16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CG_MY16
+:CG_MY16 rdf:type owl:NamedIndividual ,
+                  :MPL_MY16 ;
+         :hasPlayer :Aj ,
+                    :Amzziq ,
+                    :CikuGais ,
+                    :Deee ,
+                    :Garyy ,
+                    :Trap ,
+                    :Valenz ,
+                    :Ye3 ;
+         :hasReached :MPLPlayoff ;
+         :hasStaff :Cody ,
+                   :Mariah ,
+                   :Rainn ;
+         :RankMPL "TBD" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CW
+:CW rdf:type owl:NamedIndividual ;
+    :Roles "Assistant Coach" ;
+    :hasAge 25 ;
+    :hasName "Calvin Winata" ;
+    :hasNationality "Indonesia" ;
+    :playerInfo "Calvin \"CW\" Winata (born November 10, 2000) is an Indonesian Analyst and Gold Laner who is currently working for ONIC as an Analyst. He is a former Arena of Valor player." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Calad
+:Calad rdf:type owl:NamedIndividual ;
+       :Roles "Analyst" ;
+       :hasName "Justin Limbo" ;
+       :hasNationality "Philippines" ;
+       :playerInfo "Justin \"Calad\" Limbo is a Filipino Coach who is currently working for Aurora Gaming as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Caleb
+:Caleb rdf:type owl:NamedIndividual ;
+       :Roles "Coach" ;
+       :hasName "Tesista Kayleb" ;
+       :hasNationality "Indonesia" ;
+       :playerInfo "Tesista \"Caleb\" Kayleb is an Indonesian Coach who is currently working for Team Rey as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Caloy
+:Caloy rdf:type owl:NamedIndividual ;
+       :Roles "Roamer" ;
+       :hasNationality "Philippines" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cayden
+:Cayden rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" ;
+        :hasNationality "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ch4knu
+:Ch4knu rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" ;
+        :hasAge 24 ;
+        :hasName "Joshua Garcia Mangilog" ;
+        :hasNationality "Philippines" ;
+        :playerInfo "Joshua \"Ch4knu\" Mangilog (born August 18, 2001) is a Filipino player who is currently playing as a Roamer for TNC Pro Team." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Chibi
+:Chibi rdf:type owl:NamedIndividual ;
+       :Roles "Jungler" ;
+       :hasAge 22 ;
+       :hasName "Muhamad Nazhan Mohd Nor" ;
+       :hasNationality "Malaysia" ;
+       :playerInfo "Muhammad Nazhan \"Chibi\" Mohd Nor (born September 16, 2003) is a Malaysian player who is currently playing as a Jungler for Team Vamos." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Chovskrt
+:Chovskrt rdf:type owl:NamedIndividual ;
+          :Roles "Mid" ;
+          :hasName "Jerry Ian Nicol" ;
+          :hasNationality "Philippines" ;
+          :playerInfo "Jerry \"Chovskrt\" Nicol is a Filipino player who is currently playing as a Mid Laner for AP.Bren." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Chu
+:Chu rdf:type owl:NamedIndividual ;
+     :Roles "Exp" ;
+     :hasAge "Unknown" ;
+     :hasName "Jonathan Loh" ;
+     :hasNationality "Singapore" ;
+     :playerInfo "Jonathan \"Chu\" Loh is a Singaporean player who is currently playing as an EXP Laner for IGNITE Gaming." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CikuGais
+:CikuGais rdf:type owl:NamedIndividual ;
+          :Roles "Mid" ;
+          :hasAge 24 ;
+          :hasName "Muhammad Danial bin Mohamad Fuad" ;
+          :hasNationality "Malaysia" ;
+          :playerInfo "Muhammad Danial \"CikuGais\" Mohamad Fuad (born October 11, 2001) is a Malaysian player who is currently playing as a Mid Laner for CG Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cjay
+:Cjay rdf:type owl:NamedIndividual ;
+      :Roles "Head Coach" ;
+      :hasName "Ronnel Jayson Espinosa" ;
+      :hasNationality "Philipine" ;
+      :playerInfo "Ronnel \"Cjay\" Espinosa is a Filipino Coach who is currently working for Team Rey as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Clawkun
+:Clawkun rdf:type owl:NamedIndividual ;
+         :Roles "Mid" ;
+         :hasAge 23 ;
+         :hasName "Adriansyah Baihaqi Lesmana" ;
+         :hasNationality "Indonesia" ;
+         :playerInfo "Adriansyah \"Claw Kun\" Lesmana (born May 2, 2002) is an Indonesian player who is currently playing as a Mid Laner for Team Vamos." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Closer
+:Closer rdf:type owl:NamedIndividual ;
+        :Roles "Exp" ;
+        :hasAge "Unknown" ;
+        :hasName "Unknown" ;
+        :hasNationality "Singapore" ;
+        :playerInfo "Closer is a Singaporean player who is currently playing as an EXP Laner for Team Flash." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CoachMoody
+:CoachMoody rdf:type owl:NamedIndividual ;
+            :Roles "Assistant Coach" ;
+            :hasNationality "Philipine" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cody
+:Cody rdf:type owl:NamedIndividual ;
+      :Roles "Strategic Coach" ;
+      :hasNationality "Philipine" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cons
+:Cons rdf:type owl:NamedIndividual ;
+      :Roles "Assistant Coach" ;
+      :hasNationality "Philipine" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cryptic
+:Cryptic rdf:type owl:NamedIndividual ;
+         :Roles "Analyst" ;
+         :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cyruz
+:Cyruz rdf:type owl:NamedIndividual ;
+       :Roles "Mid" ;
+       :hasName "Muhammad Halim" ;
+       :hasNationality "Indonesia" ;
+       :playerInfo "Muhammad \"Cyruz\" Halim is an Indonesian player who is currently playing as a Mid Laner for Alter Ego." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/DU_ID16
+:DU_ID16 rdf:type owl:NamedIndividual ,
+                  :MPL_ID16 ;
+         :hasPlayer :Markk ,
+                    :Maybeee ,
+                    :Muezza ,
+                    :Octa ,
+                    :QINN ,
+                    :Reyy ,
+                    :Vanz ;
+         :hasReached :MPLPlayoff ;
+         :hasStaff :Right ,
+                   :Wongcoco ;
+         :RankMPL "5-6" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Dale
+:Dale rdf:type owl:NamedIndividual ;
+      :Roles "Assisten Coach" ;
+      :hasName "Steve Vitug" ;
+      :hasNationality "philippines" ;
+      :playerInfo "Steve \"Dale\" Vitug is a Filipino Coach who last worked for HomeBois as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Daniel
+:Daniel rdf:type owl:NamedIndividual ;
+        :RankMPL "Roamer" ;
+        :hasNationality "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Deee
+:Deee rdf:type owl:NamedIndividual ;
+      :Roles "Gold" ;
+      :hasAge 22 ;
+      :hasName "Dhiwa Zulpiqar" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Dhiwa \"Deee\" Zulpiqar (born July 23, 2003) is an Indonesian player who is currently playing as a Gold Laner for CG Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Demonkite
+:Demonkite rdf:type owl:NamedIndividual ;
+           :Roles "Jungler" ;
+           :hasAge 22 ;
+           :hasName "Jonard Caranto" ;
+           :hasNationality "philippines" ;
+           :playerInfo "Jonard \"Demonkite\" Caranto (born January 10, 2003) is a Filipino player who is currently playing as a Jungler for Aurora Gaming." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Der
+:Der rdf:type owl:NamedIndividual ;
+     :Roles "Exp" ;
+     :hasAge 26 ;
+     :hasName "Landher Gabriel" ;
+     :hasNationality "philippines" ;
+     :playerInfo "Landher \"Der\" Gabriel (born February 4, 1999) is a Filipino player who is currently playing as an EXP Laner for Team Rey." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/DevKoch
+:DevKoch rdf:type owl:NamedIndividual ;
+         :Roles "Analyst" ;
+         :hasAge 26 ;
+         :hasName "Devara Putra" ;
+         :hasNationality "Indonesia" ;
+         :playerInfo "Devara \"DevKoch\" Putra (born March 11, 1999) is an Indonesian Analyst who is currently working for TODAK on loan from Alter Ego X as an Analyst." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/DewaUnited
+:DewaUnited rdf:type owl:NamedIndividual ;
+            :hasPart :DU_ID16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Dex
+:Dex rdf:type owl:NamedIndividual ;
+     :Roles "Analyst" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/DexStar
+:DexStar rdf:type owl:NamedIndividual ;
+         :Roles "Assistant Coach" ;
+         :alternateIds "Dexter" ;
+         :hasAge 33 ;
+         :hasName "Dexter Alaba" ;
+         :hasNationality "philippines" ;
+         :playerInfo "Dexter \"Dex Star\" Alaba (born October 12, 1992) is a Filipino Coach who is currently working for Aurora Gaming as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Diablo
+:Diablo rdf:type owl:NamedIndividual ;
+        :Roles "EXP" ;
+        :hasName "Yeo Wee Lun" ;
+        :hasNationality "Singapore" ;
+        :playerInfo "Yeo \"Diablo\" Wee Lun is a Singaporean player who last played for Team Stallion SG." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Domengkite
+:Domengkite rdf:type owl:NamedIndividual ;
+            :Roles "Gold" ;
+            :alternateIds "Domeng" ;
+            :hasAge 18 ;
+            :hasName "Jan Delmundo" ;
+            :hasNationality "philippines" ;
+            :playerInfo "Jan \"DomengKite\" Delmundo (born November 3, 2007) is a Filipino player who is currently playing as a Gold Laner for Aurora Gaming." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Dora
+:Dora rdf:type owl:NamedIndividual ;
+      :Roles "Head Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/DreamS
+:DreamS rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" ;
+        :hasAge 26 ;
+        :hasName "Rachmad Wahyudi" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "Rachmad \"DreamS\" Wahyudi (born December 6, 1999) is an Indonesian player who is currently playing as a Roamer for TODAK on loan from Alter Ego." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Drinsanity
+:Drinsanity rdf:type owl:NamedIndividual ;
+            :Roles "EXP" ;
+            :hasName "Drin Fontanilla" ;
+            :hasNationality "philippines" ;
+            :playerInfo "Drin \"Drinsanity\" Fontanilla is a Filipino player who is currently playing as an EXP Laner for Kingdom Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Duskk
+:Duskk rdf:type owl:NamedIndividual ;
+       :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Dyrennn
+:Dyrennn rdf:type owl:NamedIndividual ;
+         :Roles "Exp" ;
+         :alternateIds "Coyy" ;
+         :hasAge 23 ;
+         :hasName "Rendy Syahputra" ;
+         :hasNationality "Indonesia" ;
+         :playerInfo "Rendy \"Dyrennn\" Syahputra (born May 21, 2003) is an Indonesian player who is currently playing as an EXP Laner for RRQ Hoshi." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/E2MAX
+:E2MAX rdf:type owl:NamedIndividual ;
+       :Roles "Head Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/EMANN
+:EMANN rdf:type owl:NamedIndividual ;
+       :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/ESON
+:ESON rdf:type owl:NamedIndividual ;
+      :Roles "Assistant Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/EVOS_ID16
+:EVOS_ID16 rdf:type owl:NamedIndividual ,
+                    :MPL_ID16 ;
+           :hasPlayer :Alberttt ,
+                      :Branz ,
+                      :Erlan ,
+                      :Kyy ,
+                      :Rendyy ,
+                      :Roundel ,
+                      :Swaylow ,
+                      :Xorizo ;
+           :hasReached :MPLPlayoff ;
+           :hasStaff :Bravo ,
+                     :VYN ;
+           :RankMPL 3 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Edward
+:Edward rdf:type owl:NamedIndividual ;
+        :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Erlan
+:Erlan rdf:type owl:NamedIndividual ;
+       :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Erpang
+:Erpang rdf:type owl:NamedIndividual ;
+        :Roles "Assistant Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Error404
+:Error404 rdf:type owl:NamedIndividual ;
+          :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Eshaa
+:Eshaa rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Evil
+:Evil rdf:type owl:NamedIndividual ;
+      :hasPart :Evil_SG10 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Evil_SG10
+:Evil_SG10 rdf:type owl:NamedIndividual ,
+                    :MPL_SG10 ;
+           :hasPlayer :Aether ,
+                      :Bitoy ,
+                      :Gear ,
+                      :Naako ,
+                      :PoWerFuL ,
+                      :Seilah ,
+                      :Tzu ,
+                      :Vennn ;
+           :RankMPL 1 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/EvosEsports
+:EvosEsports rdf:type owl:NamedIndividual ;
+             :hasPart :EVOS_ID16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/EyyMal
+:EyyMal rdf:type owl:NamedIndividual ;
+        :RankMPL "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Facehugger
+:Facehugger rdf:type owl:NamedIndividual ;
+            :Roles "Analyst" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Falcon_PH16
+:Falcon_PH16 rdf:type owl:NamedIndividual ,
+                      :MPL_PH16 ;
+             :hasPlayer :Ferdz ,
+                        :FlapTzy ,
+                        :KyleTzy ,
+                        :Owgwen ,
+                        :Pheww ,
+                        :SuperMarco ;
+             :hasReached :MPLPlayoff ;
+             :hasStaff :CoachMoody ,
+                       :Trebor ;
+             :RankMPL "5-6" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Fateqt
+:Fateqt rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Faviannn
+:Faviannn rdf:type owl:NamedIndividual ;
+          :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Fawndeer
+:Fawndeer rdf:type owl:NamedIndividual ;
+          :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ferdz
+:Ferdz rdf:type owl:NamedIndividual ;
+       :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ferxiic
+:Ferxiic rdf:type owl:NamedIndividual ;
+         :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Finn
+:Finn rdf:type owl:NamedIndividual ;
+      :Roles "Roamer" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Firzaa
+:Firzaa rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Fiyy
+:Fiyy rdf:type owl:NamedIndividual ;
+      :Roles "Assistant Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/FlapTzy
+:FlapTzy rdf:type owl:NamedIndividual ;
+         :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Flash_SG10
+:Flash_SG10 rdf:type owl:NamedIndividual ,
+                     :MPL_SG10 ;
+            :hasPlayer :Bearrr ,
+                       :Closer ,
+                       :Hadess ,
+                       :JPL ,
+                       :Jayy ,
+                       :KurtTzy ,
+                       :Vanix ;
+            :hasStaff :Adammir ;
+            :RankMPL 2 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Fmm
+:Fmm rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/GamesMYKelantan
+:GamesMYKelantan rdf:type owl:NamedIndividual ;
+                 :hasPart :GamesMY_MY16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/GamesMY_MY16
+:GamesMY_MY16 rdf:type owl:NamedIndividual ,
+                       :MPL_MY16 ;
+              :hasPlayer :Immqt ,
+                         :Jajaa ,
+                         :Maima ,
+                         :Matdinz ,
+                         :Munsters ,
+                         :Skyzar ,
+                         :TheSit ;
+              :hasStaff :Backdoor ,
+                        :Vivy ;
+              :RankMPL 10 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Garyy
+:Garyy rdf:type owl:NamedIndividual ;
+       :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Gear
+:Gear rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/GeekFam
+:GeekFam rdf:type owl:NamedIndividual ;
+         :hasPart :GeekFam_ID16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/GeekFam_ID16
+:GeekFam_ID16 rdf:type owl:NamedIndividual ,
+                       :MPL_ID16 ;
+              :hasPlayer :ABOY ,
+                         :Baloyskie ,
+                         :Gobs ,
+                         :KennzyySkie ,
+                         :Maykids ,
+                         :Zeltron ;
+              :hasStaff :Bluffzy ,
+                        :Dora ;
+              :RankMPL 8 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Gobs
+:Gobs rdf:type owl:NamedIndividual ;
+      :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Gojes
+:Gojes rdf:type owl:NamedIndividual ;
+       :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Grannt
+:Grannt rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Hadess
+:Hadess rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Hadji
+:Hadji rdf:type owl:NamedIndividual ;
+       :Roles "Mid" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Hate
+:Hate rdf:type owl:NamedIndividual ;
+      :Roles "Uknown" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Haze
+:Haze rdf:type owl:NamedIndividual ;
+      :Roles "Analyst" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Hazle
+:Hazle rdf:type owl:NamedIndividual ;
+       :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Hijumee
+:Hijumee rdf:type owl:NamedIndividual ;
+         :Roles "Mid" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Hito
+:Hito rdf:type owl:NamedIndividual ;
+      :Roles "Assistant Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Homebois
+:Homebois rdf:type owl:NamedIndividual ;
+          :hasPart :Homebois_MY16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Homebois_MY16
+:Homebois_MY16 rdf:type owl:NamedIndividual ,
+                        :MPL_MY16 ;
+               :hasPlayer :Cayden ,
+                          :Daniel ,
+                          :EyyMal ,
+                          :Izanami ,
+                          :Melqt ,
+                          :Rezza ,
+                          :Zippyyqt ;
+               :hasReached :MPLPlayoff ;
+               :hasStaff :Dale ,
+                         :Jes ,
+                         :Naaz ;
+               :RankMPL "5-6" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/IGNITEGaming
+:IGNITEGaming rdf:type owl:NamedIndividual ;
+              :hasPart :Ignite_SG10 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Icyfrost
+:Icyfrost rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Idok
+:Idok rdf:type owl:NamedIndividual ;
+      :Roles "Roamer" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ignite_SG10
+:Ignite_SG10 rdf:type owl:NamedIndividual ,
+                      :MPL_SG10 ;
+             :hasPlayer :Bladee ,
+                        :Chu ,
+                        :Rapidoot ,
+                        :Seiji ,
+                        :Yuta ,
+                        :ZacScofield ;
+             :hasStaff :Cryptic ,
+                       :ly4ly4ly4 ;
+             :RankMPL "5-6" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Immqt
+:Immqt rdf:type owl:NamedIndividual ;
+       :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Innocent
+:Innocent rdf:type owl:NamedIndividual ;
+          :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Irfan
+:Irfan rdf:type owl:NamedIndividual ;
+       :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ivann
+:Ivann rdf:type owl:NamedIndividual ;
+       :Roles "Roamer" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Izanami
+:Izanami rdf:type owl:NamedIndividual ;
+         :RankMPL "Mid" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/JIFDEGaming
+:JIFDEGaming rdf:type owl:NamedIndividual ;
+             :Roles "Analyst" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/JOOOOO
+:JOOOOO rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/JPL
+:JPL rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jacklee
+:Jacklee rdf:type owl:NamedIndividual ;
+         :Roles "Assistant Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jajaa
+:Jajaa rdf:type owl:NamedIndividual ;
+       :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jaypee
+:Jaypee rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jayy
+:Jayy rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jeff
+:Jeff rdf:type owl:NamedIndividual ;
+      :Roles "Head Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jes
+:Jes rdf:type owl:NamedIndividual ;
+     :RankMPL "Head Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jeymz
+:Jeymz rdf:type owl:NamedIndividual ;
+       :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jowm
+:Jowm rdf:type owl:NamedIndividual ;
+      :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/K1NGKONG
+:K1NGKONG rdf:type owl:NamedIndividual ;
+          :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kabuki
+:Kabuki rdf:type owl:NamedIndividual ;
+        :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kairi
+:Kairi rdf:type owl:NamedIndividual ;
+       :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/KarlTzy
+:KarlTzy rdf:type owl:NamedIndividual ;
+         :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Karss
+:Karss rdf:type owl:NamedIndividual ;
+       :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kazeemen
+:Kazeemen rdf:type owl:NamedIndividual ;
+          :Roles "Unknown" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kelra
+:Kelra rdf:type owl:NamedIndividual ;
+       :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kenji
+:Kenji rdf:type owl:NamedIndividual ;
+       :Roles "Assistant Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/KennzyySkie
+:KennzyySkie rdf:type owl:NamedIndividual ;
+             :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Keymin
+:Keymin rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Khezcute
+:Khezcute rdf:type owl:NamedIndividual ;
+          :Roles "Head Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kiboy
+:Kiboy rdf:type owl:NamedIndividual ;
+       :Roles "Roamer" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/KingdomEsports
+:KingdomEsports rdf:type owl:NamedIndividual ;
+                :hasPart :Kingdom_SG10 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kingdom_SG10
+:Kingdom_SG10 rdf:type owl:NamedIndividual ,
+                       :MPL_SG10 ;
+              :hasPlayer :Drinsanity ,
+                         :Fmm ,
+                         :Grannt ,
+                         :Lolsie ,
+                         :SHERMS ,
+                         :ShuraStyle ,
+                         :Yaawn ,
+                         :suskeee ;
+              :hasStaff :Apex ,
+                        :Icyfrost ,
+                        :Sammy ;
+              :RankMPL 3 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kirk
+:Kirk rdf:type owl:NamedIndividual ;
+      :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kramm
+:Kramm rdf:type owl:NamedIndividual ;
+       :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/KurtTzy
+:KurtTzy rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kusey
+:Kusey rdf:type owl:NamedIndividual ;
+       :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/KyleTzy
+:KyleTzy rdf:type owl:NamedIndividual ;
+         :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kyou
+:Kyou rdf:type owl:NamedIndividual ;
+      :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kyy
+:Kyy rdf:type owl:NamedIndividual ;
+     :Roles "Roamer" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kyym
+:Kyym rdf:type owl:NamedIndividual ;
+      :Roles "Mid" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/LILNUSH
+:LILNUSH rdf:type owl:NamedIndividual ;
+         :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/LanceCy
+:LanceCy rdf:type owl:NamedIndividual ;
+         :Roles "Mid" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lansu
+:Lansu rdf:type owl:NamedIndividual ;
+       :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lembot
+:Lembot rdf:type owl:NamedIndividual ;
+        :Roles "Assistant Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Light
+:Light rdf:type owl:NamedIndividual ;
+       :Roles "Roamer" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Link
+:Link rdf:type owl:NamedIndividual ;
+      :Roles "Assistant Coach" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lolealz
+:Lolealz rdf:type owl:NamedIndividual ;
+         :Roles "Gold" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lolsie
+:Lolsie rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/LordJM
+:LordJM rdf:type owl:NamedIndividual ;
+        :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lucianqt
+:Lucianqt rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lutpiii
+:Lutpiii rdf:type owl:NamedIndividual ;
+         :Roles "Exp" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lyoni
+:Lyoni rdf:type owl:NamedIndividual ;
+       :Roles "Roam" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPLChamps
+:MPLChamps rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPLFinals
+:MPLFinals rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPLPlayoff
+:MPLPlayoff rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPtheKing
+:MPtheKing rdf:type owl:NamedIndividual ;
+           :Roles "Jungler" ;
+           :hasAge 21 ;
+           :hasName "Michael Medrocillo Endino" ,
+                    "Philippines" ;
+           :hasNationality "Philippines" ;
+           :playerInfo "Michael \"MP the King\" Endino (born October 15, 2004) is a Filipino player who is currently playing as a Jungler for Twisted Minds PH." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSCChamps
+:MSCChamps rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSCFinal
+:MSCFinal rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSCPlayoff
+:MSCPlayoff rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSeriesChamps
+:MSeriesChamps rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSeriesFinal
+:MSeriesFinal rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSeriesPlayoff
+:MSeriesPlayoff rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Maima
+:Maima rdf:type owl:NamedIndividual ;
+       :Roles "Mid" ;
+       :hasAge 25 ;
+       :hasName "Muhammad Azam Izzudin Bin Mohd Amin" ;
+       :hasNationality "Malaysia" ;
+       :playerInfo "Muhammad \"Maima\" Amin (born June 22, 2000) is a Malaysian player who is currently playing as a Mid Laner for GamesMY Kelantan." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Mariah
+:Mariah rdf:type owl:NamedIndividual ;
+        :Roles "Analyst" ;
+        :hasNationality "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Markk
+:Markk rdf:type owl:NamedIndividual ;
+       :Roles "Exp" ;
+       :hasNationality "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MasterTheBasics
+:MasterTheBasics rdf:type owl:NamedIndividual ;
+                 :Roles "Head Coach" ;
+                 :hasName "Aniel Y Jiandani" ;
+                 :hasNationality "Philippines" ;
+                 :playerInfo "Aniel \"Master the Basics\" Jiandani is a Filipino Coach who is currently working for Aurora Gaming as a Coach. He was also a Youtuber where he puts out Mobile Legends guides." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Matdinz
+:Matdinz rdf:type owl:NamedIndividual ;
+         :Roles "Roamer" ;
+         :hasNationality "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Maybeee
+:Maybeee rdf:type owl:NamedIndividual ;
+         :Roles "Gold" ;
+         :hasAge 19 ;
+         :hasName "Delvin" ;
+         :hasNationality "Indonesia" ;
+         :playerInfo "Delvin \"Maybeee\" (born April 18, 2006) is an Indonesian player who is currently playing as a Gold Laner for Dewa United Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Maykids
+:Maykids rdf:type owl:NamedIndividual ;
+         :Roles "Jungler" ;
+         :hasName "Muhammad Akbar Prasetia Ardani" ;
+         :hasNationality "Jungler" ;
+         :playerInfo "Muhammad \"Maykids\" Ardani is an Indonesian player who is currently playing as a Jungler for Geek Fam ID." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Melqt
+:Melqt rdf:type owl:NamedIndividual ;
+       :Roles "Gold" ;
+       :hasAge 24 ;
+       :hasName "Adam Bin Hamidun" ;
+       :playerInfo "Adam \"Melll\" Hamidun (born October 3, 2001) is a Malaysian player who is currently playing as a Gold Laner for HomeBois." ,
+                   "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Momo
+:Momo rdf:type owl:NamedIndividual ;
+      :Roles "Exp" ;
+      :hasAge 25 ;
+      :hasName "Idreen Bin Abdul Jamal" ;
+      :hasNationality "Malaysia" ;
+      :playerInfo "Idreen \"Momo\" Jamal (born October 3, 2000) is a Malaysian player who is currently playing as an EXP Laner for Monster Vicious." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MonsterVicious
+:MonsterVicious rdf:type owl:NamedIndividual ;
+                :hasPart :MonsterVicious_MY16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MonsterVicious_MY16
+:MonsterVicious_MY16 rdf:type owl:NamedIndividual ,
+                              :MPL_MY16 ;
+                     :hasPlayer :Bondolz ,
+                                :Irfan ,
+                                :Lyoni ,
+                                :Momo ,
+                                :Rough ,
+                                :Unii ;
+                     :hasReached :MPLPlayoff ;
+                     :hasStaff :Dex ,
+                               :Kenji ,
+                               :SoraPayung ;
+                     :Roles "TBD" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Moreno
+:Moreno rdf:type owl:NamedIndividual ;
+        :Roles "Mid" ;
+        :hasAge 20 ;
+        :hasName "Marcel Juan Moreno Sinulingga" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "Marcel \"Moreno\" Sinulingga (born October 5, 2005) is an Indonesian player who is currently playing as a Mid Laner for Bigetron by Vitality." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Muezza
+:Muezza rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" ;
+        :hasAge 23 ;
+        :hasName "Irfan Ramadhani" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "Irfan \"Muezzaa\" Ramadhani (born November 8, 2002) is an Indonesian player who is currently playing as a Roamer for Dewa United Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Munsters
+:Munsters rdf:type owl:NamedIndividual ;
+          :Roles "Exp" ;
+          :hasAge 22 ;
+          :hasName "I Ketut Rio Mahendra" ;
+          :hasNationality "Indonesia" ;
+          :playerInfo "I \"Munsters\" Mahendra (born May 16, 2003) is an Indonesian player who is currently playing as an EXP Laner for GamesMY Kelantan." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/NAVI_ID16
+:NAVI_ID16 rdf:type owl:NamedIndividual ,
+                    :MPL_ID16 ;
+           :hasPlayer :APHRO ,
+                      :Andoryuuu ,
+                      :Karss ,
+                      :Kazeemen ,
+                      :UK1R ,
+                      :Xyve ,
+                      :woshipaul ,
+                      :xMagic ;
+           :hasReached :MPLPlayoff ;
+           :hasStaff :Aldo ,
+                     :Jacklee ;
+           :RankMPL "5-6" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/NMM
+:NMM rdf:type owl:NamedIndividual ;
+     :Roles "Analyst" ;
+     :hasName "Rasyid Kevin Perwira" ;
+     :hasNationality "Indonesia" ;
+     :playerInfo "Rasyid \"NMM\" Perwira is an Indonesian Coach who is currently working for RRQ Hoshi as a Coach. He is a former Dota 2 player." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Naako
+:Naako rdf:type owl:NamedIndividual ;
+       :Roles "Gold" ;
+       :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Naaz
+:Naaz rdf:type owl:NamedIndividual ;
+      :RankMPL "Analyst" ;
+      :hasNationality "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Nafari
+:Nafari rdf:type owl:NamedIndividual ;
+        :Roles "Head Coach" ;
+        :hasAge 32 ;
+        :hasName "Azam Aljabar Nafari" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "Azam \"Nafari\" Nafari (born September 18, 1993) is an Indonesian Coach who is currently working for TODAK on loan from Alter Ego as a Coach. He is a former Dota 2 player." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Nan
+:Nan rdf:type owl:NamedIndividual ;
+     :Roles "Jungler" ;
+     :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Natco
+:Natco rdf:type owl:NamedIndividual ;
+       :Roles "Gold" ;
+       :hasAge 19 ;
+       :hasName "Nicodemus Dustin Koesnadi" ;
+       :hasNationality "Indonesia" ;
+       :playerInfo "Nicodemus \"Natco\" Koesnadi (born December 6, 2005) is an Indonesian player who is currently playing as a Gold Laner for Team Vamos on loan from EVOS." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/NatusVincere
+:NatusVincere rdf:type owl:NamedIndividual ;
+              :hasPart :NAVI_ID16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Netskie
+:Netskie rdf:type owl:NamedIndividual ;
+         :Roles "Gold" ;
+         :hasAge 20 ;
+         :hasName "Kenneth Sablande Barro" ;
+         :hasNationality "Philippines" ;
+         :playerInfo "Kenneth \"Nets\" Barro (born November 28, 2004) is a Filipino player who is currently playing as a Gold Laner for Omega Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Nino
+:Nino rdf:type owl:NamedIndividual ;
+      :Roles "Gold" ;
+      :hasAge 21 ;
+      :hasName "Syauki Fauzan Sumarno" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Syauki \"Nino\" Sumarno (born April 30, 2004) is an Indonesian player who is currently playing as an EXP Laner for Alter Ego." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Nnael
+:Nnael rdf:type owl:NamedIndividual ;
+       :Roles "Jungler" ;
+       :hasAge 19 ;
+       :hasName "Manuel Simbolon" ;
+       :hasNationality "Indonesia" ;
+       :playerInfo "Manuel \"Nnael\" Simbolon (born January 18, 2006) is an Indonesian player who is currently playing as a Jungler for Bigetron by Vitality." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Nomed
+:Nomed rdf:type owl:NamedIndividual ;
+       :Roles "Roamer" ;
+       :hasNationality "Philippines" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Nosia
+:Nosia rdf:type owl:NamedIndividual ;
+       :Roles "Gold" ;
+       :hasNationality "Philippines" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/NovaXcobar
+:NovaXcobar rdf:type owl:NamedIndividual ;
+            :Roles "Roamer" ;
+            :hasAge 23 ;
+            :hasName "Abdul Azim bin Abdul Rashid" ;
+            :hasNationality "Malaysia" ;
+            :playerInfo "Abdul \"NovaXcobar\" Rashid (born March 5, 2002) is a Malaysian player who is currently playing as a Roamer for Team Rey." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/OGEsports
+:OGEsports rdf:type owl:NamedIndividual ;
+           :hasPart :OGEsports .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Octa
+:Octa rdf:type owl:NamedIndividual ;
+      :Roles "Mid" ;
+      :hasName "Muhamad Akmal Maulana" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Muhamad \"Octa\" Maulana is an Indonesian player who is currently playing as a Mid Laner for Dewa United Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Oheb
+:Oheb rdf:type owl:NamedIndividual ;
+      :Roles "Gold" ;
+      :hasAge 21 ;
+      :hasName "Kiel Calvin Q Soriano" ;
+      :hasNationality "Philippines" ;
+      :playerInfo "Kiel \"Oheb\" Q.Soriano (born August 17, 2004) is a Filipino player who is currently playing as a Gold Laner for Team Liquid PH." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/OmegaEsports
+:OmegaEsports rdf:type owl:NamedIndividual ;
+              :hasPart :Omega_PH16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Omega_PH16
+:Omega_PH16 rdf:type owl:NamedIndividual ,
+                     :MPL_PH16 ;
+            :hasPlayer :Hadji ,
+                       :Jeymz ,
+                       :Netskie ,
+                       :Peuder ,
+                       :Raizen ,
+                       :SuperYoshi ;
+            :hasStaff :Lembot ,
+                      :SN4P ,
+                      :Wurahhhh ;
+            :RankMPL 7 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/OnicEsport
+:OnicEsport rdf:type owl:NamedIndividual ;
+            :hasPart :Onic_ID16 ,
+                     :Onic_PH16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Onic_ID16
+:Onic_ID16 rdf:type owl:NamedIndividual ,
+                    :MPL_ID16 ;
+           :hasPlayer :Kairi ,
+                      :Kiboy ,
+                      :Lutpiii ,
+                      :Sanz ,
+                      :Savero ,
+                      :Skylar ;
+           :hasReached :MPLChamps ,
+                       :MPLFinals ,
+                       :MPLPlayoff ;
+           :hasStaff :Adi ,
+                     :CW ,
+                     :Paddington ;
+           :RankMPL 1 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Onic_PH16
+:Onic_PH16 rdf:type owl:NamedIndividual ,
+                    :MPL_PH16 ;
+           :hasPlayer :Brusko ,
+                      :Hate ,
+                      :K1NGKONG ,
+                      :Kelra ,
+                      :Kirk ,
+                      :Ryota ,
+                      :SuperFrince ;
+           :hasReached :MPLPlayoff ;
+           :hasStaff :Haze ,
+                     :YnoT ;
+           :RankMPL 4 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Owgwen
+:Owgwen rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" ;
+        :hasAge 24 ;
+        :hasName "Rowgien Stimpson Unigo" ;
+        :hasNationality "Philippines" ;
+        :playerInfo "Rowgien \"Owgwen\" Unigo (born April 25, 2001) is a Filipino player who is currently playing as a Roamer for Team Falcons PH." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/OzoraVeki
+:OzoraVeki rdf:type owl:NamedIndividual ;
+           :Roles "Strategic Coach" ;
+           :hasAge 28 ;
+           :hasName "Poon Kok Sing" ;
+           :hasNationality "Malaysia" ;
+           :playerInfo "Poon \"OzoraVeki\" Sing (born July 7, 1997) is a Malaysian Coach who is currently working for SRG.OG as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Paddington
+:Paddington rdf:type owl:NamedIndividual ;
+            :Roles "Analyst" ;
+            :hasName "Riyan Febriyanto" ;
+            :hasNationality "Indonesia" ;
+            :playerInfo "Riyan \"Paddington\" Febriyanto is an Indonesian Coach who is currently working for ONIC as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/PakAtan
+:PakAtan rdf:type owl:NamedIndividual ;
+         :Roles "Analyst" ;
+         :playerInfo "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Pakbet
+:Pakbet rdf:type owl:NamedIndividual ;
+        :Roles "Head Coach" ;
+        :hasName "Jomie Abalos" ;
+        :hasNationality "Philippines" ;
+        :playerInfo "Jomie \"P4kbet\" Abalos is a Filipino Coach who is currently working for Team Vamos as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Panda
+:Panda rdf:type owl:NamedIndividual ;
+       :Person "Strategic Coach" ;
+       :hasAge 23 ;
+       :hasName "Poh Chun Wai" ;
+       :hasNationality "Malaysia" ;
+       :playerInfo "Chun Wai \"Panda\" Poh (born October 10, 2002) is a Malaysian Coach and Gold Laner who is currently working for Aero Esports as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Perkz
+:Perkz rdf:type owl:NamedIndividual ;
+       :Roles "Roamer" ;
+       :hasAge 21 ;
+       :hasName "John Sumawan" ;
+       :hasNationality "Philippines" ;
+       :playerInfo "John \"Perkz\" Sumawan (born June 8, 2004) is a Filipino player who is currently playing as a Roamer for Team Liquid PH." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Peuder
+:Peuder rdf:type owl:NamedIndividual ;
+        :Roles "Unknown" ;
+        :hasNationality "Philippines" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Pheww
+:Pheww rdf:type owl:NamedIndividual ;
+       :Roles "Mid" ;
+       :hasAge 26 ;
+       :hasName "Angelo Kyle Arcangel" ;
+       :hasNationality "Philippines" ;
+       :playerInfo "Angelo \"Pheww\" Arcangel (born June 18, 1999) is a Filipino player who is currently playing as a Mid Laner for Team Falcons PH." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/PoWerFuL
+:PoWerFuL rdf:type owl:NamedIndividual ;
+          :Roles "Roamer" ;
+          :hasName "Willie Lee Kwong Sheng" ;
+          :hasNationality "Singapore" ;
+          :playerInfo "Willie \"PoWerFuL\" Lee is a Singaporean player who is currently playing as a Roamer for Evil." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Pozan
+:Pozan rdf:type owl:NamedIndividual ;
+       :Roles "Coach" ;
+       :hasNationality "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/QINN
+:QINN rdf:type owl:NamedIndividual ;
+      :Roles "Exp" ;
+      :hasAge 18 ;
+      :hasName "John Carlo" ;
+      :hasNationality "Philippines" ;
+      :playerInfo "John \"QINN\" Carlo (born December 9, 2006) is a Filipino player who is currently playing as an EXP Laner for Dewa United Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/RRQHoshi_ID16
+:RRQHoshi_ID16 rdf:type owl:NamedIndividual ,
+                        :MPL_ID16 ;
+               :hasPlayer :Dyrennn ,
+                          :Ferxiic ,
+                          :Idok ,
+                          :Rezzz ,
+                          :Rinz ,
+                          :Sutsujin ,
+                          :Toyy ,
+                          :Zunesh ;
+               :hasStaff :Khezcute ,
+                         :NMM ,
+                         :Rave ;
+               :RankMPL 7 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rainn
+:Rainn rdf:type owl:NamedIndividual ;
+       :Roles "Head Coach" ;
+       :hasName "Fikri Aiman Bin Mohd Khidzir" ;
+       :hasNationality "Malaysia" ;
+       :playerInfo "Fikri \"Rainn\" Khidzir is a Malaysian Coach who is currently working for CG Esports as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Raizen
+:Raizen rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" ;
+        :hasAge 21 ;
+        :hasName "Dean Christian Sumagui" ;
+        :hasNationality "Philippines" ;
+        :playerInfo "Dean \"Raizen\" Sumagui (born February 8, 2004) is a Filipino player who is currently playing as a Jungler for Omega Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rapidoot
+:Rapidoot rdf:type owl:NamedIndividual ;
+          :Roles "Roamer" ;
+          :hasAge 26 ;
+          :hasName "Ralph Adrales" ;
+          :hasNationality "Philippines" ;
+          :playerInfo "Ralph \"Rapidoot\" Adrales (born August 4, 1999) is a Filipino player who is currently playing as a Roamer for IGNITE Gaming." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rasy
+:Rasy rdf:type owl:NamedIndividual ;
+      :Roles "Roamer" ;
+      :hasAge 24 ;
+      :hasName "Rasya Arga Wisita" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Rasya \"Rasy\" Wisita (born May 5, 2001) is an Indonesian player who is currently playing as a Roamer for Untitled Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rave
+:Rave rdf:type owl:NamedIndividual ;
+      :Roles "Assistant Coach" ;
+      :hasAge 29 ;
+      :hasName "Fadhil Abdurahman" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Fadhil \"Rave\" Abdurahman (born April 18, 1996) is an Indonesian Coach and Analyst who is currently working for RRQ Hoshi as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rendyy
+:Rendyy rdf:type owl:NamedIndividual ;
+        :Roles "Exp" ;
+        :hasNationality "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rensaa
+:Rensaa rdf:type owl:NamedIndividual ;
+        :Roles "Gold" ;
+        :hasNationality "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Reyy
+:Reyy rdf:type owl:NamedIndividual ;
+      :Roles "Jungler" ;
+      :hasAge 19 ;
+      :hasName "Reynaldo Ferdiand" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Reynaldo \"Reyy\" Ferdiand (born January 4, 2006) is an Indonesian player who is currently playing as a Jungler for Dewa United Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rezza
+:Rezza rdf:type owl:NamedIndividual ;
+       :Roles "Exp" ;
+       :hasAge 23 ;
+       :hasName "Ahmad Rezza Meah Bin Ahmad Rashin Meah" ;
+       :hasNationality "Malaysia" ;
+       :playerInfo "Ahmad \"Rezza\" Meah (born July 8, 2002) is a Malaysian player who is currently playing as an EXP Laner for Aero Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rezzz
+:Rezzz rdf:type owl:NamedIndividual ;
+       :Roles "Exp" ;
+       :hasAge 19 ;
+       :hasName "Muhammad Reza Kurniawan" ;
+       :hasNationality "Indonesia" ;
+       :playerInfo "Muhammad \"Rezzz\" Kurniawan (born August 7, 2006) is an Indonesian player who is currently playing as an EXP Laner for RRQ Hoshi." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Right
+:Right rdf:type owl:NamedIndividual ;
+       :Roles "Head Coach" ;
+       :hasName "Jaypee Felipe Lugtu" ;
+       :hasNationality "Philippines" ;
+       :playerInfo "Jaypee \"Right\" Lugtu is a Filipino Coach who is currently working for Dewa United Esports as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rinee
+:Rinee rdf:type owl:NamedIndividual ;
+       :Roles "Jungler" ;
+       :hasAge 21 ;
+       :hasName "Syahrul Ramadhan" ;
+       :hasNationality "Indonesia" ;
+       :playerInfo "Syahrul \"Rinee\" Ramadhan (born November 5, 2004) is an Indonesian player who is currently playing as a Jungler for Alter Ego." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rinz
+:Rinz rdf:type owl:NamedIndividual ;
+      :Roles "Mid" ;
+      :hasAge 21 ;
+      :hasName "Hajirin Arafat" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Hajirin \"Rinz\" Arafat (born January 28, 2004) is an Indonesian player who is currently playing as a Mid Laner for RRQ Hoshi." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ronn
+:Ronn rdf:type owl:NamedIndividual ;
+      :Roles "Jungler" ;
+      :hasAge 20 ;
+      :hasName "Muhammad Syahron" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Muhammad \"Ronn\" Syahron (born April 13, 2005) is an Indonesian player who is currently playing as a Jungler for Bigetron by Vitality." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rough
+:Rough rdf:type owl:NamedIndividual ;
+       :Roles "Gold" ;
+       :hasAge 21 ;
+       :hasName "Dhiya' Harith Hazran Bin Shahrul Hadafi" ;
+       :hasNationality "Malaysia" ;
+       :playerInfo "Dhiya' \"Rough\" Hadafi (born July 16, 2004) is a Malaysian player who is currently playing as a Gold Laner for Monster Vicious." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Roundel
+:Roundel rdf:type owl:NamedIndividual ;
+         :Roles "Mid" ;
+         :hasAge 21 ;
+         :hasName "Faiskal Khadafi" ;
+         :hasNationality "Indonesia" ;
+         :playerInfo "Faiskal \"RoundeL\" Khadafi (born May 21, 2004) is an Indonesian player who is currently playing as a Mid Laner for EVOS." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Roy
+:Roy rdf:type owl:NamedIndividual ;
+     :Roles "Mid" ;
+     :hasName "Royven Tan" ;
+     :hasNationality "Singapore" ;
+     :playerInfo "Royven \"Roy\" Tan is a Singaporean player who is currently playing as a Mid Laner for Team Stallion SG." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ryota
+:Ryota rdf:type owl:NamedIndividual ;
+       :Roles "Exp" ;
+       :hasAge 22 ;
+       :hasName "Nowee Cabailo Macasa" ;
+       :hasNationality "Philippines" ;
+       :playerInfo "Nowee \"Ryota\" Macasa (born December 9, 2002) is a Filipino player who is currently playing as an EXP Laner for ONIC Philippines." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SHERMS
+:SHERMS rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" ;
+        :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SN4P
+:SN4P rdf:type owl:NamedIndividual ;
+      :Roles "Analyst" ;
+      :hasName "Allec Monsseur Alvarado Alberto" ;
+      :hasNationality "Philippines" ;
+      :playerInfo "Allec Monsseur \"SN4P\" Alvarado Alberto is a Filipino Coach who is currently working for Omega Esports as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SRGOG_MY16
+:SRGOG_MY16 rdf:type owl:NamedIndividual ,
+                     :MPL_MY16 ;
+            :hasPlayer :Innocent ,
+                       :Kramm ,
+                       :Sekys ,
+                       :Stormie ,
+                       :Winter ,
+                       :Yums ;
+            :hasReached :MPLPlayoff ;
+            :hasStaff :Arcadia ,
+                      :OzoraVeki ;
+            :RankMPL "TBD" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Saiful
+:Saiful rdf:type owl:NamedIndividual ;
+        :Roles "Assistant Coach" ;
+        :hasAge 30 ;
+        :hasName "Muhammad Saiful Bin Aujang" ;
+        :hasNationality "Malaysia" ;
+        :playerInfo "Muhammad \"Saiful\" Aujang (born September 6, 1995) is a Malaysian Coach who last worked for TODAK as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SaintDeLucaz
+:SaintDeLucaz rdf:type owl:NamedIndividual ;
+              :Roles "Head Coach" ;
+              :hasName "Doly Van Pelo Sihotang" ;
+              :hasNationality "Indonesia" ;
+              :playerInfo "Doly \"SaintDeLucaz\" Sihotang is an Indonesian Coach who is currently working for Team Liquid ID as a Coach. He is a former Dota 2 player." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Salas
+:Salas rdf:type owl:NamedIndividual ;
+       :Roles "Gold" ;
+       :hasNationality "Philippines" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sammy
+:Sammy rdf:type owl:NamedIndividual ;
+       :Roles "Analyst" ;
+       :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sanford
+:Sanford rdf:type owl:NamedIndividual ;
+         :Roles "Exp" ;
+         :hasAge 19 ;
+         :hasName "Sanford Marin Vinuya" ;
+         :hasNationality "Philippines" ;
+         :playerInfo "Sanford \"Sanford\" Vinuya (born June 24, 2006) is a Filipino player who is currently playing as an EXP Laner for Team Liquid PH." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sanji
+:Sanji rdf:type owl:NamedIndividual ;
+       :Roles "Mid" ;
+       :hasAge 20 ;
+       :hasName "Alston Pabico" ;
+       :hasNationality "Philippines" ;
+       :playerInfo """Alston \"Sanji\" Pabico (born October 3, 2005) is a Filipino player who is currently playing as a Mid Laner for Team Liquid PH.
+
+Sanji is the third player to win M World Championship in his debut season. (the other players are Wannn and FlapTzy). Sanji debuted in MPL at August 2022 and won M4 World Championship at January 2023.""" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sanz
+:Sanz rdf:type owl:NamedIndividual ;
+      :Roles "Mid" ;
+      :hasAge 23 ;
+      :hasName "Gilanh" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Gilang \"S A N Z\" (born July 22, 2002) is an Indonesian player who is currently playing as a Mid Laner for ONIC." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Savero
+:Savero rdf:type owl:NamedIndividual ;
+        :Roles "Gold" ;
+        :hasName "Clayton Adrielo Kuswanto" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "Clayton \"Savero\" Kuswanto is an Indonesian player who is currently playing as a Gold Laner for ONIC." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Seiji
+:Seiji rdf:type owl:NamedIndividual ;
+       :Roles "Gold" ;
+       :playerInfo "Philippines" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Seilah
+:Seilah rdf:type owl:NamedIndividual ;
+        :Roles "Mid" ;
+        :hasAge 26 ;
+        :hasName "Basil Lim Dao Ze" ;
+        :hasNationality "Singapore" ;
+        :playerInfo "Basil \"Seilah\" Lim (born January 29, 1999) is a Singaporean player who is currently playing as a Mid Laner for Evil." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sekys
+:Sekys rdf:type owl:NamedIndividual ;
+       :Roles "Jungler" ;
+       :hasAge 19 ;
+       :hasName "Muhammad Haqqullah Bin Ahmad Shahrul Zaman" ;
+       :hasNationality "Malaysia" ;
+       :playerInfo "Muhammad Haqqullah \"Sekys\" Ahmad Shahrul Zaman (born February 14, 2006) is a Malaysian player who is currently playing as a Jungler for SRG.OG." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SelangorRedGiant
+:SelangorRedGiant rdf:type owl:NamedIndividual ;
+                  :hasPart :SRGOG_MY16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sensui
+:Sensui rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" ;
+        :hasAge 23 ;
+        :hasName "Stephen Jasper Castillo" ;
+        :hasNationality "Philippines" ;
+        :playerInfo "Stephen \"Sensui\" Castillo (born November 28, 2001) is a Filipino player who is currently playing as a Jungler for Twisted Minds PH." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Shizou
+:Shizou rdf:type owl:NamedIndividual ;
+        :Roles "Gold" ;
+        :hasName "Jan Carl Valdez" ;
+        :hasNationality "Philippines" ;
+        :playerInfo "Jan \"Shizou\" Valdez is a Filipino player who is currently playing as a Gold Laner for AP.Bren." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Shogun
+:Shogun rdf:type owl:NamedIndividual ;
+        :Roles "Exp" ;
+        :hasAge 21 ;
+        :hasName "Dylont Ananda Setya Huraihira" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "Dylont \"Shogun\" Huraihira (born August 10, 2004) is an Indonesian player who is currently playing as an EXP Laner for Bigetron by Vitality." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/ShuraStyle
+:ShuraStyle rdf:type owl:NamedIndividual ;
+            :Roles "Jungler" ;
+            :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sick
+:Sick rdf:type owl:NamedIndividual ;
+      :Roles "Gold" ;
+      :hasNationality "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sionnn
+:Sionnn rdf:type owl:NamedIndividual ;
+        :Roles "Mid" ;
+        :hasNationality "Philippines" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sizkaa
+:Sizkaa rdf:type owl:NamedIndividual ;
+        :Roles "Exp" ;
+        :hasAge 18 ;
+        :hasName "Muhammad Razif bin Sazali" ;
+        :hasNationality "Malaysia" ;
+        :playerInfo "Muhammad \"Sizkaa\" Sazali (born December 26, 2006) is a Malaysian player who is currently playing as an EXP Laner for Untitled Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SkyZED
+:SkyZED rdf:type owl:NamedIndividual ;
+        :Roles "Gold" ;
+        :hasAge 24 ;
+        :hasName "Muhammad Taufiq Hidayat Bin Mohd Ghazali" ;
+        :hasNationality "Malaysia" ;
+        :playerInfo "Muhammad \"Stylishzed\" Ghazali (born April 9, 2001) is a Malaysian player who is currently playing as a Gold Laner for Untitled Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Skylar
+:Skylar rdf:type owl:NamedIndividual ;
+        :Roles "Gold" ;
+        :hasAge 23 ;
+        :hasName "Schevenko David Tendean" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "Schevenko \"Skylar\" Tendean (born February 25, 2002) is an Indonesian player who is currently playing as a Gold Laner for ONIC." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Skyzar
+:Skyzar rdf:type owl:NamedIndividual ;
+        :Roles "Gold" ;
+        :hasNationality "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Smooth
+:Smooth rdf:type owl:NamedIndividual ;
+        :Roles "Exp" ;
+        :hasAge 23 ;
+        :hasName "Aeliff Adam Md Ariff" ;
+        :hasNationality "Malaysia" ;
+        :playerInfo "Aeliff \"Smooth\" Ariff (born July 1, 2002) is a Malaysian player who is currently playing as an EXP Laner for Aero Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SoraPayung
+:SoraPayung rdf:type owl:NamedIndividual ;
+            :Roles "Head Coach" ;
+            :hasAge 26 ;
+            :hasName "Muhammad Farhan Bin Ibrahim" ;
+            :hasNationality "Malaysia" ;
+            :playerInfo "Muhammad \"SoraPayung\" Ibrahim (born September 1, 1999) is a Malaysian coach who is currently coaching for Monster Vicious." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Stallion_SG10
+:Stallion_SG10 rdf:type owl:NamedIndividual ,
+                        :MPL_SG10 ;
+               :hasPlayer :BRAYYY ,
+                          :Diablo ,
+                          :Lucianqt ,
+                          :Rensaa ,
+                          :Roy ;
+               :hasStaff :Amoux ,
+                         :Eshaa ,
+                         :Saiful ;
+               :RankMPL 4 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Stormie
+:Stormie rdf:type owl:NamedIndividual ;
+         :Roles "Mid" ;
+         :hasAge 20 ;
+         :hasName "Hazziq Danish Bin Mohamad Rizwan" ;
+         :hasNationality "Malaysia" ;
+         :playerInfo "Hazziq \"Stormie\" Rizwan (born June 28, 2005) is a Malaysian player who is currently playing as a Mid Laner for SRG.OG." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Stowm
+:Stowm rdf:type owl:NamedIndividual ;
+       :Roles "Mid" ;
+       :hasAge 22 ;
+       :hasName "Dale Rolan Sena Vidore" ;
+       :hasNationality "Philippines" ;
+       :playerInfo "Michael \"Styx\" Abraham is an Indonesian Coach who is currently working for Alter Ego as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Styx
+:Styx rdf:type owl:NamedIndividual ;
+      :Roles "Assistant Coach" ;
+      :hasName "Michael Abraham" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Michael \"Styx\" Abraham is an Indonesian Coach who is currently working for Alter Ego as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Subway
+:Subway rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" ;
+        :hasAge 20 ;
+        :hasName "Wan Mohamad Danish Safwan Bin Mohd Sakirin" ;
+        :hasNationality "Malaysia" ;
+        :playerInfo "Wan \"Subway\" Sakirin (born March 2, 2005) is a Malaysian player who is currently playing as a Jungler for Untitled Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Suj
+:Suj rdf:type owl:NamedIndividual ;
+     :Roles "Gold" ;
+     :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SuperFrince
+:SuperFrince rdf:type owl:NamedIndividual ;
+             :Roles "Mid" ;
+             :hasAge 21 ;
+             :hasName "Frince Miguel Ramirez" ;
+             :hasNationality "Philippines" ;
+             :playerInfo "Frince \"Super Frince\" Ramirez (born November 22, 2003) is a Filipino player who is currently playing as a Mid Laner for ONIC Philippines." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SuperMarco
+:SuperMarco rdf:type owl:NamedIndividual ;
+            :Roles "Gold" ;
+            :hasAge 19 ;
+            :hasName "Marco Stephen Requitiano" ;
+            :hasNationality "Philippines" ;
+            :playerInfo "Marco \"Super Marco\" Requitiano (born October 6, 2006) is a Filipino player who is currently playing as a Gold Laner for Team Falcons PH." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SuperYoshi
+:SuperYoshi rdf:type owl:NamedIndividual ;
+            :Roles "Roamer" ;
+            :hasName "Czedrick Romero" ;
+            :hasNationality "Philippines" ;
+            :playerInfo "Czedrick \"Yoshinu\" Romero is a Filipino player who is currently playing as a Roamer for Omega Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sutsujin
+:Sutsujin rdf:type owl:NamedIndividual ;
+          :Roles "Jungler" ;
+          :hasAge 21 ;
+          :hasName "Arthur Christopher Sunarkho" ;
+          :hasNationality "Indonesia" ;
+          :playerInfo "Arthur \"Sutsujin\" Sunarkho (born June 1, 2004) is an Indonesian player who is currently playing as a Jungler for RRQ Hoshi." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Swaylow
+:Swaylow rdf:type owl:NamedIndividual ;
+         :Roles "Mid" ;
+         :hasName "Attanasius David Halomoan Silaloho" ;
+         :hasNationality "Indonesia" ;
+         :playerInfo "Attanasius \"SwayLow\" Sihaloho is an Indonesian player who is currently playing as a Mid Laner for EVOS." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TL_ID16
+:TL_ID16 rdf:type owl:NamedIndividual ,
+                  :MPL_ID16 ;
+         :hasPlayer :AeronnShikii ,
+                    :Aran ,
+                    :Faviannn ,
+                    :Firzaa ,
+                    :JOOOOO ,
+                    :Kabuki ,
+                    :Kyou ,
+                    :Widy ,
+                    :Yehezkiel ;
+         :hasStaff :Facehugger ,
+                   :SaintDeLucaz ;
+         :RankMPL 9 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TL_PH16
+:TL_PH16 rdf:type owl:NamedIndividual ,
+                  :MPL_PH16 ;
+         :hasPlayer :Jaypee ,
+                    :KarlTzy ,
+                    :Oheb ,
+                    :Perkz ,
+                    :Sanford ,
+                    :Sanji ;
+         :hasReached :MPLChamps ,
+                     :MPLFinals ,
+                     :MPLPlayoff ;
+         :hasStaff :ArSy ,
+                   :Tictac ;
+         :RankMPL 1 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TNCProTeam
+:TNCProTeam rdf:type owl:NamedIndividual ;
+            :hasPart :TNC_PH16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TNC_PH16
+:TNC_PH16 rdf:type owl:NamedIndividual ,
+                   :MPL_PH16 ;
+          :hasPlayer <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#3MarTzy> ,
+                     :Bennyqt ,
+                     :Ch4knu ,
+                     :LanceCy ,
+                     :Vinjaz ,
+                     :Zaida ;
+          :hasReached :MPLPlayoff ;
+          :hasStaff :E2MAX ,
+                    :Hito ;
+          :RankMPL 3 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Tazy
+:Tazy rdf:type owl:NamedIndividual ;
+      :Roles "Head Coach" ;
+      :hasName "Tasia Eda Lestari" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Tasia \"Tazy\" Lestari is an Indonesian Coach who is currently working for Aero Esports as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamFalcon
+:TeamFalcon rdf:type owl:NamedIndividual ;
+            :hasPart :Falcon_PH16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamFlash
+:TeamFlash rdf:type owl:NamedIndividual ;
+           :hasPart :Flash_SG10 ;
+           :RankMPL 2 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamLiquid
+:TeamLiquid rdf:type owl:NamedIndividual ;
+            :hasPart :TL_ID16 ,
+                     :TL_PH16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamRRQ
+:TeamRRQ rdf:type owl:NamedIndividual ;
+         :hasPart :RRQHoshi_ID16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamRey
+:TeamRey rdf:type owl:NamedIndividual ;
+         :hasPart :TeamRey_MY16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamRey_MY16
+:TeamRey_MY16 rdf:type owl:NamedIndividual ,
+                       :MPL_MY16 ;
+              :hasLeft :Trap ;
+              :hasPlayer :Caleb ,
+                         :Cjay ,
+                         :Der ,
+                         :Duskk ,
+                         :Error404 ,
+                         :Jowm ,
+                         :NovaXcobar ,
+                         :XinHan ,
+                         :Zakqt ,
+                         :Zayyy ;
+              :RankMPL 8 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamStallion
+:TeamStallion rdf:type owl:NamedIndividual ;
+              :hasPart :Stallion_SG10 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamVamos
+:TeamVamos rdf:type owl:NamedIndividual ;
+           :hasPart :TeamVamos .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamVamos_MY16
+:TeamVamos_MY16 rdf:type owl:NamedIndividual ,
+                         :MPL_MY16 ;
+                :hasPlayer :Chibi ,
+                           :Clawkun ,
+                           :Gojes ,
+                           :LILNUSH ,
+                           :Natco ,
+                           :Xorn ;
+                :hasStaff :PakAtan ,
+                          :Pakbet ;
+                :RankMPL "TBD" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamVitality
+:TeamVitality rdf:type owl:NamedIndividual ;
+              :hasPart :BTRByVitality_ID16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TheSit
+:TheSit rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" ;
+        :hasNationality "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Theo
+:Theo rdf:type owl:NamedIndividual ;
+      :Roles "Head Coach" ;
+      :hasName "John Theo Guinto Eusebio" ;
+      :hasNationality "Philippines" ;
+      :playerInfo "John \"Theo\" Eusebio is a Filipino Coach who is currently working for Untitled Esports as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Tictac
+:Tictac rdf:type owl:NamedIndividual ;
+        :Roles "Analyst" ;
+        :hasAge 45 ;
+        :hasName "Harold Francis Reyes" ;
+        :hasNationality "Philippines" ;
+        :playerInfo "Harold \"Tictac\" Reyes (born November 4, 1980) is a Filipino Coach who is currently working for Team Liquid PH as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Todak
+:Todak rdf:type owl:NamedIndividual ;
+       :hasPart :Todak_MY16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Todak_MY16
+:Todak_MY16 rdf:type owl:NamedIndividual ,
+                     :MPL_MY16 ;
+            :hasPlayer :DreamS ,
+                       :Fawndeer ,
+                       :Lolealz ,
+                       :Wanzyy ,
+                       :ZAIMSEMPOI ,
+                       :Zahyed ;
+            :hasStaff :DevKoch ,
+                      :Link ,
+                      :Nafari ;
+            :RankMPL 9 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Toyy
+:Toyy rdf:type owl:NamedIndividual ;
+      :Roles "Gold" ;
+      :hasAge 22 ;
+      :hasName "Muhammad Rizky" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Muhammad \"Toyy\" Rizky (born May 14, 2003) is an Indonesian player who is currently playing as a Gold Laner for RRQ Hoshi." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Trap
+:Trap rdf:type owl:NamedIndividual ;
+      :Roles "Gold" ;
+      :hasAge 22 ;
+      :hasName "Syed Naufal Fitry" ;
+      :hasNationality "Malaysia" ;
+      :playerInfo "Syed \"Trap\" Fitri (also known as SyF) (born December 14, 2002) is a Malaysian player who is currently playing as a Gold Laner for CG Esports on loan from Team Rey." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Trebor
+:Trebor rdf:type owl:NamedIndividual ;
+        :Roles "Head Coach" ;
+        :hasAge 31 ;
+        :hasName "Robert Alexis Sanchez" ;
+        :hasNationality "Philippines" ;
+        :playerInfo "Robert \"Trebor\" Sanchez (born May 19, 1994) is a Filipino Coach who is currently working for Team Falcons PH as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TwistedMinds
+:TwistedMinds rdf:type owl:NamedIndividual ;
+              :hasPart :TwistedMinds_PH16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TwistedMinds_PH16
+:TwistedMinds_PH16 rdf:type owl:NamedIndividual ,
+                            :MPL_PH16 ;
+                   :hasPlayer :Caloy ,
+                              :Lansu ,
+                              :MPtheKing ,
+                              :Nosia ,
+                              :Sensui ,
+                              :Sionnn ;
+                   :hasReached :MPLPlayoff ;
+                   :hasStaff :BONCHAN ,
+                             :ESON ;
+                   :RankMPL "5-6" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Tzu
+:Tzu rdf:type owl:NamedIndividual ;
+     :Roles "Exp" ;
+     :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/UK1R
+:UK1R rdf:type owl:NamedIndividual ;
+      :Roles "Mid" ;
+      :hasName "Jayson Alupit" ;
+      :hasNationality "Philippines" ;
+      :playerInfo "Jayson \"UK1R\" Alupit is a Filipino player who is currently playing as a Mid Laner for Natus Vincere." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Unii
+:Unii rdf:type owl:NamedIndividual ;
+      :Roles "Jungler" ;
+      :hasAge 19 ;
+      :hasName "Muhammad Danies Fitri Bin Razman" ;
+      :hasNationality "Malaysia" ;
+      :playerInfo "Muhammad Danish Fitri \"Unii\" Razman (born September 28, 2006) is a Malaysian player who is currently playing as a Jungler for Monster Vicious." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/UntitledEsports
+:UntitledEsports rdf:type owl:NamedIndividual ;
+                 :hasPart :Untitled_MY16 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Untitled_MY16
+:Untitled_MY16 rdf:type owl:NamedIndividual ,
+                        :MPL_MY16 ;
+               :hasPlayer :Keymin ,
+                          :Rasy ,
+                          :Sizkaa ,
+                          :SkyZED ,
+                          :Stowm ,
+                          :Subway ;
+               :hasStaff :Fiyy ,
+                         :Pozan ,
+                         :Theo ;
+               :RankMPL 7 .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/VYN
+:VYN rdf:type owl:NamedIndividual ;
+     :Roles "Head Coach" ;
+     :hasAge 25 ;
+     :hasName "Calvin" ;
+     :hasNationality "Indonesia" ;
+     :playerInfo "Calvin \"VYN\" (born September 3, 2000) is an Indonesian Coach and Roamer who is currently working for EVOS as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Valenz
+:Valenz rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" ;
+        :hasAge 21 ;
+        :hasName "Luk Jun Yip" ;
+        :hasNationality "Malaysia" ;
+        :playerInfo "Luk \"Valenz\" Yip (born February 2, 2004) is a Malaysian player who is currently playing as a Roamer for CG Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vanix
+:Vanix rdf:type owl:NamedIndividual ;
+       :Roles "Gold" ;
+       :hasName "Keith Lim Wei Jun" ;
+       :hasNationality "Singapore" ;
+       :playerInfo "Keith \"Vanix\" Lim is a Singaporean player who is currently playing as a Gold Laner for Team Flash." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vanz
+:Vanz rdf:type owl:NamedIndividual ;
+      :Roles "Jungler" ;
+      :hasName "Muhammad Ikhsan Farabi" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Muhammad \"Vanz\" Farabi is an Indonesian player who is currently playing as a Jungler for Dewa United Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vennn
+:Vennn rdf:type owl:NamedIndividual ;
+       :Roles "Gold" ;
+       :hasName "Reaven Ugdiman" ;
+       :hasNationality "Philippines" ;
+       :playerInfo "Reaven \"Venn\" Ugdiman is a Filipino player who is currently playing as a Gold Laner for Evil." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vinjaz
+:Vinjaz rdf:type owl:NamedIndividual ;
+        :Roles "Unknown" ;
+        :hasNationality "Philippines" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vivy
+:Vivy rdf:type owl:NamedIndividual ;
+      :Roles "Head Coach" ;
+      :hasName "Muhammad Vikrie Ramadhan" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Muhammad \"Vivy\" Ramadhan is an Indonesian Coach who is currently working for GamesMY Kelantan as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Wanzyy
+:Wanzyy rdf:type owl:NamedIndividual ;
+        :Roles "Gold" ;
+        :hasName "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Widy
+:Widy rdf:type owl:NamedIndividual ;
+      :Roles "Roamer" ;
+      :hasAge 19 ;
+      :hasName "Christian Widy Wardhana Hartono" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Christian \"Widy\" Hartono (born May 9, 2006) is an Indonesian player who is currently playing as a Roamer for Team Liquid ID." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Winter
+:Winter rdf:type owl:NamedIndividual ;
+        :Roles "Roamer" ;
+        :hasAge 25 ;
+        :hasName "Chun Chin Wee" ;
+        :hasNationality "Malaysia" ;
+        :playerInfo "Chun \"Winter\" Wee (born April 26, 2000) is a Malaysian player who is currently playing as a Roamer for SRG.OG." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Wongcoco
+:Wongcoco rdf:type owl:NamedIndividual ;
+          :playerOf :dewaunited_ID16 ;
+          :Roles "Analyst" ;
+          :hasName "Dian Agusta" ;
+          :hasNationality "Indonesia" ;
+          :playerInfo "Dian \"Wongcoco\" Agusta is an Indonesian Analyst who is currently working for Dewa United Heka as an Analyst." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Wurahhhh
+:Wurahhhh rdf:type owl:NamedIndividual ;
+          :Roles "Head Coach" ;
+          :hasName "Hans Solano" ;
+          :hasNationality "Philippines" ;
+          :playerInfo "Hans \"Wuraaaah\" Solano is a Filipino Coach who is currently working for Omega Esports as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Xepher
+:Xepher rdf:type owl:NamedIndividual ;
+        :Roles "Head Coach" ;
+        :hasAge 29 ;
+        :hasName "Kenny Deo" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "Kenny \"Xepher\" Deo (born June 27, 1996) is an Indonesian Coach who is currently working for Alter Ego as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/XinHan
+:XinHan rdf:type owl:NamedIndividual ;
+        :Roles "Strategic Coach" ;
+        :hasNationality "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Xorizo
+:Xorizo rdf:type owl:NamedIndividual ;
+        :Roles "Exp" ;
+        :hasAge 22 ;
+        :hasName "I Gusti Made Indra Dwipayana" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "I \"Xorizo\" Dwipayana (born March 30, 2003) is an Indonesian player who is currently playing as an EXP Laner for EVOS." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Xorn
+:Xorn rdf:type owl:NamedIndividual ;
+      :Roles "Roamer" ;
+      :hasAge 25 ;
+      :hasName "Mohammad Zul Hisham Bin Mohd Noor" ;
+      :hasNationality "Malaysia" ;
+      :playerInfo "Mohammad Zul Hisham \"Xorn\" Mohd Noor (born March 10, 2000) is a Malaysian player who is currently playing as a Roamer for Team Vamos." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Xyve
+:Xyve rdf:type owl:NamedIndividual ;
+      :Roles "Gold" ;
+      :hasAge 20 ;
+      :hasName "Michael Richi" ;
+      :hasNationality "Indonesia" ;
+      :playerInfo "Michael \"Xyve\" Richi (born August 28, 2005) is an Indonesian player who is currently playing as a Gold Laner for Natus Vincere." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yaawn
+:Yaawn rdf:type owl:NamedIndividual ;
+       :hasName "Chua Jun Xiang" ;
+       :hasNationality "Singapore" ;
+       :playerInfo "Chua \"yaawn\" Jun Xiang is a Singaporean player who is currently playing as a Jungler for RSG Singapore." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yazukee
+:Yazukee rdf:type owl:NamedIndividual ;
+         :Roles "Jungler" ;
+         :hasNationality "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ye3
+:Ye3 rdf:type owl:NamedIndividual ;
+     :Roles "Exp" ;
+     :hasAge 19 ;
+     :hasName "Muhammad Al-Amin Bin Zamri" ;
+     :hasNationality "Malaysia" ;
+     :playerInfo "Muhammad \"Ye3\" Zamri (born October 5, 2006) is a Malaysian player who is currently playing as an EXP Laner for CG Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yehezkiel
+:Yehezkiel rdf:type owl:NamedIndividual ;
+           :Roles "Mid" ;
+           :hasAge 20 ;
+           :hasName "Yehezkiel Wiseman Hamonangan Napitu" ;
+           :hasNationality "Indonesia" ;
+           :playerInfo "Yehezkiel \"Yehezkiel\" Napitu (also known as Syn) (born September 11, 2005) is an Indonesian player who is currently playing as a Mid Laner for Team Liquid ID." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/YnoT
+:YnoT rdf:type owl:NamedIndividual ;
+      :Roles "Head Coach" ;
+      :hasAge 37 ;
+      :hasName "Anthony Dennis Senedrin" ;
+      :hasNationality "Philippines" ;
+      :playerInfo "Anthony \"YnoT\" Senedrin (born August 8, 1988) is a Filipino Coach who is currently working for ONIC Philippines as a Coach." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yue
+:Yue rdf:type owl:NamedIndividual ;
+     :Roles "Mid" ;
+     :hasName "Kenneth Carl Tadeo" ;
+     :hasNationality "Philippines" ;
+     :playerInfo "Kenneth \"Yue\" Tadeo is a Filipino player who is currently playing as a Mid Laner for Aurora Gaming PH" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yums
+:Yums rdf:type owl:NamedIndividual ;
+      :Roles "Roamer" ;
+      :hasAge 20 ;
+      :hasName "Muhammad Qayyum Ariffin Bin Mohd Suhairi" ;
+      :hasNationality "Malaysia" ;
+      :playerInfo "Muhammad \"Yums\" Suhairi (born December 9, 2004) is a Malaysian player who is currently playing as a Roamer for SRG.OG." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yuta
+:Yuta rdf:type owl:NamedIndividual ;
+      :Roles "Exp" ;
+      :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/ZAIMSEMPOI
+:ZAIMSEMPOI rdf:type owl:NamedIndividual ;
+            :Roles "Mid" ;
+            :hasAge 22 ;
+            :hasName "Muhammad Zaim Bin Amir Izat" ;
+            :hasNationality "Malaysia" ;
+            :playerInfo "Muhammad \"ZAIMSEMPOI\" Izat (born December 3, 2002) is a Malaysian player who is currently playing as a Mid Laner for TODAK." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/ZacScofield
+:ZacScofield rdf:type owl:NamedIndividual ;
+             :Roles "Jungler" ;
+             :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zahyed
+:Zahyed rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" ;
+        :hasAge 21 ;
+        :hasName "Muhammad Zaed Hakimi bin Zaharan" ;
+        :hasNationality "Malaysia" ;
+        :playerInfo "Muhammad \"Zaed\" Zaharan (born October 7, 2004) is a Malaysian player who is currently playing as a Jungler for TODAK." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zaida
+:Zaida rdf:type owl:NamedIndividual ;
+       :Roles "Jungler" ;
+       :hasAge 20 ;
+       :hasName "Justine Sadia Palma" ;
+       :hasNationality "Philippines" ;
+       :playerInfo "Justine \"Zaida\" Palma (born July 25, 2005) is a Filipino player who is currently playing as a Jungler for TNC Pro Team." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zakqt
+:Zakqt rdf:type owl:NamedIndividual ;
+       :Roles "Mid" ;
+       :hasAge 22 ;
+       :hasName "Muhammad Amir Zakwan Bin Mohamad Noor" ;
+       :hasNationality "Malaysia" ;
+       :playerInfo "Muhammad \"Zakqt\" Noor (born September 18, 2003) is a Malaysian player who is currently playing as a Mid Laner for Team Rey." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zayyy
+:Zayyy rdf:type owl:NamedIndividual ;
+       :Roles "Mid" ;
+       :hasNationality "Malaysia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zeltron
+:Zeltron rdf:type owl:NamedIndividual ;
+         :Roles "Gold" ;
+         :hasNationality "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zippyyqt
+:Zippyyqt rdf:type owl:NamedIndividual ;
+          :RankMPL "Gold" ;
+          :hasAge 20 ;
+          :hasName "ကျော်ဇင်ဗိုလ်" ;
+          :hasNationality "Myanmar" ;
+          :playerInfo "Kyaw \"Zippx\" Zin Bo (born November 26, 2004) is a Burmese player who last played for HomeBois." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zqeef
+:Zqeef rdf:type owl:NamedIndividual ;
+       :Roles "Roamer" ;
+       :hasAge 20 ;
+       :hasName "Muhammad Aqif Haiqal Bin Azman" ;
+       :hasNationality "Malaysia" ;
+       :playerInfo "Muhammad \"Zqeef\" Azman (born April 29, 2005) is a Malaysian player who is currently playing as a Roamer for Aero Esports." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zunesh
+:Zunesh rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" ;
+        :hasNationality "Indonesia" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/alekk
+:alekk rdf:type owl:NamedIndividual ;
+       :playerOf :AE_ID16 ;
+       :Roles "Roamer" ;
+       :alternateIds "owennn" ;
+       :hasName "Alexander Owen" ;
+       :hasNationality "Indonesia" ;
+       :playerInfo "Alexander \"Owennn\" Owen (born September 20, 2004) is an Indonesian player who is currently playing as a Roamer for Alter Ego." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/dewaunited_ID16
+:dewaunited_ID16 rdf:type owl:NamedIndividual ;
+                 :hasPlayer :Markk ,
+                            :Maybeee ,
+                            :Muezza ,
+                            :Octa ,
+                            :QINN ,
+                            :Reyy ,
+                            :Vanz ;
+                 :hasStaff :Right .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/jamespangks
+:jamespangks rdf:type owl:NamedIndividual ;
+             :Roles "Jungler" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/ly4ly4ly4
+:ly4ly4ly4 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/reggina
+:reggina rdf:type owl:NamedIndividual ;
+         :Roles "Mid" ;
+         :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/suskeee
+:suskeee rdf:type owl:NamedIndividual ;
+         :Roles "Mid" ;
+         :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/v3ndetta
+:v3ndetta rdf:type owl:NamedIndividual ;
+          :Roles "Exp" ;
+          :hasNationality "Singapore" .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/woshipaul
+:woshipaul rdf:type owl:NamedIndividual ;
+           :Roles "Jungler" ;
+           :hasAge 20 ;
+           :hasName "Muhammad Rakhaa Sastradinata" ;
+           :hasNationality "Indonesia" ;
+           :playerInfo "Muhammad \"woshipaul\" Sastradinata (born October 13, 2005) is an Indonesian player who is currently playing as a Jungler for Natus Vincere." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/xMagic
+:xMagic rdf:type owl:NamedIndividual ;
+        :Roles "Mid" ;
+        :hasName "Muhammad Andika Ramadhan" ;
+        :hasNationality "Indonesia" ;
+        :playerInfo "Muhammad \"xMagic\" Ramadhan is an Indonesian player who is currently playing as a Mid Laner for Natus Vincere." .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/xNova
+:xNova rdf:type owl:NamedIndividual ;
+       :Roles "Roamer" ;
+       :hasName "Denniel Denison Gomez" ;
+       :hasNationality "Philipine" ;
+       :playerInfo "Denniel \"xNova\" Gomez is a Filipino player who is currently playing as a Roamer for AP.Bren." .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
