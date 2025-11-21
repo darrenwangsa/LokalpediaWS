@@ -109,6 +109,9 @@ ul, ol {
   color: #FFF;
 }
 
+.hero-text{
+  text-align: center;
+}
 /*----------------------------*\
 	Inputs
 \*----------------------------*/
@@ -455,6 +458,8 @@ textarea.input {
 
 .header-logo .logo img {
   display: block;
+  object-fit: cover;
+  width: 70%;
 }
 
 /*----------------------------*\
