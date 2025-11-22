@@ -383,7 +383,7 @@
          :hasStaff :Styx ,
                    :Xepher ;
          :hasName "Alter Ego" ;
-         :RankInter 2 ;
+         :RankMPL 2 ;
          :teamName "Alter Ego" .
 
 
