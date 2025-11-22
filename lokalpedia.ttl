@@ -111,20 +111,6 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#hasFoto
-:hasFoto rdf:type owl:DatatypeProperty .
-
-
-###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#hasName
-:hasName rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf :TeamSeason .
-
-
-###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#teamName
-:teamName rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf :TeamSeason .
-
-
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL
 :MPL rdf:type owl:DatatypeProperty ;
      rdfs:subPropertyOf :Trophy ;
@@ -182,9 +168,14 @@
         rdfs:subPropertyOf :Person .
 
 
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasFoto
+:hasFoto rdf:type owl:DatatypeProperty .
+
+
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasName
 :hasName rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf :Person .
+         rdfs:subPropertyOf :Person ,
+                            :TeamSeason .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasNationality
@@ -195,6 +186,11 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/playerInfo
 :playerInfo rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :Person .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/teamName
+:teamName rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :TeamSeason .
 
 
 #################################################################
@@ -382,9 +378,9 @@
                      :MPLPlayoff ;
          :hasStaff :Styx ,
                    :Xepher ;
+         :RankInter 2 ;
          :hasName "Alter Ego" ;
-         :teamName "Alter Ego" ;
-         :RankInter 2 .
+         :teamName "Alter Ego" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/APBren
@@ -403,9 +399,9 @@
                         :xNova ;
              :hasStaff :Cons ,
                        :Jeff ;
+             :RankMPL 8 ;
              :hasName "AP Bren" ;
-             :teamName "AP.Bren" ;
-             :RankMPL 8 .
+             :teamName "AP.Bren" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/APHRO
@@ -432,9 +428,9 @@
                               :reggina ,
                               :v3ndetta ;
                    :hasReached :MPLPlayoff ;
+                   :RankMPL "5-6" ;
                    :hasName "Absolute Zero" ;
-                   :teamName "Absolute Zero" ;
-                   :RankMPL "5-6" .
+                   :teamName "Absolute Zero" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aceng
@@ -484,9 +480,9 @@
            :hasStaff :JIFDEGaming ,
                      :Panda ,
                      :Tazy ;
+           :RankMPL "5-6" ;
            :hasName "Aero Esports" ;
-           :teamName "Aero Esports" ;
-           :RankMPL "5-6" .
+           :teamName "Aero Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/AeronnShikii
@@ -639,9 +635,9 @@
              :hasStaff :Calad ,
                        :DexStar ,
                        :MasterTheBasics ;
+             :RankMPL 2 ;
              :hasName "Aurora Gaming" ;
-             :teamName "Aurora Gaming" ;
-             :RankMPL 2 .
+             :teamName "Aurora Gaming" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/BONCHAN
@@ -671,12 +667,13 @@
                     :hasStaff :Bam ,
                               :Barbossa ,
                               :Erpang ;
+                    :RankMPL 4 ;
+                    :hasFoto "https://cdn.id-mpl.com/season16/Logo/btr_vit.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T051817Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=87621145bc3767116323095ce58a2320c843af3f487a4b0c8e5beaaf1fc49e4e" ;
                     :hasName "BTR" ,
                              "BTR By Vitality" ,
                              "Bigetron" ,
                              "Vitality" ;
-                    :teamName "BTR By Vitality" ;
-                    :RankMPL 4 .
+                    :teamName "BTR By Vitality" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Backdoor
@@ -824,9 +821,9 @@
          :hasStaff :Cody ,
                    :Mariah ,
                    :Rainn ;
+         :RankMPL 2 ;
          :hasName "CG Esports" ;
-         :teamName "CG Esports" ;
-         :RankMPL 2 .
+         :teamName "CG Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CW
@@ -981,10 +978,10 @@
          :hasReached :MPLPlayoff ;
          :hasStaff :Right ,
                    :Wongcoco ;
+         :RankMPL "5-6" ;
          :hasName "DU" ,
                   "Dewa United" ;
-         :teamName "Dewa United Esports" ;
-         :RankMPL "5-6" .
+         :teamName "Dewa United Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Dale
@@ -1125,6 +1122,7 @@
 :EMANN rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 20 ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/btr/EMANN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T083404Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=60558c24cfaa26dac024790e8b84c9def69e0a9bccd700db2f48ef04c6bc5ad4" ;
        :hasName "Eman Sangco" ;
        :hasNationality "Philippines" ;
        :playerInfo "Eman \"EMANN\" Sangco (born May 25, 2005) is a Filipino player who is currently playing as a Gold Laner for Bigetron by Vitality." .
@@ -1153,9 +1151,9 @@
            :hasReached :MPLPlayoff ;
            :hasStaff :Bravo ,
                      :VYN ;
+           :RankMPL 3 ;
            :hasName "Evos Esports" ;
-           :teamName "EVOS" ;
-           :RankMPL 3 .
+           :teamName "EVOS" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Edward
@@ -1220,9 +1218,9 @@
            :hasReached :MPLChamps ,
                        :MPLFinals ,
                        :MPLPlayoff ;
+           :RankMPL 1 ;
            :hasName "Evil" ;
-           :teamName "Evil" ;
-           :RankMPL 1 .
+           :teamName "Evil" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/EvosEsports
@@ -1260,9 +1258,9 @@
              :hasReached :MPLPlayoff ;
              :hasStaff :CoachMoody ,
                        :Trebor ;
+             :RankMPL "5-6" ;
              :hasName "Team Falcons" ;
-             :teamName "Team Falcons PH" ;
-             :RankMPL "5-6" .
+             :teamName "Team Falcons PH" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Fateqt
@@ -1348,9 +1346,9 @@
             :hasReached :MPLFinals ,
                         :MPLPlayoff ;
             :hasStaff :Adammir ;
+            :RankMPL 2 ;
             :hasName "Team Flash" ;
-            :teamName "Team Flash" ;
-            :RankMPL 2 .
+            :teamName "Team Flash" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Fmm
@@ -1378,9 +1376,9 @@
                          :TheSit ;
               :hasStaff :Backdoor ,
                         :Vivy ;
+              :RankMPL 10 ;
               :hasName "GamesMY Kelantan" ;
-              :teamName "GamesMY Kelantan" ;
-              :RankMPL 10 .
+              :teamName "GamesMY Kelantan" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Garyy
@@ -1417,9 +1415,9 @@
                          :Zeltron ;
               :hasStaff :Bluffzy ,
                         :Dora ;
+              :RankMPL 8 ;
               :hasName "Geek Fam ID" ;
-              :teamName "Geek Fam" ;
-              :RankMPL 8 .
+              :teamName "Geek Fam" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Gobs
@@ -1531,9 +1529,9 @@
                :hasStaff :Dale ,
                          :Jes ,
                          :Naaz ;
+               :RankMPL "5-6" ;
                :hasName "Homebois" ;
-               :teamName "Homebois" ;
-               :RankMPL "5-6" .
+               :teamName "Homebois" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/IGNITEGaming
@@ -1569,9 +1567,9 @@
              :hasReached :MPLPlayoff ;
              :hasStaff :Cryptic ,
                        :ly4ly4ly4 ;
+             :RankMPL "5-6" ;
              :hasName "IGNITE Gaming" ;
-             :teamName "IGNITE Gaming" ;
-             :RankMPL "5-6" .
+             :teamName "IGNITE Gaming" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Immqt
@@ -1835,9 +1833,9 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
               :hasStaff :Apex ,
                         :Icyfrost ,
                         :Sammy ;
+              :RankMPL 3 ;
               :hasName "Kingdom Esports" ;
-              :teamName "Kingdom Esports" ;
-              :RankMPL 3 .
+              :teamName "Kingdom Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kirk
@@ -2145,9 +2143,9 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                      :hasStaff :Dex ,
                                :Kenji ,
                                :SoraPayung ;
+                     :Roles 3 ;
                      :hasName "Monster Vicious" ;
-                     :teamName "Homebois" ;
-                     :Roles 3 .
+                     :teamName "Homebois" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Moreno
@@ -2191,9 +2189,9 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasReached :MPLPlayoff ;
            :hasStaff :Aldo ,
                      :Jacklee ;
+           :RankMPL "5-6" ;
            :hasName "Natus Vincere" ;
-           :teamName "Natus Vincere" ;
-           :RankMPL "5-6" .
+           :teamName "Natus Vincere" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/NMM
@@ -2332,9 +2330,9 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
             :hasStaff :Lembot ,
                       :SN4P ,
                       :Wurahhhh ;
+            :RankMPL 7 ;
             :hasName "Omega Esports" ;
-            :teamName "Omega Esports" ;
-            :RankMPL 7 .
+            :teamName "Omega Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/OnicEsport
@@ -2359,9 +2357,9 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasStaff :Adi ,
                      :CW ,
                      :Paddington ;
+           :RankMPL 1 ;
            :hasName "Onic Esports ID" ;
-           :teamName "ONIC ID" ;
-           :RankMPL 1 .
+           :teamName "ONIC ID" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Onic_PH16
@@ -2377,9 +2375,9 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasReached :MPLPlayoff ;
            :hasStaff :Haze ,
                      :YnoT ;
+           :RankMPL 4 ;
            :hasName "Onic Esports PH" ;
-           :teamName "Onic Esports PH" ;
-           :RankMPL 4 .
+           :teamName "Onic Esports PH" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Owgwen
@@ -2492,11 +2490,11 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                :hasStaff :Khezcute ,
                          :NMM ,
                          :Rave ;
+               :RankMPL 7 ;
                :hasName "RRQ Hoshi" ,
                         "Rex Regum Qeon" ,
                         "Team RRQ" ;
-               :teamName "RRQ Hoshi" ;
-               :RankMPL 7 .
+               :teamName "RRQ Hoshi" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rainn
@@ -2681,10 +2679,10 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                         :MPLPlayoff ;
             :hasStaff :Arcadia ,
                       :OzoraVeki ;
+            :RankMPL 1 ;
             :hasName "SRGOG" ,
                      "Selangor Red Giant OG" ;
-            :teamName "SRGOG" ;
-            :RankMPL 1 .
+            :teamName "SRGOG" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Saiful
@@ -2889,9 +2887,9 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                :hasStaff :Amoux ,
                          :Eshaa ,
                          :Saiful ;
+               :RankMPL 4 ;
                :hasName "Team Stallion SG" ;
-               :teamName "Team Stallion" ;
-               :RankMPL 4 .
+               :teamName "Team Stallion" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Stormie
@@ -2992,10 +2990,10 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                     :Yehezkiel ;
          :hasStaff :Facehugger ,
                    :SaintDeLucaz ;
+         :RankMPL 9 ;
          :hasName "TLID" ,
                   "Team Liquid ID" ;
-         :teamName "Team Liquid ID" ;
-         :RankMPL 9 .
+         :teamName "Team Liquid ID" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TL_PH16
@@ -3013,10 +3011,10 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                      :MPLPlayoff ;
          :hasStaff :ArSy ,
                    :Tictac ;
+         :RankMPL 1 ;
          :hasName "TLPH" ,
                   "Team Liquid PH" ;
-         :teamName "Team Liquid PH" ;
-         :RankMPL 1 .
+         :teamName "Team Liquid PH" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TNCProTeam
@@ -3036,9 +3034,9 @@ Sanji is the third player to win M World Championship in his debut season. (the 
           :hasReached :MPLPlayoff ;
           :hasStaff :E2MAX ,
                     :Hito ;
+          :RankMPL 3 ;
           :hasName "TNC Pro Team" ;
-          :teamName "TNC Pro Team" ;
-          :RankMPL 3 .
+          :teamName "TNC Pro Team" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Tazy
@@ -3090,9 +3088,9 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                          :XinHan ,
                          :Zakqt ,
                          :Zayyy ;
+              :RankMPL 8 ;
               :hasName "Team Rey" ;
-              :teamName "Team Rey" ;
-              :RankMPL 8 .
+              :teamName "Team Rey" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamStallion
@@ -3117,9 +3115,9 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                 :hasReached :MPLPlayoff ;
                 :hasStaff :PakAtan ,
                           :Pakbet ;
+                :RankMPL 4 ;
                 :hasName "Team Vamos" ;
-                :teamName "Team Vamos" ;
-                :RankMPL 4 .
+                :teamName "Team Vamos" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamVitality
@@ -3167,9 +3165,9 @@ Sanji is the third player to win M World Championship in his debut season. (the 
             :hasStaff :DevKoch ,
                       :Link ,
                       :Nafari ;
+            :RankMPL 9 ;
             :hasName "Todak" ;
-            :teamName "Todak" ;
-            :RankMPL 9 .
+            :teamName "Todak" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Toyy
@@ -3216,9 +3214,9 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                    :hasReached :MPLPlayoff ;
                    :hasStaff :BONCHAN ,
                              :ESON ;
+                   :RankMPL "5-6" ;
                    :hasName "Twisted Minds PH" ;
-                   :teamName "Twisted Minds PH" ;
-                   :RankMPL "5-6" .
+                   :teamName "Twisted Minds PH" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Tzu
@@ -3261,9 +3259,9 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                :hasStaff :Fiyy ,
                          :Pozan ,
                          :Theo ;
+               :RankMPL 7 ;
                :hasName "Untitled Esports" ;
-               :teamName "Untitled Esports" ;
-               :RankMPL 7 .
+               :teamName "Untitled Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/VYN
