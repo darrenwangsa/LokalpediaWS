@@ -111,6 +111,20 @@
 #    Data properties
 #################################################################
 
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#hasFoto
+:hasFoto rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :TeamSeason .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#teamName
+:teamName rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :TeamSeason .
+
+
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL
 :MPL rdf:type owl:DatatypeProperty ;
      rdfs:subPropertyOf :Trophy ;
@@ -368,6 +382,8 @@
                      :MPLPlayoff ;
          :hasStaff :Styx ,
                    :Xepher ;
+         :hasName "Alter Ego" ;
+         :teamName "Alter Ego" ;
          :RankInter 2 .
 
 
@@ -387,6 +403,8 @@
                         :xNova ;
              :hasStaff :Cons ,
                        :Jeff ;
+             :hasName "AP Bren" ;
+             :teamName "AP.Bren" ;
              :RankMPL 8 .
 
 
@@ -414,6 +432,8 @@
                               :reggina ,
                               :v3ndetta ;
                    :hasReached :MPLPlayoff ;
+                   :hasName "Absolute Zero" ;
+                   :teamName "Absolute Zero" ;
                    :RankMPL "5-6" .
 
 
@@ -447,7 +467,8 @@
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/AeroEsports
 :AeroEsports rdf:type owl:NamedIndividual ;
-             :hasPart :Aero_MY16 .
+             :hasPart :Aero_MY16 ;
+             :hasName "Aero Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aero_MY16
@@ -463,6 +484,8 @@
            :hasStaff :JIFDEGaming ,
                      :Panda ,
                      :Tazy ;
+           :hasName "Aero Esports" ;
+           :teamName "Aero Esports" ;
            :RankMPL "5-6" .
 
 
@@ -616,6 +639,8 @@
              :hasStaff :Calad ,
                        :DexStar ,
                        :MasterTheBasics ;
+             :hasName "Aurora Gaming" ;
+             :teamName "Aurora Gaming" ;
              :RankMPL 2 .
 
 
@@ -645,7 +670,13 @@
                     :hasReached :MPLPlayoff ;
                     :hasStaff :Bam ,
                               :Barbossa ,
-                              :Erpang .
+                              :Erpang ;
+                    :hasName "BTR" ,
+                             "BTR By Vitality" ,
+                             "Bigetron" ,
+                             "Vitality" ;
+                    :teamName "BTR By Vitality" ;
+                    :RankMPL 4 .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Backdoor
@@ -772,7 +803,8 @@
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CGEsports
 :CGEsports rdf:type owl:NamedIndividual ;
-           :hasPart :CG_MY16 .
+           :hasPart :CG_MY16 ;
+           :hasName "CG Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CG_MY16
@@ -792,7 +824,9 @@
          :hasStaff :Cody ,
                    :Mariah ,
                    :Rainn ;
-         :RankMPL "TBD" .
+         :hasName "CG Esports" ;
+         :teamName "CG Esports" ;
+         :RankMPL 2 .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CW
@@ -947,6 +981,9 @@
          :hasReached :MPLPlayoff ;
          :hasStaff :Right ,
                    :Wongcoco ;
+         :hasName "DU" ,
+                  "Dewa United" ;
+         :teamName "Dewa United Esports" ;
          :RankMPL "5-6" .
 
 
@@ -1116,6 +1153,8 @@
            :hasReached :MPLPlayoff ;
            :hasStaff :Bravo ,
                      :VYN ;
+           :hasName "Evos Esports" ;
+           :teamName "EVOS" ;
            :RankMPL 3 .
 
 
@@ -1181,6 +1220,8 @@
            :hasReached :MPLChamps ,
                        :MPLFinals ,
                        :MPLPlayoff ;
+           :hasName "Evil" ;
+           :teamName "Evil" ;
            :RankMPL 1 .
 
 
@@ -1219,11 +1260,15 @@
              :hasReached :MPLPlayoff ;
              :hasStaff :CoachMoody ,
                        :Trebor ;
+             :hasName "Team Falcons" ;
+             :teamName "Team Falcons PH" ;
              :RankMPL "5-6" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Fateqt
-:Fateqt rdf:type owl:NamedIndividual .
+:Fateqt rdf:type owl:NamedIndividual ;
+        :Roles "Jungler" ;
+        :hasNationality "Singapore" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Faviannn
@@ -1303,6 +1348,8 @@
             :hasReached :MPLFinals ,
                         :MPLPlayoff ;
             :hasStaff :Adammir ;
+            :hasName "Team Flash" ;
+            :teamName "Team Flash" ;
             :RankMPL 2 .
 
 
@@ -1331,6 +1378,8 @@
                          :TheSit ;
               :hasStaff :Backdoor ,
                         :Vivy ;
+              :hasName "GamesMY Kelantan" ;
+              :teamName "GamesMY Kelantan" ;
               :RankMPL 10 .
 
 
@@ -1368,6 +1417,8 @@
                          :Zeltron ;
               :hasStaff :Bluffzy ,
                         :Dora ;
+              :hasName "Geek Fam ID" ;
+              :teamName "Geek Fam" ;
               :RankMPL 8 .
 
 
@@ -1480,6 +1531,8 @@
                :hasStaff :Dale ,
                          :Jes ,
                          :Naaz ;
+               :hasName "Homebois" ;
+               :teamName "Homebois" ;
                :RankMPL "5-6" .
 
 
@@ -1516,6 +1569,8 @@
              :hasReached :MPLPlayoff ;
              :hasStaff :Cryptic ,
                        :ly4ly4ly4 ;
+             :hasName "IGNITE Gaming" ;
+             :teamName "IGNITE Gaming" ;
              :RankMPL "5-6" .
 
 
@@ -1780,6 +1835,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
               :hasStaff :Apex ,
                         :Icyfrost ,
                         :Sammy ;
+              :hasName "Kingdom Esports" ;
+              :teamName "Kingdom Esports" ;
               :RankMPL 3 .
 
 
@@ -2088,7 +2145,9 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                      :hasStaff :Dex ,
                                :Kenji ,
                                :SoraPayung ;
-                     :Roles "TBD" .
+                     :hasName "Monster Vicious" ;
+                     :teamName "Homebois" ;
+                     :Roles 3 .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Moreno
@@ -2132,6 +2191,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasReached :MPLPlayoff ;
            :hasStaff :Aldo ,
                      :Jacklee ;
+           :hasName "Natus Vincere" ;
+           :teamName "Natus Vincere" ;
            :RankMPL "5-6" .
 
 
@@ -2271,6 +2332,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
             :hasStaff :Lembot ,
                       :SN4P ,
                       :Wurahhhh ;
+            :hasName "Omega Esports" ;
+            :teamName "Omega Esports" ;
             :RankMPL 7 .
 
 
@@ -2296,6 +2359,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasStaff :Adi ,
                      :CW ,
                      :Paddington ;
+           :hasName "Onic Esports ID" ;
+           :teamName "ONIC ID" ;
            :RankMPL 1 .
 
 
@@ -2312,6 +2377,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasReached :MPLPlayoff ;
            :hasStaff :Haze ,
                      :YnoT ;
+           :hasName "Onic Esports PH" ;
+           :teamName "Onic Esports PH" ;
            :RankMPL 4 .
 
 
@@ -2425,6 +2492,10 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                :hasStaff :Khezcute ,
                          :NMM ,
                          :Rave ;
+               :hasName "RRQ Hoshi" ,
+                        "Rex Regum Qeon" ,
+                        "Team RRQ" ;
+               :teamName "RRQ Hoshi" ;
                :RankMPL 7 .
 
 
@@ -2610,7 +2681,10 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                         :MPLPlayoff ;
             :hasStaff :Arcadia ,
                       :OzoraVeki ;
-            :RankMPL "TBD" .
+            :hasName "SRGOG" ,
+                     "Selangor Red Giant OG" ;
+            :teamName "SRGOG" ;
+            :RankMPL 1 .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Saiful
@@ -2815,6 +2889,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                :hasStaff :Amoux ,
                          :Eshaa ,
                          :Saiful ;
+               :hasName "Team Stallion SG" ;
+               :teamName "Team Stallion" ;
                :RankMPL 4 .
 
 
@@ -2916,6 +2992,9 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                     :Yehezkiel ;
          :hasStaff :Facehugger ,
                    :SaintDeLucaz ;
+         :hasName "TLID" ,
+                  "Team Liquid ID" ;
+         :teamName "Team Liquid ID" ;
          :RankMPL 9 .
 
 
@@ -2934,6 +3013,9 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                      :MPLPlayoff ;
          :hasStaff :ArSy ,
                    :Tictac ;
+         :hasName "TLPH" ,
+                  "Team Liquid PH" ;
+         :teamName "Team Liquid PH" ;
          :RankMPL 1 .
 
 
@@ -2954,6 +3036,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
           :hasReached :MPLPlayoff ;
           :hasStaff :E2MAX ,
                     :Hito ;
+          :hasName "TNC Pro Team" ;
+          :teamName "TNC Pro Team" ;
           :RankMPL 3 .
 
 
@@ -3006,6 +3090,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                          :XinHan ,
                          :Zakqt ,
                          :Zayyy ;
+              :hasName "Team Rey" ;
+              :teamName "Team Rey" ;
               :RankMPL 8 .
 
 
@@ -3031,7 +3117,9 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                 :hasReached :MPLPlayoff ;
                 :hasStaff :PakAtan ,
                           :Pakbet ;
-                :RankMPL "TBD" .
+                :hasName "Team Vamos" ;
+                :teamName "Team Vamos" ;
+                :RankMPL 4 .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TeamVitality
@@ -3079,6 +3167,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
             :hasStaff :DevKoch ,
                       :Link ,
                       :Nafari ;
+            :hasName "Todak" ;
+            :teamName "Todak" ;
             :RankMPL 9 .
 
 
@@ -3126,6 +3216,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                    :hasReached :MPLPlayoff ;
                    :hasStaff :BONCHAN ,
                              :ESON ;
+                   :hasName "Twisted Minds PH" ;
+                   :teamName "Twisted Minds PH" ;
                    :RankMPL "5-6" .
 
 
@@ -3169,6 +3261,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                :hasStaff :Fiyy ,
                          :Pozan ,
                          :Theo ;
+               :hasName "Untitled Esports" ;
+               :teamName "Untitled Esports" ;
                :RankMPL 7 .
 
 
@@ -3254,7 +3348,6 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Wongcoco
 :Wongcoco rdf:type owl:NamedIndividual ;
-          :playerOf :dewaunited_ID16 ;
           :Roles "Analyst" ;
           :hasName "Dian Agusta" ;
           :hasNationality "Indonesia" ;
@@ -3460,18 +3553,6 @@ Sanji is the third player to win M World Championship in his debut season. (the 
        :hasName "Alexander Owen" ;
        :hasNationality "Indonesia" ;
        :playerInfo "Alexander \"Owennn\" Owen (born September 20, 2004) is an Indonesian player who is currently playing as a Roamer for Alter Ego." .
-
-
-###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/dewaunited_ID16
-:dewaunited_ID16 rdf:type owl:NamedIndividual ;
-                 :hasPlayer :Markk ,
-                            :Maybeee ,
-                            :Muezza ,
-                            :Octa ,
-                            :QINN ,
-                            :Reyy ,
-                            :Vanz ;
-                 :hasStaff :Right .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/jamespangks
