@@ -111,6 +111,11 @@
 #    Data properties
 #################################################################
 
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :TeamSeason .
+
+
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPL
 :MPL rdf:type owl:DatatypeProperty ;
      rdfs:subPropertyOf :Trophy ;
@@ -172,15 +177,14 @@
 :hasFoto rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasName
-:hasName rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf :Person ,
-                            :TeamSeason .
-
-
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasNationality
 :hasNationality rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :Person .
+
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/hasRealName
+:hasRealName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :Person .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/playerInfo
@@ -347,8 +351,8 @@
                                                                                   :playerOf :TNC_PH16 ;
                                                                                   :Roles "Exp" ;
                                                                                   :hasAge 21 ;
-                                                                                  :hasName "Fredimar Serafico" ;
                                                                                   :hasNationality "Philippines" ;
+                                                                                  :hasRealName "Fredimar Serafico" ;
                                                                                   :playerInfo "Frediemar \"3MarTzy\" Serafico (born April 30, 2004) is a Filipino player who is currently playing as an EXP Laner for TNC Pro Team." .
 
 
@@ -357,8 +361,8 @@
       :playerOf :GeekFam_ID16 ;
       :Roles "Mid" ;
       :hasAge 21 ;
-      :hasName "Valent Agriansyah Putra" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Valent Agriansyah Putra" ;
       :playerInfo "Valent \"A B O Y\" Putra (born August 6, 2004) is an Indonesian player who is currently playing as a Mid Laner for Geek Fam ID." .
 
 
@@ -378,8 +382,8 @@
                      :MPLPlayoff ;
          :hasStaff :Styx ,
                    :Xepher ;
-         :RankInter 2 ;
          :hasName "Alter Ego" ;
+         :RankInter 2 ;
          :teamName "Alter Ego" .
 
 
@@ -399,8 +403,8 @@
                         :xNova ;
              :hasStaff :Cons ,
                        :Jeff ;
-             :RankMPL 8 ;
              :hasName "AP Bren" ;
+             :RankMPL 8 ;
              :teamName "AP.Bren" .
 
 
@@ -428,8 +432,8 @@
                               :reggina ,
                               :v3ndetta ;
                    :hasReached :MPLPlayoff ;
-                   :RankMPL "5-6" ;
                    :hasName "Absolute Zero" ;
+                   :RankMPL "5-6" ;
                    :teamName "Absolute Zero" .
 
 
@@ -437,17 +441,17 @@
 :Aceng rdf:type owl:NamedIndividual ;
        :Roles "Analyst" ;
        :hasAge "Unknown" ;
-       :hasName "Dian Agusta" ;
        :hasNationality "Dian \"Aceng/Wongcoco\" Agusta is an Indonesian Analyst who is currently working for Dewa United Heka as an Analyst." ,
-                       "Indonesia" .
+                       "Indonesia" ;
+       :hasRealName "Dian Agusta" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Adammir
 :Adammir rdf:type owl:NamedIndividual ;
          :Roles "Head Coach" ;
          :hasAge 25 ;
-         :hasName "Adam Chong Jin Ee" ;
          :hasNationality "Singapore" ;
+         :hasRealName "Adam Chong Jin Ee" ;
          :playerInfo "Chong \"Adammir\" Adam (born November 18, 1999) is a Singaporean player who is currently playing as an EXP Laner for Team Flash." .
 
 
@@ -456,15 +460,15 @@
      :staffOf :Onic_ID16 ;
      :Roles "Head Coach" ;
      :hasAge 33 ;
-     :hasName "Adi Asyauri" ;
      :hasNationality "Indonesia" ;
+     :hasRealName "Adi Asyauri" ;
      :playerInfo "Adi \"Adi\" Asyauri (also known as Acil) (born September 4, 1992) is an Indonesian Coach who is currently working for ONIC as a Coach. He is a former Dota 2 player." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/AeroEsports
 :AeroEsports rdf:type owl:NamedIndividual ;
              :hasPart :Aero_MY16 ;
-             :hasName "Aero Esports" .
+             :hasRealName "Aero Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Aero_MY16
@@ -480,8 +484,8 @@
            :hasStaff :JIFDEGaming ,
                      :Panda ,
                      :Tazy ;
-           :RankMPL "5-6" ;
            :hasName "Aero Esports" ;
+           :RankMPL "5-6" ;
            :teamName "Aero Esports" .
 
 
@@ -490,8 +494,8 @@
               :playerOf :TL_ID16 ;
               :Roles "Gold" ;
               :hasAge 20 ;
-              :hasName "Sultan Muhammad" ;
               :hasNationality "Indonesia" ;
+              :hasRealName "Sultan Muhammad" ;
               :playerInfo "Sultan \"AeronnShikii\" Muhammad (born July 13, 2005) is an Indonesian player who is currently playing as a Gold Laner for Team Liquid ID." .
 
 
@@ -499,8 +503,8 @@
 :Aether rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 21 ;
-        :hasName "Jason Keane Zefanya" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Jason Keane Zefanya" ;
         :playerInfo "Jason \"Aether\" Zefanya (born October 10, 2004) is an Indonesian player who is currently playing as a Jungler for Evil." .
 
 
@@ -509,8 +513,8 @@
     :playerOf :CG_MY16 ;
     :Roles "Mid" ;
     :hasAge 24 ;
-    :hasName "Muhammad Jamaludin" ;
     :hasNationality "Malaysia" ;
+    :hasRealName "Muhammad Jamaludin" ;
     :playerInfo "Muhammad \"Aj\" Jamaludin (born October 7, 2001) is a Malaysian player who is currently playing as a Mid Laner for CG Esports." .
 
 
@@ -519,8 +523,8 @@
           :playerOf :EVOS_ID16 ;
           :Roles "Jungler" ;
           :hasAge 21 ;
-          :hasName "Alberttt Neilsen Iskandar" ;
           :hasNationality "Indonesia" ;
+          :hasRealName "Alberttt Neilsen Iskandar" ;
           :playerInfo "Albert \"Alberttt\" Iskandar (born January 8, 2004) is an Indonesian player who is currently playing as a Jungler for EVOS." .
 
 
@@ -529,8 +533,8 @@
       :hasStaff :NAVI_ID16 ;
       :Roles "Head Coach" ;
       :hasAge 28 ;
-      :hasName "Ronaldo Liebertj" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Ronaldo Liebertj" ;
       :playerInfo "Ronaldo \"Aldo\" Lieberth (also known as Skipper) (born June 2, 1997) is an Indonesian Coach who is currently working for Natus Vincere as a Coach." .
 
 
@@ -543,8 +547,8 @@
 :Amoux rdf:type owl:NamedIndividual ;
        :Roles "Head Coach" ;
        :hasAge 31 ;
-       :hasName "Muhammad Ariff Iswandi Bin Johar" ;
        :hasNationality "Singapore" ;
+       :hasRealName "Muhammad Ariff Iswandi Bin Johar" ;
        :playerInfo "Muhammad \"Amoux\" Johar (born February 2, 1994) is a Singaporean Coach and Caster who is currently working for RSG Singapore as a Coach." .
 
 
@@ -557,8 +561,8 @@
 :Andoryuuu rdf:type owl:NamedIndividual ;
            :playerOf :NAVI_ID16 ;
            :Roles "Jungler" ;
-           :hasName "Andrew Flora" ;
            :hasNationality "Philippines" ;
+           :hasRealName "Andrew Flora" ;
            :playerInfo "Andrew \"Andoryuuu\" Flora is a Filipino player who is currently playing as a Jungler for Natus Vincere." .
 
 
@@ -572,8 +576,8 @@
       :playerOf :APBren_PH16 ;
       :Roles "Mid" ;
       :hasAge 24 ;
-      :hasName "Arvie Antonio" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Arvie Antonio" ;
       :playerInfo "Arvie \"Aqua\" Antonio (born November 17, 2001) is a Filipino player who is currently playing as a Mid Laner for AP.Bren." .
 
 
@@ -581,8 +585,8 @@
 :ArSy rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
       :hasAge 30 ;
-      :hasName "Rodel B Cruz" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Rodel B Cruz" ;
       :playerInfo "Rodel \"Ar Sy\" B.Cruz (born July 15, 1995) is a Filipino Coach who is currently working for Team Liquid PH as a Coach." .
 
 
@@ -591,8 +595,8 @@
       :playerOf :TL_ID16 ;
       :Roles "Exp" ;
       :hasAge 22 ;
-      :hasName "Aldhia Aranda" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Aldhia Aranda" ;
       :playerInfo "Aldhia \"Aran\" Aranda (born February 23, 2003) is an Indonesian player who is currently playing as an EXP Laner for Team Liquid ID." .
 
 
@@ -601,8 +605,8 @@
          :staffOf :SRGOG_MY16 ;
          :Roles "Head Coach" ;
          :hasAge 33 ;
-         :hasName "Michael Bocadio" ;
          :hasNationality "Philippines" ;
+         :hasRealName "Michael Bocadio" ;
          :playerInfo "Michael \"Arcadia\" Bocado (born January 15, 1992) is a Filipino Coach who is currently working for SRG.OG as a Coach." .
 
 
@@ -610,8 +614,8 @@
 :Arfy rdf:type owl:NamedIndividual ;
       :playerOf :AE_ID16 ;
       :Roles "Gold" ;
-      :hasName "Arifudin Dingarai" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Arifudin Dingarai" ;
       :playerInfo "Arifudin \"Arfy\" Dingarai is an Indonesian player who is currently playing as a Gold Laner for Alter Ego." .
 
 
@@ -635,8 +639,8 @@
              :hasStaff :Calad ,
                        :DexStar ,
                        :MasterTheBasics ;
-             :RankMPL 2 ;
              :hasName "Aurora Gaming" ;
+             :RankMPL 2 ;
              :teamName "Aurora Gaming" .
 
 
@@ -649,8 +653,8 @@
 :BRAYYY rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 20 ;
-        :hasName "Brayden Teo" ;
         :hasNationality "Singapore" ;
+        :hasRealName "Brayden Teo" ;
         :playerInfo "Brayden \"BRAYYY\" Teo (born June 7, 2005) is a Singaporean player who is currently playing as a Jungler for Team Stallion SG." .
 
 
@@ -667,12 +671,9 @@
                     :hasStaff :Bam ,
                               :Barbossa ,
                               :Erpang ;
+                    :hasName "Bigetron By Vitality" ;
                     :RankMPL 4 ;
                     :hasFoto "https://cdn.id-mpl.com/season16/Logo/btr_vit.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T051817Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=87621145bc3767116323095ce58a2320c843af3f487a4b0c8e5beaaf1fc49e4e" ;
-                    :hasName "BTR" ,
-                             "BTR By Vitality" ,
-                             "Bigetron" ,
-                             "Vitality" ;
                     :teamName "BTR By Vitality" .
 
 
@@ -688,16 +689,16 @@
            :Roles "Roamer" ;
            :alternateIds "Greed" ;
            :hasAge 27 ;
-           :hasName "llen Jedric O. Baloy" ;
            :hasNationality "Philippines" ;
+           :hasRealName "llen Jedric O. Baloy" ;
            :playerInfo "Allen \"Baloyskie\" Baloy (formerly known as Greed) (born October 10, 1998) is a Filipino player who is currently playing as a Roamer for Geek Fam ID" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Bam
 :Bam rdf:type owl:NamedIndividual ;
      :Roles "Head Coach" ;
-     :hasName "Abraham Unida" ;
      :hasNationality "Philippines" ;
+     :hasRealName "Abraham Unida" ;
      :playerInfo "Abraham \"Bam\" Unida is a Filipino Coach who is currently working for Bigetron by Vitality as a Coach." .
 
 
@@ -706,8 +707,8 @@
           :staffOf :BTRByVitality_ID16 ;
           :Roles "Analyst" ;
           :hasAge 23 ;
-          :hasName "Arya Nazhari" ;
           :hasNationality "Indonesia" ;
+          :hasRealName "Arya Nazhari" ;
           :playerInfo "Arya \"Barbossa\" Nazhari (born May 13, 2002) is an Indonesian Coach who is currently working for Bigetron by Vitality as a Coach" .
 
 
@@ -749,8 +750,8 @@
          :staffOf :GeekFam_ID16 ;
          :Roles "Assistant Coach" ;
          :hasAge 31 ;
-         :hasName "Bluffzy" ;
          :hasNationality "Philippines" ;
+         :hasRealName "Bluffzy" ;
          :playerInfo "Mark \"Bluffzy\" Reyes (born November 22, 1995) is a Filipino Coach who is currently working for Geek Fam ID as a Coach" .
 
 
@@ -758,8 +759,8 @@
 :Bondolz rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 20 ;
-         :hasName "Muhammad Amin" ;
          :hasNationality "Indonesia" ;
+         :hasRealName "Muhammad Amin" ;
          :playerInfo "Muhammad \"Bondolz\" Amin (born May 30, 2005) is an Indonesian player who is currently playing as a Mid Laner for Monster Vicious." .
 
 
@@ -767,8 +768,8 @@
 :Branz rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 20 ;
-       :hasName "Jabran Bagus Wiloko" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Jabran Bagus Wiloko" ;
        :playerInfo "Jabran \"Branz\" Wiloko (born August 29, 2000) is an Indonesian player who is currently playing as a Gold Laner for EVOS." .
 
 
@@ -776,16 +777,16 @@
 :Bravo rdf:type owl:NamedIndividual ;
        :Roles "Analyst" ;
        :hasAge 25 ;
-       :hasName "Akbar Tubagus Wira Nida" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Akbar Tubagus Wira Nida" ;
        :playerInfo "Akbar \"Bravo\" Nida (born February 7, 2000) is an Indonesian Analyst and EXP Laner who is currently working for EVOS as an Analyst." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Brusko
 :Brusko rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
-        :hasName "Borris James Parro" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Borris James Parro" ;
         :playerInfo "Borris \"Brusko\" Parro is a Filipino player who is currently playing as a Roamer for ONIC Philippines." .
 
 
@@ -793,15 +794,15 @@
 :Buji rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
       :hasAge 20 ;
-      :hasName "Aaron Ng" ;
       :hasNationality "Singapore" ;
+      :hasRealName "Aaron Ng" ;
       :playerInfo "Aaron \"Buji\" Ng (born July 5, 2005) is a Singaporean player who is currently playing as a Mid Laner for Absolute Zero." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CGEsports
 :CGEsports rdf:type owl:NamedIndividual ;
            :hasPart :CG_MY16 ;
-           :hasName "CG Esports" .
+           :hasRealName "CG Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/CG_MY16
@@ -821,8 +822,8 @@
          :hasStaff :Cody ,
                    :Mariah ,
                    :Rainn ;
-         :RankMPL 2 ;
          :hasName "CG Esports" ;
+         :RankMPL 2 ;
          :teamName "CG Esports" .
 
 
@@ -830,24 +831,24 @@
 :CW rdf:type owl:NamedIndividual ;
     :Roles "Assistant Coach" ;
     :hasAge 25 ;
-    :hasName "Calvin Winata" ;
     :hasNationality "Indonesia" ;
+    :hasRealName "Calvin Winata" ;
     :playerInfo "Calvin \"CW\" Winata (born November 10, 2000) is an Indonesian Analyst and Gold Laner who is currently working for ONIC as an Analyst. He is a former Arena of Valor player." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Calad
 :Calad rdf:type owl:NamedIndividual ;
        :Roles "Analyst" ;
-       :hasName "Justin Limbo" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Justin Limbo" ;
        :playerInfo "Justin \"Calad\" Limbo is a Filipino Coach who is currently working for Aurora Gaming as a Coach." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Caleb
 :Caleb rdf:type owl:NamedIndividual ;
        :Roles "Coach" ;
-       :hasName "Tesista Kayleb" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Tesista Kayleb" ;
        :playerInfo "Tesista \"Caleb\" Kayleb is an Indonesian Coach who is currently working for Team Rey as a Coach." .
 
 
@@ -867,8 +868,8 @@
 :Ch4knu rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 24 ;
-        :hasName "Joshua Garcia Mangilog" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Joshua Garcia Mangilog" ;
         :playerInfo "Joshua \"Ch4knu\" Mangilog (born August 18, 2001) is a Filipino player who is currently playing as a Roamer for TNC Pro Team." .
 
 
@@ -876,16 +877,16 @@
 :Chibi rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 22 ;
-       :hasName "Muhamad Nazhan Mohd Nor" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Muhamad Nazhan Mohd Nor" ;
        :playerInfo "Muhammad Nazhan \"Chibi\" Mohd Nor (born September 16, 2003) is a Malaysian player who is currently playing as a Jungler for Team Vamos." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Chovskrt
 :Chovskrt rdf:type owl:NamedIndividual ;
           :Roles "Mid" ;
-          :hasName "Jerry Ian Nicol" ;
           :hasNationality "Philippines" ;
+          :hasRealName "Jerry Ian Nicol" ;
           :playerInfo "Jerry \"Chovskrt\" Nicol is a Filipino player who is currently playing as a Mid Laner for AP.Bren." .
 
 
@@ -893,8 +894,8 @@
 :Chu rdf:type owl:NamedIndividual ;
      :Roles "Exp" ;
      :hasAge "Unknown" ;
-     :hasName "Jonathan Loh" ;
      :hasNationality "Singapore" ;
+     :hasRealName "Jonathan Loh" ;
      :playerInfo "Jonathan \"Chu\" Loh is a Singaporean player who is currently playing as an EXP Laner for IGNITE Gaming." .
 
 
@@ -902,16 +903,16 @@
 :CikuGais rdf:type owl:NamedIndividual ;
           :Roles "Mid" ;
           :hasAge 24 ;
-          :hasName "Muhammad Danial bin Mohamad Fuad" ;
           :hasNationality "Malaysia" ;
+          :hasRealName "Muhammad Danial bin Mohamad Fuad" ;
           :playerInfo "Muhammad Danial \"CikuGais\" Mohamad Fuad (born October 11, 2001) is a Malaysian player who is currently playing as a Mid Laner for CG Esports." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cjay
 :Cjay rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
-      :hasName "Ronnel Jayson Espinosa" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Ronnel Jayson Espinosa" ;
       :playerInfo "Ronnel \"Cjay\" Espinosa is a Filipino Coach who is currently working for Team Rey as a Coach." .
 
 
@@ -919,8 +920,8 @@
 :Clawkun rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 23 ;
-         :hasName "Adriansyah Baihaqi Lesmana" ;
          :hasNationality "Indonesia" ;
+         :hasRealName "Adriansyah Baihaqi Lesmana" ;
          :playerInfo "Adriansyah \"Claw Kun\" Lesmana (born May 2, 2002) is an Indonesian player who is currently playing as a Mid Laner for Team Vamos." .
 
 
@@ -928,8 +929,8 @@
 :Closer rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge "Unknown" ;
-        :hasName "Unknown" ;
         :hasNationality "Singapore" ;
+        :hasRealName "Unknown" ;
         :playerInfo "Closer is a Singaporean player who is currently playing as an EXP Laner for Team Flash." .
 
 
@@ -960,8 +961,8 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cyruz
 :Cyruz rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
-       :hasName "Muhammad Halim" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Muhammad Halim" ;
        :playerInfo "Muhammad \"Cyruz\" Halim is an Indonesian player who is currently playing as a Mid Laner for Alter Ego." .
 
 
@@ -978,17 +979,16 @@
          :hasReached :MPLPlayoff ;
          :hasStaff :Right ,
                    :Wongcoco ;
+         :hasName "Dewa United Esports" ;
          :RankMPL "5-6" ;
-         :hasName "DU" ,
-                  "Dewa United" ;
          :teamName "Dewa United Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Dale
 :Dale rdf:type owl:NamedIndividual ;
       :Roles "Assisten Coach" ;
-      :hasName "Steve Vitug" ;
       :hasNationality "philippines" ;
+      :hasRealName "Steve Vitug" ;
       :playerInfo "Steve \"Dale\" Vitug is a Filipino Coach who last worked for HomeBois as a Coach." .
 
 
@@ -1002,8 +1002,8 @@
 :Deee rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 22 ;
-      :hasName "Dhiwa Zulpiqar" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Dhiwa Zulpiqar" ;
       :playerInfo "Dhiwa \"Deee\" Zulpiqar (born July 23, 2003) is an Indonesian player who is currently playing as a Gold Laner for CG Esports." .
 
 
@@ -1011,8 +1011,8 @@
 :Demonkite rdf:type owl:NamedIndividual ;
            :Roles "Jungler" ;
            :hasAge 22 ;
-           :hasName "Jonard Caranto" ;
            :hasNationality "Philippines" ;
+           :hasRealName "Jonard Caranto" ;
            :playerInfo "Jonard \"Demonkite\" Caranto (born January 10, 2003) is a Filipino player who is currently playing as a Jungler for Aurora Gaming." .
 
 
@@ -1020,8 +1020,8 @@
 :Der rdf:type owl:NamedIndividual ;
      :Roles "Exp" ;
      :hasAge 26 ;
-     :hasName "Landher Gabriel" ;
      :hasNationality "Philippines" ;
+     :hasRealName "Landher Gabriel" ;
      :playerInfo "Landher \"Der\" Gabriel (born February 4, 1999) is a Filipino player who is currently playing as an EXP Laner for Team Rey." .
 
 
@@ -1029,8 +1029,8 @@
 :DevKoch rdf:type owl:NamedIndividual ;
          :Roles "Analyst" ;
          :hasAge 26 ;
-         :hasName "Devara Putra" ;
          :hasNationality "Indonesia" ;
+         :hasRealName "Devara Putra" ;
          :playerInfo "Devara \"DevKoch\" Putra (born March 11, 1999) is an Indonesian Analyst who is currently working for TODAK on loan from Alter Ego X as an Analyst." .
 
 
@@ -1049,16 +1049,16 @@
          :Roles "Assistant Coach" ;
          :alternateIds "Dexter" ;
          :hasAge 33 ;
-         :hasName "Dexter Alaba" ;
          :hasNationality "Philippines" ;
+         :hasRealName "Dexter Alaba" ;
          :playerInfo "Dexter \"Dex Star\" Alaba (born October 12, 1992) is a Filipino Coach who is currently working for Aurora Gaming as a Coach." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Diablo
 :Diablo rdf:type owl:NamedIndividual ;
         :Roles "EXP" ;
-        :hasName "Yeo Wee Lun" ;
         :hasNationality "Singapore" ;
+        :hasRealName "Yeo Wee Lun" ;
         :playerInfo "Yeo \"Diablo\" Wee Lun is a Singaporean player who last played for Team Stallion SG." .
 
 
@@ -1067,8 +1067,8 @@
             :Roles "Gold" ;
             :alternateIds "Domeng" ;
             :hasAge 18 ;
-            :hasName "Jan Delmundo" ;
             :hasNationality "Philippines" ;
+            :hasRealName "Jan Delmundo" ;
             :playerInfo "Jan \"DomengKite\" Delmundo (born November 3, 2007) is a Filipino player who is currently playing as a Gold Laner for Aurora Gaming." .
 
 
@@ -1081,16 +1081,16 @@
 :DreamS rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 26 ;
-        :hasName "Rachmad Wahyudi" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Rachmad Wahyudi" ;
         :playerInfo "Rachmad \"DreamS\" Wahyudi (born December 6, 1999) is an Indonesian player who is currently playing as a Roamer for TODAK on loan from Alter Ego." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Drinsanity
 :Drinsanity rdf:type owl:NamedIndividual ;
             :Roles "EXP" ;
-            :hasName "Drin Fontanilla" ;
             :hasNationality "philippines" ;
+            :hasRealName "Drin Fontanilla" ;
             :playerInfo "Drin \"Drinsanity\" Fontanilla is a Filipino player who is currently playing as an EXP Laner for Kingdom Esports." .
 
 
@@ -1104,8 +1104,8 @@
          :Roles "Exp" ;
          :alternateIds "Coyy" ;
          :hasAge 23 ;
-         :hasName "Rendy Syahputra" ;
          :hasNationality "Indonesia" ;
+         :hasRealName "Rendy Syahputra" ;
          :playerInfo "Rendy \"Dyrennn\" Syahputra (born May 21, 2003) is an Indonesian player who is currently playing as an EXP Laner for RRQ Hoshi." .
 
 
@@ -1113,8 +1113,8 @@
 :E2MAX rdf:type owl:NamedIndividual ;
        :Roles "Head Coach" ;
        :hasAge 29 ;
-       :hasName "Patrick Caidic" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Patrick Caidic" ;
        :playerInfo "Patrick \"E2MAX\" Caidic (born July 12, 1996) is a Filipino Coach and Mid Laner who is currently working for TNC Pro Team as a Coach." .
 
 
@@ -1123,8 +1123,8 @@
        :Roles "Gold" ;
        :hasAge 20 ;
        :hasFoto "https://cdn.id-mpl.com/season16/player/btr/EMANN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T083404Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=60558c24cfaa26dac024790e8b84c9def69e0a9bccd700db2f48ef04c6bc5ad4" ;
-       :hasName "Eman Sangco" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Eman Sangco" ;
        :playerInfo "Eman \"EMANN\" Sangco (born May 25, 2005) is a Filipino player who is currently playing as a Gold Laner for Bigetron by Vitality." .
 
 
@@ -1132,8 +1132,8 @@
 :ESON rdf:type owl:NamedIndividual ;
       :Roles "Assistant Coach" ;
       :hasAge 31 ;
-      :hasName "Mark Jayson Gerardo" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Mark Jayson Gerardo" ;
       :playerInfo "Mark \"ESON\" Gerardo (born October 26, 1994) is a Filipino Coach who is currently working for Twisted Minds PH as a Coach." .
 
 
@@ -1151,8 +1151,8 @@
            :hasReached :MPLPlayoff ;
            :hasStaff :Bravo ,
                      :VYN ;
-           :RankMPL 3 ;
            :hasName "Evos Esports" ;
+           :RankMPL 3 ;
            :teamName "EVOS" .
 
 
@@ -1161,8 +1161,8 @@
         :playerOf :Aurora_PH16 ;
         :Roles "Exp" ;
         :hasAge 21 ;
-        :hasName "Edward Dapadap" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Edward Dapadap" ;
         :playerInfo "Edward \"Edward\" Dapadap (born September 11, 2004) is a Filipino player who is currently playing as an EXP Laner for Aurora Gaming PH." .
 
 
@@ -1170,8 +1170,8 @@
 :Erlan rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :alternateIds "Douma" ;
-       :hasName "Erland Saputra" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Erland Saputra" ;
        :playerInfo "Erland \"Erlan\" Saputra (also known as Douma) is an Indonesian player who is currently playing as a Gold Laner for EVOS." .
 
 
@@ -1179,8 +1179,8 @@
 :Erpang rdf:type owl:NamedIndividual ;
         :Roles "Assistant Coach" ;
         :hasAge 26 ;
-        :hasName "Ervan Hasan" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Ervan Hasan" ;
         :playerInfo "Ervan \"Erpang\" Hasan (born December 5, 1999) is an Indonesian Coach who is currently working for Bigetron by Vitality as a Coach." .
 
 
@@ -1193,8 +1193,8 @@
 :Eshaa rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
        :hasAge 26 ;
-       :hasName "Muhammad Yaacob Esha Bin Muhammad Halizan @Charles" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Muhammad Yaacob Esha Bin Muhammad Halizan @Charles" ;
        :playerInfo "Muhammad \"Eshaa Ohana\" @Charles (born September 9, 1999) is a Malaysian player who is currently playing as a Roamer for Team Lunatix." .
 
 
@@ -1218,8 +1218,8 @@
            :hasReached :MPLChamps ,
                        :MPLFinals ,
                        :MPLPlayoff ;
-           :RankMPL 1 ;
            :hasName "Evil" ;
+           :RankMPL 1 ;
            :teamName "Evil" .
 
 
@@ -1232,8 +1232,8 @@
 :EyyMal rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 21 ;
-        :hasName "Muhammad Ikmal Hakimy Azemy" ;
         :hasNationality "Malaysian" ;
+        :hasRealName "Muhammad Ikmal Hakimy Azemy" ;
         :playerInfo "Muhammad Ikmal Hakimy \"EyyMal\" Azemy (born April 17, 2004) is a Malaysian player who is currently playing as a Jungler for HomeBois." .
 
 
@@ -1241,8 +1241,8 @@
 :Facehugger rdf:type owl:NamedIndividual ;
             :Roles "Analyst" ;
             :hasAge 28 ;
-            :hasName "Usep Satiawan" ;
             :hasNationality "Indonesia" ;
+            :hasRealName "Usep Satiawan" ;
             :playerInfo "Usep \"Facehugger\" Satiawan (born July 18, 1997) is an Indonesian Coach and Mid Laner who is currently working for Team Liquid ID as a Coach. He is a former Dota 2 player." .
 
 
@@ -1258,8 +1258,8 @@
              :hasReached :MPLPlayoff ;
              :hasStaff :CoachMoody ,
                        :Trebor ;
-             :RankMPL "5-6" ;
              :hasName "Team Falcons" ;
+             :RankMPL "5-6" ;
              :teamName "Team Falcons PH" .
 
 
@@ -1273,8 +1273,8 @@
 :Faviannn rdf:type owl:NamedIndividual ;
           :Roles "Jungler" ;
           :hasAge 19 ;
-          :hasName "Favian Putra" ;
           :hasNationality "Indonesia" ;
+          :hasRealName "Favian Putra" ;
           :playerInfo "Favian \"Faviannn\" Putra (born September 11, 2006) is an Indonesian player who is currently playing as a Jungler for Team Liquid ID." .
 
 
@@ -1282,16 +1282,16 @@
 :Fawndeer rdf:type owl:NamedIndividual ;
           :Roles "Exp" ;
           :hasAge 22 ;
-          :hasName "Melvin Rulif" ;
           :hasNationality "Indonesia" ;
+          :hasRealName "Melvin Rulif" ;
           :playerInfo "Melvin \"Fawndeer\" Rulif (born April 30, 2003) is an Indonesian player who is currently playing as an EXP Laner for TODAK on loan from Alter Ego X." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ferdz
 :Ferdz rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
-       :hasName "Dferdz Fernandez" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Dferdz Fernandez" ;
        :playerInfo "dferdz \"Ferdz\" Fernandez is a Filipino player who is currently playing as an EXP Laner for Team Falcons PH." .
 
 
@@ -1299,8 +1299,8 @@
 :Ferxiic rdf:type owl:NamedIndividual ;
          :Roles "Jungler" ;
          :hasAge 21 ;
-         :hasName "Ferdyansyah Kamaruddin" ;
          :hasNationality "Indonesia" ;
+         :hasRealName "Ferdyansyah Kamaruddin" ;
          :playerInfo "Ferdyansyah \"Ferxiic\" Kamaruddin (born August 18, 2004) is an Indonesian player who is currently playing as a Jungler for RRQ Hoshi." .
 
 
@@ -1308,8 +1308,8 @@
 :Finn rdf:type owl:NamedIndividual ;
       :Roles "Roamer" ;
       :hasAge 21 ;
-      :hasName "Muhammad Hikmatullah" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Muhammad Hikmatullah" ;
       :playerInfo "Muhammad \"Finn\" Hikmatullah (born September 29, 2004) is an Indonesian player who is currently playing as a Roamer for Bigetron by Vitality." .
 
 
@@ -1328,8 +1328,8 @@
          :Roles "Exp" ;
          :alternateIds "Flap" ;
          :hasAge 21 ;
-         :hasName "David Charles Canon" ;
          :hasNationality "Philippines" ;
+         :hasRealName "David Charles Canon" ;
          :playerInfo "David \"FlapTzy\" Canon (born July 5, 2004) is a Filipino player who is currently playing as an EXP Laner for Team Falcons PH." .
 
 
@@ -1346,16 +1346,16 @@
             :hasReached :MPLFinals ,
                         :MPLPlayoff ;
             :hasStaff :Adammir ;
-            :RankMPL 2 ;
             :hasName "Team Flash" ;
+            :RankMPL 2 ;
             :teamName "Team Flash" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Fmm
 :Fmm rdf:type owl:NamedIndividual ;
      :Roles "Midlaner" ;
-     :hasName "Ng Bi De" ;
      :hasNationality "SIngapore" ;
+     :hasRealName "Ng Bi De" ;
      :playerInfo "Ng \"FMM\" Bi De is a Singaporean player who is currently playing as a Mid Laner for Kingdom Esports." .
 
 
@@ -1376,8 +1376,8 @@
                          :TheSit ;
               :hasStaff :Backdoor ,
                         :Vivy ;
-              :RankMPL 10 ;
               :hasName "GamesMY Kelantan" ;
+              :RankMPL 10 ;
               :teamName "GamesMY Kelantan" .
 
 
@@ -1385,8 +1385,8 @@
 :Garyy rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 21 ;
-       :hasName "Muhammad Syafizan Najmi Bin Kamarulzaman" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Muhammad Syafizan Najmi Bin Kamarulzaman" ;
        :playerInfo "Muhammad Syafizan Najmi \"Garyy\" Kamarulzaman (born November 6, 2004) is a Malaysian player who is currently playing as a Jungler for CG Esports." .
 
 
@@ -1394,8 +1394,8 @@
 :Gear rdf:type owl:NamedIndividual ;
       :Roles "Exp" ;
       :hasAge 20 ;
-      :hasName "Tristan Nathanael" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Tristan Nathanael" ;
       :playerInfo "Tristan \"Gear\" Nathanael (born June 4, 2005) is a Singaporean/Indonesian player who is currently playing as an EXP Laner for Evil." .
 
 
@@ -1415,8 +1415,8 @@
                          :Zeltron ;
               :hasStaff :Bluffzy ,
                         :Dora ;
-              :RankMPL 8 ;
               :hasName "Geek Fam ID" ;
+              :RankMPL 8 ;
               :teamName "Geek Fam" .
 
 
@@ -1425,8 +1425,8 @@
       :Roles "Exp" ;
       :alternateIds "Mercy" ;
       :hasAge 25 ;
-      :hasName "Mercy Richart Ratuliu" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Mercy Richart Ratuliu" ;
       :playerInfo "Mercy \"Gobs\" Ratuliu (born May 21, 2000) is an Indonesian player who is currently playing as an EXP Laner for Geek Fam ID." .
 
 
@@ -1435,8 +1435,8 @@
        :Roles "Exp" ;
        :alternateIds "Ilman" ;
        :hasAge 22 ;
-       :hasName "Ilman Zareef Bin Zulkifli" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Ilman Zareef Bin Zulkifli" ;
        :playerInfo "Ilman \"Gojes\" Zulkifli (born November 20, 2003) is a Malaysian player who is currently playing as an EXP Laner for Team Vamos on loan from SRG.OG." .
 
 
@@ -1450,8 +1450,8 @@
 :Hadess rdf:type owl:NamedIndividual ;
         :alternateIds "Janaaqt, Lord Hadess" ;
         :hasAge 23 ;
-        :hasName "aymark Aaron Thomas Lazaro" ;
         :hasNationality "Philippines" ;
+        :hasRealName "aymark Aaron Thomas Lazaro" ;
         :playerInfo "Jaymark \"Hadess\" Lazaro (also known as Janaaqt) (born January 10, 2002) is a Filipino player who is currently playing as a Jungler for Team Flash on loan from Geek Fam ID." .
 
 
@@ -1460,8 +1460,8 @@
        :Roles "Mid" ;
        :alternateIds "Hadjizy, Had Ji" ;
        :hasAge 23 ;
-       :hasName "Salic Alauya Imam" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Salic Alauya Imam" ;
        :playerInfo "Salic \"Hadji\" Imam (born April 23, 2003) is a Filipino player who is currently playing as a Mid Laner for Omega Esports." .
 
 
@@ -1470,8 +1470,8 @@
       :Roles "Mid" ;
       :alternateIds "Hatred, Hated" ;
       :hasAge 23 ;
-      :hasName "Jaylord Gonzales" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Jaylord Gonzales" ;
       :playerInfo "Jaylord \"Hate\" Gonzales (born August 31, 2002) is a Filipino player who is currently playing as a Mid Laner for ONIC Philippines." .
 
 
@@ -1480,8 +1480,8 @@
       :Roles "Analyst" ;
       :alternateIds "YellyHazeDR" ;
       :hasAge 29 ;
-      :hasName "Janiel Beta Anon" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Janiel Beta Anon" ;
       :playerInfo "Jeniel \"YellyHaze\" Bata-Anon (born May 29, 1996) is a Filipino Coach who is currently working for ONIC Philippines as a Coach." .
 
 
@@ -1489,8 +1489,8 @@
 :Hazle rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 18 ;
-       :hasName "Muhammad Balakosa" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Muhammad Balakosa" ;
        :playerInfo "Muhammad \"Hazle\" Balakosa (born May 6, 2007) is an Indonesian player who is currently playing as a Jungler for Aero Esports on loan from RRQ Hoshi." .
 
 
@@ -1498,15 +1498,15 @@
 :Hijumee rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 22 ;
-         :hasName "Dalvin Ramadhana Putra" ;
          :hasNationality "Indonesia" ;
+         :hasRealName "Dalvin Ramadhana Putra" ;
          :playerInfo "Dalvin \"Hijumee\" Putra (born November 23, 2002) is an Indonesian player who is currently playing as a Mid Laner for Alter Ego." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Hito
 :Hito rdf:type owl:NamedIndividual ;
       :Roles "Assistant Coach" ;
-      :hasName "Robert Remar Candoy" ;
+      :hasRealName "Robert Remar Candoy" ;
       :playerInfo "Robert \"Hito\" Candoy is a Filipino Coach and Gold Laner who is currently working for TNC Pro Team as a Coach." .
 
 
@@ -1529,8 +1529,8 @@
                :hasStaff :Dale ,
                          :Jes ,
                          :Naaz ;
-               :RankMPL "5-6" ;
                :hasName "Homebois" ;
+               :RankMPL "5-6" ;
                :teamName "Homebois" .
 
 
@@ -1550,8 +1550,8 @@
       :Roles "Roamer" ;
       :alternateIds "dadidudedo" ;
       :hasAge 20 ;
-      :hasName "Said Ridho" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Said Ridho" ;
       :playerInfo "Said \"Idok\" Ridho (born January 30, 2005) is an Indonesian player who is currently playing as a Roamer for RRQ Hoshi." .
 
 
@@ -1567,8 +1567,8 @@
              :hasReached :MPLPlayoff ;
              :hasStaff :Cryptic ,
                        :ly4ly4ly4 ;
-             :RankMPL "5-6" ;
              :hasName "IGNITE Gaming" ;
+             :RankMPL "5-6" ;
              :teamName "IGNITE Gaming" .
 
 
@@ -1581,8 +1581,8 @@
 :Innocent rdf:type owl:NamedIndividual ;
           :Roles "Gold" ;
           :hasAge 21 ;
-          :hasName "John Banal" ;
           :hasNationality "Philippines" ;
+          :hasRealName "John Banal" ;
           :playerInfo "John \"Innocent\" Banal (born May 12, 2004) is a Filipino player who is currently playing as a Gold Laner for SRG.OG." .
 
 
@@ -1590,8 +1590,8 @@
 :Irfan rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :alternateIds "Sepat" ;
-       :hasName "Muhammad Irfan bin Aujang" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Muhammad Irfan bin Aujang" ;
        :playerInfo "Muhammad \"Sepat\" Aujang (also known as Irfan) (born November 27, 2004) is a Malaysian player who is currently playing as an EXP Laner for JP NINERS on loan from Team Vamos." .
 
 
@@ -1600,8 +1600,8 @@
        :Roles "Roamer" ;
        :alternateIds "VaanStrong" ;
        :hasAge 25 ;
-       :hasName "Vincentsius Ivan Adrianto" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Vincentsius Ivan Adrianto" ;
        :playerInfo "Vincentsius \"Ivann\" Adrianto (born September 24, 2000) is an Indonesian player who is currently playing as a Roamer for Alter Ego." .
 
 
@@ -1610,8 +1610,8 @@
          :RankMPL "Mid" ;
          :alternateIds "Izanamiyeyo" ;
          :hasAge 22 ;
-         :hasName "Mohammad Irwandy Lim" ;
          :hasNationality "Malaysia" ;
+         :hasRealName "Mohammad Irwandy Lim" ;
          :playerInfo "Mohammad \"Izanami\" Lim (born November 21, 2003) is a Malaysian player who is currently playing as a Mid Laner for HomeBois." .
 
 
@@ -1619,8 +1619,8 @@
 :JIFDEGaming rdf:type owl:NamedIndividual ;
              :Roles "Analyst" ;
              :hasAge 25 ;
-             :hasName "Jason Yap Chun Siu" ;
              :hasNationality "Malaysia" ;
+             :hasRealName "Jason Yap Chun Siu" ;
              :playerInfo "Jason \"JIFDEGaming\" Yap (born October 13, 2000) is a Malaysian Analyst who is currently working for Aero Esports as an Analyst." .
 
 
@@ -1634,8 +1634,8 @@
 :JPL rdf:type owl:NamedIndividual ;
      :Roles "Roamer" ;
      :hasAge 30 ;
-     :hasName "Akihiro furusawa" ;
      :hasNationality "Singapore" ;
+     :hasRealName "Akihiro furusawa" ;
      :playerInfo "Akihiro \"JPL\" Furusawa (born December 23, 1995) is a Singaporean player who is currently playing as a Roamer for Team Flash." .
 
 
@@ -1644,8 +1644,8 @@
          :Roles "Assistant Coach" ;
          :alternateIds "Lumba-Lumba" ;
          :hasAge 29 ;
-         :hasName "Hafizun Ahmad" ;
          :hasNationality "Indonesia" ;
+         :hasRealName "Hafizun Ahmad" ;
          :playerInfo "Hafizun \"Jacklee\" Ahmad (born May 26, 1996) is an Indonesian Coach who is currently working for Natus Vincere as a Coach." .
 
 
@@ -1653,8 +1653,8 @@
 :Jajaa rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 21 ;
-       :hasName "Muhammad Azrul Izani Bin Mohamad" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Muhammad Azrul Izani Bin Mohamad" ;
        :playerInfo "Muhammad \"Jajaa\" Mohamad (born May 25, 2004) is a Malaysian player who is currently playing as a Jungler for GamesMY Kelantan." .
 
 
@@ -1662,24 +1662,24 @@
 :Jaypee rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 27 ;
-        :hasName "Jaypee Gonzales Dela Cruz" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Jaypee Gonzales Dela Cruz" ;
         :playerInfo "Jaypee Gonzales \"Jaypee\" Dela Cruz (born October 22, 1998) is a Filipino player who is currently playing as a Roamer for Team Liquid PH." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jayy
 :Jayy rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
-      :hasName "Chng Jun Wen" ;
       :hasNationality "Singapore" ;
+      :hasRealName "Chng Jun Wen" ;
       :playerInfo "Chng \"Jayy\" Jun Wen is a Singaporean player who is currently playing as a Mid Laner for RSG Singapore." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jeff
 :Jeff rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
-      :hasName "Jeffrey Manforte" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Jeffrey Manforte" ;
       :playerInfo "Jeffrey \"Jeff\" Manforte is a Filipino Coach who is currently working for AP.Bren as a Coach." .
 
 
@@ -1692,8 +1692,8 @@
 :Jeymz rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 21 ;
-       :hasName "James Gloria" ;
        :hasNationality "Philippines" ;
+       :hasRealName "James Gloria" ;
        :playerInfo "James \"Jeymz\" Gloria (born August 13, 2004) is a Filipino player who is currently playing as an EXP Laner for Omega Esports." .
 
 
@@ -1701,8 +1701,8 @@
 :Jowm rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 21 ;
-      :hasName "Jomari Pingol" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Jomari Pingol" ;
       :playerInfo "Jomari \"Jowm\" Pingol (born October 23, 2004) is a Filipino player who is currently playing as a Gold Laner for Omega Esports." .
 
 
@@ -1710,8 +1710,8 @@
 :K1NGKONG rdf:type owl:NamedIndividual ;
           :Roles "Jungler" ;
           :hasAge 19 ;
-          :hasName "King Cyric Perez" ;
           :hasNationality "Philippines" ;
+          :hasRealName "King Cyric Perez" ;
           :playerInfo "King \"K1NGKONG\" Perez (born April 26, 2006) is a Filipino player who is currently playing as a Jungler for ONIC Philippines." .
 
 
@@ -1719,8 +1719,8 @@
 :Kabuki rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
         :hasAge 22 ;
-        :hasName "Leonardo Prasetyo Agung" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Leonardo Prasetyo Agung" ;
         :playerInfo "Leonardo \"Kabuki\" Agung (born January 1, 2003) is an Indonesian player who is currently playing as a Gold Laner for Team Liquid ID." .
 
 
@@ -1729,8 +1729,8 @@
        :Roles "Jungler" ;
        :alternateIds "FULLCLIP" ;
        :hasAge 20 ;
-       :hasName "Kairi Ygnacio Rayosdelsol" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Kairi Ygnacio Rayosdelsol" ;
        :playerInfo "Kairi \"Kairi\" Rayosdelsol (born September 21, 2005) is a Filipino player who is currently playing as a Jungler for ONIC." .
 
 
@@ -1739,8 +1739,8 @@
          :Roles "Jungler" ;
          :alternateIds "Chessman" ;
          :hasAge 21 ;
-         :hasName "Karl Gabriel Nepomuceno" ;
          :hasNationality "Philippines" ;
+         :hasRealName "Karl Gabriel Nepomuceno" ;
          :playerInfo """Karl \"KarlTzy\" Nepomuceno (born August 22, 2004) is a Filipino player who is currently playing as a Jungler for Team Liquid PH.
 
 After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB player in the world.""" .
@@ -1750,9 +1750,9 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Karss rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 20 ;
-       :hasName "Karsten \"Karss\" Tjugito (born July 6, 2005) is an Indonesian player who is currently playing as a EXP Laner for Natus Vincere." ,
-                "Karsten William Tjugito" ;
-       :hasNationality "Indonesia" .
+       :hasNationality "Indonesia" ;
+       :hasRealName "Karsten \"Karss\" Tjugito (born July 6, 2005) is an Indonesian player who is currently playing as a EXP Laner for Natus Vincere." ,
+                    "Karsten William Tjugito" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kazeemen
@@ -1764,8 +1764,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kelra rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 20 ;
-       :hasName "Grant Duane Pillas" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Grant Duane Pillas" ;
        :playerInfo "Grant \"Kelra\" Pillas (born March 26, 2005) is a Filipino player who is currently playing as a Gold Laner for ONIC Philippines" .
 
 
@@ -1773,16 +1773,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kenji rdf:type owl:NamedIndividual ;
        :Roles "Assistant Coach" ;
        :hasAge 27 ;
-       :hasName "Kenneth Jiane S. Villa" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Kenneth Jiane S. Villa" ;
        :playerInfo "Kenneth \"Kenji\" Villa (born February 14, 1998) is a Filipino player who is currently playing as an EXP Laner for Monster Vicious." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/KennzyySkie
 :KennzyySkie rdf:type owl:NamedIndividual ;
              :Roles "Gold" ;
-             :hasName "Kenny Ramadhan" ;
              :hasNationality "Indonesia" ;
+             :hasRealName "Kenny Ramadhan" ;
              :playerInfo "Kenny \"KennzyySkie\" Ramadhan is an Indonesian player who is currently playing as a Gold Laner for Geek Fam ID." .
 
 
@@ -1790,8 +1790,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Keymin rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 23 ;
-        :hasName "Muhammad Akmal Hakimin bin Ghazali" ;
         :hasNationality "Malaysia" ;
+        :hasRealName "Muhammad Akmal Hakimin bin Ghazali" ;
         :playerInfo "Muhammad \"Keymin\" Ghazali (born October 11, 2002) is a Malaysian player who is currently playing as a Jungler for Untitled Esports." .
 
 
@@ -1799,17 +1799,17 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Khezcute rdf:type owl:NamedIndividual ;
           :Roles "Head Coach" ;
           :hasAge 32 ;
-          :hasName "Alfi Syahrin Nelphyana" ;
           :hasNationality "Alfi \"Khezcute\" Nelphyana (born March 6, 1993) is an Indonesian Coach who is currently working for RRQ Hoshi as a Coach. He is a former Dota 2 player." ,
-                          "Indonesia" .
+                          "Indonesia" ;
+          :hasRealName "Alfi Syahrin Nelphyana" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kiboy
 :Kiboy rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
        :hasAge 23 ;
-       :hasName "Nicky Fernando Pontonuwu" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Nicky Fernando Pontonuwu" ;
        :playerInfo "Nicky \"Kiboy\" Pontonuwu (born November 7, 2002) is an Indonesian player who is currently playing as a Roamer for ONIC." .
 
 
@@ -1833,16 +1833,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
               :hasStaff :Apex ,
                         :Icyfrost ,
                         :Sammy ;
-              :RankMPL 3 ;
               :hasName "Kingdom Esports" ;
+              :RankMPL 3 ;
               :teamName "Kingdom Esports" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kirk
 :Kirk rdf:type owl:NamedIndividual ;
       :Roles "Exp" ;
-      :hasName "Jann Kirk Solcruz Gutierrez" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Jann Kirk Solcruz Gutierrez" ;
       :playerInfo "Jann \"Kirk\" Gutierrez is a Filipino player who is currently playing as an EXP Laner for ONIC Philippines." .
 
 
@@ -1850,8 +1850,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kramm rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 20 ;
-       :hasName "Mark genzon Sojero Rusiana" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Mark genzon Sojero Rusiana" ;
        :playerInfo "Mark \"Kramm\" Rusiana (born April 14, 2005) is a Filipino player who is currently playing as an EXP Laner for SRG.OG." .
 
 
@@ -1859,8 +1859,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :KurtTzy rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 22 ;
-         :hasName "Jankurt Russel Matira" ;
          :hasNationality "Philippines" ;
+         :hasRealName "Jankurt Russel Matira" ;
          :playerInfo "Jankurt \"KurtTzy\" Matira (born March 2, 2003) is a Filipino player who is currently playing as a Mid Laner for Team Flash." .
 
 
@@ -1869,8 +1869,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
        :Roles "Gold" ;
        :alternateIds "Kousei" ;
        :hasAge 20 ;
-       :hasName "Clarense Jay G. Camilo" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Clarense Jay G. Camilo" ;
        :playerInfo "Clarense \"Kusey\" Camilo (born January 13, 2005) is a Filipino player who is currently playing as a Gold Laner for Aero Esports." .
 
 
@@ -1878,8 +1878,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :KyleTzy rdf:type owl:NamedIndividual ;
          :Roles "Jungler" ;
          :hasAge 20 ;
-         :hasName "Michael Angelo Sayson" ;
          :hasNationality "Philippines" ;
+         :hasRealName "Michael Angelo Sayson" ;
          :playerInfo "Michael \"KyleTzy\" Sayson (born August 19, 2005) is a Filipino player who is currently playing as a Jungler for Team Falcons PH." .
 
 
@@ -1887,8 +1887,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kyou rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 19 ;
-      :hasName "Riski" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Riski" ;
       :playerInfo "Riski \"Kyou\" (born February 26, 2006) is an Indonesian player who is currently playing as a Gold Laner for Team Liquid ID." .
 
 
@@ -1897,8 +1897,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
      :Roles "Roamer" ;
      :alternateIds "Super Kyy" ;
      :hasAge 23 ;
-     :hasName "Hengky Gunawan" ;
      :hasNationality "Indonesia" ;
+     :hasRealName "Hengky Gunawan" ;
      :playerInfo "Hengky \"Kyy\" Gunawan (born November 9, 2003) is an Indonesian player who is currently playing as a Roamer for EVOS." .
 
 
@@ -1906,8 +1906,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kyym rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
       :hasAge 19 ;
-      :hasName "Adam Alhakim Bin Mohamad Ali" ;
       :hasNationality "Malaysia" ;
+      :hasRealName "Adam Alhakim Bin Mohamad Ali" ;
       :playerInfo "Adam \"Kyym\" Ali (born January 20, 2006) is a Malaysian player who is currently playing as a Mid Laner for Aero Esports." .
 
 
@@ -1920,24 +1920,24 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :LanceCy rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 25 ;
-         :hasName "Lance Walter Cunanan" ;
          :hasNationality "Philippines" ;
+         :hasRealName "Lance Walter Cunanan" ;
          :playerInfo "Lance \"LanceCy\" Cunanan (born September 24, 2000) is a Filipino player who is currently playing as a Mid Laner for TNC Pro Team." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lansu
 :Lansu rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
-       :hasName "Lance Aron Misa" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Lance Aron Misa" ;
        :playerInfo "Lance \"Lansu\" Misa is a Filipino player who is currently playing as an EXP Laner for Twisted Minds PH." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lembot
 :Lembot rdf:type owl:NamedIndividual ;
         :Roles "Assistant Coach" ;
-        :hasName "Lamuel Josh Lucban" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Lamuel Josh Lucban" ;
         :playerInfo "Lemuel Josh \"Lembot\" Lucban is a Filipino Coach who is currently working for Omega Esports as a Coach." .
 
 
@@ -1946,8 +1946,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
        :Roles "Roamer" ;
        :alternateIds "Unravel, Light Yagami" ;
        :hasAge 22 ;
-       :hasName "Dylan Aaron Poblete Catipon" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Dylan Aaron Poblete Catipon" ;
        :playerInfo "Dylan \"Light\" Catipon (formerly known as Unravel) (born November 14, 2002) is a Filipino player who is currently playing as a Roamer for Aurora Gaming PH." .
 
 
@@ -1955,8 +1955,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Link rdf:type owl:NamedIndividual ;
       :Roles "Assistant Coach" ;
       :hasAge 32 ;
-      :hasName "Jm Nieles" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Jm Nieles" ;
       :playerInfo "Jm \"Link\" Nieles (born September 18, 1993) is a Filipino Coach who is currently working for TODAK as a Coach" .
 
 
@@ -1965,8 +1965,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
          :Roles "Gold" ;
          :alternateIds "Loleal" ;
          :hasAge 22 ;
-         :hasName "Ealtond Rayner" ;
          :hasNationality "Malaysia" ;
+         :hasRealName "Ealtond Rayner" ;
          :playerInfo "Ealtond \"Lolealz\" Rayner (born January 29, 2003) is a Malaysian player who is currently playing as a Gold Laner for TODAK." .
 
 
@@ -1981,16 +1981,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :LordJM rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge 20 ;
-        :hasName "Jhon Marl Sebastian" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Jhon Marl Sebastian" ;
         :playerInfo "Jhon \"JM\" Sebastian (born June 27, 2005) is a Filipino player who is currently playing as an EXP Laner for AP.Bren." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lucianqt
 :Lucianqt rdf:type owl:NamedIndividual ;
           :Roles "Roamer" ;
-          :hasName "I Nyoman Dehi Pranipata" ;
           :hasNationality "Indonesia" ;
+          :hasRealName "I Nyoman Dehi Pranipata" ;
           :playerInfo "I \"Lucianqt\" Pranipata (formerly known as Detha) is an Indonesian player who last played for Team Stallion SG." .
 
 
@@ -2025,9 +2025,9 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :MPtheKing rdf:type owl:NamedIndividual ;
            :Roles "Jungler" ;
            :hasAge 21 ;
-           :hasName "Michael Medrocillo Endino" ,
-                    "Philippines" ;
            :hasNationality "Philippines" ;
+           :hasRealName "Michael Medrocillo Endino" ,
+                        "Philippines" ;
            :playerInfo "Michael \"MP the King\" Endino (born October 15, 2004) is a Filipino player who is currently playing as a Jungler for Twisted Minds PH." .
 
 
@@ -2059,8 +2059,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Maima rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
        :hasAge 25 ;
-       :hasName "Muhammad Azam Izzudin Bin Mohd Amin" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Muhammad Azam Izzudin Bin Mohd Amin" ;
        :playerInfo "Muhammad \"Maima\" Amin (born June 22, 2000) is a Malaysian player who is currently playing as a Mid Laner for GamesMY Kelantan." .
 
 
@@ -2079,8 +2079,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MasterTheBasics
 :MasterTheBasics rdf:type owl:NamedIndividual ;
                  :Roles "Head Coach" ;
-                 :hasName "Aniel Y Jiandani" ;
                  :hasNationality "Philippines" ;
+                 :hasRealName "Aniel Y Jiandani" ;
                  :playerInfo "Aniel \"Master the Basics\" Jiandani is a Filipino Coach who is currently working for Aurora Gaming as a Coach. He was also a Youtuber where he puts out Mobile Legends guides." .
 
 
@@ -2094,16 +2094,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Maybeee rdf:type owl:NamedIndividual ;
          :Roles "Gold" ;
          :hasAge 19 ;
-         :hasName "Delvin" ;
          :hasNationality "Indonesia" ;
+         :hasRealName "Delvin" ;
          :playerInfo "Delvin \"Maybeee\" (born April 18, 2006) is an Indonesian player who is currently playing as a Gold Laner for Dewa United Esports." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Maykids
 :Maykids rdf:type owl:NamedIndividual ;
          :Roles "Jungler" ;
-         :hasName "Muhammad Akbar Prasetia Ardani" ;
          :hasNationality "Jungler" ;
+         :hasRealName "Muhammad Akbar Prasetia Ardani" ;
          :playerInfo "Muhammad \"Maykids\" Ardani is an Indonesian player who is currently playing as a Jungler for Geek Fam ID." .
 
 
@@ -2111,7 +2111,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Melqt rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 24 ;
-       :hasName "Adam Bin Hamidun" ;
+       :hasRealName "Adam Bin Hamidun" ;
        :playerInfo "Adam \"Melll\" Hamidun (born October 3, 2001) is a Malaysian player who is currently playing as a Gold Laner for HomeBois." ,
                    "Malaysia" .
 
@@ -2120,8 +2120,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Momo rdf:type owl:NamedIndividual ;
       :Roles "Exp" ;
       :hasAge 25 ;
-      :hasName "Idreen Bin Abdul Jamal" ;
       :hasNationality "Malaysia" ;
+      :hasRealName "Idreen Bin Abdul Jamal" ;
       :playerInfo "Idreen \"Momo\" Jamal (born October 3, 2000) is a Malaysian player who is currently playing as an EXP Laner for Monster Vicious." .
 
 
@@ -2143,8 +2143,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                      :hasStaff :Dex ,
                                :Kenji ,
                                :SoraPayung ;
-                     :Roles 3 ;
                      :hasName "Monster Vicious" ;
+                     :Roles 3 ;
                      :teamName "Homebois" .
 
 
@@ -2152,8 +2152,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Moreno rdf:type owl:NamedIndividual ;
         :Roles "Mid" ;
         :hasAge 20 ;
-        :hasName "Marcel Juan Moreno Sinulingga" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Marcel Juan Moreno Sinulingga" ;
         :playerInfo "Marcel \"Moreno\" Sinulingga (born October 5, 2005) is an Indonesian player who is currently playing as a Mid Laner for Bigetron by Vitality." .
 
 
@@ -2161,8 +2161,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Muezza rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 23 ;
-        :hasName "Irfan Ramadhani" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Irfan Ramadhani" ;
         :playerInfo "Irfan \"Muezzaa\" Ramadhani (born November 8, 2002) is an Indonesian player who is currently playing as a Roamer for Dewa United Esports." .
 
 
@@ -2170,8 +2170,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Munsters rdf:type owl:NamedIndividual ;
           :Roles "Exp" ;
           :hasAge 22 ;
-          :hasName "I Ketut Rio Mahendra" ;
           :hasNationality "Indonesia" ;
+          :hasRealName "I Ketut Rio Mahendra" ;
           :playerInfo "I \"Munsters\" Mahendra (born May 16, 2003) is an Indonesian player who is currently playing as an EXP Laner for GamesMY Kelantan." .
 
 
@@ -2189,16 +2189,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasReached :MPLPlayoff ;
            :hasStaff :Aldo ,
                      :Jacklee ;
-           :RankMPL "5-6" ;
            :hasName "Natus Vincere" ;
+           :RankMPL "5-6" ;
            :teamName "Natus Vincere" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/NMM
 :NMM rdf:type owl:NamedIndividual ;
      :Roles "Analyst" ;
-     :hasName "Rasyid Kevin Perwira" ;
      :hasNationality "Indonesia" ;
+     :hasRealName "Rasyid Kevin Perwira" ;
      :playerInfo "Rasyid \"NMM\" Perwira is an Indonesian Coach who is currently working for RRQ Hoshi as a Coach. He is a former Dota 2 player." .
 
 
@@ -2218,8 +2218,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Nafari rdf:type owl:NamedIndividual ;
         :Roles "Head Coach" ;
         :hasAge 32 ;
-        :hasName "Azam Aljabar Nafari" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Azam Aljabar Nafari" ;
         :playerInfo "Azam \"Nafari\" Nafari (born September 18, 1993) is an Indonesian Coach who is currently working for TODAK on loan from Alter Ego as a Coach. He is a former Dota 2 player." .
 
 
@@ -2233,8 +2233,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Natco rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 19 ;
-       :hasName "Nicodemus Dustin Koesnadi" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Nicodemus Dustin Koesnadi" ;
        :playerInfo "Nicodemus \"Natco\" Koesnadi (born December 6, 2005) is an Indonesian player who is currently playing as a Gold Laner for Team Vamos on loan from EVOS." .
 
 
@@ -2247,8 +2247,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Netskie rdf:type owl:NamedIndividual ;
          :Roles "Gold" ;
          :hasAge 20 ;
-         :hasName "Kenneth Sablande Barro" ;
          :hasNationality "Philippines" ;
+         :hasRealName "Kenneth Sablande Barro" ;
          :playerInfo "Kenneth \"Nets\" Barro (born November 28, 2004) is a Filipino player who is currently playing as a Gold Laner for Omega Esports." .
 
 
@@ -2256,8 +2256,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Nino rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 21 ;
-      :hasName "Syauki Fauzan Sumarno" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Syauki Fauzan Sumarno" ;
       :playerInfo "Syauki \"Nino\" Sumarno (born April 30, 2004) is an Indonesian player who is currently playing as an EXP Laner for Alter Ego." .
 
 
@@ -2265,8 +2265,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Nnael rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 19 ;
-       :hasName "Manuel Simbolon" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Manuel Simbolon" ;
        :playerInfo "Manuel \"Nnael\" Simbolon (born January 18, 2006) is an Indonesian player who is currently playing as a Jungler for Bigetron by Vitality." .
 
 
@@ -2286,8 +2286,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :NovaXcobar rdf:type owl:NamedIndividual ;
             :Roles "Roamer" ;
             :hasAge 23 ;
-            :hasName "Abdul Azim bin Abdul Rashid" ;
             :hasNationality "Malaysia" ;
+            :hasRealName "Abdul Azim bin Abdul Rashid" ;
             :playerInfo "Abdul \"NovaXcobar\" Rashid (born March 5, 2002) is a Malaysian player who is currently playing as a Roamer for Team Rey." .
 
 
@@ -2299,8 +2299,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Octa
 :Octa rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
-      :hasName "Muhamad Akmal Maulana" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Muhamad Akmal Maulana" ;
       :playerInfo "Muhamad \"Octa\" Maulana is an Indonesian player who is currently playing as a Mid Laner for Dewa United Esports." .
 
 
@@ -2308,8 +2308,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Oheb rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 21 ;
-      :hasName "Kiel Calvin Q Soriano" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Kiel Calvin Q Soriano" ;
       :playerInfo "Kiel \"Oheb\" Q.Soriano (born August 17, 2004) is a Filipino player who is currently playing as a Gold Laner for Team Liquid PH." .
 
 
@@ -2330,8 +2330,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
             :hasStaff :Lembot ,
                       :SN4P ,
                       :Wurahhhh ;
-            :RankMPL 7 ;
             :hasName "Omega Esports" ;
+            :RankMPL 7 ;
             :teamName "Omega Esports" .
 
 
@@ -2357,8 +2357,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasStaff :Adi ,
                      :CW ,
                      :Paddington ;
-           :RankMPL 1 ;
            :hasName "Onic Esports ID" ;
+           :RankMPL 1 ;
            :teamName "ONIC ID" .
 
 
@@ -2375,17 +2375,17 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasReached :MPLPlayoff ;
            :hasStaff :Haze ,
                      :YnoT ;
-           :RankMPL 4 ;
            :hasName "Onic Esports PH" ;
-           :teamName "Onic Esports PH" .
+           :RankMPL 4 ;
+           :teamName "Onic PH" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Owgwen
 :Owgwen rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 24 ;
-        :hasName "Rowgien Stimpson Unigo" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Rowgien Stimpson Unigo" ;
         :playerInfo "Rowgien \"Owgwen\" Unigo (born April 25, 2001) is a Filipino player who is currently playing as a Roamer for Team Falcons PH." .
 
 
@@ -2393,16 +2393,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :OzoraVeki rdf:type owl:NamedIndividual ;
            :Roles "Strategic Coach" ;
            :hasAge 28 ;
-           :hasName "Poon Kok Sing" ;
            :hasNationality "Malaysia" ;
+           :hasRealName "Poon Kok Sing" ;
            :playerInfo "Poon \"OzoraVeki\" Sing (born July 7, 1997) is a Malaysian Coach who is currently working for SRG.OG as a Coach." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Paddington
 :Paddington rdf:type owl:NamedIndividual ;
             :Roles "Analyst" ;
-            :hasName "Riyan Febriyanto" ;
             :hasNationality "Indonesia" ;
+            :hasRealName "Riyan Febriyanto" ;
             :playerInfo "Riyan \"Paddington\" Febriyanto is an Indonesian Coach who is currently working for ONIC as a Coach." .
 
 
@@ -2415,8 +2415,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Pakbet
 :Pakbet rdf:type owl:NamedIndividual ;
         :Roles "Head Coach" ;
-        :hasName "Jomie Abalos" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Jomie Abalos" ;
         :playerInfo "Jomie \"P4kbet\" Abalos is a Filipino Coach who is currently working for Team Vamos as a Coach." .
 
 
@@ -2424,8 +2424,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Panda rdf:type owl:NamedIndividual ;
        :Person "Strategic Coach" ;
        :hasAge 23 ;
-       :hasName "Poh Chun Wai" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Poh Chun Wai" ;
        :playerInfo "Chun Wai \"Panda\" Poh (born October 10, 2002) is a Malaysian Coach and Gold Laner who is currently working for Aero Esports as a Coach." .
 
 
@@ -2433,8 +2433,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Perkz rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
        :hasAge 21 ;
-       :hasName "John Sumawan" ;
        :hasNationality "Philippines" ;
+       :hasRealName "John Sumawan" ;
        :playerInfo "John \"Perkz\" Sumawan (born June 8, 2004) is a Filipino player who is currently playing as a Roamer for Team Liquid PH." .
 
 
@@ -2448,16 +2448,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Pheww rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
        :hasAge 26 ;
-       :hasName "Angelo Kyle Arcangel" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Angelo Kyle Arcangel" ;
        :playerInfo "Angelo \"Pheww\" Arcangel (born June 18, 1999) is a Filipino player who is currently playing as a Mid Laner for Team Falcons PH." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/PoWerFuL
 :PoWerFuL rdf:type owl:NamedIndividual ;
           :Roles "Roamer" ;
-          :hasName "Willie Lee Kwong Sheng" ;
           :hasNationality "Singapore" ;
+          :hasRealName "Willie Lee Kwong Sheng" ;
           :playerInfo "Willie \"PoWerFuL\" Lee is a Singaporean player who is currently playing as a Roamer for Evil." .
 
 
@@ -2471,8 +2471,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :QINN rdf:type owl:NamedIndividual ;
       :Roles "Exp" ;
       :hasAge 18 ;
-      :hasName "John Carlo" ;
       :hasNationality "Philippines" ;
+      :hasRealName "John Carlo" ;
       :playerInfo "John \"QINN\" Carlo (born December 9, 2006) is a Filipino player who is currently playing as an EXP Laner for Dewa United Esports." .
 
 
@@ -2490,18 +2490,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                :hasStaff :Khezcute ,
                          :NMM ,
                          :Rave ;
+               :hasName "Rex Regum Qeon Hoshi" ;
                :RankMPL 7 ;
-               :hasName "RRQ Hoshi" ,
-                        "Rex Regum Qeon" ,
-                        "Team RRQ" ;
                :teamName "RRQ Hoshi" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rainn
 :Rainn rdf:type owl:NamedIndividual ;
        :Roles "Head Coach" ;
-       :hasName "Fikri Aiman Bin Mohd Khidzir" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Fikri Aiman Bin Mohd Khidzir" ;
        :playerInfo "Fikri \"Rainn\" Khidzir is a Malaysian Coach who is currently working for CG Esports as a Coach." .
 
 
@@ -2509,8 +2507,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Raizen rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 21 ;
-        :hasName "Dean Christian Sumagui" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Dean Christian Sumagui" ;
         :playerInfo "Dean \"Raizen\" Sumagui (born February 8, 2004) is a Filipino player who is currently playing as a Jungler for Omega Esports." .
 
 
@@ -2518,8 +2516,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rapidoot rdf:type owl:NamedIndividual ;
           :Roles "Roamer" ;
           :hasAge 26 ;
-          :hasName "Ralph Adrales" ;
           :hasNationality "Philippines" ;
+          :hasRealName "Ralph Adrales" ;
           :playerInfo "Ralph \"Rapidoot\" Adrales (born August 4, 1999) is a Filipino player who is currently playing as a Roamer for IGNITE Gaming." .
 
 
@@ -2527,8 +2525,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rasy rdf:type owl:NamedIndividual ;
       :Roles "Roamer" ;
       :hasAge 24 ;
-      :hasName "Rasya Arga Wisita" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Rasya Arga Wisita" ;
       :playerInfo "Rasya \"Rasy\" Wisita (born May 5, 2001) is an Indonesian player who is currently playing as a Roamer for Untitled Esports." .
 
 
@@ -2536,8 +2534,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rave rdf:type owl:NamedIndividual ;
       :Roles "Assistant Coach" ;
       :hasAge 29 ;
-      :hasName "Fadhil Abdurahman" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Fadhil Abdurahman" ;
       :playerInfo "Fadhil \"Rave\" Abdurahman (born April 18, 1996) is an Indonesian Coach and Analyst who is currently working for RRQ Hoshi as a Coach." .
 
 
@@ -2557,8 +2555,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Reyy rdf:type owl:NamedIndividual ;
       :Roles "Jungler" ;
       :hasAge 19 ;
-      :hasName "Reynaldo Ferdiand" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Reynaldo Ferdiand" ;
       :playerInfo "Reynaldo \"Reyy\" Ferdiand (born January 4, 2006) is an Indonesian player who is currently playing as a Jungler for Dewa United Esports." .
 
 
@@ -2566,8 +2564,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rezza rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 23 ;
-       :hasName "Ahmad Rezza Meah Bin Ahmad Rashin Meah" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Ahmad Rezza Meah Bin Ahmad Rashin Meah" ;
        :playerInfo "Ahmad \"Rezza\" Meah (born July 8, 2002) is a Malaysian player who is currently playing as an EXP Laner for Aero Esports." .
 
 
@@ -2575,16 +2573,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rezzz rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 19 ;
-       :hasName "Muhammad Reza Kurniawan" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Muhammad Reza Kurniawan" ;
        :playerInfo "Muhammad \"Rezzz\" Kurniawan (born August 7, 2006) is an Indonesian player who is currently playing as an EXP Laner for RRQ Hoshi." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Right
 :Right rdf:type owl:NamedIndividual ;
        :Roles "Head Coach" ;
-       :hasName "Jaypee Felipe Lugtu" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Jaypee Felipe Lugtu" ;
        :playerInfo "Jaypee \"Right\" Lugtu is a Filipino Coach who is currently working for Dewa United Esports as a Coach." .
 
 
@@ -2592,8 +2590,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rinee rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 21 ;
-       :hasName "Syahrul Ramadhan" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Syahrul Ramadhan" ;
        :playerInfo "Syahrul \"Rinee\" Ramadhan (born November 5, 2004) is an Indonesian player who is currently playing as a Jungler for Alter Ego." .
 
 
@@ -2601,8 +2599,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rinz rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
       :hasAge 21 ;
-      :hasName "Hajirin Arafat" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Hajirin Arafat" ;
       :playerInfo "Hajirin \"Rinz\" Arafat (born January 28, 2004) is an Indonesian player who is currently playing as a Mid Laner for RRQ Hoshi." .
 
 
@@ -2610,8 +2608,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Ronn rdf:type owl:NamedIndividual ;
       :Roles "Jungler" ;
       :hasAge 20 ;
-      :hasName "Muhammad Syahron" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Muhammad Syahron" ;
       :playerInfo "Muhammad \"Ronn\" Syahron (born April 13, 2005) is an Indonesian player who is currently playing as a Jungler for Bigetron by Vitality." .
 
 
@@ -2619,8 +2617,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rough rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 21 ;
-       :hasName "Dhiya' Harith Hazran Bin Shahrul Hadafi" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Dhiya' Harith Hazran Bin Shahrul Hadafi" ;
        :playerInfo "Dhiya' \"Rough\" Hadafi (born July 16, 2004) is a Malaysian player who is currently playing as a Gold Laner for Monster Vicious." .
 
 
@@ -2628,16 +2626,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Roundel rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 21 ;
-         :hasName "Faiskal Khadafi" ;
          :hasNationality "Indonesia" ;
+         :hasRealName "Faiskal Khadafi" ;
          :playerInfo "Faiskal \"RoundeL\" Khadafi (born May 21, 2004) is an Indonesian player who is currently playing as a Mid Laner for EVOS." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Roy
 :Roy rdf:type owl:NamedIndividual ;
      :Roles "Mid" ;
-     :hasName "Royven Tan" ;
      :hasNationality "Singapore" ;
+     :hasRealName "Royven Tan" ;
      :playerInfo "Royven \"Roy\" Tan is a Singaporean player who is currently playing as a Mid Laner for Team Stallion SG." .
 
 
@@ -2645,8 +2643,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Ryota rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 22 ;
-       :hasName "Nowee Cabailo Macasa" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Nowee Cabailo Macasa" ;
        :playerInfo "Nowee \"Ryota\" Macasa (born December 9, 2002) is a Filipino player who is currently playing as an EXP Laner for ONIC Philippines." .
 
 
@@ -2659,8 +2657,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SN4P
 :SN4P rdf:type owl:NamedIndividual ;
       :Roles "Analyst" ;
-      :hasName "Allec Monsseur Alvarado Alberto" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Allec Monsseur Alvarado Alberto" ;
       :playerInfo "Allec Monsseur \"SN4P\" Alvarado Alberto is a Filipino Coach who is currently working for Omega Esports as a Coach." .
 
 
@@ -2679,9 +2677,9 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                         :MPLPlayoff ;
             :hasStaff :Arcadia ,
                       :OzoraVeki ;
+            :hasName "Selangor Red Giant OG" ;
             :RankMPL 1 ;
-            :hasName "SRGOG" ,
-                     "Selangor Red Giant OG" ;
+            :hasRealName "SRGOG" ;
             :teamName "SRGOG" .
 
 
@@ -2689,16 +2687,16 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Saiful rdf:type owl:NamedIndividual ;
         :Roles "Assistant Coach" ;
         :hasAge 30 ;
-        :hasName "Muhammad Saiful Bin Aujang" ;
         :hasNationality "Malaysia" ;
+        :hasRealName "Muhammad Saiful Bin Aujang" ;
         :playerInfo "Muhammad \"Saiful\" Aujang (born September 6, 1995) is a Malaysian Coach who last worked for TODAK as a Coach." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SaintDeLucaz
 :SaintDeLucaz rdf:type owl:NamedIndividual ;
               :Roles "Head Coach" ;
-              :hasName "Doly Van Pelo Sihotang" ;
               :hasNationality "Indonesia" ;
+              :hasRealName "Doly Van Pelo Sihotang" ;
               :playerInfo "Doly \"SaintDeLucaz\" Sihotang is an Indonesian Coach who is currently working for Team Liquid ID as a Coach. He is a former Dota 2 player." .
 
 
@@ -2718,8 +2716,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Sanford rdf:type owl:NamedIndividual ;
          :Roles "Exp" ;
          :hasAge 19 ;
-         :hasName "Sanford Marin Vinuya" ;
          :hasNationality "Philippines" ;
+         :hasRealName "Sanford Marin Vinuya" ;
          :playerInfo "Sanford \"Sanford\" Vinuya (born June 24, 2006) is a Filipino player who is currently playing as an EXP Laner for Team Liquid PH." .
 
 
@@ -2727,8 +2725,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Sanji rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
        :hasAge 20 ;
-       :hasName "Alston Pabico" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Alston Pabico" ;
        :playerInfo """Alston \"Sanji\" Pabico (born October 3, 2005) is a Filipino player who is currently playing as a Mid Laner for Team Liquid PH.
 
 Sanji is the third player to win M World Championship in his debut season. (the other players are Wannn and FlapTzy). Sanji debuted in MPL at August 2022 and won M4 World Championship at January 2023.""" .
@@ -2738,16 +2736,16 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Sanz rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
       :hasAge 23 ;
-      :hasName "Gilanh" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Gilanh" ;
       :playerInfo "Gilang \"S A N Z\" (born July 22, 2002) is an Indonesian player who is currently playing as a Mid Laner for ONIC." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Savero
 :Savero rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
-        :hasName "Clayton Adrielo Kuswanto" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Clayton Adrielo Kuswanto" ;
         :playerInfo "Clayton \"Savero\" Kuswanto is an Indonesian player who is currently playing as a Gold Laner for ONIC." .
 
 
@@ -2761,8 +2759,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Seilah rdf:type owl:NamedIndividual ;
         :Roles "Mid" ;
         :hasAge 26 ;
-        :hasName "Basil Lim Dao Ze" ;
         :hasNationality "Singapore" ;
+        :hasRealName "Basil Lim Dao Ze" ;
         :playerInfo "Basil \"Seilah\" Lim (born January 29, 1999) is a Singaporean player who is currently playing as a Mid Laner for Evil." .
 
 
@@ -2770,8 +2768,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Sekys rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 19 ;
-       :hasName "Muhammad Haqqullah Bin Ahmad Shahrul Zaman" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Muhammad Haqqullah Bin Ahmad Shahrul Zaman" ;
        :playerInfo "Muhammad Haqqullah \"Sekys\" Ahmad Shahrul Zaman (born February 14, 2006) is a Malaysian player who is currently playing as a Jungler for SRG.OG." .
 
 
@@ -2784,16 +2782,16 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Sensui rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 23 ;
-        :hasName "Stephen Jasper Castillo" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Stephen Jasper Castillo" ;
         :playerInfo "Stephen \"Sensui\" Castillo (born November 28, 2001) is a Filipino player who is currently playing as a Jungler for Twisted Minds PH." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Shizou
 :Shizou rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
-        :hasName "Jan Carl Valdez" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Jan Carl Valdez" ;
         :playerInfo "Jan \"Shizou\" Valdez is a Filipino player who is currently playing as a Gold Laner for AP.Bren." .
 
 
@@ -2801,8 +2799,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Shogun rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge 21 ;
-        :hasName "Dylont Ananda Setya Huraihira" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Dylont Ananda Setya Huraihira" ;
         :playerInfo "Dylont \"Shogun\" Huraihira (born August 10, 2004) is an Indonesian player who is currently playing as an EXP Laner for Bigetron by Vitality." .
 
 
@@ -2828,8 +2826,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Sizkaa rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge 18 ;
-        :hasName "Muhammad Razif bin Sazali" ;
         :hasNationality "Malaysia" ;
+        :hasRealName "Muhammad Razif bin Sazali" ;
         :playerInfo "Muhammad \"Sizkaa\" Sazali (born December 26, 2006) is a Malaysian player who is currently playing as an EXP Laner for Untitled Esports." .
 
 
@@ -2837,8 +2835,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :SkyZED rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
         :hasAge 24 ;
-        :hasName "Muhammad Taufiq Hidayat Bin Mohd Ghazali" ;
         :hasNationality "Malaysia" ;
+        :hasRealName "Muhammad Taufiq Hidayat Bin Mohd Ghazali" ;
         :playerInfo "Muhammad \"Stylishzed\" Ghazali (born April 9, 2001) is a Malaysian player who is currently playing as a Gold Laner for Untitled Esports." .
 
 
@@ -2846,8 +2844,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Skylar rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
         :hasAge 23 ;
-        :hasName "Schevenko David Tendean" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Schevenko David Tendean" ;
         :playerInfo "Schevenko \"Skylar\" Tendean (born February 25, 2002) is an Indonesian player who is currently playing as a Gold Laner for ONIC." .
 
 
@@ -2861,8 +2859,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Smooth rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge 23 ;
-        :hasName "Aeliff Adam Md Ariff" ;
         :hasNationality "Malaysia" ;
+        :hasRealName "Aeliff Adam Md Ariff" ;
         :playerInfo "Aeliff \"Smooth\" Ariff (born July 1, 2002) is a Malaysian player who is currently playing as an EXP Laner for Aero Esports." .
 
 
@@ -2870,8 +2868,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :SoraPayung rdf:type owl:NamedIndividual ;
             :Roles "Head Coach" ;
             :hasAge 26 ;
-            :hasName "Muhammad Farhan Bin Ibrahim" ;
             :hasNationality "Malaysia" ;
+            :hasRealName "Muhammad Farhan Bin Ibrahim" ;
             :playerInfo "Muhammad \"SoraPayung\" Ibrahim (born September 1, 1999) is a Malaysian coach who is currently coaching for Monster Vicious." .
 
 
@@ -2887,8 +2885,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                :hasStaff :Amoux ,
                          :Eshaa ,
                          :Saiful ;
-               :RankMPL 4 ;
                :hasName "Team Stallion SG" ;
+               :RankMPL 4 ;
                :teamName "Team Stallion" .
 
 
@@ -2896,8 +2894,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Stormie rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 20 ;
-         :hasName "Hazziq Danish Bin Mohamad Rizwan" ;
          :hasNationality "Malaysia" ;
+         :hasRealName "Hazziq Danish Bin Mohamad Rizwan" ;
          :playerInfo "Hazziq \"Stormie\" Rizwan (born June 28, 2005) is a Malaysian player who is currently playing as a Mid Laner for SRG.OG." .
 
 
@@ -2905,16 +2903,16 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Stowm rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
        :hasAge 22 ;
-       :hasName "Dale Rolan Sena Vidore" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Dale Rolan Sena Vidore" ;
        :playerInfo "Michael \"Styx\" Abraham is an Indonesian Coach who is currently working for Alter Ego as a Coach." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Styx
 :Styx rdf:type owl:NamedIndividual ;
       :Roles "Assistant Coach" ;
-      :hasName "Michael Abraham" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Michael Abraham" ;
       :playerInfo "Michael \"Styx\" Abraham is an Indonesian Coach who is currently working for Alter Ego as a Coach." .
 
 
@@ -2922,8 +2920,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Subway rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 20 ;
-        :hasName "Wan Mohamad Danish Safwan Bin Mohd Sakirin" ;
         :hasNationality "Malaysia" ;
+        :hasRealName "Wan Mohamad Danish Safwan Bin Mohd Sakirin" ;
         :playerInfo "Wan \"Subway\" Sakirin (born March 2, 2005) is a Malaysian player who is currently playing as a Jungler for Untitled Esports." .
 
 
@@ -2937,8 +2935,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :SuperFrince rdf:type owl:NamedIndividual ;
              :Roles "Mid" ;
              :hasAge 21 ;
-             :hasName "Frince Miguel Ramirez" ;
              :hasNationality "Philippines" ;
+             :hasRealName "Frince Miguel Ramirez" ;
              :playerInfo "Frince \"Super Frince\" Ramirez (born November 22, 2003) is a Filipino player who is currently playing as a Mid Laner for ONIC Philippines." .
 
 
@@ -2946,16 +2944,16 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :SuperMarco rdf:type owl:NamedIndividual ;
             :Roles "Gold" ;
             :hasAge 19 ;
-            :hasName "Marco Stephen Requitiano" ;
             :hasNationality "Philippines" ;
+            :hasRealName "Marco Stephen Requitiano" ;
             :playerInfo "Marco \"Super Marco\" Requitiano (born October 6, 2006) is a Filipino player who is currently playing as a Gold Laner for Team Falcons PH." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SuperYoshi
 :SuperYoshi rdf:type owl:NamedIndividual ;
             :Roles "Roamer" ;
-            :hasName "Czedrick Romero" ;
             :hasNationality "Philippines" ;
+            :hasRealName "Czedrick Romero" ;
             :playerInfo "Czedrick \"Yoshinu\" Romero is a Filipino player who is currently playing as a Roamer for Omega Esports." .
 
 
@@ -2963,16 +2961,16 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Sutsujin rdf:type owl:NamedIndividual ;
           :Roles "Jungler" ;
           :hasAge 21 ;
-          :hasName "Arthur Christopher Sunarkho" ;
           :hasNationality "Indonesia" ;
+          :hasRealName "Arthur Christopher Sunarkho" ;
           :playerInfo "Arthur \"Sutsujin\" Sunarkho (born June 1, 2004) is an Indonesian player who is currently playing as a Jungler for RRQ Hoshi." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Swaylow
 :Swaylow rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
-         :hasName "Attanasius David Halomoan Silaloho" ;
          :hasNationality "Indonesia" ;
+         :hasRealName "Attanasius David Halomoan Silaloho" ;
          :playerInfo "Attanasius \"SwayLow\" Sihaloho is an Indonesian player who is currently playing as a Mid Laner for EVOS." .
 
 
@@ -2991,8 +2989,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
          :hasStaff :Facehugger ,
                    :SaintDeLucaz ;
          :RankMPL 9 ;
-         :hasName "TLID" ,
-                  "Team Liquid ID" ;
+         :hasRealName "Team Liquid ID" ;
          :teamName "Team Liquid ID" .
 
 
@@ -3011,9 +3008,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                      :MPLPlayoff ;
          :hasStaff :ArSy ,
                    :Tictac ;
+         :hasName "Team Liquid PH" ;
          :RankMPL 1 ;
-         :hasName "TLPH" ,
-                  "Team Liquid PH" ;
          :teamName "Team Liquid PH" .
 
 
@@ -3034,16 +3030,16 @@ Sanji is the third player to win M World Championship in his debut season. (the 
           :hasReached :MPLPlayoff ;
           :hasStaff :E2MAX ,
                     :Hito ;
-          :RankMPL 3 ;
           :hasName "TNC Pro Team" ;
+          :RankMPL 3 ;
           :teamName "TNC Pro Team" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Tazy
 :Tazy rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
-      :hasName "Tasia Eda Lestari" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Tasia Eda Lestari" ;
       :playerInfo "Tasia \"Tazy\" Lestari is an Indonesian Coach who is currently working for Aero Esports as a Coach." .
 
 
@@ -3088,8 +3084,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                          :XinHan ,
                          :Zakqt ,
                          :Zayyy ;
-              :RankMPL 8 ;
               :hasName "Team Rey" ;
+              :RankMPL 8 ;
               :teamName "Team Rey" .
 
 
@@ -3115,8 +3111,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                 :hasReached :MPLPlayoff ;
                 :hasStaff :PakAtan ,
                           :Pakbet ;
-                :RankMPL 4 ;
                 :hasName "Team Vamos" ;
+                :RankMPL 4 ;
                 :teamName "Team Vamos" .
 
 
@@ -3134,8 +3130,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Theo
 :Theo rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
-      :hasName "John Theo Guinto Eusebio" ;
       :hasNationality "Philippines" ;
+      :hasRealName "John Theo Guinto Eusebio" ;
       :playerInfo "John \"Theo\" Eusebio is a Filipino Coach who is currently working for Untitled Esports as a Coach." .
 
 
@@ -3143,8 +3139,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Tictac rdf:type owl:NamedIndividual ;
         :Roles "Analyst" ;
         :hasAge 45 ;
-        :hasName "Harold Francis Reyes" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Harold Francis Reyes" ;
         :playerInfo "Harold \"Tictac\" Reyes (born November 4, 1980) is a Filipino Coach who is currently working for Team Liquid PH as a Coach." .
 
 
@@ -3165,8 +3161,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
             :hasStaff :DevKoch ,
                       :Link ,
                       :Nafari ;
-            :RankMPL 9 ;
             :hasName "Todak" ;
+            :RankMPL 9 ;
             :teamName "Todak" .
 
 
@@ -3174,8 +3170,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Toyy rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 22 ;
-      :hasName "Muhammad Rizky" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Muhammad Rizky" ;
       :playerInfo "Muhammad \"Toyy\" Rizky (born May 14, 2003) is an Indonesian player who is currently playing as a Gold Laner for RRQ Hoshi." .
 
 
@@ -3183,8 +3179,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Trap rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 22 ;
-      :hasName "Syed Naufal Fitry" ;
       :hasNationality "Malaysia" ;
+      :hasRealName "Syed Naufal Fitry" ;
       :playerInfo "Syed \"Trap\" Fitri (also known as SyF) (born December 14, 2002) is a Malaysian player who is currently playing as a Gold Laner for CG Esports on loan from Team Rey." .
 
 
@@ -3192,8 +3188,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Trebor rdf:type owl:NamedIndividual ;
         :Roles "Head Coach" ;
         :hasAge 31 ;
-        :hasName "Robert Alexis Sanchez" ;
         :hasNationality "Philippines" ;
+        :hasRealName "Robert Alexis Sanchez" ;
         :playerInfo "Robert \"Trebor\" Sanchez (born May 19, 1994) is a Filipino Coach who is currently working for Team Falcons PH as a Coach." .
 
 
@@ -3214,8 +3210,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                    :hasReached :MPLPlayoff ;
                    :hasStaff :BONCHAN ,
                              :ESON ;
-                   :RankMPL "5-6" ;
                    :hasName "Twisted Minds PH" ;
+                   :RankMPL "5-6" ;
                    :teamName "Twisted Minds PH" .
 
 
@@ -3228,8 +3224,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/UK1R
 :UK1R rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
-      :hasName "Jayson Alupit" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Jayson Alupit" ;
       :playerInfo "Jayson \"UK1R\" Alupit is a Filipino player who is currently playing as a Mid Laner for Natus Vincere." .
 
 
@@ -3237,8 +3233,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Unii rdf:type owl:NamedIndividual ;
       :Roles "Jungler" ;
       :hasAge 19 ;
-      :hasName "Muhammad Danies Fitri Bin Razman" ;
       :hasNationality "Malaysia" ;
+      :hasRealName "Muhammad Danies Fitri Bin Razman" ;
       :playerInfo "Muhammad Danish Fitri \"Unii\" Razman (born September 28, 2006) is a Malaysian player who is currently playing as a Jungler for Monster Vicious." .
 
 
@@ -3259,8 +3255,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                :hasStaff :Fiyy ,
                          :Pozan ,
                          :Theo ;
-               :RankMPL 7 ;
                :hasName "Untitled Esports" ;
+               :RankMPL 7 ;
                :teamName "Untitled Esports" .
 
 
@@ -3268,8 +3264,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :VYN rdf:type owl:NamedIndividual ;
      :Roles "Head Coach" ;
      :hasAge 25 ;
-     :hasName "Calvin" ;
      :hasNationality "Indonesia" ;
+     :hasRealName "Calvin" ;
      :playerInfo "Calvin \"VYN\" (born September 3, 2000) is an Indonesian Coach and Roamer who is currently working for EVOS as a Coach." .
 
 
@@ -3277,32 +3273,32 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Valenz rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 21 ;
-        :hasName "Luk Jun Yip" ;
         :hasNationality "Malaysia" ;
+        :hasRealName "Luk Jun Yip" ;
         :playerInfo "Luk \"Valenz\" Yip (born February 2, 2004) is a Malaysian player who is currently playing as a Roamer for CG Esports." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vanix
 :Vanix rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
-       :hasName "Keith Lim Wei Jun" ;
        :hasNationality "Singapore" ;
+       :hasRealName "Keith Lim Wei Jun" ;
        :playerInfo "Keith \"Vanix\" Lim is a Singaporean player who is currently playing as a Gold Laner for Team Flash." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vanz
 :Vanz rdf:type owl:NamedIndividual ;
       :Roles "Jungler" ;
-      :hasName "Muhammad Ikhsan Farabi" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Muhammad Ikhsan Farabi" ;
       :playerInfo "Muhammad \"Vanz\" Farabi is an Indonesian player who is currently playing as a Jungler for Dewa United Esports." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vennn
 :Vennn rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
-       :hasName "Reaven Ugdiman" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Reaven Ugdiman" ;
        :playerInfo "Reaven \"Venn\" Ugdiman is a Filipino player who is currently playing as a Gold Laner for Evil." .
 
 
@@ -3315,23 +3311,23 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vivy
 :Vivy rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
-      :hasName "Muhammad Vikrie Ramadhan" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Muhammad Vikrie Ramadhan" ;
       :playerInfo "Muhammad \"Vivy\" Ramadhan is an Indonesian Coach who is currently working for GamesMY Kelantan as a Coach." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Wanzyy
 :Wanzyy rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
-        :hasName "Malaysia" .
+        :hasRealName "Malaysia" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Widy
 :Widy rdf:type owl:NamedIndividual ;
       :Roles "Roamer" ;
       :hasAge 19 ;
-      :hasName "Christian Widy Wardhana Hartono" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Christian Widy Wardhana Hartono" ;
       :playerInfo "Christian \"Widy\" Hartono (born May 9, 2006) is an Indonesian player who is currently playing as a Roamer for Team Liquid ID." .
 
 
@@ -3339,24 +3335,24 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Winter rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 25 ;
-        :hasName "Chun Chin Wee" ;
         :hasNationality "Malaysia" ;
+        :hasRealName "Chun Chin Wee" ;
         :playerInfo "Chun \"Winter\" Wee (born April 26, 2000) is a Malaysian player who is currently playing as a Roamer for SRG.OG." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Wongcoco
 :Wongcoco rdf:type owl:NamedIndividual ;
           :Roles "Analyst" ;
-          :hasName "Dian Agusta" ;
           :hasNationality "Indonesia" ;
+          :hasRealName "Dian Agusta" ;
           :playerInfo "Dian \"Wongcoco\" Agusta is an Indonesian Analyst who is currently working for Dewa United Heka as an Analyst." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Wurahhhh
 :Wurahhhh rdf:type owl:NamedIndividual ;
           :Roles "Head Coach" ;
-          :hasName "Hans Solano" ;
           :hasNationality "Philippines" ;
+          :hasRealName "Hans Solano" ;
           :playerInfo "Hans \"Wuraaaah\" Solano is a Filipino Coach who is currently working for Omega Esports as a Coach." .
 
 
@@ -3364,8 +3360,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Xepher rdf:type owl:NamedIndividual ;
         :Roles "Head Coach" ;
         :hasAge 29 ;
-        :hasName "Kenny Deo" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Kenny Deo" ;
         :playerInfo "Kenny \"Xepher\" Deo (born June 27, 1996) is an Indonesian Coach who is currently working for Alter Ego as a Coach." .
 
 
@@ -3379,8 +3375,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Xorizo rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge 22 ;
-        :hasName "I Gusti Made Indra Dwipayana" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "I Gusti Made Indra Dwipayana" ;
         :playerInfo "I \"Xorizo\" Dwipayana (born March 30, 2003) is an Indonesian player who is currently playing as an EXP Laner for EVOS." .
 
 
@@ -3388,8 +3384,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Xorn rdf:type owl:NamedIndividual ;
       :Roles "Roamer" ;
       :hasAge 25 ;
-      :hasName "Mohammad Zul Hisham Bin Mohd Noor" ;
       :hasNationality "Malaysia" ;
+      :hasRealName "Mohammad Zul Hisham Bin Mohd Noor" ;
       :playerInfo "Mohammad Zul Hisham \"Xorn\" Mohd Noor (born March 10, 2000) is a Malaysian player who is currently playing as a Roamer for Team Vamos." .
 
 
@@ -3397,15 +3393,15 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Xyve rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 20 ;
-      :hasName "Michael Richi" ;
       :hasNationality "Indonesia" ;
+      :hasRealName "Michael Richi" ;
       :playerInfo "Michael \"Xyve\" Richi (born August 28, 2005) is an Indonesian player who is currently playing as a Gold Laner for Natus Vincere." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yaawn
 :Yaawn rdf:type owl:NamedIndividual ;
-       :hasName "Chua Jun Xiang" ;
        :hasNationality "Singapore" ;
+       :hasRealName "Chua Jun Xiang" ;
        :playerInfo "Chua \"yaawn\" Jun Xiang is a Singaporean player who is currently playing as a Jungler for RSG Singapore." .
 
 
@@ -3419,8 +3415,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Ye3 rdf:type owl:NamedIndividual ;
      :Roles "Exp" ;
      :hasAge 19 ;
-     :hasName "Muhammad Al-Amin Bin Zamri" ;
      :hasNationality "Malaysia" ;
+     :hasRealName "Muhammad Al-Amin Bin Zamri" ;
      :playerInfo "Muhammad \"Ye3\" Zamri (born October 5, 2006) is a Malaysian player who is currently playing as an EXP Laner for CG Esports." .
 
 
@@ -3428,8 +3424,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Yehezkiel rdf:type owl:NamedIndividual ;
            :Roles "Mid" ;
            :hasAge 20 ;
-           :hasName "Yehezkiel Wiseman Hamonangan Napitu" ;
            :hasNationality "Indonesia" ;
+           :hasRealName "Yehezkiel Wiseman Hamonangan Napitu" ;
            :playerInfo "Yehezkiel \"Yehezkiel\" Napitu (also known as Syn) (born September 11, 2005) is an Indonesian player who is currently playing as a Mid Laner for Team Liquid ID." .
 
 
@@ -3437,16 +3433,16 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :YnoT rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
       :hasAge 37 ;
-      :hasName "Anthony Dennis Senedrin" ;
       :hasNationality "Philippines" ;
+      :hasRealName "Anthony Dennis Senedrin" ;
       :playerInfo "Anthony \"YnoT\" Senedrin (born August 8, 1988) is a Filipino Coach who is currently working for ONIC Philippines as a Coach." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yue
 :Yue rdf:type owl:NamedIndividual ;
      :Roles "Mid" ;
-     :hasName "Kenneth Carl Tadeo" ;
      :hasNationality "Philippines" ;
+     :hasRealName "Kenneth Carl Tadeo" ;
      :playerInfo "Kenneth \"Yue\" Tadeo is a Filipino player who is currently playing as a Mid Laner for Aurora Gaming PH" .
 
 
@@ -3454,8 +3450,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Yums rdf:type owl:NamedIndividual ;
       :Roles "Roamer" ;
       :hasAge 20 ;
-      :hasName "Muhammad Qayyum Ariffin Bin Mohd Suhairi" ;
       :hasNationality "Malaysia" ;
+      :hasRealName "Muhammad Qayyum Ariffin Bin Mohd Suhairi" ;
       :playerInfo "Muhammad \"Yums\" Suhairi (born December 9, 2004) is a Malaysian player who is currently playing as a Roamer for SRG.OG." .
 
 
@@ -3469,8 +3465,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :ZAIMSEMPOI rdf:type owl:NamedIndividual ;
             :Roles "Mid" ;
             :hasAge 22 ;
-            :hasName "Muhammad Zaim Bin Amir Izat" ;
             :hasNationality "Malaysia" ;
+            :hasRealName "Muhammad Zaim Bin Amir Izat" ;
             :playerInfo "Muhammad \"ZAIMSEMPOI\" Izat (born December 3, 2002) is a Malaysian player who is currently playing as a Mid Laner for TODAK." .
 
 
@@ -3484,8 +3480,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Zahyed rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 21 ;
-        :hasName "Muhammad Zaed Hakimi bin Zaharan" ;
         :hasNationality "Malaysia" ;
+        :hasRealName "Muhammad Zaed Hakimi bin Zaharan" ;
         :playerInfo "Muhammad \"Zaed\" Zaharan (born October 7, 2004) is a Malaysian player who is currently playing as a Jungler for TODAK." .
 
 
@@ -3493,8 +3489,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Zaida rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 20 ;
-       :hasName "Justine Sadia Palma" ;
        :hasNationality "Philippines" ;
+       :hasRealName "Justine Sadia Palma" ;
        :playerInfo "Justine \"Zaida\" Palma (born July 25, 2005) is a Filipino player who is currently playing as a Jungler for TNC Pro Team." .
 
 
@@ -3502,8 +3498,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Zakqt rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
        :hasAge 22 ;
-       :hasName "Muhammad Amir Zakwan Bin Mohamad Noor" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Muhammad Amir Zakwan Bin Mohamad Noor" ;
        :playerInfo "Muhammad \"Zakqt\" Noor (born September 18, 2003) is a Malaysian player who is currently playing as a Mid Laner for Team Rey." .
 
 
@@ -3523,8 +3519,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Zippyyqt rdf:type owl:NamedIndividual ;
           :RankMPL "Gold" ;
           :hasAge 20 ;
-          :hasName "ကျော်ဇင်ဗိုလ်" ;
           :hasNationality "Myanmar" ;
+          :hasRealName "ကျော်ဇင်ဗိုလ်" ;
           :playerInfo "Kyaw \"Zippx\" Zin Bo (born November 26, 2004) is a Burmese player who last played for HomeBois." .
 
 
@@ -3532,8 +3528,8 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Zqeef rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
        :hasAge 20 ;
-       :hasName "Muhammad Aqif Haiqal Bin Azman" ;
        :hasNationality "Malaysia" ;
+       :hasRealName "Muhammad Aqif Haiqal Bin Azman" ;
        :playerInfo "Muhammad \"Zqeef\" Azman (born April 29, 2005) is a Malaysian player who is currently playing as a Roamer for Aero Esports." .
 
 
@@ -3548,24 +3544,24 @@ Sanji is the third player to win M World Championship in his debut season. (the 
        :playerOf :AE_ID16 ;
        :Roles "Roamer" ;
        :alternateIds "owennn" ;
-       :hasName "Alexander Owen" ;
        :hasNationality "Indonesia" ;
+       :hasRealName "Alexander Owen" ;
        :playerInfo "Alexander \"Owennn\" Owen (born September 20, 2004) is an Indonesian player who is currently playing as a Roamer for Alter Ego." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/jamespangks
 :jamespangks rdf:type owl:NamedIndividual ;
              :Roles "Jungler" ;
-             :hasName "Jonathan James Mendoza" ;
              :hasNationality "Philippines" ;
+             :hasRealName "Jonathan James Mendoza" ;
              :playerInfo "Jonathan James \"Jamespangks\" Mendoza is a Filipino player who is currently playing as a Jungler for AP.Bren." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/ly4ly4ly4
 :ly4ly4ly4 rdf:type owl:NamedIndividual ;
            :Roles "Coach" ;
-           :hasName "Lim Yang" ;
            :hasNationality "Singapore" ;
+           :hasRealName "Lim Yang" ;
            :playerInfo "Lim \"Ly4ly4ly4\" Yang is a Singaporean Coach who is currently working for Rift Esports as a Coach." .
 
 
@@ -3591,24 +3587,24 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :woshipaul rdf:type owl:NamedIndividual ;
            :Roles "Jungler" ;
            :hasAge 20 ;
-           :hasName "Muhammad Rakhaa Sastradinata" ;
            :hasNationality "Indonesia" ;
+           :hasRealName "Muhammad Rakhaa Sastradinata" ;
            :playerInfo "Muhammad \"woshipaul\" Sastradinata (born October 13, 2005) is an Indonesian player who is currently playing as a Jungler for Natus Vincere." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/xMagic
 :xMagic rdf:type owl:NamedIndividual ;
         :Roles "Mid" ;
-        :hasName "Muhammad Andika Ramadhan" ;
         :hasNationality "Indonesia" ;
+        :hasRealName "Muhammad Andika Ramadhan" ;
         :playerInfo "Muhammad \"xMagic\" Ramadhan is an Indonesian player who is currently playing as a Mid Laner for Natus Vincere." .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/xNova
 :xNova rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
-       :hasName "Denniel Denison Gomez" ;
        :hasNationality "Philipine" ;
+       :hasRealName "Denniel Denison Gomez" ;
        :playerInfo "Denniel \"xNova\" Gomez is a Filipino player who is currently playing as a Roamer for AP.Bren." .
 
 
