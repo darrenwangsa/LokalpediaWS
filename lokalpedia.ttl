@@ -2138,7 +2138,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                                :SoraPayung ;
                      :Roles 3 ;
                      :hasName "Monster Vicious" ;
-                     :teamName "Homebois" .
+                     :teamName "Monster Vicious" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Moreno

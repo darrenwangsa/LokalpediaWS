@@ -80,79 +80,90 @@ $data = json_decode($response, true);
 // Hitung skor berurut
 $results = [];
 foreach ($data['results']['bindings'] as $row) {
+    // Ambil semua field
     $teamName = strtolower($row['teamName']['value'] ?? '');
-    $hasName = $row['hasName']['value'] ?? '';
-    $playerShort = $row['playerShort']['value'] ?? '';
-    $realName = $row['realName']['value'] ?? '';
-    $competitionShort = $row['competitionShort']['value'] ?? '';
+    $hasName = strtolower($row['hasName']['value'] ?? '');
+    $playerShort = strtolower($row['playerShort']['value'] ?? '');
+    $realName = strtolower($row['realName']['value'] ?? '');
+    $competitionShort = strtolower($row['competitionShort']['value'] ?? '');
 
-    // Hitung skor hanya jika teamName ada
-    $score = 1000; // default penalti tinggi
-    if ($teamName !== '') {
-        $pos = 0;
-        $lastPos = -1;
+    // Fungsi hitung skor berdasarkan posisi huruf (case-insensitive)
+    $calculateScore = function($fieldValue) use ($keyword) {
+        if ($fieldValue === '') return -1; // tandai field kosong
         $score = 0;
+        $lastPos = -1;
         foreach (str_split($keyword) as $char) {
-            $pos = strpos($teamName, $char, $lastPos + 1);
+            $pos = stripos($fieldValue, $char, $lastPos + 1);
             if ($pos === false) {
-                $score += 1000;
+                $score += 1000; // huruf tidak ditemukan → penalti besar
             } else {
-                $score += $pos;
+                $score += $pos; // huruf ditemukan → skor lebih rendah jika muncul lebih awal
                 $lastPos = $pos;
             }
         }
-    }
+        return $score;
+    };
+
+    // Hitung skor tiap field
+    $scoreTeamName = $calculateScore($teamName);
+    $scoreHasName = $calculateScore($hasName);
+    $scorePlayer = $calculateScore($playerShort);
+    $scoreRealName = $calculateScore($realName);
+    $scoreCompetition = $calculateScore($competitionShort);
+
+    // Skor maksimum yang akan digunakan untuk urutan
+    $scores = [$scoreTeamName, $scoreHasName, $scorePlayer, $scoreRealName, $scoreCompetition];
+    $minScore = min(array_filter($scores, fn($s) => $s >= 0)); // abaikan field kosong (-1)
 
     $results[] = [
-        'team' => $row['team']['value'] ?? '',
-        'teamName' => $teamName,
-        'hasName' => $hasName,
-        'playerShort' => $playerShort,
-        'realName' => $realName,
-        'competitionShort' => $competitionShort,
-        'score' => $score
+        'teamName' => $row['teamName']['value'] ?? '',
+        'hasName' => $row['hasName']['value'] ?? '',
+        'playerShort' => $row['playerShort']['value'] ?? '',
+        'realName' => $row['realName']['value'] ?? '',
+        'competitionShort' => $row['competitionShort']['value'] ?? '',
+        'scoreTeamName' => $scoreTeamName,
+        'scoreHasName' => $scoreHasName,
+        'scorePlayer' => $scorePlayer,
+        'scoreRealName' => $scoreRealName,
+        'scoreCompetition' => $scoreCompetition,
+        'minScore' => $minScore
     ];
 }
 
-
-// Urutkan hasil berdasarkan skor
+// Urutkan ascending → skor paling rendah muncul di atas
 usort($results, function($a, $b) {
-    return $a['score'] <=> $b['score'];
+    return $a['minScore'] <=> $b['minScore'];
 });
 
 // Tampilkan hasil
 foreach ($results as $r) {
     echo "<div style='margin-bottom:10px; padding:5px; border:1px solid #000;'>";
 
-    // Jika baris ini berasal dari blok tim
     if (!empty($r['teamName'])) {
         echo "<strong>Team:</strong> " . htmlspecialchars($r['teamName']);
+        echo " <em>(score: " . $r['scoreTeamName'] . ")</em>";
         if (!empty($r['hasName'])) {
-            echo " (" . htmlspecialchars($r['hasName']) . ")";
+            echo " (" . htmlspecialchars($r['hasName']) . " <em>score: " . $r['scoreHasName'] . "</em>)";
         }
         echo "<br>";
     }
 
-    // Jika baris ini berasal dari blok pemain
     if (!empty($r['playerShort'])) {
         echo "<strong>Player:</strong> " . htmlspecialchars($r['playerShort']);
         if (!empty($r['realName'])) {
             echo " (" . htmlspecialchars($r['realName']) . ")";
         }
+        echo " <em>score: " . $r['scorePlayer'] . "</em>";
         echo "<br>";
     }
 
-    // Jika baris ini berasal dari blok kompetisi
     if (!empty($r['competitionShort'])) {
         echo "<strong>Competition:</strong> " . htmlspecialchars($r['competitionShort']);
+        echo " <em>score: " . $r['scoreCompetition'] . "</em>";
         echo "<br>";
     }
 
-    // Score (opsional)
-    if (isset($r['score'])) {
-        echo "<em>Score:</em> " . $r['score'];
-    }
-
+    echo "<strong>Score:</strong> " . $r['minScore'];
     echo "</div>";
 }
 
