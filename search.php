@@ -24,46 +24,96 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 $keyword = strtolower($searchInput);
 // Ambil hasil SPARQL
-$endpoint = "http://localhost:3030/lokalpedia/sparql";
-$query = "
+$endpoint = "http://localhost:3030/lokalpedia22/sparql";
+$sparqlQuery0 = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
-SELECT DISTINCT ?team ?teamName ?hasName WHERE {
-  ?team a ?mpl ;
+
+SELECT DISTINCT 
+?team
+?teamName 
+?hasName
+(REPLACE(STR(?player), "^.*/", "") AS ?playerShort)
+?realName
+(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionShort) WHERE {{
+  ?team a ?competition ;
         :teamName ?teamName ;
         :hasName ?hasName .
+  }
+  UNION
+  {
+    ?player :hasRealName ?realName .
+    OPTIONAL{
+    ?player :hasFoto ?linkFoto .
+    }
+  }
+  UNION
+  {
+    {
+      ?headTour rdfs:subClassOf :InternationalTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    
+      FILTER NOT EXISTS {
+        ?child rdfs:subClassOf ?competitions .
+        FILTER(?child != ?competitions)
+      }
+    } UNION
+    {
+      ?regionTour rdfs:subClassOf :RegionalTour .
+      ?headTour rdfs:subClassOf ?regionTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    
+    	FILTER NOT EXISTS {
+        ?child rdfs:subClassOf ?competitions .
+        FILTER(?child != ?competitions)
+    }
+  }
 }
-";
+}
+SPARQL;
 
-$response = file_get_contents($endpoint . "?query=" . urlencode($query) . "&format=json");
+$response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery0) . "&format=json");
 $data = json_decode($response, true);
 
 // Hitung skor berurut
 $results = [];
 foreach ($data['results']['bindings'] as $row) {
-    $teamName = strtolower($row['teamName']['value']);
+    $teamName = strtolower($row['teamName']['value'] ?? '');
+    $hasName = $row['hasName']['value'] ?? '';
+    $playerShort = $row['playerShort']['value'] ?? '';
+    $realName = $row['realName']['value'] ?? '';
+    $competitionShort = $row['competitionShort']['value'] ?? '';
 
-    $pos = 0;  // posisi awal
-    $score = 0;
-    $lastPos = -1;
-
-    // Hitung skor berdasarkan urutan huruf input
-    foreach (str_split($keyword) as $char) {
-        $pos = strpos($teamName, $char, $lastPos + 1);
-        if ($pos === false) {
-            $score += 1000; // huruf tidak ditemukan → penalti besar
-        } else {
-            $score += $pos; // semakin awal → lebih rendah score
-            $lastPos = $pos;
+    // Hitung skor hanya jika teamName ada
+    $score = 1000; // default penalti tinggi
+    if ($teamName !== '') {
+        $pos = 0;
+        $lastPos = -1;
+        $score = 0;
+        foreach (str_split($keyword) as $char) {
+            $pos = strpos($teamName, $char, $lastPos + 1);
+            if ($pos === false) {
+                $score += 1000;
+            } else {
+                $score += $pos;
+                $lastPos = $pos;
+            }
         }
     }
 
     $results[] = [
-        'team' => $row['team']['value'],
-        'teamName' => $row['teamName']['value'],
-        'hasName' => $row['hasName']['value'],
+        'team' => $row['team']['value'] ?? '',
+        'teamName' => $teamName,
+        'hasName' => $hasName,
+        'playerShort' => $playerShort,
+        'realName' => $realName,
+        'competitionShort' => $competitionShort,
         'score' => $score
     ];
 }
+
 
 // Urutkan hasil berdasarkan skor
 usort($results, function($a, $b) {
@@ -72,8 +122,40 @@ usort($results, function($a, $b) {
 
 // Tampilkan hasil
 foreach ($results as $r) {
-    echo $r['teamName'] . " (" . $r['hasName'] . ") - score: " . $r['score'] . "\n";
+    echo "<div style='margin-bottom:10px; padding:5px; border:1px solid #000;'>";
+
+    // Jika baris ini berasal dari blok tim
+    if (!empty($r['teamName'])) {
+        echo "<strong>Team:</strong> " . htmlspecialchars($r['teamName']);
+        if (!empty($r['hasName'])) {
+            echo " (" . htmlspecialchars($r['hasName']) . ")";
+        }
+        echo "<br>";
+    }
+
+    // Jika baris ini berasal dari blok pemain
+    if (!empty($r['playerShort'])) {
+        echo "<strong>Player:</strong> " . htmlspecialchars($r['playerShort']);
+        if (!empty($r['realName'])) {
+            echo " (" . htmlspecialchars($r['realName']) . ")";
+        }
+        echo "<br>";
+    }
+
+    // Jika baris ini berasal dari blok kompetisi
+    if (!empty($r['competitionShort'])) {
+        echo "<strong>Competition:</strong> " . htmlspecialchars($r['competitionShort']);
+        echo "<br>";
+    }
+
+    // Score (opsional)
+    if (isset($r['score'])) {
+        echo "<em>Score:</em> " . $r['score'];
+    }
+
+    echo "</div>";
 }
+
 ?>
 
 
