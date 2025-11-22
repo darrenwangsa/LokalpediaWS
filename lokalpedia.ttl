@@ -355,6 +355,7 @@
       :playerOf :GeekFam_ID16 ;
       :Roles "Mid" ;
       :hasAge 21 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/geek/ABOY.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=5019ca4361313b3a0de7cfab847f75bb7e9c81ae5f455aa109a8116f0baeb007" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Valent Agriansyah Putra" ;
       :playerInfo "Valent \"A B O Y\" Putra (born August 6, 2004) is an Indonesian player who is currently playing as a Mid Laner for Geek Fam ID." .
@@ -377,6 +378,7 @@
          :hasStaff :Styx ,
                    :Xepher ;
          :RankMPL 2 ;
+         :hasFoto "https://cdn.id-mpl.com/data/teams/ae-256.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T113841Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d67f1bb491bfc59013c48390b8b95cb4664f8ec683208cd92d73155d50f462ec" ;
          :hasName "Alter Ego" ;
          :teamName "Alter Ego" .
 
@@ -406,6 +408,7 @@
 :APHRO rdf:type owl:NamedIndividual ;
        :playerOf :NAVI_ID16 ;
        :Roles "Roamer" ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/navi/APRHO.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7618e7749397691f53f6c1e15b7434b82a13a843828b85054fe8be805d2d3e46" ;
        :hasNationality "Indonesia" .
 
 
@@ -435,6 +438,7 @@
 :Aceng rdf:type owl:NamedIndividual ;
        :Roles "Analyst" ;
        :hasAge "Unknown" ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/dewa/ACENG.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T125639Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a900b916ab8b6b972cda7e8d07102215303ac9bf0761b1e14ccc86f74844a876" ;
        :hasNationality "Dian \"Aceng/Wongcoco\" Agusta is an Indonesian Analyst who is currently working for Dewa United Heka as an Analyst." ,
                        "Indonesia" ;
        :hasRealName "Dian Agusta" .
@@ -454,6 +458,7 @@
      :staffOf :Onic_ID16 ;
      :Roles "Head Coach" ;
      :hasAge 33 ;
+     :hasFoto "https://cdn.id-mpl.com/season16/player/onic/ADI.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T124200Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=94692fdb9fad467db5292982167a0f3eb432cff315ccdec5f613508bdca3ef8b" ;
      :hasNationality "Indonesia" ;
      :hasRealName "Adi Asyauri" ;
      :playerInfo "Adi \"Adi\" Asyauri (also known as Acil) (born September 4, 1992) is an Indonesian Coach who is currently working for ONIC as a Coach. He is a former Dota 2 player." .
@@ -488,6 +493,7 @@
               :playerOf :TL_ID16 ;
               :Roles "Gold" ;
               :hasAge 20 ;
+              :hasFoto "https://cdn.id-mpl.com/season16/player/tlid/AERONNSHIKII.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T160651Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=caa6807ac58f58e6c3df2b556a497e53a479efa41d7d5c1b89ac8241ba0e8fb2" ;
               :hasNationality "Indonesia" ;
               :hasRealName "Sultan Muhammad" ;
               :playerInfo "Sultan \"AeronnShikii\" Muhammad (born July 13, 2005) is an Indonesian player who is currently playing as a Gold Laner for Team Liquid ID." .
@@ -517,6 +523,7 @@
           :playerOf :EVOS_ID16 ;
           :Roles "Jungler" ;
           :hasAge 21 ;
+          :hasFoto "https://cdn.id-mpl.com/season16/player/evos/ALBERTTT.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T143816Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=e2d5cac82fcb5d967a3c5cc9c02ce5b390ae26534d14646247dba30c00ec4d50" ;
           :hasNationality "Indonesia" ;
           :hasRealName "Alberttt Neilsen Iskandar" ;
           :playerInfo "Albert \"Alberttt\" Iskandar (born January 8, 2004) is an Indonesian player who is currently playing as a Jungler for EVOS." .
@@ -527,6 +534,7 @@
       :hasStaff :NAVI_ID16 ;
       :Roles "Head Coach" ;
       :hasAge 28 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/navi/DO.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T175819Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=83ed66c619c48a7e81d098c730bf02fd1439c4c97c37e0b2dd6645aaafa0da16" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Ronaldo Liebertj" ;
       :playerInfo "Ronaldo \"Aldo\" Lieberth (also known as Skipper) (born June 2, 1997) is an Indonesian Coach who is currently working for Natus Vincere as a Coach." .
@@ -555,6 +563,7 @@
 :Andoryuuu rdf:type owl:NamedIndividual ;
            :playerOf :NAVI_ID16 ;
            :Roles "Jungler" ;
+           :hasFoto "https://cdn.id-mpl.com/season16/player/navi/ANDORYUU.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=984726ccfbdf646de49a34180058a9988b9b24a481d5e816cfc35f02026ddb51" ;
            :hasNationality "Philippines" ;
            :hasRealName "Andrew Flora" ;
            :playerInfo "Andrew \"Andoryuuu\" Flora is a Filipino player who is currently playing as a Jungler for Natus Vincere." .
@@ -589,6 +598,7 @@
       :playerOf :TL_ID16 ;
       :Roles "Exp" ;
       :hasAge 22 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/tlid/ARAN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T145235Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7eef579d6d427fce592ce9f3bebabc49bc8c35b73600c07c77652f5413bd010f" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Aldhia Aranda" ;
       :playerInfo "Aldhia \"Aran\" Aranda (born February 23, 2003) is an Indonesian player who is currently playing as an EXP Laner for Team Liquid ID." .
@@ -608,6 +618,7 @@
 :Arfy rdf:type owl:NamedIndividual ;
       :playerOf :AE_ID16 ;
       :Roles "Gold" ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/ae/ARFY.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=209b81e07467cd85dc680d74b6e4580a5f1ca93c6b00ff82dc814b80022e4ad1" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Arifudin Dingarai" ;
       :playerInfo "Arifudin \"Arfy\" Dingarai is an Indonesian player who is currently playing as a Gold Laner for Alter Ego." .
@@ -683,6 +694,7 @@
            :Roles "Roamer" ;
            :alternateIds "Greed" ;
            :hasAge 27 ;
+           :hasFoto "https://cdn.id-mpl.com/season16/player/geek/BALOYSKIE.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=6f0a5e80a0aa0999d72733d776320aad64148f28030f02c56aa0132711f1e620" ;
            :hasNationality "Philippines" ;
            :hasRealName "llen Jedric O. Baloy" ;
            :playerInfo "Allen \"Baloyskie\" Baloy (formerly known as Greed) (born October 10, 1998) is a Filipino player who is currently playing as a Roamer for Geek Fam ID" .
@@ -691,6 +703,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Bam
 :Bam rdf:type owl:NamedIndividual ;
      :Roles "Head Coach" ;
+     :hasFoto "https://cdn.id-mpl.com/season16/player/btr/Coach%20Bam.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T125900Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=625893ef3e3989a0a7a52e97003e8afc835cfc23e3797e19aabf5153fa175222" ;
      :hasNationality "Philippines" ;
      :hasRealName "Abraham Unida" ;
      :playerInfo "Abraham \"Bam\" Unida is a Filipino Coach who is currently working for Bigetron by Vitality as a Coach." .
@@ -701,6 +714,7 @@
           :staffOf :BTRByVitality_ID16 ;
           :Roles "Analyst" ;
           :hasAge 23 ;
+          :hasFoto "https://cdn.id-mpl.com/season16/player/btr/BARBOSA.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T125900Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=4594cf30f429ed49ffab3076ef68ab8d93bffc6dc6af45482279379951798ee7" ;
           :hasNationality "Indonesia" ;
           :hasRealName "Arya Nazhari" ;
           :playerInfo "Arya \"Barbossa\" Nazhari (born May 13, 2002) is an Indonesian Coach who is currently working for Bigetron by Vitality as a Coach" .
@@ -744,6 +758,7 @@
          :staffOf :GeekFam_ID16 ;
          :Roles "Assistant Coach" ;
          :hasAge 31 ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/geek/BLUFFZY.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T173732Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2b7bd7e4f37a18aabc9d59ef4d7f9fedbfc9f48e6dfbd98a61e069d6cb66a35a" ;
          :hasNationality "Philippines" ;
          :hasRealName "Bluffzy" ;
          :playerInfo "Mark \"Bluffzy\" Reyes (born November 22, 1995) is a Filipino Coach who is currently working for Geek Fam ID as a Coach" .
@@ -762,6 +777,7 @@
 :Branz rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 20 ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/evos/BRANZ.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T145119Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=00ad217d7e7715587258ae449b312db9d79d753bb354ef2493440cc39922a3bd" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Jabran Bagus Wiloko" ;
        :playerInfo "Jabran \"Branz\" Wiloko (born August 29, 2000) is an Indonesian player who is currently playing as a Gold Laner for EVOS." .
@@ -771,6 +787,7 @@
 :Bravo rdf:type owl:NamedIndividual ;
        :Roles "Analyst" ;
        :hasAge 25 ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/evos/BRAVO.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T164511Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=9cba713b66ae51728fa802899e9f512b267343e0dcc3f7e36f5f0efa2afea230" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Akbar Tubagus Wira Nida" ;
        :playerInfo "Akbar \"Bravo\" Nida (born February 7, 2000) is an Indonesian Analyst and EXP Laner who is currently working for EVOS as an Analyst." .
@@ -825,6 +842,7 @@
 :CW rdf:type owl:NamedIndividual ;
     :Roles "Assistant Coach" ;
     :hasAge 25 ;
+    :hasFoto "https://cdn.id-mpl.com/season16/player/onic/CW.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T124200Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7e5804f8feeacbaa452ff3e2b5a927baebe8c33b77e1d5f89e4f08374d7cff98" ;
     :hasNationality "Indonesia" ;
     :hasRealName "Calvin Winata" ;
     :playerInfo "Calvin \"CW\" Winata (born November 10, 2000) is an Indonesian Analyst and Gold Laner who is currently working for ONIC as an Analyst. He is a former Arena of Valor player." .
@@ -955,6 +973,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cyruz
 :Cyruz rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/ae/CYRUZ.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T144139Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=91acdd016e49c1a31c4c6c8e4253094d977b6a7fb729a39f6bb77763a2d1390b" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Muhammad Halim" ;
        :playerInfo "Muhammad \"Cyruz\" Halim is an Indonesian player who is currently playing as a Mid Laner for Alter Ego." .
@@ -974,6 +993,7 @@
          :hasStaff :Right ,
                    :Wongcoco ;
          :RankMPL "5-6" ;
+         :hasFoto "https://cdn.id-mpl.com/data/teams/dewa-united-500.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142458Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=37d539fc7005105c85182beed5bb1aa3cd52d66031a5bc4022874957d5d6a3ae" ;
          :hasName "Dewa United Esports" ;
          :teamName "Dewa United Esports" .
 
@@ -1068,7 +1088,8 @@
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Dora
 :Dora rdf:type owl:NamedIndividual ;
-      :Roles "Head Coach" .
+      :Roles "Head Coach" ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/geek/DORADSP.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T173732Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=e0bd63c73b2e67a85c17e4cbaa128f0fe6feb4bf2bd8e273357dbb7b4f78a265" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/DreamS
@@ -1098,6 +1119,7 @@
          :Roles "Exp" ;
          :alternateIds "Coyy" ;
          :hasAge 23 ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/DYRENNN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T144111Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=38f1f5231f9f5eb7820f12ba98caf137cd42717439542f661a3779b798367d71" ;
          :hasNationality "Indonesia" ;
          :hasRealName "Rendy Syahputra" ;
          :playerInfo "Rendy \"Dyrennn\" Syahputra (born May 21, 2003) is an Indonesian player who is currently playing as an EXP Laner for RRQ Hoshi." .
@@ -1146,6 +1168,7 @@
            :hasStaff :Bravo ,
                      :VYN ;
            :RankMPL 3 ;
+           :hasFoto "https://cdn.id-mpl.com/data/teams/evos-500.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T134153Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=3db1e92e0d1359b6eff9d978c5441e2be4542bcad152a717e66a141d9953b072" ;
            :hasName "Evos Esports" ;
            :teamName "EVOS" .
 
@@ -1164,6 +1187,7 @@
 :Erlan rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :alternateIds "Douma" ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/evos/ERLAN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T143816Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7cbbdf4042036ada71dfce2e87a685e5545ad9c900eb8399354c3551df94a605" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Erland Saputra" ;
        :playerInfo "Erland \"Erlan\" Saputra (also known as Douma) is an Indonesian player who is currently playing as a Gold Laner for EVOS." .
@@ -1235,6 +1259,7 @@
 :Facehugger rdf:type owl:NamedIndividual ;
             :Roles "Analyst" ;
             :hasAge 28 ;
+            :hasFoto "https://cdn.id-mpl.com/season16/player/tlid/FACEHUGGER.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T160651Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=b3bf9cd346824bcd3451ec920754d28bbc08957c5a017d3a4e21fdcd862c1334" ;
             :hasNationality "Indonesia" ;
             :hasRealName "Usep Satiawan" ;
             :playerInfo "Usep \"Facehugger\" Satiawan (born July 18, 1997) is an Indonesian Coach and Mid Laner who is currently working for Team Liquid ID as a Coach. He is a former Dota 2 player." .
@@ -1267,6 +1292,7 @@
 :Faviannn rdf:type owl:NamedIndividual ;
           :Roles "Jungler" ;
           :hasAge 19 ;
+          :hasFoto "https://cdn.id-mpl.com/season16/player/tlid/FAVIANNN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T150810Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2bbeebe1786c2e8ca199bec3c516251b22ba675aaa67cae134399e71541d7f73" ;
           :hasNationality "Indonesia" ;
           :hasRealName "Favian Putra" ;
           :playerInfo "Favian \"Faviannn\" Putra (born September 11, 2006) is an Indonesian player who is currently playing as a Jungler for Team Liquid ID." .
@@ -1293,6 +1319,7 @@
 :Ferxiic rdf:type owl:NamedIndividual ;
          :Roles "Jungler" ;
          :hasAge 21 ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/Ferxicc.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T161025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=eb2491598d61b74504111605d94ac51688741721a98ca56135e7a1fd24a77ffb" ;
          :hasNationality "Indonesia" ;
          :hasRealName "Ferdyansyah Kamaruddin" ;
          :playerInfo "Ferdyansyah \"Ferxiic\" Kamaruddin (born August 18, 2004) is an Indonesian player who is currently playing as a Jungler for RRQ Hoshi." .
@@ -1302,6 +1329,7 @@
 :Finn rdf:type owl:NamedIndividual ;
       :Roles "Roamer" ;
       :hasAge 21 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/btr/FINN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=05e326d55ccd42ed59a42d3055c22792703ece7644c17d82814a428232662c65" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Muhammad Hikmatullah" ;
       :playerInfo "Muhammad \"Finn\" Hikmatullah (born September 29, 2004) is an Indonesian player who is currently playing as a Roamer for Bigetron by Vitality." .
@@ -1410,6 +1438,7 @@
               :hasStaff :Bluffzy ,
                         :Dora ;
               :RankMPL 8 ;
+              :hasFoto "https://cdn.id-mpl.com/data/teams/geek-500.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142717Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7123dd6bd7d7ebb71fb7666b8b5dd972a8a5328073df769376417908c9dc0842" ;
               :hasName "Geek Fam ID" ;
               :teamName "Geek Fam" .
 
@@ -1419,6 +1448,7 @@
       :Roles "Exp" ;
       :alternateIds "Mercy" ;
       :hasAge 25 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/geek/GOBS.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=4e146b7feecf1dfd3741c5b200419d113688af86e2aa72772168ffba35d960e5" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Mercy Richart Ratuliu" ;
       :playerInfo "Mercy \"Gobs\" Ratuliu (born May 21, 2000) is an Indonesian player who is currently playing as an EXP Laner for Geek Fam ID." .
@@ -1492,6 +1522,7 @@
 :Hijumee rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 22 ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/ae/HIJUME.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=b24d08acf3826e2ff9193aeb7ef2e72172c8f2a0f81fe11e147f2063ffe0630b" ;
          :hasNationality "Indonesia" ;
          :hasRealName "Dalvin Ramadhana Putra" ;
          :playerInfo "Dalvin \"Hijumee\" Putra (born November 23, 2002) is an Indonesian player who is currently playing as a Mid Laner for Alter Ego." .
@@ -1544,6 +1575,7 @@
       :Roles "Roamer" ;
       :alternateIds "dadidudedo" ;
       :hasAge 20 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/IDOK.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f0b19a61c9c6b7e95a022f08b67dfebfc91ae846565176d7ef041383615c3a1d" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Said Ridho" ;
       :playerInfo "Said \"Idok\" Ridho (born January 30, 2005) is an Indonesian player who is currently playing as a Roamer for RRQ Hoshi." .
@@ -1594,6 +1626,7 @@
        :Roles "Roamer" ;
        :alternateIds "VaanStrong" ;
        :hasAge 25 ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/ae/IVAN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T144139Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=62c373450434cc929ddcfdcf40c307c57c293e0749cff739aa2ea2983c0c59a0" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Vincentsius Ivan Adrianto" ;
        :playerInfo "Vincentsius \"Ivann\" Adrianto (born September 24, 2000) is an Indonesian player who is currently playing as a Roamer for Alter Ego." .
@@ -1621,6 +1654,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/JOOOOO
 :JOOOOO rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/tlid/JOOOO.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T145235Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=3a1099c2aedef54e34ada6de15218c84a39b243f493167854a08d92c4d9a9844" ;
         :hasNationality "Indonesia" .
 
 
@@ -1638,6 +1672,7 @@
          :Roles "Assistant Coach" ;
          :alternateIds "Lumba-Lumba" ;
          :hasAge 29 ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/navi/Jacklee.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T175819Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f6b683390cbecf679026824f268e4eb76f2a4fca6aea10acecebf40053de229f" ;
          :hasNationality "Indonesia" ;
          :hasRealName "Hafizun Ahmad" ;
          :playerInfo "Hafizun \"Jacklee\" Ahmad (born May 26, 1996) is an Indonesian Coach who is currently working for Natus Vincere as a Coach." .
@@ -1713,6 +1748,7 @@
 :Kabuki rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
         :hasAge 22 ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/tlid/KABUKI.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T145235Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=55fc3a3c432ea9f565f2215f5841160724f13f9c7445b67566ae76b33816aea8" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Leonardo Prasetyo Agung" ;
         :playerInfo "Leonardo \"Kabuki\" Agung (born January 1, 2003) is an Indonesian player who is currently playing as a Gold Laner for Team Liquid ID." .
@@ -1723,6 +1759,7 @@
        :Roles "Jungler" ;
        :alternateIds "FULLCLIP" ;
        :hasAge 20 ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/onic/KAIRI.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=1c371c876aa2c035831027d7261c2c071f1518c35bc183b6541065c9d3fe3eb2" ;
        :hasNationality "Philippines" ;
        :hasRealName "Kairi Ygnacio Rayosdelsol" ;
        :playerInfo "Kairi \"Kairi\" Rayosdelsol (born September 21, 2005) is a Filipino player who is currently playing as a Jungler for ONIC." .
@@ -1744,6 +1781,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Karss rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 20 ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/navi/KARSS.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=daf71bb746b5ed4e405ec3e1c7fdbe24946e86f5ce9281c0c59fd5f34cffe1fd" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Karsten William Tjugito" ;
        :playerInfo "Karsten \"Karss\" Tjugito (born July 6, 2005) is an Indonesian player who is currently playing as a EXP Laner for Natus Vincere." .
@@ -1775,6 +1813,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/KennzyySkie
 :KennzyySkie rdf:type owl:NamedIndividual ;
              :Roles "Gold" ;
+             :hasFoto "https://cdn.id-mpl.com/season16/player/geek/KENNZYYSKIE.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=75a3c1bcdbd0833b384079cd5a408a6b8ededff94aa00cb545fcc583c7b1b2f6" ;
              :hasNationality "Indonesia" ;
              :hasRealName "Kenny Ramadhan" ;
              :playerInfo "Kenny \"KennzyySkie\" Ramadhan is an Indonesian player who is currently playing as a Gold Laner for Geek Fam ID." .
@@ -1793,6 +1832,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Khezcute rdf:type owl:NamedIndividual ;
           :Roles "Head Coach" ;
           :hasAge 32 ;
+          :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/KHEZCUTE.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T161025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=c121ab6ebe90d557da1d920af6f4314d10b0b8658575c01659f01a3480cc2eca" ;
           :hasNationality "Alfi \"Khezcute\" Nelphyana (born March 6, 1993) is an Indonesian Coach who is currently working for RRQ Hoshi as a Coach. He is a former Dota 2 player." ,
                           "Indonesia" ;
           :hasRealName "Alfi Syahrin Nelphyana" .
@@ -1802,6 +1842,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kiboy rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
        :hasAge 23 ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/onic/KIBOY.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=fd76b741f5cb0434cfa8f825448b166677dcb186c6f84ccd0533f8c890a97416" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Nicky Fernando Pontonuwu" ;
        :playerInfo "Nicky \"Kiboy\" Pontonuwu (born November 7, 2002) is an Indonesian player who is currently playing as a Roamer for ONIC." .
@@ -1881,6 +1922,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kyou rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 19 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/tlid/KYOU.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T150810Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=086fc3b59cfd654311d174eae9c6b7e2c2bad3bc8dcf57e9f6cbee8c2897292b" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Riski" ;
       :playerInfo "Riski \"Kyou\" (born February 26, 2006) is an Indonesian player who is currently playing as a Gold Laner for Team Liquid ID." .
@@ -1891,6 +1933,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
      :Roles "Roamer" ;
      :alternateIds "Super Kyy" ;
      :hasAge 23 ;
+     :hasFoto "https://cdn.id-mpl.com/season16/player/evos/KYY.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T143817Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=c79d47685f5a1305eb3b891056b03e2bacb6e449300d1e540b92cdc44b6ad2b5" ;
      :hasNationality "Indonesia" ;
      :hasRealName "Hengky Gunawan" ;
      :playerInfo "Hengky \"Kyy\" Gunawan (born November 9, 2003) is an Indonesian player who is currently playing as a Roamer for EVOS." .
@@ -1993,6 +2036,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
          :Roles "Exp" ;
          :alternateIds "Ragazzor" ;
          :hasAge 19 ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/onic/Lutpii.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f8e285d630e5bcc52477797c393887023df104dc6ae5f0faed2ef8612e718bd7" ;
          :hasNationality "Indonesia" ;
          :playerInfo "Moch \"Lutpiii\" Ardianto (born December 3, 2005) is an Indonesian player who is currently playing as an EXP Laner for ONIC." ,
                      "Moch Lutfi Ardianto" .
@@ -2066,6 +2110,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Markk
 :Markk rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/dewa/MARKKK.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T150614Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=268acd227566db2024c9ec68cfc94531bb16ec9e871e3b3779609e06309b93d7" ;
        :hasNationality "Indonesia" .
 
 
@@ -2087,6 +2132,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Maybeee rdf:type owl:NamedIndividual ;
          :Roles "Gold" ;
          :hasAge 19 ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/dewa/MAYBEEE.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T143816Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=437735db887f2a7f9f6d1f84dd3319c90a16f233cc8b9c66ba5bf89325d53e00" ;
          :hasNationality "Indonesia" ;
          :hasRealName "Delvin" ;
          :playerInfo "Delvin \"Maybeee\" (born April 18, 2006) is an Indonesian player who is currently playing as a Gold Laner for Dewa United Esports." .
@@ -2095,6 +2141,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Maykids
 :Maykids rdf:type owl:NamedIndividual ;
          :Roles "Jungler" ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/geek/Maykids.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=8b8801728f05293d85cf84f691f75b1fa0e96e7af62b25b8fdce2c212ee2e7bb" ;
          :hasNationality "Jungler" ;
          :hasRealName "Muhammad Akbar Prasetia Ardani" ;
          :playerInfo "Muhammad \"Maykids\" Ardani is an Indonesian player who is currently playing as a Jungler for Geek Fam ID." .
@@ -2145,6 +2192,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Moreno rdf:type owl:NamedIndividual ;
         :Roles "Mid" ;
         :hasAge 20 ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/btr/MORENO.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=197226e86b8429ea7fd559f59dc90e0838a7dc4b6d6c24ccab65a8ad7a042536" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Marcel Juan Moreno Sinulingga" ;
         :playerInfo "Marcel \"Moreno\" Sinulingga (born October 5, 2005) is an Indonesian player who is currently playing as a Mid Laner for Bigetron by Vitality." .
@@ -2154,6 +2202,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Muezza rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 23 ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/dewa/MUEZZA.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T143817Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=33226128c08d6ddd3f258e357d829496b2cb619341c5a88ff195f72d06a3597e" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Irfan Ramadhani" ;
         :playerInfo "Irfan \"Muezzaa\" Ramadhani (born November 8, 2002) is an Indonesian player who is currently playing as a Roamer for Dewa United Esports." .
@@ -2183,6 +2232,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasStaff :Aldo ,
                      :Jacklee ;
            :RankMPL "5-6" ;
+           :hasFoto "https://cdn.id-mpl.com/season15/NAVI-2.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T170817Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=11083e9226c3324c298effcd3946cbb402c2778d63f05a61e3c2e59f1f73cad1" ;
            :hasName "Natus Vincere" ;
            :teamName "Natus Vincere" .
 
@@ -2190,6 +2240,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/NMM
 :NMM rdf:type owl:NamedIndividual ;
      :Roles "Analyst" ;
+     :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/NMM.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T161025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=3a8081711a3a566f322d7404ac163f4bb6bd390b50c887a59ccc434973141f52" ;
      :hasNationality "Indonesia" ;
      :hasRealName "Rasyid Kevin Perwira" ;
      :playerInfo "Rasyid \"NMM\" Perwira is an Indonesian Coach who is currently working for RRQ Hoshi as a Coach. He is a former Dota 2 player." .
@@ -2249,6 +2300,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Nino rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 21 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/ae/NINO.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f09820547f150bde9e3ef9c55c124a3c215d02a275af1dd6af52e35ff0342927" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Syauki Fauzan Sumarno" ;
       :playerInfo "Syauki \"Nino\" Sumarno (born April 30, 2004) is an Indonesian player who is currently playing as an EXP Laner for Alter Ego." .
@@ -2258,6 +2310,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Nnael rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 19 ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/btr/NNAEL.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a0dc4013e5c5b966195d57876a28ac0c9c8c6453ed4b876ed5d80b3bf141179c" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Manuel Simbolon" ;
        :playerInfo "Manuel \"Nnael\" Simbolon (born January 18, 2006) is an Indonesian player who is currently playing as a Jungler for Bigetron by Vitality." .
@@ -2292,6 +2345,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Octa
 :Octa rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/dewa/OCTA.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T143816Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=e9c5bb4718cf75cfc78e0f49f82018a2846f4fb58186707a356e3109dfef0094" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Muhamad Akmal Maulana" ;
       :playerInfo "Muhamad \"Octa\" Maulana is an Indonesian player who is currently playing as a Mid Laner for Dewa United Esports." .
@@ -2351,6 +2405,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                      :CW ,
                      :Paddington ;
            :RankMPL 1 ;
+           :hasFoto "https://cdn.id-mpl.com/data/teams/onic-b-256.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T113841Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=73dd12e33ce7f60e5c13818aaf88363343b02ea0928ab461138899f46a9a0ca9" ;
            :hasName "Onic Esports ID" ;
            :teamName "ONIC ID" .
 
@@ -2394,6 +2449,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Paddington
 :Paddington rdf:type owl:NamedIndividual ;
             :Roles "Analyst" ;
+            :hasFoto "https://cdn.id-mpl.com/season16/player/onic/GEM.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T124200Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f285a758eb29ac2ffb35dd44c890e42aa32a145230647c2db9b98026a4881a72" ;
             :hasNationality "Indonesia" ;
             :hasRealName "Riyan Febriyanto" ;
             :playerInfo "Riyan \"Paddington\" Febriyanto is an Indonesian Coach who is currently working for ONIC as a Coach." .
@@ -2464,6 +2520,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :QINN rdf:type owl:NamedIndividual ;
       :Roles "Exp" ;
       :hasAge 18 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/dewa/Qinn.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T143817Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=8645cf8735d690cbd5cfe4a5091e817bdef97723306db5211a6d29911b2a4e09" ;
       :hasNationality "Philippines" ;
       :hasRealName "John Carlo" ;
       :playerInfo "John \"QINN\" Carlo (born December 9, 2006) is a Filipino player who is currently playing as an EXP Laner for Dewa United Esports." .
@@ -2484,6 +2541,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                          :NMM ,
                          :Rave ;
                :RankMPL 7 ;
+               :hasFoto "https://cdn.id-mpl.com/data/teams/rrq-500.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141638Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=32efdf324cf5b985945a1b39bd428acd11aef30da49d3b32710a3199a4a5fe07" ;
                :hasName "Rex Regum Qeon Hoshi" ;
                :teamName "RRQ Hoshi" .
 
@@ -2527,6 +2585,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rave rdf:type owl:NamedIndividual ;
       :Roles "Assistant Coach" ;
       :hasAge 29 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/RAVE.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T161025Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=c521b274c6482080157bba48bc1d88fdf44b6637fc1151756047486d22485d19" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Fadhil Abdurahman" ;
       :playerInfo "Fadhil \"Rave\" Abdurahman (born April 18, 1996) is an Indonesian Coach and Analyst who is currently working for RRQ Hoshi as a Coach." .
@@ -2535,6 +2594,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rendyy
 :Rendyy rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/evos/RENDYY_MID.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T143817Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=801f7abbe0548f2509d4e6dd0a60288e52dff632628bcbbe1f075a581847522a" ;
         :hasNationality "Indonesia" .
 
 
@@ -2548,6 +2608,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Reyy rdf:type owl:NamedIndividual ;
       :Roles "Jungler" ;
       :hasAge 19 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/dewa/REYY.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T143816Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2582302d821a883f047ece271a56052956dcdbca6db08d384dece73296080cda" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Reynaldo Ferdiand" ;
       :playerInfo "Reynaldo \"Reyy\" Ferdiand (born January 4, 2006) is an Indonesian player who is currently playing as a Jungler for Dewa United Esports." .
@@ -2566,6 +2627,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rezzz rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 19 ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/REZZZ.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=c4a13cb4a547bfa4bab92e031947c0f1b6ff7e8982f50e083b3c3d2ea2c95362" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Muhammad Reza Kurniawan" ;
        :playerInfo "Muhammad \"Rezzz\" Kurniawan (born August 7, 2006) is an Indonesian player who is currently playing as an EXP Laner for RRQ Hoshi." .
@@ -2574,6 +2636,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Right
 :Right rdf:type owl:NamedIndividual ;
        :Roles "Head Coach" ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/dewa/COACH%20RIGHT.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T125639Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=59beaa918fbb29b524ebfda7f5ed02c0382551d1afb9558f34d5bbad7df1ece6" ;
        :hasNationality "Philippines" ;
        :hasRealName "Jaypee Felipe Lugtu" ;
        :playerInfo "Jaypee \"Right\" Lugtu is a Filipino Coach who is currently working for Dewa United Esports as a Coach." .
@@ -2583,6 +2646,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rinee rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 21 ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/ae/RINE.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T144139Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=b6989b3a60c20fa22d3b74ece7d65fa273d08b7bb826687ee03462dd85a82c43" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Syahrul Ramadhan" ;
        :playerInfo "Syahrul \"Rinee\" Ramadhan (born November 5, 2004) is an Indonesian player who is currently playing as a Jungler for Alter Ego." .
@@ -2592,6 +2656,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rinz rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
       :hasAge 21 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/RINZ.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d1718738e10e114546b5be0314eaff6f537c18c4ba428eb4c1d4ef0c3e09f037" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Hajirin Arafat" ;
       :playerInfo "Hajirin \"Rinz\" Arafat (born January 28, 2004) is an Indonesian player who is currently playing as a Mid Laner for RRQ Hoshi." .
@@ -2601,6 +2666,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Ronn rdf:type owl:NamedIndividual ;
       :Roles "Jungler" ;
       :hasAge 20 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/btr/RONN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T144629Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=59bf6851520b13b81d8570974cca4e04f3d5e8b820ccbaac8497e38d9d836667" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Muhammad Syahron" ;
       :playerInfo "Muhammad \"Ronn\" Syahron (born April 13, 2005) is an Indonesian player who is currently playing as a Jungler for Bigetron by Vitality." .
@@ -2619,6 +2685,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Roundel rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 21 ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/evos/ROUNDEL.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T143816Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a936f9b4c58ded6d3cd8e51d23890c8f2dad81bded6ebb9d1a4e5910aa0986cf" ;
          :hasNationality "Indonesia" ;
          :hasRealName "Faiskal Khadafi" ;
          :playerInfo "Faiskal \"RoundeL\" Khadafi (born May 21, 2004) is an Indonesian player who is currently playing as a Mid Laner for EVOS." .
@@ -2729,6 +2796,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Sanz rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
       :hasAge 23 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/onic/SANZ.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2ff005499747e0c393fda101297617e64e22234d6838bd542a93c422a09e2a44" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Gilanh" ;
       :playerInfo "Gilang \"S A N Z\" (born July 22, 2002) is an Indonesian player who is currently playing as a Mid Laner for ONIC." .
@@ -2737,6 +2805,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Savero
 :Savero rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/onic/SAVERO.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T144546Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=73683adaf2b020669fd0f3d4a80197806844ca5e4c45a5be8248e87165464375" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Clayton Adrielo Kuswanto" ;
         :playerInfo "Clayton \"Savero\" Kuswanto is an Indonesian player who is currently playing as a Gold Laner for ONIC." .
@@ -2792,6 +2861,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Shogun rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge 21 ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/btr/SHOGUN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=c911ef1147c816e89ae811ad4da8b58b41380ee2b332c2c05fe0e6a4752acac9" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Dylont Ananda Setya Huraihira" ;
         :playerInfo "Dylont \"Shogun\" Huraihira (born August 10, 2004) is an Indonesian player who is currently playing as an EXP Laner for Bigetron by Vitality." .
@@ -2837,6 +2907,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Skylar rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
         :hasAge 23 ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/onic/SKYLAR.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=b311727cc4a5feeb0b5fb10e088bc6ab1f2067ec41875a26751a3031e0639f84" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Schevenko David Tendean" ;
         :playerInfo "Schevenko \"Skylar\" Tendean (born February 25, 2002) is an Indonesian player who is currently playing as a Gold Laner for ONIC." .
@@ -2904,6 +2975,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Styx
 :Styx rdf:type owl:NamedIndividual ;
       :Roles "Assistant Coach" ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/ae/STYX.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T125020Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a426ac7f4da02d49e6f6a4450c2bd48436258c5667680ca3a6280cc314ce8e9f" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Michael Abraham" ;
       :playerInfo "Michael \"Styx\" Abraham is an Indonesian Coach who is currently working for Alter Ego as a Coach." .
@@ -2954,6 +3026,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Sutsujin rdf:type owl:NamedIndividual ;
           :Roles "Jungler" ;
           :hasAge 21 ;
+          :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/SUTSUJIN.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T144111Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a880cd538c2dbb418b834de95daf5b4416fd125ccce9c8bf7ceed33726157efa" ;
           :hasNationality "Indonesia" ;
           :hasRealName "Arthur Christopher Sunarkho" ;
           :playerInfo "Arthur \"Sutsujin\" Sunarkho (born June 1, 2004) is an Indonesian player who is currently playing as a Jungler for RRQ Hoshi." .
@@ -2962,6 +3035,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Swaylow
 :Swaylow rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/evos/SWAYLOW.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T145119Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=950890355ab3ddcade141efef30fde0d7e256b7194dcf363b6d6b2bf67e4e50b" ;
          :hasNationality "Indonesia" ;
          :hasRealName "Attanasius David Halomoan Silaloho" ;
          :playerInfo "Attanasius \"SwayLow\" Sihaloho is an Indonesian player who is currently playing as a Mid Laner for EVOS." .
@@ -2982,6 +3056,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
          :hasStaff :Facehugger ,
                    :SaintDeLucaz ;
          :RankMPL 9 ;
+         :hasFoto "https://cdn.id-mpl.com/season14/Team/TLID-Primary500x500.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142717Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=cdb78a91db386675c240648e8c39c9cce9c12019ad3c6aa58c2b8f7186913c0d" ;
          :hasRealName "Team Liquid ID" ;
          :teamName "Team Liquid ID" .
 
@@ -3163,6 +3238,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Toyy rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 22 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/TOYY.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d57b18ae858b4f26fa5f2b401895f9d16e66998b8676ce81572643c8045c5c7a" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Muhammad Rizky" ;
       :playerInfo "Muhammad \"Toyy\" Rizky (born May 14, 2003) is an Indonesian player who is currently playing as a Gold Laner for RRQ Hoshi." .
@@ -3217,6 +3293,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/UK1R
 :UK1R rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/navi/Uk1R.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d7404daf3a8bc196a13850b61c36a31c2323da207211b65c7b3d0056390b47ef" ;
       :hasNationality "Philippines" ;
       :hasRealName "Jayson Alupit" ;
       :playerInfo "Jayson \"UK1R\" Alupit is a Filipino player who is currently playing as a Mid Laner for Natus Vincere." .
@@ -3257,6 +3334,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :VYN rdf:type owl:NamedIndividual ;
      :Roles "Head Coach" ;
      :hasAge 25 ;
+     :hasFoto "https://cdn.id-mpl.com/season16/player/evos/Vyn.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T164511Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=5d5dc8acb5b2384be747ae7d0f763f76f85bcd0e104f3e9b8e279d5280f54313" ;
      :hasNationality "Indonesia" ;
      :hasRealName "Calvin" ;
      :playerInfo "Calvin \"VYN\" (born September 3, 2000) is an Indonesian Coach and Roamer who is currently working for EVOS as a Coach." .
@@ -3282,6 +3360,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vanz
 :Vanz rdf:type owl:NamedIndividual ;
       :Roles "Jungler" ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/dewa/VANZ.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T150614Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d861c4b6691f3ef677a5172f7ed2b41aae2d2fcfc74e941e9478fc74c59aa093" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Muhammad Ikhsan Farabi" ;
       :playerInfo "Muhammad \"Vanz\" Farabi is an Indonesian player who is currently playing as a Jungler for Dewa United Esports." .
@@ -3319,6 +3398,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Widy rdf:type owl:NamedIndividual ;
       :Roles "Roamer" ;
       :hasAge 19 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/tlid/WIDY.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T145235Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=4cb13442e3e478935f90a1dcc8262ecf7af7318538b0d4d11ee0c78097bf861d" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Christian Widy Wardhana Hartono" ;
       :playerInfo "Christian \"Widy\" Hartono (born May 9, 2006) is an Indonesian player who is currently playing as a Roamer for Team Liquid ID." .
@@ -3353,6 +3433,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Xepher rdf:type owl:NamedIndividual ;
         :Roles "Head Coach" ;
         :hasAge 29 ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/ae/XEPHER.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T125020Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=1af3fb123b79564bdf11c69b5d9da495b538efa83db5fce13d99805efaa885bf" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Kenny Deo" ;
         :playerInfo "Kenny \"Xepher\" Deo (born June 27, 1996) is an Indonesian Coach who is currently working for Alter Ego as a Coach." .
@@ -3368,6 +3449,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Xorizo rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge 22 ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/evos/XORIZO.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T145119Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=b5ac387e8cfdb50018e54477c844388e41bee270e0a282b28a15617888807d55" ;
         :hasNationality "Indonesia" ;
         :hasRealName "I Gusti Made Indra Dwipayana" ;
         :playerInfo "I \"Xorizo\" Dwipayana (born March 30, 2003) is an Indonesian player who is currently playing as an EXP Laner for EVOS." .
@@ -3386,6 +3468,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Xyve rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 20 ;
+      :hasFoto "https://cdn.id-mpl.com/season16/player/navi/XYVE.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=9ca38be1197acc73fd207caf12f56a3eba64f7000ebaa17fdf205363911afe77" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Michael Richi" ;
       :playerInfo "Michael \"Xyve\" Richi (born August 28, 2005) is an Indonesian player who is currently playing as a Gold Laner for Natus Vincere." .
@@ -3401,6 +3484,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yazukee
 :Yazukee rdf:type owl:NamedIndividual ;
          :Roles "Jungler" ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/ae/YAZUKE.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=9d3c7e79fc7fa29395c782d573031781b64594d46596722d86c699758507ba9b" ;
          :hasNationality "Indonesia" .
 
 
@@ -3417,6 +3501,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Yehezkiel rdf:type owl:NamedIndividual ;
            :Roles "Mid" ;
            :hasAge 20 ;
+           :hasFoto "https://cdn.id-mpl.com/season16/player/tlid/YEHEZKIEL.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T145235Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=9705c159c0cf1817c6c09efae314d6ab3db5b8c7b788fd9573437e9e6509896e" ;
            :hasNationality "Indonesia" ;
            :hasRealName "Yehezkiel Wiseman Hamonangan Napitu" ;
            :playerInfo "Yehezkiel \"Yehezkiel\" Napitu (also known as Syn) (born September 11, 2005) is an Indonesian player who is currently playing as a Mid Laner for Team Liquid ID." .
@@ -3505,6 +3590,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zeltron
 :Zeltron rdf:type owl:NamedIndividual ;
          :Roles "Gold" ;
+         :hasFoto "https://cdn.id-mpl.com/season16/player/geek/ZELTRON.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T145205Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=3e0274c50ba7b76cf9f3275fa32a6c51648de151ae6055e69cfcccbcd6fd1007" ;
          :hasNationality "Indonesia" .
 
 
@@ -3529,6 +3615,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zunesh
 :Zunesh rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/rrq/ZUNESH.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T144111Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=317608978a45dbcb5bdeebe10ef04562c07cd7a4b73817c5bcc555bdf58f1262" ;
         :hasNationality "Indonesia" .
 
 
@@ -3537,6 +3624,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
        :playerOf :AE_ID16 ;
        :Roles "Roamer" ;
        :alternateIds "owennn" ;
+       :hasFoto "https://cdn.id-mpl.com/season16/player/ae/ALEK.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T141259Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=37cbcdc1c55991a45d0e6feb0a993b885c2dc293de8a8770a7fbb816c9d2bd70" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Alexander Owen" ;
        :playerInfo "Alexander \"Owennn\" Owen (born September 20, 2004) is an Indonesian player who is currently playing as a Roamer for Alter Ego." .
@@ -3580,6 +3668,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :woshipaul rdf:type owl:NamedIndividual ;
            :Roles "Jungler" ;
            :hasAge 20 ;
+           :hasFoto "https://cdn.id-mpl.com/season16/player/navi/WOSHIPAUL.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T153604Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=37d38fd4abbbb92cbffa4ab0f53450a965437636ba7b0fa97fcf3cb2d95375a3" ;
            :hasNationality "Indonesia" ;
            :hasRealName "Muhammad Rakhaa Sastradinata" ;
            :playerInfo "Muhammad \"woshipaul\" Sastradinata (born October 13, 2005) is an Indonesian player who is currently playing as a Jungler for Natus Vincere." .
@@ -3588,6 +3677,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/xMagic
 :xMagic rdf:type owl:NamedIndividual ;
         :Roles "Mid" ;
+        :hasFoto "https://cdn.id-mpl.com/season16/player/navi/XMAGIC.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T153604Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=46739bea3c1f1b549122643eb5024fba364eb73d9a090b73a42a0ad823b4657f" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Muhammad Andika Ramadhan" ;
         :playerInfo "Muhammad \"xMagic\" Ramadhan is an Indonesian player who is currently playing as a Mid Laner for Natus Vincere." .
