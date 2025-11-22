@@ -90,6 +90,26 @@ ul, ol {
 	Buttons
 \*----------------------------*/
 
+.back-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #F3AA36;
+  padding: 10px 20px;
+  border: 2px solid #eea125;   /* border hitam */
+  border-radius: 40px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.text-center {
+  margin-bottom: 10px;
+}
+
+
 .primary-btn {
   display: inline-block;
   padding: 12px 30px;
@@ -143,7 +163,7 @@ textarea.input {
 }
 
 .input-number input[type="number"] {
-  -moz-appearance: textfield;
+  /* moz-appearance: textfield; */
   height: 40px;
   width: 100%;
   border: 1px solid #E4E7ED;
