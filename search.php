@@ -1,15 +1,81 @@
 <?php
 $error = "";
+$searchInput = "";
+$category = 0; // default 0
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    if (!isset($_POST['search']) || trim($_POST['search']) == "") {
+
+    // Ambil dan trim input
+    $searchInput = isset($_POST['search']) ? trim($_POST['search']) : "";
+
+    // Validasi search
+    if ($searchInput === "") {
         $error = "Search tidak boleh kosong!";
     } else {
-        $searchInput = $_POST['search'];
-        $category = $_POST['category'];
+        // Pastikan category selalu angka 0-3
+        $category = isset($_POST['category']) ? (int)$_POST['category'] : 0;
+
+        // Optional: jika category diluar range
+        if ($category < 0 || $category > 3) {
+            $category = 0;
+        }
     }
 }
+
+$keyword = strtolower($searchInput);
+// Ambil hasil SPARQL
+$endpoint = "http://localhost:3030/lokalpedia/sparql";
+$query = "
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+SELECT DISTINCT ?team ?teamName ?hasName WHERE {
+  ?team a ?mpl ;
+        :teamName ?teamName ;
+        :hasName ?hasName .
+}
+";
+
+$response = file_get_contents($endpoint . "?query=" . urlencode($query) . "&format=json");
+$data = json_decode($response, true);
+
+// Hitung skor berurut
+$results = [];
+foreach ($data['results']['bindings'] as $row) {
+    $teamName = strtolower($row['teamName']['value']);
+
+    $pos = 0;  // posisi awal
+    $score = 0;
+    $lastPos = -1;
+
+    // Hitung skor berdasarkan urutan huruf input
+    foreach (str_split($keyword) as $char) {
+        $pos = strpos($teamName, $char, $lastPos + 1);
+        if ($pos === false) {
+            $score += 1000; // huruf tidak ditemukan → penalti besar
+        } else {
+            $score += $pos; // semakin awal → lebih rendah score
+            $lastPos = $pos;
+        }
+    }
+
+    $results[] = [
+        'team' => $row['team']['value'],
+        'teamName' => $row['teamName']['value'],
+        'hasName' => $row['hasName']['value'],
+        'score' => $score
+    ];
+}
+
+// Urutkan hasil berdasarkan skor
+usort($results, function($a, $b) {
+    return $a['score'] <=> $b['score'];
+});
+
+// Tampilkan hasil
+foreach ($results as $r) {
+    echo $r['teamName'] . " (" . $r['hasName'] . ") - score: " . $r['score'] . "\n";
+}
 ?>
+
 
 
 <!DOCTYPE html>
@@ -41,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="index.html" class="logo">
 									<img src="./img/logoLokalpedia.png" alt="">
 								</a>
 							</div>
@@ -78,15 +144,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <?php if($error != ""): ?>
             <br>
             <div class="alert alert-danger text-center">
-                <?php echo $error; ?>
+                <?php echo $error;?>
             </div>
             <div class="text-center">
                 <button onclick="history.back()" class="back-btn">Kembali</button>
             </div>
 
         <?php else: ?>
-        
-            
         <?php endif; ?>
     </body>
     <!-- FOOTER -->
