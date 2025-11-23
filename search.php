@@ -55,10 +55,13 @@ SELECT DISTINCT
     }UNION
     {
     ?player :staffOf ?p .
+  	}
+    OPTIONAL{
+    ?player :hasRealName ?realName .
     }
-      OPTIONAL{
-    ?player :hasFoto ?linkFoto .
-    }
+  	OPTIONAL {
+  	?player :hasFoto ?linkFoto .
+    } 
   }
   UNION
   {
@@ -66,21 +69,16 @@ SELECT DISTINCT
       ?headTour rdfs:subClassOf :InternationalTour .
       ?competitions rdfs:subClassOf ?headTour .
     
-      FILTER NOT EXISTS {
-        ?child rdfs:subClassOf ?competitions .
-        FILTER(?child != ?competitions)
-      }
-    } UNION
+      
+      } UNION
     {
       ?regionTour rdfs:subClassOf :RegionalTour .
       ?headTour rdfs:subClassOf ?regionTour .
       ?competitions rdfs:subClassOf ?headTour .
-    
-    	FILTER NOT EXISTS {
+    } FILTER NOT EXISTS {
         ?child rdfs:subClassOf ?competitions .
         FILTER(?child != ?competitions)
-    }
-  }
+  		}
 }
 }
 SPARQL;
@@ -97,13 +95,14 @@ SELECT DISTINCT
 ?teamName 
 ?teamAddName
 ?linkFoto
-WHERE {
+WHERE {{
   ?team a ?competition ;
         :teamName ?teamName ;
         :hasName ?teamAddName .
     OPTIONAL {
     ?team :hasFoto ?linkFoto .
     }
+  }
 }
 SPARQL;
 
@@ -115,17 +114,48 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
 
 SELECT DISTINCT 
-(REPLACE(STR(?team), "^.*/", "") AS ?teams)
-?teamName 
-?teamAddName
 ?linkFoto
-WHERE {
-  ?team a ?competition ;
-        :teamName ?teamName ;
-        :hasName ?teamAddName .
-    OPTIONAL {
-    ?team :hasFoto ?linkFoto .
+(REPLACE(STR(?player), "^.*/", "") AS ?playerNickname)
+?realName
+WHERE {{
+    ?player :playerOf ?p .
+    }UNION
+    {
+    ?player :staffOf ?p .
+  	}
+    OPTIONAL{
+    ?player :hasRealName ?realName .
     }
+  	OPTIONAL {
+  	?player :hasFoto ?linkFoto .
+  	}
+  
+}
+SPARQL;
+
+//  Query utk COMPETITIONS
+$sparqlQuery3 = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+SELECT DISTINCT 
+(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionName) WHERE {
+    {
+      ?headTour rdfs:subClassOf :InternationalTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    
+     
+      } UNION
+    {
+      ?regionTour rdfs:subClassOf :RegionalTour .
+      ?headTour rdfs:subClassOf ?regionTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    } FILTER NOT EXISTS {
+        ?child rdfs:subClassOf ?competitions .
+        FILTER(?child != ?competitions)
+}
 }
 SPARQL;
 
@@ -203,15 +233,12 @@ usort($results, function($a, $b) {
     return $a['minScore'] <=> $b['minScore'];
 });
 
-// Tampilkan hasil
-$limit = 1;
-$count = 0;
 foreach ($results as $r) {
     
 
-if($count >= $limit){
-    break;
-}
+// if($count >= $limit){
+//     break;
+// }
     echo "<div style='margin-bottom:10px; padding:5px; border:1px solid #000;'>";
 
     if (!empty($r['teamName'])) {
@@ -244,7 +271,6 @@ if($count >= $limit){
 
     echo "<strong>Score:</strong> " . $r['minScore'];
     echo "</div>";
-$count++;
 }
 
 ?>
@@ -294,8 +320,8 @@ $count++;
 									<select class="input-select" name="category">
 										<option value="0">All Categories</option>
 										<option value="1">Teams</option>
-										<option value="2">Competition</option>
-										<option value="3">Players</option>
+										<option value="2">Players & Staff</option>
+										<option value="3">Competition</option>
 									</select>
 									<input class="input" name="search" placeholder="Search here">
 									<button class="search-btn" type="submit">Search</button>
