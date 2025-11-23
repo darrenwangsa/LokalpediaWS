@@ -15,7 +15,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            background: white;
             min-height: 100vh;
             color: #ff9d00;
             padding: 20px;
@@ -23,44 +23,24 @@
             overflow-x: hidden;
         }
 
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background:
-                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
         }
 
         .search-header {
             text-align: center;
-            margin-bottom: 60px;
-            animation: fadeInDown 0.8s ease;
+            margin-bottom: 50px;
         }
-
-      
 
         .result-title {
             font-size: 32px;
             font-weight: 700;
-            margin: 50px 0 30px;
+            margin: 40px 0 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            position: relative;
             display: inline-block;
-            animation: fadeInLeft 0.8s ease;
+            position: relative;
         }
 
         .result-title::after {
@@ -71,210 +51,55 @@
             width: 60px;
             height: 4px;
             background: linear-gradient(90deg, #f3aa36, transparent);
-            border-radius: 2px;
         }
 
         .main-result {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(20px);
             border-radius: 30px;
-            padding: 60px;
+            padding: 50px;
             text-align: center;
             border: 2px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            transition: all 0.4s ease;
-            animation: scaleIn 0.8s ease;
+            transition: 0.3s ease;
         }
 
-        .main-result:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
-            border-color: rgba(255, 255, 255, 0.4);
-        }
-
-        .logo-img {
-            max-width: 350px;
+        .main-result img {
+            max-width: 450px;
             width: 100%;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
-            transition: transform 0.4s ease;
-        }
-
-        .main-result:hover .logo-img {
-            transform: scale(1.05) rotate(2deg);
+            border-radius: 20px;
         }
 
         .other-result {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
         }
 
         .player-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border-radius: 25px;
+            border-radius: 20px;
             overflow: hidden;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            animation: fadeInUp 0.8s ease;
-            animation-fill-mode: both;
-        }
-
-        .player-card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .player-card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .player-card:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .player-card:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-
-        .player-card:nth-child(5) {
-            animation-delay: 0.5s;
-        }
-
-        .player-card:nth-child(6) {
-            animation-delay: 0.6s;
-        }
-
-        .player-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
-            opacity: 0;
-            transition: opacity 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+            transition: 0.3s ease;
         }
 
         .player-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-            border-color: rgba(255, 255, 255, 0.4);
-        }
-
-        .player-card:hover::before {
-            opacity: 1;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.30);
         }
 
         .player-card img {
             width: 100%;
             display: block;
-            transition: transform 0.6s ease;
-        }
-
-        .player-card:hover img {
-            transform: scale(1.08);
         }
 
         .not-found {
             text-align: center;
-            padding: 100px 20px;
-            animation: fadeIn 0.8s ease;
-        }
-
-        .not-found-icon {
-            font-size: 80px;
-            margin-bottom: 20px;
-            opacity: 0.6;
-        }
-
-        .not-found-text {
-            font-size: 28px;
-            font-weight: 600;
-            opacity: 0.9;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .result-title {
-                font-size: 24px;
-            }
-
-            .main-result {
-                padding: 40px 20px;
-            }
-
-            .logo-img {
-                max-width: 250px;
-            }
-
-            .other-result {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
+            padding: 60px;
         }
     </style>
+
 </head>
 
 <body>
@@ -300,15 +125,24 @@
 
         document.getElementById('search-term').textContent = q.toUpperCase() || 'NONE';
 
-        // Data dummy — tinggal kamu ganti pakai RDF/SPARQL result
+        // Data dummy — tinggal diganti dari SPARQL RDF
         const data = {
             teams: {
                 "evos": {
-                    logo: "img/teams/evos_logo.png",
-                    players: [
-                        "img/players/evos_player1.png",
-                        "img/players/evos_player2.png",
-                        "img/players/evos_player3.png"
+                    mainImage: "img/results/evos_main.png",
+                    otherImages: [
+                        "img/results/evos_1.png",
+                        "img/results/evos_2.png",
+                        "img/results/evos_3.png"
+                    ]
+                },
+
+                "rrq": {
+                    mainImage: "img/results/rrq_main.png",
+                    otherImages: [
+                        "img/results/rrq_1.png",
+                        "img/results/rrq_2.png",
+                        "img/results/rrq_3.png"
                     ]
                 }
             }
@@ -317,38 +151,35 @@
         // CARI DATA
         let found = data.teams[q];
 
-        // --- TAMPILKAN DATA ---
         if (found) {
-
-            // hasil utama (logo)
+            // Hasil utama
             document.getElementById("main-result").innerHTML = `
                 <div class="main-result">
-                    <img class="logo-img" src="${found.logo}" alt="Team Logo">
+                    <img src="${found.mainImage}" alt="Main Image">
                 </div>
             `;
 
-            // hasil lainnya (pemain)
-            let playersHTML = "";
-            found.players.forEach(p => {
-                playersHTML += `
+            // Hasil lainnya
+            let imgList = "";
+            found.otherImages.forEach(img => {
+                imgList += `
                     <div class="player-card">
-                        <img src="${p}" alt="Player">
+                        <img src="${img}" alt="Other Result">
                     </div>
                 `;
             });
 
-            document.getElementById("other-result").innerHTML = playersHTML;
+            document.getElementById("other-result").innerHTML = imgList;
 
         } else {
+            // Jika tidak ditemukan
             document.getElementById("main-result").innerHTML = `
                 <div class="not-found">
-                    <div class="not-found-icon">🔍</div>
-                    <p class="not-found-text">Tidak ditemukan hasil untuk "${q}"</p>
+                    <h2>Tidak ditemukan hasil untuk "${q}"</h2>
                 </div>
             `;
             document.getElementById("other-result").innerHTML = "";
         }
-
     </script>
 
 </body>
