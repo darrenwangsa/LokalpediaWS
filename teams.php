@@ -222,38 +222,7 @@
 
 <body>
 	<!-- HEADER -->
-	<header>
-		<div id="header">
-			<div class="container">
-				<div class="row">
-					<!-- LOGO -->
-					<div class="col-md-3">
-						<div class="header-logo">
-							<a href="index.html" class="logo">
-								<img src="./img/logoLokalpedia.png" alt="Lokalpedia">
-							</a>
-						</div>
-					</div>
-
-					<!-- SEARCH BAR -->
-					<div class="col-md-6">
-						<div class="header-search">
-							<form>
-								<select class="input-select">
-									<option value="0">All Categories</option>
-									<option value="1">Teams</option>
-									<option value="2">Competition</option>
-									<option value="3">Players</option>
-								</select>
-								<input class="input" placeholder="Search here">
-								<button class="search-btn">Search</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+	<?php include 'header.php'; ?>
 
 	<!-- NAVIGATION -->
 	<nav id="navigation">
@@ -349,7 +318,7 @@
 						<div class="team-logo"><img src="./img/logo-dewa.png" alt="DEWA"></div>
 					</div>
 		
-                    <a href="detail_team/evos/index.html" class="team-link">
+                    <a href="detail_team/evos/index.php" class="team-link">
                         <div class="team-card">
                             <div class="team-header">EVOS
                                 <div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
@@ -551,8 +520,11 @@
 
 	<!-- FOOTER -->
 	<footer id="footer">
+		<!-- top footer -->
 		<div class="section">
+			<!-- container -->
 			<div class="container">
+				<!-- row -->
 				<div class="row">
 					<div class="col-md-3 col-xs-6">
 						<div class="footer">
@@ -570,9 +542,11 @@
 						<div class="footer">
 							<h3 class="footer-title">Categories</h3>
 							<ul class="footer-links">
-								<li><a href="teams.html">Teams</a></li>
-								<li><a href="#">Competition</a></li>
-								<li><a href="#">Players</a></li>
+								<li><a href="#">Hot deals</a></li>
+								<li><a href="#">Laptops</a></li>
+								<li><a href="#">Smartphones</a></li>
+								<li><a href="#">Cameras</a></li>
+								<li><a href="#">Accessories</a></li>
 							</ul>
 						</div>
 					</div>
@@ -586,6 +560,7 @@
 								<li><a href="#">About Us</a></li>
 								<li><a href="#">Contact Us</a></li>
 								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Orders and Returns</a></li>
 								<li><a href="#">Terms & Conditions</a></li>
 							</ul>
 						</div>
@@ -596,25 +571,41 @@
 							<h3 class="footer-title">Service</h3>
 							<ul class="footer-links">
 								<li><a href="#">My Account</a></li>
+								<li><a href="#">View Cart</a></li>
+								<li><a href="#">Wishlist</a></li>
+								<li><a href="#">Track My Order</a></li>
 								<li><a href="#">Help</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
+				<!-- /row -->
 			</div>
+			<!-- /container -->
 		</div>
+		<!-- /top footer -->
 
+		<!-- bottom footer -->
 		<div id="bottom-footer" class="section">
 			<div class="container">
+				<!-- row -->
 				<div class="row">
 					<div class="col-md-12 text-center">
+						<ul class="footer-payments">
+							<li><img style="width: 20%;" src="./img/logoLokalpedia.png"></img></li>
+						</ul>
 						<span class="copyright">
-							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</span>
 					</div>
 				</div>
+					<!-- /row -->
 			</div>
+			<!-- /container -->
 		</div>
+		<!-- /bottom footer -->
 	</footer>
 
 	<!-- jQuery Plugins -->

@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M7 World Championship</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Slick -->
+		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+
+		<!-- nouislider -->
+		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
     <style>
 
         .flag {
@@ -13,20 +30,20 @@
         }
 
 
-        * {
+        /* * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
+        } */
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            padding: 40px 20px;
+            /* padding: 40px 20px; */
             min-height: 100vh;
         }
 
-        .container {
+        .con {
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -77,12 +94,12 @@
             box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
         }
 
-        .logo-section {
+        .logoImg-section {
             text-align: center;
             flex-shrink: 0;
         }
 
-        .logo {
+        .logoImg {
             width: 150px;
             height: 150px;
             background: white;
@@ -96,7 +113,7 @@
             padding: 10px;
         }
 
-        .logo img {
+        .logoImg img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -176,7 +193,7 @@
                 padding: 25px;
             }
 
-            .logo {
+            .logoImg {
                 width: 120px;
                 height: 120px;
                 font-size: 2.5em;
@@ -231,19 +248,19 @@
 
     });
 </script>
-Zz
 
 <body>
-    <div class="container">
+    <?php include 'header.php';?>
+    <div class="con">
         <h1>  M7 World Championship</h1>
 
         <!-- International Competitions -->
         <div class="competition-card">
             <div class="card-header">
                 <div class="tier-badge">Tier: S</div>
-                <div class="logo-section">
-                    <div class="logo">
-                        <img src="img/m7.png" alt="M7 World Championship Logo"
+                <div class="logoImg-section">
+                    <div class="logoImg">
+                        <img src="img/m7.png" alt="M7 World Championship logoImg"
                             onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-size:3em;font-weight:bold;color:#c9a961;display:flex;align-items:center;justify-content:center;height:100%;\'>M7</div>';">
                     </div>
                     <div class="tagline">"let the world see us"</div>
@@ -315,9 +332,9 @@ Zz
         <div class="competition-card">
             <div class="card-header">
                 <div class="tier-badge">Tier: A</div>
-                <div class="logo-section">
-                    <div class="logo">
-                        <img src="img/mpl-ph.png" alt="MPL PH Logo"
+                <div class="logoImg-section">
+                    <div class="logoImg">
+                        <img src="img/mpl-ph.png" alt="MPL PH logoImg"
                             onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-size:3em;font-weight:bold;color:#c9a961;display:flex;align-items:center;justify-content:center;height:100%;\'>M7</div>';">
                     </div>
                     <div class="tagline">"Lakas ng Pinas"</div>
@@ -387,6 +404,7 @@ Zz
             </div>
         </div>
     </div>
+    <?php include 'footer.php';?>
 </body>
 
 </html>
