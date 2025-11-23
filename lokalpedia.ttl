@@ -852,8 +852,7 @@
                    :Mariah ,
                    :Rainn ;
          :RankMPL 2 ;
-         :hasFoto "" ,
-                  "https://cdn5.vistek.id/season16/team%20logo/cg.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=50e0428cc2bebe048511453d16d910b594e7f25362e9a9784299c8107c7f8eac" ;
+         :hasFoto "https://cdn5.vistek.id/season16/team%20logo/cg.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=50e0428cc2bebe048511453d16d910b594e7f25362e9a9784299c8107c7f8eac" ;
          :hasName "CG Esports" ;
          :teamName "CG Esports" .
 
@@ -3219,7 +3218,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                    :SaintDeLucaz ;
          :RankMPL 9 ;
          :hasFoto "https://cdn.id-mpl.com/season14/Team/TLID-Primary500x500.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00UK9XG63MGT2KWV9H%2F20251122%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251122T142717Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=cdb78a91db386675c240648e8c39c9cce9c12019ad3c6aa58c2b8f7186913c0d" ;
-         :hasRealName "Team Liquid ID" ;
+         :hasName "Team Liquid ID" ;
          :teamName "Team Liquid ID" .
 
 
