@@ -50,8 +50,13 @@ SELECT DISTINCT
   }
   UNION
   {
-    ?player :hasRealName ?realName .
-    OPTIONAL{
+    {
+    ?player :playerOf ?p .
+    }UNION
+    {
+    ?player :staffOf ?p .
+    }
+      OPTIONAL{
     ?player :hasFoto ?linkFoto .
     }
   }
