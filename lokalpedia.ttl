@@ -400,6 +400,7 @@
              :hasStaff :Cons ,
                        :Jeff ;
              :RankMPL 8 ;
+             :hasFoto "https://cdn3.vistek.id/season12/Logo/APBREN-LOGO3.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T054036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=18e4e106967573205691ba4b2dff057a68e03f0d6dd1521889a8137a030243c0" ;
              :hasName "AP Bren" ;
              :teamName "AP.Bren" .
 
@@ -430,6 +431,7 @@
                               :v3ndetta ;
                    :hasReached :MPLPlayoff ;
                    :RankMPL "5-6" ;
+                   :hasFoto "https://liquipedia.net/commons/images/thumb/0/01/Absolute_Zero_%28mlbb_team%29_allmode.png/241px-Absolute_Zero_%28mlbb_team%29_allmode.png" ;
                    :hasName "Absolute Zero" ;
                    :teamName "Absolute Zero" .
 
@@ -448,6 +450,7 @@
 :Adammir rdf:type owl:NamedIndividual ;
          :Roles "Head Coach" ;
          :hasAge 25 ;
+         :hasFoto "https://liquipedia.net/commons/images/2/25/NPFL_Adammir_S8.png" ;
          :hasNationality "Singapore" ;
          :hasRealName "Adam Chong Jin Ee" ;
          :playerInfo "Chong \"Adammir\" Adam (born November 18, 1999) is a Singaporean player who is currently playing as an EXP Laner for Team Flash." .
@@ -484,6 +487,7 @@
                      :Panda ,
                      :Tazy ;
            :RankMPL "5-6" ;
+           :hasFoto "https://cdn5.vistek.id/season15/team_logo/aero.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=fed4513ab6c7cb21c4bcecd289fccb800ba4c734dfe2468132ef5c3658d4b071" ;
            :hasName "Aero Esports" ;
            :teamName "Aero Esports" .
 
@@ -503,6 +507,7 @@
 :Aether rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 21 ;
+        :hasFoto "https://liquipedia.net/commons/images/b/b8/NAVI_Aether_S15.png" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Jason Keane Zefanya" ;
         :playerInfo "Jason \"Aether\" Zefanya (born October 10, 2004) is an Indonesian player who is currently playing as a Jungler for Evil." .
@@ -513,6 +518,7 @@
     :playerOf :CG_MY16 ;
     :Roles "Mid" ;
     :hasAge 24 ;
+    :hasFoto "https://cdn5.vistek.id/season16/foto%20player/cg/Aj.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044920Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=1541ccb1c655ff8cbb3041231e98ca40b68e799ceac8c2e118ae61a75cf25ad6" ;
     :hasNationality "Malaysia" ;
     :hasRealName "Muhammad Jamaludin" ;
     :playerInfo "Muhammad \"Aj\" Jamaludin (born October 7, 2001) is a Malaysian player who is currently playing as a Mid Laner for CG Esports." .
@@ -549,6 +555,7 @@
 :Amoux rdf:type owl:NamedIndividual ;
        :Roles "Head Coach" ;
        :hasAge 31 ;
+       :hasFoto "https://liquipedia.net/commons/images/0/0a/TDK_Amoux_S14.png" ;
        :hasNationality "Singapore" ;
        :hasRealName "Muhammad Ariff Iswandi Bin Johar" ;
        :playerInfo "Muhammad \"Amoux\" Johar (born February 2, 1994) is a Singaporean Coach and Caster who is currently working for RSG Singapore as a Coach." .
@@ -556,7 +563,8 @@
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Amzziq
 :Amzziq rdf:type owl:NamedIndividual ;
-        :Roles "Gold" .
+        :Roles "Gold" ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/cg/A%20M%20Z%20Z%20I%20Q_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044918Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=72ef03c5e1ac3cca5f16eb3876a19dae0406b1555ad132116107027f6ad559eb" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Andoryuuu
@@ -579,6 +587,7 @@
       :playerOf :APBren_PH16 ;
       :Roles "Mid" ;
       :hasAge 24 ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/apbr/Aqua_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041619Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=e44239650d4cd94c6e256244085e606ec776ddc97413794333be9e10500a510f" ;
       :hasNationality "Philippines" ;
       :hasRealName "Arvie Antonio" ;
       :playerInfo "Arvie \"Aqua\" Antonio (born November 17, 2001) is a Filipino player who is currently playing as a Mid Laner for AP.Bren." .
@@ -588,6 +597,7 @@
 :ArSy rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
       :hasAge 30 ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/tlph/CoachArsy_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064131Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=328639c634dccc3f4ce83220f47c3b730f488bb1bfb0920fe65f1ff77ffa080d" ;
       :hasNationality "Philippines" ;
       :hasRealName "Rodel B Cruz" ;
       :playerInfo "Rodel \"Ar Sy\" B.Cruz (born July 15, 1995) is a Filipino Coach who is currently working for Team Liquid PH as a Coach." .
@@ -609,6 +619,7 @@
          :staffOf :SRGOG_MY16 ;
          :Roles "Head Coach" ;
          :hasAge 33 ;
+         :hasFoto "https://cdn5.vistek.id/season16/foto%20player/srg/Coach%20Arcadia%20%28Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T062632Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=6c2eb694d6410ce2e8305162ce31501841977f019c3d8113a9247cf390aa200e" ;
          :hasNationality "Philippines" ;
          :hasRealName "Michael Bocadio" ;
          :playerInfo "Michael \"Arcadia\" Bocado (born January 15, 1992) is a Filipino Coach who is currently working for SRG.OG as a Coach." .
@@ -645,19 +656,22 @@
                        :DexStar ,
                        :MasterTheBasics ;
              :RankMPL 2 ;
+             :hasFoto "https://cdn3.vistek.id/season16/teams/rora.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T054036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=418a80c0dfc97a05663e03a5f33a238f2dfae67ef49854a37d4ff9428226c466" ;
              :hasName "Aurora Gaming" ;
              :teamName "Aurora Gaming" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/BONCHAN
 :BONCHAN rdf:type owl:NamedIndividual ;
-         :Roles "Head Coach" .
+         :Roles "Head Coach" ;
+         :hasFoto "https://cdn3.vistek.id/season16/player/twis/CoachBon_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T065054Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=4d4ea15615eff3b87b43e386074d4f3c3e3228d26c62ef5876a4b927f8bd5d2f" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/BRAYYY
 :BRAYYY rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 20 ;
+        :hasFoto "https://liquipedia.net/commons/images/3/3d/RSG_BRAYYY_S7.png" ;
         :hasNationality "Singapore" ;
         :hasRealName "Brayden Teo" ;
         :playerInfo "Brayden \"BRAYYY\" Teo (born June 7, 2005) is a Singaporean player who is currently playing as a Jungler for Team Stallion SG." .
@@ -685,6 +699,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Backdoor
 :Backdoor rdf:type owl:NamedIndividual ;
           :Roles "Strategic Coach" ;
+          :hasFoto "https://cdn5.vistek.id/season16/foto%20player/gmxk/BackDoor%20%28Tactical%20Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T060000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=1c9b0657048f91d55239acd71dc15646453a130dc64b58c5169d7bb00b7fcbad" ;
           :hasNationality "Indonesia" .
 
 
@@ -731,6 +746,7 @@
          :playerOf :TNC_PH16 ;
          :Roles "Gold" ;
          :hasAge 24 ;
+         :hasFoto "https://cdn3.vistek.id/season16/player/tnc/Bennyqt_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064121Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=011c2de245ac53c4b5910ee05b26376560ca7983fa5f2f659e6f8c149ea0fbe0" ;
          :hasNationality "Philippines" ;
          :playerInfo "Frederic \"Bennyqt\" Gonzales (born September 10, 2001) is a Filipino player who is currently playing as a Gold Laner for TNC Pro Team." .
 
@@ -768,6 +784,7 @@
 :Bondolz rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 20 ;
+         :hasFoto "https://cdn5.vistek.id/season16/foto%20player/mv/Bondolz_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052733Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=ea8568becaef743860f7258c200b0d7af7450e8708038858f6b91938ec6b4ac6" ;
          :hasNationality "Indonesia" ;
          :hasRealName "Muhammad Amin" ;
          :playerInfo "Muhammad \"Bondolz\" Amin (born May 30, 2005) is an Indonesian player who is currently playing as a Mid Laner for Monster Vicious." .
@@ -796,6 +813,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Brusko
 :Brusko rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/onic/Brusko_Standard_Esport-Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=8b3e160695f6cb0e90119a1eca36f6b09cf3741f9b00775d5b2e3b66b94b8f57" ;
         :hasNationality "Philippines" ;
         :hasRealName "Borris James Parro" ;
         :playerInfo "Borris \"Brusko\" Parro is a Filipino player who is currently playing as a Roamer for ONIC Philippines." .
@@ -834,6 +852,8 @@
                    :Mariah ,
                    :Rainn ;
          :RankMPL 2 ;
+         :hasFoto "" ,
+                  "https://cdn5.vistek.id/season16/team%20logo/cg.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=50e0428cc2bebe048511453d16d910b594e7f25362e9a9784299c8107c7f8eac" ;
          :hasName "CG Esports" ;
          :teamName "CG Esports" .
 
@@ -851,6 +871,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Calad
 :Calad rdf:type owl:NamedIndividual ;
        :Roles "Analyst" ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/rora/Calad_Standard_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T075016Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=51e6fc447d1d3fd4349e41259d2e1f88f8951dfffb55a187c74f6566e32475c6" ;
        :hasNationality "Philippines" ;
        :hasRealName "Justin Limbo" ;
        :playerInfo "Justin \"Calad\" Limbo is a Filipino Coach who is currently working for Aurora Gaming as a Coach." .
@@ -859,6 +880,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Caleb
 :Caleb rdf:type owl:NamedIndividual ;
        :Roles "Coach" ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/rey/Caleb.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T065144Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f58a86f45bf14f845746e0f5e9ed3e757f25f9036c046b0bc11bb3de67d38bfb" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Tesista Kayleb" ;
        :playerInfo "Tesista \"Caleb\" Kayleb is an Indonesian Coach who is currently working for Team Rey as a Coach." .
@@ -867,12 +889,14 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Caloy
 :Caloy rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/twis/Caloy_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T043647Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2ddda4af225bf9b05823489fcf8cb563fa612e0f090cfe91837e10919a66b1b1" ;
        :hasNationality "Philippines" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cayden
 :Cayden rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/hb/CAYDEN_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T021245Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=59099642dadcffa7e3b9e20a5d34ada66f65271c23647f0a02cd52deaebbdaac" ;
         :hasNationality "Malaysia" .
 
 
@@ -880,6 +904,7 @@
 :Ch4knu rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 24 ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/tnc/Chaknu_StandardEsports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064121Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=8e03a8a2f5abe0b30157206b89368cc4da7fc3095cd84183365d8eeff6f3e8b5" ;
         :hasNationality "Philippines" ;
         :hasRealName "Joshua Garcia Mangilog" ;
         :playerInfo "Joshua \"Ch4knu\" Mangilog (born August 18, 2001) is a Filipino player who is currently playing as a Roamer for TNC Pro Team." .
@@ -889,6 +914,7 @@
 :Chibi rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 22 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/vamos/CHIBI_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070035Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=c8387cb2fe944f8ec52947bd7222f5db8dd25cc55dddfe8a78ab832e330cd927" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Muhamad Nazhan Mohd Nor" ;
        :playerInfo "Muhammad Nazhan \"Chibi\" Mohd Nor (born September 16, 2003) is a Malaysian player who is currently playing as a Jungler for Team Vamos." .
@@ -897,6 +923,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Chovskrt
 :Chovskrt rdf:type owl:NamedIndividual ;
           :Roles "Mid" ;
+          :hasFoto "https://cdn3.vistek.id/season16/player/apbr/Chovskrt_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041619Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=70234ff55147b22ef557f7f5500c38b7a42cb913c8b32fa7e437660808ace5b4" ;
           :hasNationality "Philippines" ;
           :hasRealName "Jerry Ian Nicol" ;
           :playerInfo "Jerry \"Chovskrt\" Nicol is a Filipino player who is currently playing as a Mid Laner for AP.Bren." .
@@ -906,6 +933,7 @@
 :Chu rdf:type owl:NamedIndividual ;
      :Roles "Exp" ;
      :hasAge "Unknown" ;
+     :hasFoto "https://liquipedia.net/commons/images/c/cc/RIFT_Chu_S8.png" ;
      :hasNationality "Singapore" ;
      :hasRealName "Jonathan Loh" ;
      :playerInfo "Jonathan \"Chu\" Loh is a Singaporean player who is currently playing as an EXP Laner for IGNITE Gaming." .
@@ -915,6 +943,7 @@
 :CikuGais rdf:type owl:NamedIndividual ;
           :Roles "Mid" ;
           :hasAge 24 ;
+          :hasFoto "https://cdn5.vistek.id/season16/foto%20player/cg/C%20I%20K%20U_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044918Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d771d82af005a4e26b0e7ac242726e4b7e8e3ef1e4d2654f279df8a4d2708570" ;
           :hasNationality "Malaysia" ;
           :hasRealName "Muhammad Danial bin Mohamad Fuad" ;
           :playerInfo "Muhammad Danial \"CikuGais\" Mohamad Fuad (born October 11, 2001) is a Malaysian player who is currently playing as a Mid Laner for CG Esports." .
@@ -923,6 +952,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cjay
 :Cjay rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/rey/CJay%20%28Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T065144Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=0ab4eb05a4f70d9317155a3997ed76fe5c4f0d726f62d98dcf16191f5b5b203a" ;
       :hasNationality "Philippines" ;
       :hasRealName "Ronnel Jayson Espinosa" ;
       :playerInfo "Ronnel \"Cjay\" Espinosa is a Filipino Coach who is currently working for Team Rey as a Coach." .
@@ -932,6 +962,7 @@
 :Clawkun rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 23 ;
+         :hasFoto "https://cdn5.vistek.id/season16/foto%20player/vamos/CLAWKUN_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070035Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=c796d42cb2d50eb196b3252175877a91cfc3b1a34b5d30baaec7ada1f06475b9" ;
          :hasNationality "Indonesia" ;
          :hasRealName "Adriansyah Baihaqi Lesmana" ;
          :playerInfo "Adriansyah \"Claw Kun\" Lesmana (born May 2, 2002) is an Indonesian player who is currently playing as a Mid Laner for Team Vamos." .
@@ -955,6 +986,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Cody
 :Cody rdf:type owl:NamedIndividual ;
       :Roles "Strategic Coach" ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/cg/COACH%20CODY%20%28Tactical%20Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044920Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=847a62087c655d98733f5099cf83df457dbc9df0163f9f1fc0cae81c2435e2f3" ;
       :hasNationality "Philippines" .
 
 
@@ -1009,6 +1041,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Daniel
 :Daniel rdf:type owl:NamedIndividual ;
         :RankMPL "Roamer" ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/hb/Daniel.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064946Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=82cbea337efc76385d05126bbf6b037e39780c247aa7f113e9158d3c2a96a9a1" ;
         :hasNationality "Indonesia" .
 
 
@@ -1025,6 +1058,7 @@
 :Demonkite rdf:type owl:NamedIndividual ;
            :Roles "Jungler" ;
            :hasAge 22 ;
+           :hasFoto "https://cdn3.vistek.id/season16/player/rora/Demonkite_Esport_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070305Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f6853e11b6b4d0f64cfcd852bcbf6c92982ccb69e1e58a347b57572de7bebd9f" ;
            :hasNationality "Philippines" ;
            :hasRealName "Jonard Caranto" ;
            :playerInfo "Jonard \"Demonkite\" Caranto (born January 10, 2003) is a Filipino player who is currently playing as a Jungler for Aurora Gaming." .
@@ -1034,6 +1068,7 @@
 :Der rdf:type owl:NamedIndividual ;
      :Roles "Exp" ;
      :hasAge 26 ;
+     :hasFoto "https://cdn5.vistek.id/season16/foto%20player/rey/Der_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044918Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=eb13e1acae1cefa4ef4145a3cbce5831dfeb1fc440a67a780d616c0f6072dd6c" ;
      :hasNationality "Philippines" ;
      :hasRealName "Landher Gabriel" ;
      :playerInfo "Landher \"Der\" Gabriel (born February 4, 1999) is a Filipino player who is currently playing as an EXP Laner for Team Rey." .
@@ -1043,6 +1078,7 @@
 :DevKoch rdf:type owl:NamedIndividual ;
          :Roles "Analyst" ;
          :hasAge 26 ;
+         :hasFoto "https://cdn5.vistek.id/season16/foto%20player/todak/DevKoch.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T023559Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=0f33b099a256051a6c53bc417f8256633d117f84c8e7d89ef24f9a62ec7830ac" ;
          :hasNationality "Indonesia" ;
          :hasRealName "Devara Putra" ;
          :playerInfo "Devara \"DevKoch\" Putra (born March 11, 1999) is an Indonesian Analyst who is currently working for TODAK on loan from Alter Ego X as an Analyst." .
@@ -1055,7 +1091,8 @@
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Dex
 :Dex rdf:type owl:NamedIndividual ;
-     :Roles "Analyst" .
+     :Roles "Analyst" ;
+     :hasFoto "https://cdn5.vistek.id/season16/foto%20player/mv/Dex.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041925Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=95ec825271f51f697067241ecbb8abc603265898ebc8cbd510261512459397e5" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/DexStar
@@ -1063,6 +1100,7 @@
          :Roles "Assistant Coach" ;
          :alternateIds "Dexter" ;
          :hasAge 33 ;
+         :hasFoto "https://cdn3.vistek.id/season16/player/rora/CoachDexstar_Standard_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T075016Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=217cb64d4ac87bc7edf1c3c6489014563e507da8c1658756105ed1d51d8e694e" ;
          :hasNationality "Philippines" ;
          :hasRealName "Dexter Alaba" ;
          :playerInfo "Dexter \"Dex Star\" Alaba (born October 12, 1992) is a Filipino Coach who is currently working for Aurora Gaming as a Coach." .
@@ -1071,6 +1109,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Diablo
 :Diablo rdf:type owl:NamedIndividual ;
         :Roles "EXP" ;
+        :hasFoto "https://liquipedia.net/commons/images/thumb/d/d3/NPFL_Diablo_at_M6_Swiss_Stage.jpg/900px-NPFL_Diablo_at_M6_Swiss_Stage.jpg" ;
         :hasNationality "Singapore" ;
         :hasRealName "Yeo Wee Lun" ;
         :playerInfo "Yeo \"Diablo\" Wee Lun is a Singaporean player who last played for Team Stallion SG." .
@@ -1081,6 +1120,7 @@
             :Roles "Gold" ;
             :alternateIds "Domeng" ;
             :hasAge 18 ;
+            :hasFoto "https://cdn3.vistek.id/season16/player/rora/Domengkite_Esport_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070305Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=835b35a72a3aa6a051f23ed1c5e65ac406a3ea9b4ea91e97d18218e1bb9a4f17" ;
             :hasNationality "Philippines" ;
             :hasRealName "Jan Delmundo" ;
             :playerInfo "Jan \"DomengKite\" Delmundo (born November 3, 2007) is a Filipino player who is currently playing as a Gold Laner for Aurora Gaming." .
@@ -1096,6 +1136,7 @@
 :DreamS rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 26 ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/todak/DreamS_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T023559Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=ecaec29d7ee91e8c0afb150c1e6d7c838430fbae0d51fcf296d8237e50f56ee2" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Rachmad Wahyudi" ;
         :playerInfo "Rachmad \"DreamS\" Wahyudi (born December 6, 1999) is an Indonesian player who is currently playing as a Roamer for TODAK on loan from Alter Ego." .
@@ -1111,7 +1152,8 @@
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Duskk
 :Duskk rdf:type owl:NamedIndividual ;
-       :Roles "Jungler" .
+       :Roles "Jungler" ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/rey/Duskk_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044918Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=72ede7cd42932d9a2a582e833e179befefe5f2fc25a4481f7e91baa6b84c0203" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Dyrennn
@@ -1129,6 +1171,7 @@
 :E2MAX rdf:type owl:NamedIndividual ;
        :Roles "Head Coach" ;
        :hasAge 29 ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/tnc/E2max_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064121Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=0f8329ac04cf052b397ec68ffe02e9ab602c73f4c263c504f7b8d9f19783a3df" ;
        :hasNationality "Philippines" ;
        :hasRealName "Patrick Caidic" ;
        :playerInfo "Patrick \"E2MAX\" Caidic (born July 12, 1996) is a Filipino Coach and Mid Laner who is currently working for TNC Pro Team as a Coach." .
@@ -1148,6 +1191,7 @@
 :ESON rdf:type owl:NamedIndividual ;
       :Roles "Assistant Coach" ;
       :hasAge 31 ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/twis/CoachEson_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T065054Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=76e463b57d7609c172f55efd71395c1731adcebcbe83d6efdd255aed6d7b989c" ;
       :hasNationality "Philippines" ;
       :hasRealName "Mark Jayson Gerardo" ;
       :playerInfo "Mark \"ESON\" Gerardo (born October 26, 1994) is a Filipino Coach who is currently working for Twisted Minds PH as a Coach." .
@@ -1178,6 +1222,7 @@
         :playerOf :Aurora_PH16 ;
         :Roles "Exp" ;
         :hasAge 21 ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/rora/Edward_Standard_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T075016Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=5b45f64119308ee869b05f9e9fda65c13cb25e4a75ad5e2a4fcf83246bf1577d" ;
         :hasNationality "Philippines" ;
         :hasRealName "Edward Dapadap" ;
         :playerInfo "Edward \"Edward\" Dapadap (born September 11, 2004) is a Filipino player who is currently playing as an EXP Laner for Aurora Gaming PH." .
@@ -1204,13 +1249,15 @@
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Error404
 :Error404 rdf:type owl:NamedIndividual ;
-          :Roles "Jungler" .
+          :Roles "Jungler" ;
+          :hasFoto "https://cdn5.vistek.id/season16/foto%20player/rey/ERROR404%20TEAM%20REY%20EDITED.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T065144Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=abacb7ad0506a6dd03da834b2dffcfd2cc024dcadb798f60e08b0b2a0e019f7c" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Eshaa
 :Eshaa rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
        :hasAge 26 ;
+       :hasFoto "https://liquipedia.net/commons/images/thumb/8/8e/RG_Eshaa_S11.png/900px-RG_Eshaa_S11.png" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Muhammad Yaacob Esha Bin Muhammad Halizan @Charles" ;
        :playerInfo "Muhammad \"Eshaa Ohana\" @Charles (born September 9, 1999) is a Malaysian player who is currently playing as a Roamer for Team Lunatix." .
@@ -1237,6 +1284,7 @@
                        :MPLFinals ,
                        :MPLPlayoff ;
            :RankMPL 1 ;
+           :hasFoto "https://liquipedia.net/commons/images/5/5e/EVIL_SG_allmode.png" ;
            :hasName "Evil" ;
            :teamName "Evil" .
 
@@ -1278,6 +1326,7 @@
              :hasStaff :CoachMoody ,
                        :Trebor ;
              :RankMPL "5-6" ;
+             :hasFoto "https://cdn3.vistek.id/season16/teams/flcn.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T054036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2a6743ff335b5a716af5c096374665203b2dc9aacdbb5abe33acffddaee127af" ;
              :hasName "Team Falcons" ;
              :teamName "Team Falcons PH" .
 
@@ -1302,6 +1351,7 @@
 :Fawndeer rdf:type owl:NamedIndividual ;
           :Roles "Exp" ;
           :hasAge 22 ;
+          :hasFoto "https://cdn5.vistek.id/season16/foto%20player/todak/Fawndeer_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T063046Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=9f5e43fd10b49483d6578c1bb370ce9cb79204ecd6436918bcbbaf9df890e3bb" ;
           :hasNationality "Indonesia" ;
           :hasRealName "Melvin Rulif" ;
           :playerInfo "Melvin \"Fawndeer\" Rulif (born April 30, 2003) is an Indonesian player who is currently playing as an EXP Laner for TODAK on loan from Alter Ego X." .
@@ -1310,6 +1360,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Ferdz
 :Ferdz rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/flcn/Ferdz_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053711Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=29c987dfc90aa18d3c95147bdbf923834234311851e41a39704fe851b41f31d9" ;
        :hasNationality "Philippines" ;
        :hasRealName "Dferdz Fernandez" ;
        :playerInfo "dferdz \"Ferdz\" Fernandez is a Filipino player who is currently playing as an EXP Laner for Team Falcons PH." .
@@ -1350,6 +1401,7 @@
          :Roles "Exp" ;
          :alternateIds "Flap" ;
          :hasAge 21 ;
+         :hasFoto "https://cdn3.vistek.id/season16/player/flcn/Flaptzy_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053711Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=3bc610186ff0aa013a1486b16b6774f20d46bca85547976e290b59a4847bbbc0" ;
          :hasNationality "Philippines" ;
          :hasRealName "David Charles Canon" ;
          :playerInfo "David \"FlapTzy\" Canon (born July 5, 2004) is a Filipino player who is currently playing as an EXP Laner for Team Falcons PH." .
@@ -1369,6 +1421,7 @@
                         :MPLPlayoff ;
             :hasStaff :Adammir ;
             :RankMPL 2 ;
+            :hasFoto "https://liquipedia.net/commons/images/thumb/3/3d/Team_Flash_full_darkmode.png/900px-Team_Flash_full_darkmode.png" ;
             :hasName "Team Flash" ;
             :teamName "Team Flash" .
 
@@ -1376,6 +1429,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Fmm
 :Fmm rdf:type owl:NamedIndividual ;
      :Roles "Midlaner" ;
+     :hasFoto "https://liquipedia.net/commons/images/a/a0/BLD_FMM_S8.png" ;
      :hasNationality "SIngapore" ;
      :hasRealName "Ng Bi De" ;
      :playerInfo "Ng \"FMM\" Bi De is a Singaporean player who is currently playing as a Mid Laner for Kingdom Esports." .
@@ -1399,6 +1453,7 @@
               :hasStaff :Backdoor ,
                         :Vivy ;
               :RankMPL 10 ;
+              :hasFoto "https://cdn5.vistek.id/season16/team%20logo/gmxk.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=383a52ca921c6178e5469beb93c5fd15d329c7386b93f4faae7483e0b5410c2e" ;
               :hasName "GamesMY Kelantan" ;
               :teamName "GamesMY Kelantan" .
 
@@ -1407,6 +1462,7 @@
 :Garyy rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 21 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/cg/G%20A%20R%20Y_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044918Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=6072bb2e30accd01f9262ef477e6041122f33d825d7d2831a26dba51f2585c9d" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Muhammad Syafizan Najmi Bin Kamarulzaman" ;
        :playerInfo "Muhammad Syafizan Najmi \"Garyy\" Kamarulzaman (born November 6, 2004) is a Malaysian player who is currently playing as a Jungler for CG Esports." .
@@ -1416,6 +1472,7 @@
 :Gear rdf:type owl:NamedIndividual ;
       :Roles "Exp" ;
       :hasAge 20 ;
+      :hasFoto "https://liquipedia.net/commons/images/3/33/BLD_Gear_S7.png" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Tristan Nathanael" ;
       :playerInfo "Tristan \"Gear\" Nathanael (born June 4, 2005) is a Singaporean/Indonesian player who is currently playing as an EXP Laner for Evil." .
@@ -1459,6 +1516,7 @@
        :Roles "Exp" ;
        :alternateIds "Ilman" ;
        :hasAge 22 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/vamos/GOJES_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070035Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=9e2335dbdadf5f2571816d92f650416afc068b139c94d9239daeaff012fe8d38" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Ilman Zareef Bin Zulkifli" ;
        :playerInfo "Ilman \"Gojes\" Zulkifli (born November 20, 2003) is a Malaysian player who is currently playing as an EXP Laner for Team Vamos on loan from SRG.OG." .
@@ -1474,6 +1532,7 @@
 :Hadess rdf:type owl:NamedIndividual ;
         :alternateIds "Janaaqt, Lord Hadess" ;
         :hasAge 23 ;
+        :hasFoto "https://liquipedia.net/commons/images/thumb/c/c5/FL_Hadess_at_MSC_2025.jpg/900px-FL_Hadess_at_MSC_2025.jpg" ;
         :hasNationality "Philippines" ;
         :hasRealName "aymark Aaron Thomas Lazaro" ;
         :playerInfo "Jaymark \"Hadess\" Lazaro (also known as Janaaqt) (born January 10, 2002) is a Filipino player who is currently playing as a Jungler for Team Flash on loan from Geek Fam ID." .
@@ -1484,6 +1543,7 @@
        :Roles "Mid" ;
        :alternateIds "Hadjizy, Had Ji" ;
        :hasAge 23 ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/omg/Hadji_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041819Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d729110695586adbc89d2e030ac668e4c2cd8327804ad7cc8b1723de1d5f2f0d" ;
        :hasNationality "Philippines" ;
        :hasRealName "Salic Alauya Imam" ;
        :playerInfo "Salic \"Hadji\" Imam (born April 23, 2003) is a Filipino player who is currently playing as a Mid Laner for Omega Esports." .
@@ -1494,6 +1554,7 @@
       :Roles "Mid" ;
       :alternateIds "Hatred, Hated" ;
       :hasAge 23 ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/onic/Hate_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=fa477e492dfa3aa47741b73f0e4b6b3de130c594f214e8fd9ee2e4396029224e" ;
       :hasNationality "Philippines" ;
       :hasRealName "Jaylord Gonzales" ;
       :playerInfo "Jaylord \"Hate\" Gonzales (born August 31, 2002) is a Filipino player who is currently playing as a Mid Laner for ONIC Philippines." .
@@ -1504,6 +1565,7 @@
       :Roles "Analyst" ;
       :alternateIds "YellyHazeDR" ;
       :hasAge 29 ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/onic/CoachHaze_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d59a2dd2f81aa39dd2c0d667eb3b4b977f4067d075f21cc70646655b1ac2ebb0" ;
       :hasNationality "Philippines" ;
       :hasRealName "Janiel Beta Anon" ;
       :playerInfo "Jeniel \"YellyHaze\" Bata-Anon (born May 29, 1996) is a Filipino Coach who is currently working for ONIC Philippines as a Coach." .
@@ -1513,6 +1575,7 @@
 :Hazle rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 18 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/aero/Hazle_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T045534Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=fef11befc86d30b1244d595aac85e70a0b0001d72c80325147e2a82f7e3930f2" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Muhammad Balakosa" ;
        :playerInfo "Muhammad \"Hazle\" Balakosa (born May 6, 2007) is an Indonesian player who is currently playing as a Jungler for Aero Esports on loan from RRQ Hoshi." .
@@ -1531,6 +1594,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Hito
 :Hito rdf:type owl:NamedIndividual ;
       :Roles "Assistant Coach" ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/tnc/Hito_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064121Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=9a2a2d2c3c4b8a39027e24bbe4509f206d6ade40c26de4277df0dc7dd6ce5556" ;
       :hasRealName "Robert Remar Candoy" ;
       :playerInfo "Robert \"Hito\" Candoy is a Filipino Coach and Gold Laner who is currently working for TNC Pro Team as a Coach." .
 
@@ -1555,6 +1619,7 @@
                          :Jes ,
                          :Naaz ;
                :RankMPL "5-6" ;
+               :hasFoto "https://cdn5.vistek.id/season14/team_logo/homebois.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=0e60cf82ea9a8847a0b677a9b9dbd5312b181b2fc6c3dc9feb34711e337d54ce" ;
                :hasName "Homebois" ;
                :teamName "Homebois" .
 
@@ -1594,19 +1659,22 @@
              :hasStaff :Cryptic ,
                        :ly4ly4ly4 ;
              :RankMPL "5-6" ;
+             :hasFoto "https://liquipedia.net/commons/images/thumb/6/61/IGNITE_Gaming_allmode.png/240px-IGNITE_Gaming_allmode.png" ;
              :hasName "IGNITE Gaming" ;
              :teamName "IGNITE Gaming" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Immqt
 :Immqt rdf:type owl:NamedIndividual ;
-       :Roles "Gold" .
+       :Roles "Gold" ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/gmxk/Immqt_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T055959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=e31d6550fc6042eea40c84eb5b9ad1031c343f3165b71f49adae3e2d1331b84a" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Innocent
 :Innocent rdf:type owl:NamedIndividual ;
           :Roles "Gold" ;
           :hasAge 21 ;
+          :hasFoto "https://cdn5.vistek.id/season16/foto%20player/srg/Innocent_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T055151Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=5522d14c82304bbb78952c12e245a7d57e83f2b84b3ee5133ab9dcc0fd0d5464" ;
           :hasNationality "Philippines" ;
           :hasRealName "John Banal" ;
           :playerInfo "John \"Innocent\" Banal (born May 12, 2004) is a Filipino player who is currently playing as a Gold Laner for SRG.OG." .
@@ -1616,6 +1684,7 @@
 :Irfan rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :alternateIds "Sepat" ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/mv/Irfan.._Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041925Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=af69ed90eba7bfafd4dcecb16c197e297d881254b964bf78f6fcfc250282b43b" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Muhammad Irfan bin Aujang" ;
        :playerInfo "Muhammad \"Sepat\" Aujang (also known as Irfan) (born November 27, 2004) is a Malaysian player who is currently playing as an EXP Laner for JP NINERS on loan from Team Vamos." .
@@ -1637,6 +1706,8 @@
          :RankMPL "Mid" ;
          :alternateIds "Izanamiyeyo" ;
          :hasAge 22 ;
+         :hasFoto "https://cdn5.vistek.id/season16/foto%20player/hb/EYYMAL_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T063046Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=02b8a6407514d33140d5d69b7c89009e79c60d6d903074dc42898b50ac3117a7" ,
+                  "https://cdn5.vistek.id/season16/foto%20player/hb/IZANAMI_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T063046Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=37aa76195b2a717d7ca67011167e2abefa120c00c0d6cedcc4dbd06270a9f472" ;
          :hasNationality "Malaysia" ;
          :hasRealName "Mohammad Irwandy Lim" ;
          :playerInfo "Mohammad \"Izanami\" Lim (born November 21, 2003) is a Malaysian player who is currently playing as a Mid Laner for HomeBois." .
@@ -1646,6 +1717,7 @@
 :JIFDEGaming rdf:type owl:NamedIndividual ;
              :Roles "Analyst" ;
              :hasAge 25 ;
+             :hasFoto "https://cdn5.vistek.id/season16/foto%20player/aero/JIFDEGaming%20%28Analyst%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T045534Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=94a0d645c967e97a2edebc8bfa680fafdbbf071d2fac99b110a676853a66dce3" ;
              :hasNationality "Malaysia" ;
              :hasRealName "Jason Yap Chun Siu" ;
              :playerInfo "Jason \"JIFDEGaming\" Yap (born October 13, 2000) is a Malaysian Analyst who is currently working for Aero Esports as an Analyst." .
@@ -1662,6 +1734,7 @@
 :JPL rdf:type owl:NamedIndividual ;
      :Roles "Roamer" ;
      :hasAge 30 ;
+     :hasFoto "https://liquipedia.net/commons/images/thumb/e/eb/FL_JPL_at_MSC_2025.jpg/900px-FL_JPL_at_MSC_2025.jpg" ;
      :hasNationality "Singapore" ;
      :hasRealName "Akihiro furusawa" ;
      :playerInfo "Akihiro \"JPL\" Furusawa (born December 23, 1995) is a Singaporean player who is currently playing as a Roamer for Team Flash." .
@@ -1682,6 +1755,7 @@
 :Jajaa rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 21 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/gmxk/Jaja_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031621Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2a5693749cccbf85d4b31b67e604ae1361dffb28472c12e22ad95a73e6a0922f" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Muhammad Azrul Izani Bin Mohamad" ;
        :playerInfo "Muhammad \"Jajaa\" Mohamad (born May 25, 2004) is a Malaysian player who is currently playing as a Jungler for GamesMY Kelantan." .
@@ -1691,6 +1765,7 @@
 :Jaypee rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 27 ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/tlph/Jaypee_Standard_Esport_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T061111Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=4ec067e1e1b9faccd86c0c997e905e1705ef1ec76fdc86817d4847aa40dadc5f" ;
         :hasNationality "Philippines" ;
         :hasRealName "Jaypee Gonzales Dela Cruz" ;
         :playerInfo "Jaypee Gonzales \"Jaypee\" Dela Cruz (born October 22, 1998) is a Filipino player who is currently playing as a Roamer for Team Liquid PH." .
@@ -1699,6 +1774,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jayy
 :Jayy rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
+      :hasFoto "https://liquipedia.net/commons/images/4/4f/BLD_Jayy_S8.png" ;
       :hasNationality "Singapore" ;
       :hasRealName "Chng Jun Wen" ;
       :playerInfo "Chng \"Jayy\" Jun Wen is a Singaporean player who is currently playing as a Mid Laner for RSG Singapore." .
@@ -1707,6 +1783,7 @@
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jeff
 :Jeff rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/apbr/Coach_Jeff_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041619Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=5e8429bb34e685ee41137cea762a52bea42b945b2974c8361edeb8e84a3ad57f" ;
       :hasNationality "Philippines" ;
       :hasRealName "Jeffrey Manforte" ;
       :playerInfo "Jeffrey \"Jeff\" Manforte is a Filipino Coach who is currently working for AP.Bren as a Coach." .
@@ -1714,13 +1791,15 @@
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jes
 :Jes rdf:type owl:NamedIndividual ;
-     :RankMPL "Head Coach" .
+     :RankMPL "Head Coach" ;
+     :hasFoto "https://cdn5.vistek.id/season16/foto%20player/hb/COACH%20JES%20%28Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T024430Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=137ef88292aa94411f1d3d84ca6d03a0892dd0326047275dcf61310168d69b56" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Jeymz
 :Jeymz rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 21 ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/omg/Jeymz_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041819Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a78a5e06503667d7b70bdefde3e6879e73d3090b6b400dfb537e1062a67340c8" ;
        :hasNationality "Philippines" ;
        :hasRealName "James Gloria" ;
        :playerInfo "James \"Jeymz\" Gloria (born August 13, 2004) is a Filipino player who is currently playing as an EXP Laner for Omega Esports." .
@@ -1730,6 +1809,7 @@
 :Jowm rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 21 ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/rey/Jowm_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044918Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=965752f54d0f6fdf2692f2623b11844fe44c3f1f69755836580a961d98b27afa" ;
       :hasNationality "Philippines" ;
       :hasRealName "Jomari Pingol" ;
       :playerInfo "Jomari \"Jowm\" Pingol (born October 23, 2004) is a Filipino player who is currently playing as a Gold Laner for Omega Esports." .
@@ -1739,6 +1819,7 @@
 :K1NGKONG rdf:type owl:NamedIndividual ;
           :Roles "Jungler" ;
           :hasAge 19 ;
+          :hasFoto "https://cdn3.vistek.id/season16/player/onic/K1ngkong_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064216Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d3c03656c4c0f179a51cca24cfa787c4c4153084718a1d662bd67c164e303aa0" ;
           :hasNationality "Philippines" ;
           :hasRealName "King Cyric Perez" ;
           :playerInfo "King \"K1NGKONG\" Perez (born April 26, 2006) is a Filipino player who is currently playing as a Jungler for ONIC Philippines." .
@@ -1770,6 +1851,7 @@
          :Roles "Jungler" ;
          :alternateIds "Chessman" ;
          :hasAge 21 ;
+         :hasFoto "https://cdn3.vistek.id/season16/player/tlph/Karltzy_Standard_Esport_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T020330Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=34d0ac342346627b7dbec71419946809aaedda736682e4f2f75e41c8b12a93e7" ;
          :hasNationality "Philippines" ;
          :hasRealName "Karl Gabriel Nepomuceno" ;
          :playerInfo """Karl \"KarlTzy\" Nepomuceno (born August 22, 2004) is a Filipino player who is currently playing as a Jungler for Team Liquid PH.
@@ -1796,6 +1878,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kelra rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 20 ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/onic/Kelra_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053810Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a0889c53daeaa6001b32c08d52151d4d63617ea751430f4f348245e602bd8aa8" ;
        :hasNationality "Philippines" ;
        :hasRealName "Grant Duane Pillas" ;
        :playerInfo "Grant \"Kelra\" Pillas (born March 26, 2005) is a Filipino player who is currently playing as a Gold Laner for ONIC Philippines" .
@@ -1805,6 +1888,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kenji rdf:type owl:NamedIndividual ;
        :Roles "Assistant Coach" ;
        :hasAge 27 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/mv/Kenji%20%28Tactical%20Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041925Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=90b66d6f2c3df4b4dab9f1398fac812d6afdaa9b005653e2641dfe61230de858" ;
        :hasNationality "Philippines" ;
        :hasRealName "Kenneth Jiane S. Villa" ;
        :playerInfo "Kenneth \"Kenji\" Villa (born February 14, 1998) is a Filipino player who is currently playing as an EXP Laner for Monster Vicious." .
@@ -1823,6 +1907,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Keymin rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 23 ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/unt/Keymin_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T025030Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=691d5eb1224840175852ed6ebc42f97184cb4e4aef3c8a48aa0fc35828670e38" ;
         :hasNationality "Malaysia" ;
         :hasRealName "Muhammad Akmal Hakimin bin Ghazali" ;
         :playerInfo "Muhammad \"Keymin\" Ghazali (born October 11, 2002) is a Malaysian player who is currently playing as a Jungler for Untitled Esports." .
@@ -1869,6 +1954,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                         :Icyfrost ,
                         :Sammy ;
               :RankMPL 3 ;
+              :hasFoto "https://liquipedia.net/commons/images/thumb/4/4f/Kingdom_Esports_%28mlbb_team%29_allmode.png/285px-Kingdom_Esports_%28mlbb_team%29_allmode.png" ;
               :hasName "Kingdom Esports" ;
               :teamName "Kingdom Esports" .
 
@@ -1876,6 +1962,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kirk
 :Kirk rdf:type owl:NamedIndividual ;
       :Roles "Exp" ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/onic/Kirk_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=1ce62885b6028bf68a0f00d0382909326b4fda4d5ab83715e904548e22db7403" ;
       :hasNationality "Philippines" ;
       :hasRealName "Jann Kirk Solcruz Gutierrez" ;
       :playerInfo "Jann \"Kirk\" Gutierrez is a Filipino player who is currently playing as an EXP Laner for ONIC Philippines." .
@@ -1885,6 +1972,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kramm rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 20 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/srg/KRAMM_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T055151Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a9f213b563e2e1733a769baf56fc0e22628a365f2bdc09bdb4274428f80ba2a4" ;
        :hasNationality "Philippines" ;
        :hasRealName "Mark genzon Sojero Rusiana" ;
        :playerInfo "Mark \"Kramm\" Rusiana (born April 14, 2005) is a Filipino player who is currently playing as an EXP Laner for SRG.OG." .
@@ -1894,6 +1982,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :KurtTzy rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 22 ;
+         :hasFoto "https://liquipedia.net/commons/images/thumb/2/2a/FL_KurtTzy_at_MSC_2025.jpg/900px-FL_KurtTzy_at_MSC_2025.jpg" ;
          :hasNationality "Philippines" ;
          :hasRealName "Jankurt Russel Matira" ;
          :playerInfo "Jankurt \"KurtTzy\" Matira (born March 2, 2003) is a Filipino player who is currently playing as a Mid Laner for Team Flash." .
@@ -1904,6 +1993,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
        :Roles "Gold" ;
        :alternateIds "Kousei" ;
        :hasAge 20 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/aero/Kusey_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T045534Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f3ca3a3e99cc6e47d96d5be39bab8e193e84f76b43a701fc2e24a9c22998444e" ;
        :hasNationality "Philippines" ;
        :hasRealName "Clarense Jay G. Camilo" ;
        :playerInfo "Clarense \"Kusey\" Camilo (born January 13, 2005) is a Filipino player who is currently playing as a Gold Laner for Aero Esports." .
@@ -1913,6 +2003,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :KyleTzy rdf:type owl:NamedIndividual ;
          :Roles "Jungler" ;
          :hasAge 20 ;
+         :hasFoto "https://cdn3.vistek.id/season16/player/flcn/Kyletzy_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053711Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=1004785aceb1725b46cff9e9940ed4e9b60af32aca8b71f7f23c5d4250386d2c" ;
          :hasNationality "Philippines" ;
          :hasRealName "Michael Angelo Sayson" ;
          :playerInfo "Michael \"KyleTzy\" Sayson (born August 19, 2005) is a Filipino player who is currently playing as a Jungler for Team Falcons PH." .
@@ -1943,6 +2034,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Kyym rdf:type owl:NamedIndividual ;
       :Roles "Mid" ;
       :hasAge 19 ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/aero/Kyym_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T015055Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=1bbb080a5a0a1b9485fd4f7f2be44922e88a24537fc30747dc71c31fc8a97637" ;
       :hasNationality "Malaysia" ;
       :hasRealName "Adam Alhakim Bin Mohamad Ali" ;
       :playerInfo "Adam \"Kyym\" Ali (born January 20, 2006) is a Malaysian player who is currently playing as a Mid Laner for Aero Esports." .
@@ -1950,13 +2042,15 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/LILNUSH
 :LILNUSH rdf:type owl:NamedIndividual ;
-         :Roles "Jungler" .
+         :Roles "Jungler" ;
+         :hasFoto "https://cdn5.vistek.id/season16/foto%20player/mv/Lilnush.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T051909Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=56fe0bcd9e209feec523a259947c0f1920d53da94853002501344ead0ca170a3" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/LanceCy
 :LanceCy rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 25 ;
+         :hasFoto "https://cdn3.vistek.id/season16/player/tnc/Lancecy_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064121Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7731a6f7cc08cae4694c90d1714eef535e49cecc332910a175b39fcf301bf661" ;
          :hasNationality "Philippines" ;
          :hasRealName "Lance Walter Cunanan" ;
          :playerInfo "Lance \"LanceCy\" Cunanan (born September 24, 2000) is a Filipino player who is currently playing as a Mid Laner for TNC Pro Team." .
@@ -1965,6 +2059,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lansu
 :Lansu rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/twis/Lansu_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T065054Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=ce73eb0e72e2b76ec3c9d636d610804fdcc11655a00a56343fcc0c730fa44594" ;
        :hasNationality "Philippines" ;
        :hasRealName "Lance Aron Misa" ;
        :playerInfo "Lance \"Lansu\" Misa is a Filipino player who is currently playing as an EXP Laner for Twisted Minds PH." .
@@ -1973,6 +2068,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lembot
 :Lembot rdf:type owl:NamedIndividual ;
         :Roles "Assistant Coach" ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/omg/CoachLembot_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041819Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=045278a7c888b8561c0177ddcafb6995630aee9dd50b39457bd1de1209197d67" ;
         :hasNationality "Philippines" ;
         :hasRealName "Lamuel Josh Lucban" ;
         :playerInfo "Lemuel Josh \"Lembot\" Lucban is a Filipino Coach who is currently working for Omega Esports as a Coach." .
@@ -1983,6 +2079,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
        :Roles "Roamer" ;
        :alternateIds "Unravel, Light Yagami" ;
        :hasAge 22 ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/rora/Light_Standard_Esports_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070305Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a77be27fc162b80646698193e8616eb89ae82c0b41dfc13ba8b3c910a166c64c" ;
        :hasNationality "Philippines" ;
        :hasRealName "Dylan Aaron Poblete Catipon" ;
        :playerInfo "Dylan \"Light\" Catipon (formerly known as Unravel) (born November 14, 2002) is a Filipino player who is currently playing as a Roamer for Aurora Gaming PH." .
@@ -1992,6 +2089,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Link rdf:type owl:NamedIndividual ;
       :Roles "Assistant Coach" ;
       :hasAge 32 ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/todak/Link%20%28Tactical%20Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T023559Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=b1561efa8ec84da2dbdd12bc35b271c769e574498655faec249043c35c2bd9d5" ;
       :hasNationality "Philippines" ;
       :hasRealName "Jm Nieles" ;
       :playerInfo "Jm \"Link\" Nieles (born September 18, 1993) is a Filipino Coach who is currently working for TODAK as a Coach" .
@@ -2002,6 +2100,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
          :Roles "Gold" ;
          :alternateIds "Loleal" ;
          :hasAge 22 ;
+         :hasFoto "https://cdn5.vistek.id/season16/foto%20player/todak/Loleal_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T023559Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=479365f2c97cd896626f57af35e7d061f36f1747203dacd82b222521c5ca85bb" ;
          :hasNationality "Malaysia" ;
          :hasRealName "Ealtond Rayner" ;
          :playerInfo "Ealtond \"Lolealz\" Rayner (born January 29, 2003) is a Malaysian player who is currently playing as a Gold Laner for TODAK." .
@@ -2010,6 +2109,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lolsie
 :Lolsie rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
+        :hasFoto "https://liquipedia.net/commons/images/a/a2/NPFL_Lolsie_S8.png" ;
         :hasNationality "Singapore" ;
         :playerInfo "Bellamy \"Lolsie\" Yeov is a Singaporean player who is currently playing as a Roamer for Kingdom Esports." .
 
@@ -2018,6 +2118,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :LordJM rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge 20 ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/apbr/LordJM_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041619Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=ddebe8d13afc2c48ed59200f0b67e17b5ec0227fb21f899b5690c9bc9adea2a3" ;
         :hasNationality "Philippines" ;
         :hasRealName "Jhon Marl Sebastian" ;
         :playerInfo "Jhon \"JM\" Sebastian (born June 27, 2005) is a Filipino player who is currently playing as an EXP Laner for AP.Bren." .
@@ -2026,6 +2127,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lucianqt
 :Lucianqt rdf:type owl:NamedIndividual ;
           :Roles "Roamer" ;
+          :hasFoto "https://liquipedia.net/commons/images/7/7a/TLAID_Lucianqt_MDL_S10.png" ;
           :hasNationality "Indonesia" ;
           :hasRealName "I Nyoman Dehi Pranipata" ;
           :playerInfo "I \"Lucianqt\" Pranipata (formerly known as Detha) is an Indonesian player who last played for Team Stallion SG." .
@@ -2044,7 +2146,8 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Lyoni
 :Lyoni rdf:type owl:NamedIndividual ;
-       :Roles "Roamer" .
+       :Roles "Roamer" ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/mv/Lyoni_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052733Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=813c7b7dd35f081bd0fc8120978b7364a0850a9bbfa5510a84fc979f08020e07" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MPLChamps
@@ -2063,6 +2166,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :MPtheKing rdf:type owl:NamedIndividual ;
            :Roles "Jungler" ;
            :hasAge 21 ;
+           :hasFoto "https://cdn3.vistek.id/season16/player/twis/MPTheKing_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T065054Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=5dfd61d505abadb318c1463425bfdc1be3cb22cf12c41ade0d8de5744aceddfa" ;
            :hasNationality "Philippines" ;
            :hasRealName "Michael Medrocillo Endino" ;
            :playerInfo "Michael \"MP the King\" Endino (born October 15, 2004) is a Filipino player who is currently playing as a Jungler for Twisted Minds PH." .
@@ -2096,6 +2200,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Maima rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
        :hasAge 25 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/gmxk/Maima_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T055959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=ea842f521051463bfd8e3240afa1f5b3f09cf1f63221b43ad59edd4846f1a85b" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Muhammad Azam Izzudin Bin Mohd Amin" ;
        :playerInfo "Muhammad \"Maima\" Amin (born June 22, 2000) is a Malaysian player who is currently playing as a Mid Laner for GamesMY Kelantan." .
@@ -2104,6 +2209,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Mariah
 :Mariah rdf:type owl:NamedIndividual ;
         :Roles "Analyst" ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/cg/COACH%20MARIAH%20%28Analyst%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044920Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=64b319b11371147569d60db425cd020a6d203038d593fc618a43b5be482b8c10" ;
         :hasNationality "Malaysia" .
 
 
@@ -2117,6 +2223,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MasterTheBasics
 :MasterTheBasics rdf:type owl:NamedIndividual ;
                  :Roles "Head Coach" ;
+                 :hasFoto "https://cdn3.vistek.id/season16/player/rora/CoachMastertheBasics_Esport_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T075016Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2df50d7333ae5b060b293b9afab7589d6860335ebe5df5c07153891b090b0caa" ;
                  :hasNationality "Philippines" ;
                  :hasRealName "Aniel Y Jiandani" ;
                  :playerInfo "Aniel \"Master the Basics\" Jiandani is a Filipino Coach who is currently working for Aurora Gaming as a Coach. He was also a Youtuber where he puts out Mobile Legends guides." .
@@ -2125,6 +2232,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Matdinz
 :Matdinz rdf:type owl:NamedIndividual ;
          :Roles "Roamer" ;
+         :hasFoto "https://cdn5.vistek.id/season16/foto%20player/gmxk/Matdinz_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T055959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=0447d6aa22796db642ee3a5a6bf9d81f7b951163d9d54917a281b19eee221e4d" ;
          :hasNationality "Malaysia" .
 
 
@@ -2151,6 +2259,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Melqt rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 24 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/hb/MELQT_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T063046Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=399b7f8bab21dcdc316be2db1860faf74e986cbd66e873ed46afdd0f396cf77d" ;
        :hasRealName "Adam Bin Hamidun" ;
        :playerInfo "Adam \"Melll\" Hamidun (born October 3, 2001) is a Malaysian player who is currently playing as a Gold Laner for HomeBois." ,
                    "Malaysia" .
@@ -2160,6 +2269,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Momo rdf:type owl:NamedIndividual ;
       :Roles "Exp" ;
       :hasAge 25 ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/mv/Momo_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052733Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=062a416a1052cde51aa4baf70df31e910a1cb2d893d049d3a882a22111d5a77c" ;
       :hasNationality "Malaysia" ;
       :hasRealName "Idreen Bin Abdul Jamal" ;
       :playerInfo "Idreen \"Momo\" Jamal (born October 3, 2000) is a Malaysian player who is currently playing as an EXP Laner for Monster Vicious." .
@@ -2184,6 +2294,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                                :Kenji ,
                                :SoraPayung ;
                      :Roles 3 ;
+                     :hasFoto "https://cdn5.vistek.id/season16/team%20logo/mv-white.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=992f53714cd6741192e7c8968a0f60bfaf6cf6f4e4283b4573a0e8373c2d514c" ;
                      :hasName "Monster Vicious" ;
                      :teamName "Monster Vicious" .
 
@@ -2212,6 +2323,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Munsters rdf:type owl:NamedIndividual ;
           :Roles "Exp" ;
           :hasAge 22 ;
+          :hasFoto "https://cdn5.vistek.id/season16/foto%20player/gmxk/Munster_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T055959Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=3165b84fe93117dc59d26e20527d5a0b815ccd5a13006089e885976472ce2a62" ;
           :hasNationality "Indonesia" ;
           :hasRealName "I Ketut Rio Mahendra" ;
           :playerInfo "I \"Munsters\" Mahendra (born May 16, 2003) is an Indonesian player who is currently playing as an EXP Laner for GamesMY Kelantan." .
@@ -2255,6 +2367,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Naaz
 :Naaz rdf:type owl:NamedIndividual ;
       :RankMPL "Analyst" ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/hb/NAAZ%20%28Analyst%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T024430Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=563d5dbbf783afc6e827cf55789a9f9f3a81cc7b8701b8958047fc1242805e5c" ;
       :hasNationality "Malaysia" .
 
 
@@ -2262,6 +2375,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Nafari rdf:type owl:NamedIndividual ;
         :Roles "Head Coach" ;
         :hasAge 32 ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/todak/N%20F%20R%20%28Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T023559Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a2ddccb895249f570b6d9f4ea575c1f2c7cc3437ced5b32bd6a3b1d627c3475c" ;
         :hasNationality "Indonesia" ;
         :hasRealName "Azam Aljabar Nafari" ;
         :playerInfo "Azam \"Nafari\" Nafari (born September 18, 1993) is an Indonesian Coach who is currently working for TODAK on loan from Alter Ego as a Coach. He is a former Dota 2 player." .
@@ -2277,6 +2391,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Natco rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 19 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/vamos/NATCO_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070035Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=1517630915dd589e1486ce4f913b14bfb03c0d3a4f0bcf430f2ae35d7f9c30af" ;
        :hasNationality "Indonesia" ;
        :hasRealName "Nicodemus Dustin Koesnadi" ;
        :playerInfo "Nicodemus \"Natco\" Koesnadi (born December 6, 2005) is an Indonesian player who is currently playing as a Gold Laner for Team Vamos on loan from EVOS." .
@@ -2291,6 +2406,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Netskie rdf:type owl:NamedIndividual ;
          :Roles "Gold" ;
          :hasAge 20 ;
+         :hasFoto "https://cdn3.vistek.id/season16/player/omg/Netskie_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041819Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=fcdc74d6f52e9df918c8c29c678c9eebbe7ca7d982dcd40aa39698923fe23cf8" ;
          :hasNationality "Philippines" ;
          :hasRealName "Kenneth Sablande Barro" ;
          :playerInfo "Kenneth \"Nets\" Barro (born November 28, 2004) is a Filipino player who is currently playing as a Gold Laner for Omega Esports." .
@@ -2325,6 +2441,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Nosia
 :Nosia rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/twis/Nosia_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T065054Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2c581f43b8f87480a221fb419f10f3258619484b0dc7cc00789d3869f9a7435f" ;
        :hasNationality "Philippines" .
 
 
@@ -2332,6 +2449,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :NovaXcobar rdf:type owl:NamedIndividual ;
             :Roles "Roamer" ;
             :hasAge 23 ;
+            :hasFoto "https://cdn5.vistek.id/season16/foto%20player/rey/NovaXcobar_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044918Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2bd1d110868b388ce8ee9120704476e9daa0f956ced3afb3d1685a796739a256" ;
             :hasNationality "Malaysia" ;
             :hasRealName "Abdul Azim bin Abdul Rashid" ;
             :playerInfo "Abdul \"NovaXcobar\" Rashid (born March 5, 2002) is a Malaysian player who is currently playing as a Roamer for Team Rey." .
@@ -2355,6 +2473,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Oheb rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 21 ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/tlph/Oheb_Standard_Esport_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T061111Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=68669f33dbd2cf593801cbf82678b4b0ad628d38db6cbbc9ab9aaff5739137c5" ;
       :hasNationality "Philippines" ;
       :hasRealName "Kiel Calvin Q Soriano" ;
       :playerInfo "Kiel \"Oheb\" Q.Soriano (born August 17, 2004) is a Filipino player who is currently playing as a Gold Laner for Team Liquid PH." .
@@ -2378,6 +2497,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
                       :SN4P ,
                       :Wurahhhh ;
             :RankMPL 7 ;
+            :hasFoto "https://cdn3.vistek.id/season14/teams/smart_500.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T054036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a3abd511f6fab70ee80108998423f2bd1a1fff96a7329b06bc492e5b50958b3f" ;
             :hasName "Omega Esports" ;
             :teamName "Omega Esports" .
 
@@ -2424,6 +2544,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
            :hasStaff :Haze ,
                      :YnoT ;
            :RankMPL 4 ;
+           :hasFoto "https://cdn3.vistek.id/season16/teams/onicph_bw.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T054036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=e4752be5ee58cffa79e1ce29e0e908f4eb00ca12934905bf920c5474f2964b66" ;
            :hasName "Onic Esports PH" ;
            :teamName "Onic PH" .
 
@@ -2432,6 +2553,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Owgwen rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 24 ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/flcn/Owgwen_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053711Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=9017d66f074527d586bafb327ddc2051a28414b8ee8cc61f385cbfe507e41496" ;
         :hasNationality "Philippines" ;
         :hasRealName "Rowgien Stimpson Unigo" ;
         :playerInfo "Rowgien \"Owgwen\" Unigo (born April 25, 2001) is a Filipino player who is currently playing as a Roamer for Team Falcons PH." .
@@ -2441,6 +2563,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :OzoraVeki rdf:type owl:NamedIndividual ;
            :Roles "Strategic Coach" ;
            :hasAge 28 ;
+           :hasFoto "https://cdn5.vistek.id/season16/foto%20player/srg/Ozoraveki%20%28Tactical%20Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T062632Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7a548b0277e3f2d910818476764e3c42b60e8ed27b085cdc3cd2d855f233aaa5" ;
            :hasNationality "Malaysia" ;
            :hasRealName "Poon Kok Sing" ;
            :playerInfo "Poon \"OzoraVeki\" Sing (born July 7, 1997) is a Malaysian Coach who is currently working for SRG.OG as a Coach." .
@@ -2458,12 +2581,14 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/PakAtan
 :PakAtan rdf:type owl:NamedIndividual ;
          :Roles "Analyst" ;
+         :hasFoto "https://cdn5.vistek.id/season16/foto%20player/vamos/PAK%20ATAN%20%28Analyst%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T051909Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=901081cc7776136d2d95ee4545c13bff337c760b53efd80b702f27f8690c943c" ;
          :playerInfo "Malaysia" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Pakbet
 :Pakbet rdf:type owl:NamedIndividual ;
         :Roles "Head Coach" ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/vamos/PAKBET.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T051909Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=43cce0d880702ef0149554828b2a93e5de01414151d444e94593cbf22efa91b3" ;
         :hasNationality "Philippines" ;
         :hasRealName "Jomie Abalos" ;
         :playerInfo "Jomie \"P4kbet\" Abalos is a Filipino Coach who is currently working for Team Vamos as a Coach." .
@@ -2473,6 +2598,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Panda rdf:type owl:NamedIndividual ;
        :Person "Strategic Coach" ;
        :hasAge 23 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/aero/Panda.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T045534Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=eef0d1527252051697be12b00804006df662209cbd54015f40dc3ad7c3d4c3cc" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Poh Chun Wai" ;
        :playerInfo "Chun Wai \"Panda\" Poh (born October 10, 2002) is a Malaysian Coach and Gold Laner who is currently working for Aero Esports as a Coach." .
@@ -2482,6 +2608,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Perkz rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
        :hasAge 21 ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/tlph/Perkziva_Standard_Esport_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064131Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=75145f86b7a19e2dcdef9a61ef4ce25cedd40d66368ebf9b19096549025862b1" ;
        :hasNationality "Philippines" ;
        :hasRealName "John Sumawan" ;
        :playerInfo "John \"Perkz\" Sumawan (born June 8, 2004) is a Filipino player who is currently playing as a Roamer for Team Liquid PH." .
@@ -2490,6 +2617,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Peuder
 :Peuder rdf:type owl:NamedIndividual ;
         :Roles "Unknown" ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/omg/Peuder_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041819Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=960e2d472e59e29e827c87a6aca39f9323ed88e40ed475704c64ab0a27789cd8" ;
         :hasNationality "Philippines" .
 
 
@@ -2497,6 +2625,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Pheww rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
        :hasAge 26 ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/flcn/Pheww_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053711Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=aa8e37cc4e7e65b00aa3356e84a1dacaa9a34645ad5742d9d784669a5c113a6b" ;
        :hasNationality "Philippines" ;
        :hasRealName "Angelo Kyle Arcangel" ;
        :playerInfo "Angelo \"Pheww\" Arcangel (born June 18, 1999) is a Filipino player who is currently playing as a Mid Laner for Team Falcons PH." .
@@ -2505,6 +2634,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/PoWerFuL
 :PoWerFuL rdf:type owl:NamedIndividual ;
           :Roles "Roamer" ;
+          :hasFoto "https://liquipedia.net/commons/images/4/48/EVIL_PoWerFuL_S8.png" ;
           :hasNationality "Singapore" ;
           :hasRealName "Willie Lee Kwong Sheng" ;
           :playerInfo "Willie \"PoWerFuL\" Lee is a Singaporean player who is currently playing as a Roamer for Evil." .
@@ -2513,6 +2643,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Pozan
 :Pozan rdf:type owl:NamedIndividual ;
        :Roles "Coach" ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/unt/Pozan.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=c00a4c9ad9ea368f6edc51fc79f59d6e5c09c8e20f60921b86af04f8c3944832" ;
        :hasNationality "Malaysia" .
 
 
@@ -2549,6 +2680,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Rainn
 :Rainn rdf:type owl:NamedIndividual ;
        :Roles "Head Coach" ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/cg/COACH%20RAIN%20%28Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044920Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=b0f0946409f8a355043aecbc938abb7268e30a0b73e2a5d996ed0f64866ab52a" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Fikri Aiman Bin Mohd Khidzir" ;
        :playerInfo "Fikri \"Rainn\" Khidzir is a Malaysian Coach who is currently working for CG Esports as a Coach." .
@@ -2558,6 +2690,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Raizen rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 21 ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/omg/Raizen_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041819Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7c622b85b15d4b24851b22a8b9e72414cfbee2b00de1486c3545a87a09251caf" ;
         :hasNationality "Philippines" ;
         :hasRealName "Dean Christian Sumagui" ;
         :playerInfo "Dean \"Raizen\" Sumagui (born February 8, 2004) is a Filipino player who is currently playing as a Jungler for Omega Esports." .
@@ -2567,6 +2700,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rapidoot rdf:type owl:NamedIndividual ;
           :Roles "Roamer" ;
           :hasAge 26 ;
+          :hasFoto "https://liquipedia.net/commons/images/0/0a/TSV_Rapidoot_S7.png" ;
           :hasNationality "Philippines" ;
           :hasRealName "Ralph Adrales" ;
           :playerInfo "Ralph \"Rapidoot\" Adrales (born August 4, 1999) is a Filipino player who is currently playing as a Roamer for IGNITE Gaming." .
@@ -2576,6 +2710,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rasy rdf:type owl:NamedIndividual ;
       :Roles "Roamer" ;
       :hasAge 24 ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/unt/Rasy_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T025030Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=93565683d75feecf7c9ecfa1912ee31ff8a3cc88fa849f06c593fdce8f2d91f3" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Rasya Arga Wisita" ;
       :playerInfo "Rasya \"Rasy\" Wisita (born May 5, 2001) is an Indonesian player who is currently playing as a Roamer for Untitled Esports." .
@@ -2618,6 +2753,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rezza rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 23 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/hb/REZZA_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T063046Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=8a865fd83cd3827155324f3d2a89de6e0d3b70d5feedc88e1ecc90b0bcb097bc" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Ahmad Rezza Meah Bin Ahmad Rashin Meah" ;
        :playerInfo "Ahmad \"Rezza\" Meah (born July 8, 2002) is a Malaysian player who is currently playing as an EXP Laner for Aero Esports." .
@@ -2676,6 +2812,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Rough rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
        :hasAge 21 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/mv/RougH_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052733Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=72fb52ef91b069b69189eb4095fea64ff0a0276886da1ff52bc478cf72cc525c" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Dhiya' Harith Hazran Bin Shahrul Hadafi" ;
        :playerInfo "Dhiya' \"Rough\" Hadafi (born July 16, 2004) is a Malaysian player who is currently playing as a Gold Laner for Monster Vicious." .
@@ -2694,6 +2831,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Roy
 :Roy rdf:type owl:NamedIndividual ;
      :Roles "Mid" ;
+     :hasFoto "https://liquipedia.net/commons/images/a/ad/RSG_Roy_S7.png" ;
      :hasNationality "Singapore" ;
      :hasRealName "Royven Tan" ;
      :playerInfo "Royven \"Roy\" Tan is a Singaporean player who is currently playing as a Mid Laner for Team Stallion SG." .
@@ -2703,6 +2841,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Ryota rdf:type owl:NamedIndividual ;
        :Roles "Exp" ;
        :hasAge 22 ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/onic/Ryota_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=13152d1321180921777a4d4f54c1e13bc9b4ed7ca86e9e38bcb80d945cb489d5" ;
        :hasNationality "Philippines" ;
        :hasRealName "Nowee Cabailo Macasa" ;
        :playerInfo "Nowee \"Ryota\" Macasa (born December 9, 2002) is a Filipino player who is currently playing as an EXP Laner for ONIC Philippines." .
@@ -2717,6 +2856,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SN4P
 :SN4P rdf:type owl:NamedIndividual ;
       :Roles "Analyst" ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/omg/CoachSnap_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041819Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=688dec9c2154c9d3d75f29be956e4db1ac7824e05be5ab2b44581b29a1408607" ;
       :hasNationality "Philippines" ;
       :hasRealName "Allec Monsseur Alvarado Alberto" ;
       :playerInfo "Allec Monsseur \"SN4P\" Alvarado Alberto is a Filipino Coach who is currently working for Omega Esports as a Coach." .
@@ -2738,6 +2878,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
             :hasStaff :Arcadia ,
                       :OzoraVeki ;
             :RankMPL 1 ;
+            :hasFoto "https://cdn5.vistek.id/season15/team_logo/srg_og.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=1da30513f6b6adecd9b785b294e4a65c48b826ba9f38fff6ee9b6a4b3ad09302" ;
             :hasName "Selangor Red Giant OG" ;
             :hasRealName "SRGOG" ;
             :teamName "SRGOG" .
@@ -2747,6 +2888,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Saiful rdf:type owl:NamedIndividual ;
         :Roles "Assistant Coach" ;
         :hasAge 30 ;
+        :hasFoto "https://liquipedia.net/commons/images/6/64/TDK_Saiful_S14.png" ;
         :hasNationality "Malaysia" ;
         :hasRealName "Muhammad Saiful Bin Aujang" ;
         :playerInfo "Muhammad \"Saiful\" Aujang (born September 6, 1995) is a Malaysian Coach who last worked for TODAK as a Coach." .
@@ -2776,6 +2918,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Sanford rdf:type owl:NamedIndividual ;
          :Roles "Exp" ;
          :hasAge 19 ;
+         :hasFoto "https://cdn3.vistek.id/season16/player/tlph/Sanford_Standard_Esport_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064131Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=e6c03ea929f2d1b0fce7b67d3f5e8a9b53a1ab2d57f4c50b47007be9eec6086f" ;
          :hasNationality "Philippines" ;
          :hasRealName "Sanford Marin Vinuya" ;
          :playerInfo "Sanford \"Sanford\" Vinuya (born June 24, 2006) is a Filipino player who is currently playing as an EXP Laner for Team Liquid PH." .
@@ -2785,6 +2928,7 @@ After winning MLBB Mid Season Cup 2025, he is currently the highest earning MLBB
 :Sanji rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
        :hasAge 20 ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/tlph/Sanji_Standard_Esport_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064131Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=212ebf9cd5223979fbd05fc7a6fa5283e5ae2b7166268fe51091e4fdfd8aa411" ;
        :hasNationality "Philippines" ;
        :hasRealName "Alston Pabico" ;
        :playerInfo """Alston \"Sanji\" Pabico (born October 3, 2005) is a Filipino player who is currently playing as a Mid Laner for Team Liquid PH.
@@ -2821,6 +2965,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Seilah rdf:type owl:NamedIndividual ;
         :Roles "Mid" ;
         :hasAge 26 ;
+        :hasFoto "https://liquipedia.net/commons/images/d/dd/EVIL_Seilah_S8.png" ;
         :hasNationality "Singapore" ;
         :hasRealName "Basil Lim Dao Ze" ;
         :playerInfo "Basil \"Seilah\" Lim (born January 29, 1999) is a Singaporean player who is currently playing as a Mid Laner for Evil." .
@@ -2830,6 +2975,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Sekys rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 19 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/srg/Sekysss_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T055151Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f3d1fd73953555ffdd8c9e2efb0c0e4eedcbf2d2f2aaf328daebbe9e30f0316a" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Muhammad Haqqullah Bin Ahmad Shahrul Zaman" ;
        :playerInfo "Muhammad Haqqullah \"Sekys\" Ahmad Shahrul Zaman (born February 14, 2006) is a Malaysian player who is currently playing as a Jungler for SRG.OG." .
@@ -2844,6 +2990,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Sensui rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 23 ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/twis/Sensui_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T043647Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=ebdf12dbcc8a42609e45a47ef1062ad357319ebf40a8749d94bfe9b2cf50f072" ;
         :hasNationality "Philippines" ;
         :hasRealName "Stephen Jasper Castillo" ;
         :playerInfo "Stephen \"Sensui\" Castillo (born November 28, 2001) is a Filipino player who is currently playing as a Jungler for Twisted Minds PH." .
@@ -2852,6 +2999,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Shizou
 :Shizou rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/apbr/Shizou_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041619Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=3d7223a8f0672060a15634c00ab614346dfd7bc35571bef952541d838b6f8735" ;
         :hasNationality "Philippines" ;
         :hasRealName "Jan Carl Valdez" ;
         :playerInfo "Jan \"Shizou\" Valdez is a Filipino player who is currently playing as a Gold Laner for AP.Bren." .
@@ -2876,12 +3024,14 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sick
 :Sick rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/aero/Sick.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T045534Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=201b2bc9bdd80929c9a882e0b65378fdc0e999c6542e8470949f73fdd64ab863" ;
       :hasNationality "Malaysia" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Sionnn
 :Sionnn rdf:type owl:NamedIndividual ;
         :Roles "Mid" ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/twis/Sionnn_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T043647Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=88eb569612a11b2413f31bbb1154c8aa2919a94c12f92dda5258b2a73394d416" ;
         :hasNationality "Philippines" .
 
 
@@ -2889,6 +3039,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Sizkaa rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge 18 ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/unt/Sizkaa_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T025030Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d9c5b82a54c39c64dedd5e33f51b77d591b84f60bda56c3dd5ac15340cf45dfe" ;
         :hasNationality "Malaysia" ;
         :hasRealName "Muhammad Razif bin Sazali" ;
         :playerInfo "Muhammad \"Sizkaa\" Sazali (born December 26, 2006) is a Malaysian player who is currently playing as an EXP Laner for Untitled Esports." .
@@ -2898,6 +3049,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :SkyZED rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
         :hasAge 24 ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/unt/SkyZED_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T025030Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=9f8e3b2bd61cad365e50f457728d85298b7ba2190b0aff7070830799c445acb2" ;
         :hasNationality "Malaysia" ;
         :hasRealName "Muhammad Taufiq Hidayat Bin Mohd Ghazali" ;
         :playerInfo "Muhammad \"Stylishzed\" Ghazali (born April 9, 2001) is a Malaysian player who is currently playing as a Gold Laner for Untitled Esports." .
@@ -2916,6 +3068,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Skyzar
 :Skyzar rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/gmxk/Skyzar.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T060000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=95b5bbf730df63dd56b1824bf65a6d9c94b537789251e5a183c399bcdedde509" ;
         :hasNationality "Indonesia" .
 
 
@@ -2923,6 +3076,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Smooth rdf:type owl:NamedIndividual ;
         :Roles "Exp" ;
         :hasAge 23 ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/aero/Smooth_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T015055Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=da1d581d0d829b4eb2c1ddcbf1be6dfcece4def5b59d898d541692e15bf25f41" ;
         :hasNationality "Malaysia" ;
         :hasRealName "Aeliff Adam Md Ariff" ;
         :playerInfo "Aeliff \"Smooth\" Ariff (born July 1, 2002) is a Malaysian player who is currently playing as an EXP Laner for Aero Esports." .
@@ -2932,6 +3086,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :SoraPayung rdf:type owl:NamedIndividual ;
             :Roles "Head Coach" ;
             :hasAge 26 ;
+            :hasFoto "https://cdn5.vistek.id/season16/foto%20player/mv/SoraPayung%20%28Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041925Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=5806fef26149f24568be67520a28b89a6ad94836b97fec2776463811bda8c311" ;
             :hasNationality "Malaysia" ;
             :hasRealName "Muhammad Farhan Bin Ibrahim" ;
             :playerInfo "Muhammad \"SoraPayung\" Ibrahim (born September 1, 1999) is a Malaysian coach who is currently coaching for Monster Vicious." .
@@ -2950,6 +3105,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                          :Eshaa ,
                          :Saiful ;
                :RankMPL 4 ;
+               :hasFoto "https://liquipedia.net/commons/images/thumb/1/1c/Stallions_%28Saudi_Arabian_team%29_allmode.png/147px-Stallions_%28Saudi_Arabian_team%29_allmode.png" ;
                :hasName "Team Stallion SG" ;
                :teamName "Team Stallion" .
 
@@ -2958,6 +3114,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Stormie rdf:type owl:NamedIndividual ;
          :Roles "Mid" ;
          :hasAge 20 ;
+         :hasFoto "https://cdn5.vistek.id/season16/foto%20player/srg/Stormie_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T055151Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=d43d64f19ffb408f0848b9bd5330ed09aecdee731b66ce29cecb71d8b2a05c4a" ;
          :hasNationality "Malaysia" ;
          :hasRealName "Hazziq Danish Bin Mohamad Rizwan" ;
          :playerInfo "Hazziq \"Stormie\" Rizwan (born June 28, 2005) is a Malaysian player who is currently playing as a Mid Laner for SRG.OG." .
@@ -2967,6 +3124,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Stowm rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
        :hasAge 22 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/unt/Stowm_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T025030Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=759cfe4ae3eca71a996f0dff922be08bd8610dcc295be93dce754988aaa9feff" ;
        :hasNationality "Philippines" ;
        :hasRealName "Dale Rolan Sena Vidore" ;
        :playerInfo "Michael \"Styx\" Abraham is an Indonesian Coach who is currently working for Alter Ego as a Coach." .
@@ -2985,6 +3143,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Subway rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 20 ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/unt/Subway_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=19dab1c47e74b7dc6905c4bd79eb22b7cb9dc051dd0cdd968c50b01e1b4851b7" ;
         :hasNationality "Malaysia" ;
         :hasRealName "Wan Mohamad Danish Safwan Bin Mohd Sakirin" ;
         :playerInfo "Wan \"Subway\" Sakirin (born March 2, 2005) is a Malaysian player who is currently playing as a Jungler for Untitled Esports." .
@@ -3000,6 +3159,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :SuperFrince rdf:type owl:NamedIndividual ;
              :Roles "Mid" ;
              :hasAge 21 ;
+             :hasFoto "https://cdn3.vistek.id/season16/player/onic/SuperFrince_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053810Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=e92f0ebba5d573eccee87f09dcf6ce0d6fbaca920cebc356e1ac44a2a7f7c304" ;
              :hasNationality "Philippines" ;
              :hasRealName "Frince Miguel Ramirez" ;
              :playerInfo "Frince \"Super Frince\" Ramirez (born November 22, 2003) is a Filipino player who is currently playing as a Mid Laner for ONIC Philippines." .
@@ -3009,6 +3169,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :SuperMarco rdf:type owl:NamedIndividual ;
             :Roles "Gold" ;
             :hasAge 19 ;
+            :hasFoto "https://cdn3.vistek.id/season16/player/flcn/SuperMarco_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070305Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7830b1309e332634b813d899ea4f7dd6ad35359c0b4b01c9874aa247e265a9c2" ;
             :hasNationality "Philippines" ;
             :hasRealName "Marco Stephen Requitiano" ;
             :playerInfo "Marco \"Super Marco\" Requitiano (born October 6, 2006) is a Filipino player who is currently playing as a Gold Laner for Team Falcons PH." .
@@ -3017,6 +3178,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/SuperYoshi
 :SuperYoshi rdf:type owl:NamedIndividual ;
             :Roles "Roamer" ;
+            :hasFoto "https://cdn3.vistek.id/season16/player/omg/SuperYoshi_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041819Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=90418af59d5c97172604f1084c22a6c9fcc02f30feeafd25de1b87d5b5204505" ;
             :hasNationality "Philippines" ;
             :hasRealName "Czedrick Romero" ;
             :playerInfo "Czedrick \"Yoshinu\" Romero is a Filipino player who is currently playing as a Roamer for Omega Esports." .
@@ -3077,6 +3239,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
          :hasStaff :ArSy ,
                    :Tictac ;
          :RankMPL 1 ;
+         :hasFoto "https://cdn3.vistek.id/season16/teams/tlph.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T054036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=cb16f5e4a8cb1a9ca2472eb879cd557045d05bacd4e4ab60fa1fae5de8390bce" ;
          :hasName "Team Liquid PH" ;
          :teamName "Team Liquid PH" .
 
@@ -3099,6 +3262,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
           :hasStaff :E2MAX ,
                     :Hito ;
           :RankMPL 3 ;
+          :hasFoto "https://cdn3.vistek.id/season8/teams/tnc-500.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T054036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=242b38809d90835531c23042db69b5988338c7c86268e253c2705c1cbdc8e7af" ;
           :hasName "TNC Pro Team" ;
           :teamName "TNC Pro Team" .
 
@@ -3106,6 +3270,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Tazy
 :Tazy rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/aero/Tazy%20%28Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T045534Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f323ace8e3a774e14bc06d8b30f011db7bc8b65bb5b128ae670aa508d7ba95c3" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Tasia Eda Lestari" ;
       :playerInfo "Tasia \"Tazy\" Lestari is an Indonesian Coach who is currently working for Aero Esports as a Coach." .
@@ -3153,6 +3318,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                          :Zakqt ,
                          :Zayyy ;
               :RankMPL 8 ;
+              :hasFoto "https://cdn5.vistek.id/season14/team_logo/team%20rey.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=c0215b9e9490441b085f0fb54e3b7a62a2810ca4f18b4dff2e37b86f66a91b19" ;
               :hasName "Team Rey" ;
               :teamName "Team Rey" .
 
@@ -3180,6 +3346,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                 :hasStaff :PakAtan ,
                           :Pakbet ;
                 :RankMPL 4 ;
+                :hasFoto "https://cdn5.vistek.id/season15/team_logo/Latest%20Team%20Vamos%20Logo.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=0ae412ee1597a97d069fcc9112f6ffba7922f9bbc4ee5e1e22537aef78ffb3be" ;
                 :hasName "Team Vamos" ;
                 :teamName "Team Vamos" .
 
@@ -3192,12 +3359,14 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TheSit
 :TheSit rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/gmxk/The%20Sit_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T060000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=c0c8213ecd0f3e743c9635894961d3dd4597915db9eac899fd05c209cda9442d" ;
         :hasNationality "Malaysia" .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Theo
 :Theo rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/unt/Coach%20Theo%20%28Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=36779638463e5386a4c48fbac08049a4d9f8541ec858151b6e2eeeebdfc7c1b8" ;
       :hasNationality "Philippines" ;
       :hasRealName "John Theo Guinto Eusebio" ;
       :playerInfo "John \"Theo\" Eusebio is a Filipino Coach who is currently working for Untitled Esports as a Coach." .
@@ -3230,6 +3399,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                       :Link ,
                       :Nafari ;
             :RankMPL 9 ;
+            :hasFoto "https://cdn5.vistek.id/season16/team%20logo/todak-white.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=9011559df19c3e541d38fe4e24e018be1dfc970d2e4cbd06a2ec5c0622d29639" ;
             :hasName "Todak" ;
             :teamName "Todak" .
 
@@ -3248,6 +3418,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Trap rdf:type owl:NamedIndividual ;
       :Roles "Gold" ;
       :hasAge 22 ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/cg/trapp%201%20CG.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044920Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=59c1fd3be9796be44659701f44741e9d0b084f7fc26557a20e2ab9d8d285528c" ;
       :hasNationality "Malaysia" ;
       :hasRealName "Syed Naufal Fitry" ;
       :playerInfo "Syed \"Trap\" Fitri (also known as SyF) (born December 14, 2002) is a Malaysian player who is currently playing as a Gold Laner for CG Esports on loan from Team Rey." .
@@ -3257,6 +3428,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Trebor rdf:type owl:NamedIndividual ;
         :Roles "Head Coach" ;
         :hasAge 31 ;
+        :hasFoto "https://cdn3.vistek.id/season16/player/flcn/CoachTrebor_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053711Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7984ab20f3ae10b38f4c6f58867249a03e8190c665c6954dfc011ba253f188bf" ;
         :hasNationality "Philippines" ;
         :hasRealName "Robert Alexis Sanchez" ;
         :playerInfo "Robert \"Trebor\" Sanchez (born May 19, 1994) is a Filipino Coach who is currently working for Team Falcons PH as a Coach." .
@@ -3280,6 +3452,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                    :hasStaff :BONCHAN ,
                              :ESON ;
                    :RankMPL "5-6" ;
+                   :hasFoto "https://cdn3.vistek.id/season15/logo%20team/twistedminds.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T054036Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=549c4139e016e773a85f053c052c8a37e095be80bd619cec064e37ccfaef8fa2" ;
                    :hasName "Twisted Minds PH" ;
                    :teamName "Twisted Minds PH" .
 
@@ -3303,6 +3476,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Unii rdf:type owl:NamedIndividual ;
       :Roles "Jungler" ;
       :hasAge 19 ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/mv/Unii_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052733Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f7b6efd958dc869036c1ff1c87cf6cd0af956da7d4877edeae7e47dcc0c5e29a" ;
       :hasNationality "Malaysia" ;
       :hasRealName "Muhammad Danies Fitri Bin Razman" ;
       :playerInfo "Muhammad Danish Fitri \"Unii\" Razman (born September 28, 2006) is a Malaysian player who is currently playing as a Jungler for Monster Vicious." .
@@ -3326,6 +3500,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                          :Pozan ,
                          :Theo ;
                :RankMPL 7 ;
+               :hasFoto "https://cdn5.vistek.id/season16/team%20logo/untitled-white.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T031043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=5d700110a507c061da7c88ad7e41f77d8a87e6ee27e1273eead3984f1fd5ae35" ;
                :hasName "Untitled Esports" ;
                :teamName "Untitled Esports" .
 
@@ -3344,6 +3519,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Valenz rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 21 ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/cg/V%20A%20L%20E%20N%20Z_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044918Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=6e022242eedad5094fa79dc516e7b184743eadc3a3001c1d654daae1eda554f5" ;
         :hasNationality "Malaysia" ;
         :hasRealName "Luk Jun Yip" ;
         :playerInfo "Luk \"Valenz\" Yip (born February 2, 2004) is a Malaysian player who is currently playing as a Roamer for CG Esports." .
@@ -3352,6 +3528,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vanix
 :Vanix rdf:type owl:NamedIndividual ;
        :Roles "Gold" ;
+       :hasFoto "https://liquipedia.net/commons/images/thumb/a/a8/NPFL_Vanix_at_M6_Swiss_Stage.jpg/900px-NPFL_Vanix_at_M6_Swiss_Stage.jpg" ;
        :hasNationality "Singapore" ;
        :hasRealName "Keith Lim Wei Jun" ;
        :playerInfo "Keith \"Vanix\" Lim is a Singaporean player who is currently playing as a Gold Laner for Team Flash." .
@@ -3383,6 +3560,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Vivy
 :Vivy rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/gmxk/Vivy%20%28Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T060000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=6e01b6ba293c25ff9a99d57ce0166be719289be43819c41debc9dee10e728cd1" ;
       :hasNationality "Indonesia" ;
       :hasRealName "Muhammad Vikrie Ramadhan" ;
       :playerInfo "Muhammad \"Vivy\" Ramadhan is an Indonesian Coach who is currently working for GamesMY Kelantan as a Coach." .
@@ -3391,6 +3569,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Wanzyy
 :Wanzyy rdf:type owl:NamedIndividual ;
         :Roles "Gold" ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/todak/WANZYY_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T023559Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=2b39418249fbfe9e0a3d18329d346562c00842cc10856f00f50a9e6eeff5fe36" ;
         :hasRealName "Malaysia" .
 
 
@@ -3408,6 +3587,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Winter rdf:type owl:NamedIndividual ;
         :Roles "Roamer" ;
         :hasAge 25 ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/srg/Winter_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T062632Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=f42969f16cb0692e202292daf9fed488cdfb7a02ba67170edc3ab753ad361403" ;
         :hasNationality "Malaysia" ;
         :hasRealName "Chun Chin Wee" ;
         :playerInfo "Chun \"Winter\" Wee (born April 26, 2000) is a Malaysian player who is currently playing as a Roamer for SRG.OG." .
@@ -3442,6 +3622,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/XinHan
 :XinHan rdf:type owl:NamedIndividual ;
         :Roles "Strategic Coach" ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/rey/XinHan%20%28Tactical%20Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T065144Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=df21e897224cbb5a572f5b6103325b550d2d42a2b815ac0b7d37f5c5ffed3596" ;
         :hasNationality "Malaysia" .
 
 
@@ -3459,6 +3640,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Xorn rdf:type owl:NamedIndividual ;
       :Roles "Roamer" ;
       :hasAge 25 ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/vamos/XORN_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070035Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=bee23045b095e23ddf6b5eabb61ecfb598652ff54399a3a140954aee73889518" ;
       :hasNationality "Malaysia" ;
       :hasRealName "Mohammad Zul Hisham Bin Mohd Noor" ;
       :playerInfo "Mohammad Zul Hisham \"Xorn\" Mohd Noor (born March 10, 2000) is a Malaysian player who is currently playing as a Roamer for Team Vamos." .
@@ -3476,6 +3658,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yaawn
 :Yaawn rdf:type owl:NamedIndividual ;
+       :hasFoto "https://liquipedia.net/commons/images/9/9b/RSG_Yaawn_S8.png" ;
        :hasNationality "Singapore" ;
        :hasRealName "Chua Jun Xiang" ;
        :playerInfo "Chua \"yaawn\" Jun Xiang is a Singaporean player who is currently playing as a Jungler for RSG Singapore." .
@@ -3492,6 +3675,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Ye3 rdf:type owl:NamedIndividual ;
      :Roles "Exp" ;
      :hasAge 19 ;
+     :hasFoto "https://cdn5.vistek.id/season16/foto%20player/cg/Y%20E%203_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044918Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=e8aefe11086bd670d1baa72d71e907fc3127abb3416bb5b63e01cf54df8cd38d" ;
      :hasNationality "Malaysia" ;
      :hasRealName "Muhammad Al-Amin Bin Zamri" ;
      :playerInfo "Muhammad \"Ye3\" Zamri (born October 5, 2006) is a Malaysian player who is currently playing as an EXP Laner for CG Esports." .
@@ -3511,6 +3695,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :YnoT rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
       :hasAge 37 ;
+      :hasFoto "https://cdn3.vistek.id/season16/player/onic/CoachYnot_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T052623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=488ad22b3c70dd31fbe53568d9411b9546eeaee414aadbff4f7c82827b03fba6" ;
       :hasNationality "Philippines" ;
       :hasRealName "Anthony Dennis Senedrin" ;
       :playerInfo "Anthony \"YnoT\" Senedrin (born August 8, 1988) is a Filipino Coach who is currently working for ONIC Philippines as a Coach." .
@@ -3519,6 +3704,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Yue
 :Yue rdf:type owl:NamedIndividual ;
      :Roles "Mid" ;
+     :hasFoto "https://cdn3.vistek.id/season16/player/rora/YUE_ESPORTS_CENTER.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070305Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=3da765f881f65b9f6098b035ce41730e36f779b47aa0013bfa3e2d4472509bdf" ;
      :hasNationality "Philippines" ;
      :hasRealName "Kenneth Carl Tadeo" ;
      :playerInfo "Kenneth \"Yue\" Tadeo is a Filipino player who is currently playing as a Mid Laner for Aurora Gaming PH" .
@@ -3528,6 +3714,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Yums rdf:type owl:NamedIndividual ;
       :Roles "Roamer" ;
       :hasAge 20 ;
+      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/srg/YumS_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T055151Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=34737c20109cecc22058ae78390b6a3137d7d3bf8d4c241a7ad38f3cfa82320b" ;
       :hasNationality "Malaysia" ;
       :hasRealName "Muhammad Qayyum Ariffin Bin Mohd Suhairi" ;
       :playerInfo "Muhammad \"Yums\" Suhairi (born December 9, 2004) is a Malaysian player who is currently playing as a Roamer for SRG.OG." .
@@ -3543,6 +3730,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :ZAIMSEMPOI rdf:type owl:NamedIndividual ;
             :Roles "Mid" ;
             :hasAge 22 ;
+            :hasFoto "https://cdn5.vistek.id/season16/foto%20player/todak/ZAIMSEMPOI_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T023559Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=267f92663d825962d239afc2d5f788680dbe27207e034bf8ec93f41c5aff0270" ;
             :hasNationality "Malaysia" ;
             :hasRealName "Muhammad Zaim Bin Amir Izat" ;
             :playerInfo "Muhammad \"ZAIMSEMPOI\" Izat (born December 3, 2002) is a Malaysian player who is currently playing as a Mid Laner for TODAK." .
@@ -3558,6 +3746,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Zahyed rdf:type owl:NamedIndividual ;
         :Roles "Jungler" ;
         :hasAge 21 ;
+        :hasFoto "https://cdn5.vistek.id/season16/foto%20player/todak/Zahyed_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T023559Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=43a9e321864bd719b032af4b8e915934d610db59880f330de80a6cb5f93a00d8" ;
         :hasNationality "Malaysia" ;
         :hasRealName "Muhammad Zaed Hakimi bin Zaharan" ;
         :playerInfo "Muhammad \"Zaed\" Zaharan (born October 7, 2004) is a Malaysian player who is currently playing as a Jungler for TODAK." .
@@ -3567,6 +3756,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Zaida rdf:type owl:NamedIndividual ;
        :Roles "Jungler" ;
        :hasAge 20 ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/tnc/Zaida_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T070305Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=a76a34227ba38e7c3dbe7fc5ddb58961b44277cf2f1e75c7815ea5dac86bfa1e" ;
        :hasNationality "Philippines" ;
        :hasRealName "Justine Sadia Palma" ;
        :playerInfo "Justine \"Zaida\" Palma (born July 25, 2005) is a Filipino player who is currently playing as a Jungler for TNC Pro Team." .
@@ -3576,6 +3766,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Zakqt rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
        :hasAge 22 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/rey/Zakqt_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T044918Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=b3fb2f01088ef12c0ff32846fc6f66a0aa7725859cdb280592678f0155bd0e0c" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Muhammad Amir Zakwan Bin Mohamad Noor" ;
        :playerInfo "Muhammad \"Zakqt\" Noor (born September 18, 2003) is a Malaysian player who is currently playing as a Mid Laner for Team Rey." .
@@ -3584,6 +3775,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Zayyy
 :Zayyy rdf:type owl:NamedIndividual ;
        :Roles "Mid" ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/rey/Zay%20La%20Nina_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T065144Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=01211fed427e94e1b3e37571196dea5e22c0413f29e1be66203f6eba334664c9" ;
        :hasNationality "Malaysia" .
 
 
@@ -3607,6 +3799,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 :Zqeef rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
        :hasAge 20 ;
+       :hasFoto "https://cdn5.vistek.id/season16/foto%20player/aero/Zqeef_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T045534Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=728f344086a52f78ceb1c6870c2fa924ef34ed2a793d4814fe2f8b36d7608010" ;
        :hasNationality "Malaysia" ;
        :hasRealName "Muhammad Aqif Haiqal Bin Azman" ;
        :playerInfo "Muhammad \"Zqeef\" Azman (born April 29, 2005) is a Malaysian player who is currently playing as a Roamer for Aero Esports." .
@@ -3633,6 +3826,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/jamespangks
 :jamespangks rdf:type owl:NamedIndividual ;
              :Roles "Jungler" ;
+             :hasFoto "https://cdn3.vistek.id/season16/player/apbr/Jamespangks_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041619Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=0d33c11f0ddf617b041f8171a11da9bdc1dbf22cca8405305cbdb4dd066dc77c" ;
              :hasNationality "Philippines" ;
              :hasRealName "Jonathan James Mendoza" ;
              :playerInfo "Jonathan James \"Jamespangks\" Mendoza is a Filipino player who is currently playing as a Jungler for AP.Bren." .
@@ -3641,6 +3835,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/ly4ly4ly4
 :ly4ly4ly4 rdf:type owl:NamedIndividual ;
            :Roles "Coach" ;
+           :hasFoto "https://liquipedia.net/commons/images/thumb/9/92/RSG_SG_Ly4ly4ly4_MSC_2022.png/900px-RSG_SG_Ly4ly4ly4_MSC_2022.png" ;
            :hasNationality "Singapore" ;
            :hasRealName "Lim Yang" ;
            :playerInfo "Lim \"Ly4ly4ly4\" Yang is a Singaporean Coach who is currently working for Rift Esports as a Coach." .
@@ -3686,6 +3881,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/xNova
 :xNova rdf:type owl:NamedIndividual ;
        :Roles "Roamer" ;
+       :hasFoto "https://cdn3.vistek.id/season16/player/apbr/Xnova_Standard_Esport_Pose_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T041619Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=e37e7a261adbd11f06eff4e711675ad75644d9fccdba1778901939d10fe4a2e4" ;
        :hasNationality "Philipine" ;
        :hasRealName "Denniel Denison Gomez" ;
        :playerInfo "Denniel \"xNova\" Gomez is a Filipino player who is currently playing as a Roamer for AP.Bren." .
@@ -3696,6 +3892,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                                                                                   :playerOf :TNC_PH16 ;
                                                                                   :Roles "Exp" ;
                                                                                   :hasAge 21 ;
+                                                                                  :hasFoto "https://cdn3.vistek.id/season16/player/tnc/3Mar_Esports_Center.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00NVQL86C8DZLXRYVQ%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T064121Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=7a945830a78ba2915c92a112d9a10693dd936eefb91d3dba124bd488eb28f67c" ;
                                                                                   :hasNationality "Philippines" ;
                                                                                   :hasRealName "Fredimar Serafico" ;
                                                                                   :playerInfo "Frediemar \"3MarTzy\" Serafico (born April 30, 2004) is a Filipino player who is currently playing as an EXP Laner for TNC Pro Team." .
