@@ -346,8 +346,8 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#3MarTzy
-<http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#3MarTzy> rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/3MarTzy
+<http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/3MarTzy> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/ABOY
@@ -3252,7 +3252,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/TNC_PH16
 :TNC_PH16 rdf:type owl:NamedIndividual ,
                    :MPL_PH16 ;
-          :hasPlayer <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19#3MarTzy> ,
+          :hasPlayer <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/3MarTzy> ,
                      :Bennyqt ,
                      :Ch4knu ,
                      :LanceCy ,

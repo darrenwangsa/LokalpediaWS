@@ -37,12 +37,16 @@ SELECT DISTINCT
 (REPLACE(STR(?team), "^.*/", "") AS ?teams)
 ?teamName 
 ?teamAddName
+?linkFoto
 (REPLACE(STR(?player), "^.*/", "") AS ?playerNickname)
 ?realName
 (REPLACE(STR(?competitions), "^.*/", "") AS ?competitionName) WHERE {{
   ?team a ?competition ;
         :teamName ?teamName ;
         :hasName ?teamAddName .
+    OPTIONAL {
+    ?team :hasFoto ?linkFoto .
+    }
   }
   UNION
   {
@@ -77,7 +81,7 @@ SELECT DISTINCT
 SPARQL;
 
 // Query for TEAMS
-$sparqlQuery0 = <<<SPARQL
+$sparqlQuery1 = <<<SPARQL
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -87,42 +91,36 @@ SELECT DISTINCT
 (REPLACE(STR(?team), "^.*/", "") AS ?teams)
 ?teamName 
 ?teamAddName
-(REPLACE(STR(?player), "^.*/", "") AS ?playerNickname)
-?realName
-(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionName) WHERE {{
+?linkFoto
+WHERE {
   ?team a ?competition ;
         :teamName ?teamName ;
         :hasName ?teamAddName .
-  }
-  UNION
-  {
-    ?player :hasRealName ?realName .
-    OPTIONAL{
-    ?player :hasFoto ?linkFoto .
+    OPTIONAL {
+    ?team :hasFoto ?linkFoto .
     }
-  }
-  UNION
-  {
-    {
-      ?headTour rdfs:subClassOf :InternationalTour .
-      ?competitions rdfs:subClassOf ?headTour .
-    
-      FILTER NOT EXISTS {
-        ?child rdfs:subClassOf ?competitions .
-        FILTER(?child != ?competitions)
-      }
-    } UNION
-    {
-      ?regionTour rdfs:subClassOf :RegionalTour .
-      ?headTour rdfs:subClassOf ?regionTour .
-      ?competitions rdfs:subClassOf ?headTour .
-    
-    	FILTER NOT EXISTS {
-        ?child rdfs:subClassOf ?competitions .
-        FILTER(?child != ?competitions)
-    }
-  }
 }
+SPARQL;
+
+// Query for PLAYERS
+$sparqlQuery2 = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+SELECT DISTINCT 
+(REPLACE(STR(?team), "^.*/", "") AS ?teams)
+?teamName 
+?teamAddName
+?linkFoto
+WHERE {
+  ?team a ?competition ;
+        :teamName ?teamName ;
+        :hasName ?teamAddName .
+    OPTIONAL {
+    ?team :hasFoto ?linkFoto .
+    }
 }
 SPARQL;
 
@@ -149,6 +147,7 @@ foreach ($data['results']['bindings'] as $row) {
     $playerNickname = strtolower($row['playerNickname']['value'] ?? '');
     $realName = strtolower($row['realName']['value'] ?? '');
     $competitionName = strtolower($row['competitionName']['value'] ?? '');
+    $linkFoto = strtolower($row['linkFoto']['value'] ?? '');
 
     // Fungsi hitung skor berdasarkan posisi huruf (case-insensitive)
     $calculateScore = function($fieldValue) use ($keyword) {
@@ -184,6 +183,7 @@ foreach ($data['results']['bindings'] as $row) {
         'playerNickname' => $row['playerNickname']['value'] ?? '',
         'realName' => $row['realName']['value'] ?? '',
         'competitionName' => $row['competitionName']['value'] ?? '',
+        'linkFoto' => $row['linkFoto']['value'] ?? '',
         'scoreTeamName' => $scoreTeamName,
         'scoreteamAddName' => $scoreteamAddName,
         'scorePlayer' => $scorePlayer,
@@ -199,7 +199,14 @@ usort($results, function($a, $b) {
 });
 
 // Tampilkan hasil
+$limit = 1;
+$count = 0;
 foreach ($results as $r) {
+    
+
+if($count >= $limit){
+    break;
+}
     echo "<div style='margin-bottom:10px; padding:5px; border:1px solid #000;'>";
 
     if (!empty($r['teamName'])) {
@@ -225,9 +232,14 @@ foreach ($results as $r) {
         echo " <em>score: " . $r['scoreCompetition'] . "</em>";
         echo "<br>";
     }
+    if (!empty($r['linkFoto'])) {
+        echo "<strong>Link:</strong> " . htmlspecialchars($r['linkFoto']);
+        echo "<br>";
+    }
 
     echo "<strong>Score:</strong> " . $r['minScore'];
     echo "</div>";
+$count++;
 }
 
 ?>
