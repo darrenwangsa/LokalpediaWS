@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M7 World Championship</title>
+    <style>
+
+        .flag {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #f3aa36;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgb(255, 255, 255);
+        }
+
+        .competition-card {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .competition-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #f3aa36, #f4e5b8, #c9a961);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .tier-badge {
+            background: linear-gradient(135deg, #f3aa36 0%, #f4e5b8 100%);
+            color: #333;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
+        }
+
+        .logo-section {
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            box-shadow: 0 8px 20px rgba(201, 169, 97, 0.5);
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .info-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-section h3 {
+            color: #f3aa36;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #c9a961;
+            padding-bottom: 8px;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            align-items: center;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #333;
+            min-width: 140px;
+        }
+
+        .info-value {
+            color: #555;
+            flex: 1;
+        }
+
+        .venue-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #f3aa36;
+        }
+
+        .prize-highlight {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #f3aa36;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .date-highlight {
+            font-weight: 600;
+            color: #f3aa36;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .competition-card {
+                padding: 25px;
+            }
+
+            .logo {
+                width: 120px;
+                height: 120px;
+                font-size: 2.5em;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const flagMap = {
+            "id": "🇮🇩",
+            "ph": "🇵🇭",
+            "my": "🇲🇾",
+            "sg": "🇸🇬",
+            "th": "🇹🇭",
+            "vn": "🇻🇳",
+            "mm": "🇲🇲",
+            "kh": "🇰🇭",
+            "la": "🇱🇦"
+        };
+
+        document.querySelectorAll('.info-value').forEach(v => {
+            let text = v.textContent.trim();
+
+            // split berdasarkan koma → dukung banyak lokasi
+            let parts = text.split(',').map(p => p.trim());
+
+            let converted = parts.map(p => {
+                // ambil 2 huruf pertama sebagai kode negara
+                let code = p.slice(0, 2).toLowerCase();
+
+                // ambil teks setelah kode negara
+                let place = p.slice(2).trim();
+
+                // kalau kode ada di flagMap → ubah ke emoji
+                if (flagMap[code]) {
+                    return `<span class="flag">${flagMap[code]}</span> ${place}`;
+                }
+
+                // kalau tidak dikenal → kembalikan apa adanya
+                return p;
+            });
+
+            // gabungkan ulang pakai koma
+            v.innerHTML = converted.join(', ');
+        });
+
+    });
+</script>
+Zz
+
+<body>
+    <div class="container">
+        <h1>  M7 World Championship</h1>
+
+        <!-- International Competitions -->
+        <div class="competition-card">
+            <div class="card-header">
+                <div class="tier-badge">Tier: S</div>
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="img/m7.png" alt="M7 World Championship Logo"
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-size:3em;font-weight:bold;color:#c9a961;display:flex;align-items:center;justify-content:center;height:100%;\'>M7</div>';">
+                    </div>
+                    <div class="tagline">"let the world see us"</div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="info-section">
+                    <h3>  General Information</h3>
+                    <div class="info-item">
+                        <span class="info-label">Organizer:</span>
+                        <span class="info-value">Moonton</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Sponsor:</span>
+                        <span class="info-value">Realme, Visa</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Official Device:</span>
+                        <span class="info-value">Realme 15 pro</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Type:</span>
+                        <span class="info-value">Offline</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Location:</span>
+                        <span class="info-value">id Jakarta</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>  Venue</h3>
+                    <div class="venue-item">
+                        <strong>XO Hall (MPL Arena)</strong>
+                        <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
+                            Wildcard, Swiss Stage, Knockout Stage Day 1
+                        </div>
+                    </div>
+                    <div class="venue-item">
+                        <strong>Tennis Indoor Stadium Senayan</strong>
+                        <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
+                            The Rest of Knockout Stage
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>  Tournament Details</h3>
+                    <div class="info-item">
+                        <span class="info-label">Prize Pool:</span>
+                        <span class="info-value prize-highlight">$1,000,000 USD</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Start Date:</span>
+                        <span class="info-value date-highlight">2026-01-03</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">End Date:</span>
+                        <span class="info-value date-highlight">2026-01-25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1>  Regional Competitions</h1>
+
+        <!-- Regional Competitions -->
+        <div class="competition-card">
+            <div class="card-header">
+                <div class="tier-badge">Tier: A</div>
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="img/mpl-ph.png" alt="MPL PH Logo"
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-size:3em;font-weight:bold;color:#c9a961;display:flex;align-items:center;justify-content:center;height:100%;\'>M7</div>';">
+                    </div>
+                    <div class="tagline">"Lakas ng Pinas"</div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="info-section">
+                    <h3>  General Information</h3>
+                    <div class="info-item">
+                        <span class="info-label">Organizer:</span>
+                        <span class="info-value">Moonton,mineski global</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Sponsor:</span>
+                        <span class="info-value">Smart, Infinix, Bpi, Clearman, Knorr, Go Hotels</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Official Device:</span>
+                        <span class="info-value">Infinix GT30 pro</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Patch </span>
+                        <span class="info-value">1.9.99-2.1.18</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Type:</span>
+                        <span class="info-value">Offline</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Location:</span>
+                        <span class="info-value">ph Makati City, ph pasay city</span>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>  Venue</h3>
+                    <div class="venue-item">
+                        <strong>Green sun Hotel</strong>
+                        <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
+                            Regular Season
+                        </div>
+                    </div>
+                    <div class="venue-item">
+                        <strong>CUneta Astrodome</strong>
+                        <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
+                            Playoff
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>  Tournament Details</h3>
+                    <div class="info-item">
+                        <span class="info-label">Prize Pool:</span>
+                        <span class="info-value prize-highlight">$1,000,000 USD</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Start Date:</span>
+                        <span class="info-value date-highlight">2026-01-03</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">End Date:</span>
+                        <span class="info-value date-highlight">2026-01-25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
