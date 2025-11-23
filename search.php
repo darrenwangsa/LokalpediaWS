@@ -23,8 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 }
 
 $keyword = strtolower($searchInput);
-// Ambil hasil SPARQL
+// connect JENA
 $endpoint = "http://localhost:3030/lokalpedia22/sparql";
+
+// Query for ALL CATEGORIES
 $sparqlQuery0 = <<<SPARQL
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -32,15 +34,15 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
 
 SELECT DISTINCT 
-?team
+(REPLACE(STR(?team), "^.*/", "") AS ?teams)
 ?teamName 
-?hasName
-(REPLACE(STR(?player), "^.*/", "") AS ?playerShort)
+?teamAddName
+(REPLACE(STR(?player), "^.*/", "") AS ?playerNickname)
 ?realName
-(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionShort) WHERE {{
+(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionName) WHERE {{
   ?team a ?competition ;
         :teamName ?teamName ;
-        :hasName ?hasName .
+        :hasName ?teamAddName .
   }
   UNION
   {
@@ -74,7 +76,68 @@ SELECT DISTINCT
 }
 SPARQL;
 
-$response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery0) . "&format=json");
+// Query for TEAMS
+$sparqlQuery0 = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+SELECT DISTINCT 
+(REPLACE(STR(?team), "^.*/", "") AS ?teams)
+?teamName 
+?teamAddName
+(REPLACE(STR(?player), "^.*/", "") AS ?playerNickname)
+?realName
+(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionName) WHERE {{
+  ?team a ?competition ;
+        :teamName ?teamName ;
+        :hasName ?teamAddName .
+  }
+  UNION
+  {
+    ?player :hasRealName ?realName .
+    OPTIONAL{
+    ?player :hasFoto ?linkFoto .
+    }
+  }
+  UNION
+  {
+    {
+      ?headTour rdfs:subClassOf :InternationalTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    
+      FILTER NOT EXISTS {
+        ?child rdfs:subClassOf ?competitions .
+        FILTER(?child != ?competitions)
+      }
+    } UNION
+    {
+      ?regionTour rdfs:subClassOf :RegionalTour .
+      ?headTour rdfs:subClassOf ?regionTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    
+    	FILTER NOT EXISTS {
+        ?child rdfs:subClassOf ?competitions .
+        FILTER(?child != ?competitions)
+    }
+  }
+}
+}
+SPARQL;
+
+
+if ($category == 0){
+    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery0) . "&format=json");
+} elseif ($category == 1){
+    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery1) . "&format=json");
+} elseif ($category == 2){
+    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery2) . "&format=json");
+} elseif ($category == 3){
+    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery3) . "&format=json");
+} else{
+    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery0) . "&format=json");
+}
 $data = json_decode($response, true);
 
 // Hitung skor berurut
@@ -82,10 +145,10 @@ $results = [];
 foreach ($data['results']['bindings'] as $row) {
     // Ambil semua field
     $teamName = strtolower($row['teamName']['value'] ?? '');
-    $hasName = strtolower($row['hasName']['value'] ?? '');
-    $playerShort = strtolower($row['playerShort']['value'] ?? '');
+    $teamAddName = strtolower($row['teamAddName']['value'] ?? '');
+    $playerNickname = strtolower($row['playerNickname']['value'] ?? '');
     $realName = strtolower($row['realName']['value'] ?? '');
-    $competitionShort = strtolower($row['competitionShort']['value'] ?? '');
+    $competitionName = strtolower($row['competitionName']['value'] ?? '');
 
     // Fungsi hitung skor berdasarkan posisi huruf (case-insensitive)
     $calculateScore = function($fieldValue) use ($keyword) {
@@ -106,23 +169,23 @@ foreach ($data['results']['bindings'] as $row) {
 
     // Hitung skor tiap field
     $scoreTeamName = $calculateScore($teamName);
-    $scoreHasName = $calculateScore($hasName);
-    $scorePlayer = $calculateScore($playerShort);
+    $scoreteamAddName = $calculateScore($teamAddName);
+    $scorePlayer = $calculateScore($playerNickname);
     $scoreRealName = $calculateScore($realName);
-    $scoreCompetition = $calculateScore($competitionShort);
+    $scoreCompetition = $calculateScore($competitionName);
 
     // Skor maksimum yang akan digunakan untuk urutan
-    $scores = [$scoreTeamName, $scoreHasName, $scorePlayer, $scoreRealName, $scoreCompetition];
+    $scores = [$scoreTeamName, $scoreteamAddName, $scorePlayer, $scoreRealName, $scoreCompetition];
     $minScore = min(array_filter($scores, fn($s) => $s >= 0)); // abaikan field kosong (-1)
 
     $results[] = [
         'teamName' => $row['teamName']['value'] ?? '',
-        'hasName' => $row['hasName']['value'] ?? '',
-        'playerShort' => $row['playerShort']['value'] ?? '',
+        'teamAddName' => $row['teamAddName']['value'] ?? '',
+        'playerNickname' => $row['playerNickname']['value'] ?? '',
         'realName' => $row['realName']['value'] ?? '',
-        'competitionShort' => $row['competitionShort']['value'] ?? '',
+        'competitionName' => $row['competitionName']['value'] ?? '',
         'scoreTeamName' => $scoreTeamName,
-        'scoreHasName' => $scoreHasName,
+        'scoreteamAddName' => $scoreteamAddName,
         'scorePlayer' => $scorePlayer,
         'scoreRealName' => $scoreRealName,
         'scoreCompetition' => $scoreCompetition,
@@ -142,14 +205,14 @@ foreach ($results as $r) {
     if (!empty($r['teamName'])) {
         echo "<strong>Team:</strong> " . htmlspecialchars($r['teamName']);
         echo " <em>(score: " . $r['scoreTeamName'] . ")</em>";
-        if (!empty($r['hasName'])) {
-            echo " (" . htmlspecialchars($r['hasName']) . " <em>score: " . $r['scoreHasName'] . "</em>)";
+        if (!empty($r['teamAddName'])) {
+            echo " (" . htmlspecialchars($r['teamAddName']) . " <em>score: " . $r['scoreteamAddName'] . "</em>)";
         }
         echo "<br>";
     }
 
-    if (!empty($r['playerShort'])) {
-        echo "<strong>Player:</strong> " . htmlspecialchars($r['playerShort']);
+    if (!empty($r['playerNickname'])) {
+        echo "<strong>Player:</strong> " . htmlspecialchars($r['playerNickname']);
         if (!empty($r['realName'])) {
             echo " (" . htmlspecialchars($r['realName']) . ")";
         }
@@ -157,8 +220,8 @@ foreach ($results as $r) {
         echo "<br>";
     }
 
-    if (!empty($r['competitionShort'])) {
-        echo "<strong>Competition:</strong> " . htmlspecialchars($r['competitionShort']);
+    if (!empty($r['competitionName'])) {
+        echo "<strong>Competition:</strong> " . htmlspecialchars($r['competitionName']);
         echo " <em>score: " . $r['scoreCompetition'] . "</em>";
         echo "<br>";
     }
