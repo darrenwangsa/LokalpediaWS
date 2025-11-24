@@ -15,9 +15,9 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: white;
+            background: #f5f5f5;
             min-height: 100vh;
-            color: #ff9d00;
+            color: #f3aa36;
             padding: 20px;
             position: relative;
             overflow-x: hidden;
@@ -34,64 +34,49 @@
         }
 
         .result-title {
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 700;
-            margin: 40px 0 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            display: inline-block;
-            position: relative;
-        }
-
-        .result-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, #f3aa36, transparent);
+            margin: 30px 0 15px;
+            text-transform: none;
+            letter-spacing: 0;
+            display: block;
+            color: #f3aa36;
         }
 
         .main-result {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            border-radius: 30px;
-            padding: 50px;
-            text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            transition: 0.3s ease;
-        }
-
-        .main-result img {
-            max-width: 450px;
-            width: 100%;
-            border-radius: 20px;
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
         }
 
         .other-result {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
         }
 
         .player-card {
-            border-radius: 20px;
+            border-radius: 0;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+            box-shadow: none;
             transition: 0.3s ease;
+            background: transparent;
+            backdrop-filter: none;
+            border: none;
+            width: 180px;
         }
 
         .player-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.30);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .player-card img {
             width: 100%;
             display: block;
+            height: auto;
         }
 
         .not-found {
@@ -111,7 +96,7 @@
         </div>
 
         <h2 class="result-title">Hasil Dicari</h2>
-        <div id="main-result"></div>
+        <div id="main-result" class="main-result"></div>
 
         <h2 class="result-title">Hasil Lainnya</h2>
         <div id="other-result" class="other-result"></div>
@@ -154,7 +139,7 @@
         if (found) {
             // Hasil utama
             document.getElementById("main-result").innerHTML = `
-                <div class="main-result">
+                <div class="player-card">
                     <img src="${found.mainImage}" alt="Main Image">
                 </div>
             `;

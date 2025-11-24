@@ -194,6 +194,8 @@
             border-bottom: 1px solid #e0e0e0;
         }
 
+        
+
         .detail-row:last-child {
             border-bottom: none;
         }
@@ -205,6 +207,17 @@
             letter-spacing: 0.5px;
             font-weight: 600;
         }
+
+        .more-detail-label {
+    font-size: 11px;
+    color: #257af1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    display: block;
+    margin-top: 20px;   /* ini bikin turun */
+}
+
 
         .detail-value {
             font-size: 12px;
@@ -319,6 +332,12 @@
                                 <span class="detail-label">Join Date</span>
                                 <span class="detail-value">2025</span>
                             </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -351,6 +370,12 @@
                                 <span class="detail-label">Join Date</span>
                                 <span class="detail-value">2024</span>
                             </div>
+                            <a href="detail-player.html"">
+                                <div class="detail-row">
+                                    <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -379,6 +404,11 @@
                                 <span class="detail-label">Join Date</span>
                                 <span class="detail-value">2025</span>
                             </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -403,6 +433,11 @@
                                 <span class="detail-label">Join Date</span>
                                 <span class="detail-value">2025</span>
                             </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -431,6 +466,11 @@
                                 <span class="detail-label">Join Date</span>
                                 <span class="detail-value">2025</span>
                             </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -459,6 +499,11 @@
                                 <span class="detail-label">Join Date</span>
                                 <span class="detail-value">2025</span>
                             </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -487,6 +532,11 @@
                                 <span class="detail-label">Join Date</span>
                                 <span class="detail-value">2025</span>
                             </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -511,6 +561,11 @@
                                 <span class="detail-label">Join Date</span>
                                 <span class="detail-value">2025</span>
                             </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     
