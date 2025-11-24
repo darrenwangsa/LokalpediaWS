@@ -433,38 +433,7 @@
 
 <body>
     <!-- HEADER -->
-    <header>
-        <div id="header">
-            <div class="container">
-                <div class="row">
-                    <!-- LOGO -->
-                    <div class="col-md-3">
-                        <div class="header-logo">
-                            <a href="../../index.html" class="logo">
-                                <img src="../../img/logoLokalpedia.png" alt="Lokalpedia">
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- SEARCH BAR -->
-                    <div class="col-md-6">
-                        <div class="header-search">
-                            <form>
-                                <select class="input-select">
-                                    <option value="0">All Categories</option>
-                                    <option value="1">Teams</option>
-                                    <option value="2">Competition</option>
-                                    <option value="3">Players</option>
-                                </select>
-                                <input class="input" placeholder="Search here">
-                                <button class="search-btn">Search</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include 'header.php' ?>
 
     <!-- NAVIGATION -->
     <nav id="navigation">
@@ -506,7 +475,7 @@
                     <!-- Info Section -->
                     <div class="info-section">
                         <div class="team-name-header">
-                            <div class="team-abbr">E<span class="o-letter">V</span>OS</div>
+                            <div class="team-abbr">EVOS</div>
                             <div class="team-full-name">Evos Esport</div>
                         </div>
 
