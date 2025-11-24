@@ -410,7 +410,19 @@ usort($results, function($a, $b) {
                         $categories = "Competitions";
                     }
 
-                        echo '<a href="#" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 20px; padding: 0; overflow: hidden; font-family: Arial, sans-serif;">';
+                    echo '<a href="/lokalpediaanan/' . $categories . '/details/detail' . $categories . '.php#';
+                    if (!empty($r['teamName'])) {
+                        echo htmlspecialchars($r['teams']);
+                    }
+                
+                    if (!empty($r['playerNickname'])) {
+                        echo htmlspecialchars($r['playerNickname']);
+                    }
+                
+                    if (!empty($r['competitionName'])) {
+                        echo htmlspecialchars($r['competitionName']);
+                    }
+                        echo '" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 20px; padding: 0; overflow: hidden; font-family: Arial, sans-serif;">';
                         echo'<div style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 20px; padding: 0; overflow: hidden; font-family: Arial, sans-serif;">';
 
                         echo '<div style="width: 100%; height: 25vh;">
@@ -481,7 +493,7 @@ usort($results, function($a, $b) {
                 }
 
                 // Sesuaikan width kartu agar 5 kartu muat horizontal (misalnya 18% untuk margin)
-                echo '<a href="/' . $categories . '/details/';
+                echo '<a href="/lokalpediaanan/' . $categories . '/details/detail' . $categories . '.php#';
                     if (!empty($r['teamName'])) {
                         echo htmlspecialchars($r['teams']);
                     }

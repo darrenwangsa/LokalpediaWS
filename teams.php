@@ -1,10 +1,103 @@
+<?php
+// connect JENA
+$endpoint = "http://localhost:3030/lokalpedia22/sparql";
+$competitionName = "";
+
+// Query for searching all Competitions
+$sparqlQueryCompetitions = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+SELECT DISTINCT 
+(REPLACE(STR(?competitions), "^.*[/#]", "") AS ?idCompetition)
+(REPLACE(REPLACE(STR(?competitions), "^.*[/#]", ""), "_", " ") AS ?competitionName) WHERE {
+    {
+      ?headTour rdfs:subClassOf :InternationalTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    
+     
+      } UNION
+    {
+      ?regionTour rdfs:subClassOf :RegionalTour .
+      ?headTour rdfs:subClassOf ?regionTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    } FILTER NOT EXISTS {
+        ?child rdfs:subClassOf ?competitions .
+        FILTER(?child != ?competitions)
+}
+}
+SPARQL;
+
+$response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQueryCompetitions) . "&format=json");
+                $data = json_decode($response, true);
+                $competitions = [];
+                foreach ($data['results']['bindings'] as $row) {
+                    // Ambil semua field
+                    $competitions[] = [
+                        'idCompetition' => $row['idCompetition']['value'] ?? '',
+                        'competitionName' => $row['competitionName']['value'] ?? ''
+                    ];
+                
+                }
+
+				usort($competitions, function($a, $b) {
+                    return $a['competitionName'] <=> $b['competitionName'];
+                });
+
+
+// foreach ($results as $r) {
+    
+
+// // if($count >= $limit){
+// //     break;
+// // }
+//     echo "<div style='margin-bottom:10px; padding:5px; border:1px solid #000;'>";
+
+//     if (!empty($r['teamName'])) {
+//         echo "<strong>Team:</strong> " . htmlspecialchars($r['teamName']);
+//         echo " <em>(score: " . $r['scoreTeamName'] . ")</em>";
+//         if (!empty($r['teamAddName'])) {
+//             echo " (" . htmlspecialchars($r['teamAddName']) . " <em>score: " . $r['scoreteamAddName'] . "</em>)";
+//         }
+//         echo "<br>";
+//     }
+
+//     if (!empty($r['playerNickname'])) {
+//         echo "<strong>Player:</strong> " . htmlspecialchars($r['playerNickname']);
+//         if (!empty($r['realName'])) {
+//             echo " (" . htmlspecialchars($r['realName']) . ")";
+//         }
+//         echo " <em>score: " . $r['scorePlayer'] . "</em>";
+//         echo "<br>";
+//     }
+
+//     if (!empty($r['competitionName'])) {
+//         echo "<strong>Competition:</strong> " ;
+// 		$competitionName = htmlspecialchars($r['competitionName']);
+// 		$competition = htmlspecialchars($r['idCompetition']);
+// 		echo $competition . "<br>" . $competitionName;
+//         echo "<br>";
+//     }
+//     if (!empty($r['linkFoto'])) {
+//         echo "<strong>Link:</strong> " . htmlspecialchars($r['linkFoto']);
+//         echo "<br>";
+//     }
+
+//     // echo "<strong>Score:</strong> " . $r['minScore'];
+//     echo "</div>";
+// }
+
+?>
+
 <!DOCTYPE html>
 <e lang="id">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TIM - Esports Teams</title>
+	<title>Lokalpedia - Teams</title>
 
 	<!-- Styles dari file pertama -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -118,6 +211,7 @@
 
 		.team-card {
 			width: 110px;
+			height: 38vh;
 			background: white;
 			border-radius: 8px 8px 0 0;
 			box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
@@ -133,6 +227,7 @@
 
 		.team-header {
 			background: #F3AA36;
+			height: 30%;
 			color: white;
 			padding: 12px;
 			text-align: center;
@@ -232,381 +327,95 @@
 			</div>
 		</div>
 	</nav>
-
-	<!-- MAIN CONTENT -->
+	
+	
 	<div class="main-content">
 		<div class="all-leagues">
-		
-			<!-- M7 Section -->
-			<section class="league-section" id="M7">
-				<div class="league-header">
-					<img src="./img/m7.png" alt="M7" class="league-logo">
-					<div class="league-title">M World Series 7</div>
-				</div>
-		
-				<div class="teams-container">
-					<div class="team-card">
-						<div class="team-header">AE
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-ae.png" alt="AE"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">ONIC
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-onic.png" alt="ONIC"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">RORA
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/ph.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-rora.png" alt="AURORA"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">TLPH
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/ph.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-tlph.png" alt="TEAM LIQUID PH"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">CG
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-cg.png" alt="CG Esport"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">SRG
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-srg.png" alt="Selangor Red Giants OG"></div>
-					</div>
-				</div>
-			</section>
-		
-			<!-- MPL ID S16 Section -->
-			<section class="league-section" id="mpl-id-s16">
-				<div class="league-header">
-					<img src="./img/mpl_id.png" alt="MPL ID" class="league-logo">
-					<div class="league-title">MPL ID S16</div>
-				</div>
-		
-				<div class="teams-container">
-					<div class="team-card">
-						<div class="team-header">AE
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-ae.png" alt="AE"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">BTR
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-btr.png" alt="BTR"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">DEWA
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-dewa.png" alt="DEWA"></div>
-					</div>
-		
-                    <a href="detail_team/evos/index.php" class="team-link">
-                        <div class="team-card">
-                            <div class="team-header">EVOS
-                                <div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-                            </div>
-                            <div class="team-logo"><img src="./img/logo-evos.png" alt="EVOS"></div>
-                        </div>
-                    </a>
-		
-					<div class="team-card">
-						<div class="team-header">GEEK
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-geek.png" alt="GEEK"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">NAVI
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-navi.png" alt="NAVI"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">ONIC
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-onic.png" alt="ONIC"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">RRQ
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-rrq.png" alt="RRQ"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">TLID
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/id.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-liquid.png" alt="TLID"></div>
-					</div>
-				</div>
-			</section>
-		
-			<!-- MPL PH S16 Section -->
-			<section class="league-section" id="mpl-ph-s16">
-				<div class="league-header">
-					<img src="./img/mpl-ph.png" alt="MPL PH" class="league-logo">
-					<div class="league-title">MPL PH S16</div>
-				</div>
-		
-				<div class="teams-container">
-					<div class="team-card">
-						<div class="team-header">APBR
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/ph.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-apbren.png" alt="APBren"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">RORA
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/ph.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-rora.png" alt="AURORA"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">ONIC
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/ph.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-onicph.png" alt="ONICPH"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">OMG
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/ph.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-omega.png" alt="OMEGA"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">FLCN
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/ph.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-falcon.png" alt="Falcons"></div>
-					</div>
+			<!-- MAIN CONTENT -->
+			<?php
+				foreach($competitions as $c){
+					$idCompetition = htmlspecialchars($c['idCompetition']);
+					$competitionName = htmlspecialchars($c['competitionName']);
+					// echo $competitionName;
+					// echo htmlspecialchars($c['competitionName']) . htmlspecialchars($c['idCompetition']);
+					// echo '<br>';
 
-					<div class="team-card">
-						<div class="team-header">TLPH
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/ph.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-tlph.png" alt="TEAM LIQUID PH"></div>
-					</div>
+					$sparqlQueryTeamsPerCompetitions = <<<SPARQL
+					PREFIX owl: <http://www.w3.org/2002/07/owl#>
+					PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+					PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+					PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
 
-					<div class="team-card">
-						<div class="team-header">TNC
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/ph.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-tnc.png" alt="TNC Pro"></div>
-					</div>
+					SELECT DISTINCT 
+					?idTeam
+					?teamName 
+					(REPLACE(STR(?idTeam), "_.*$", "")AS ?teamFront)
+					?teamAddName
+					(REPLACE(REPLACE(STR(?idTeam), "^.*_", ""),  "[0-9]+", "")AS ?region)
+					WHERE {{
+					?team a ?competition ;
+							:teamName ?teamName ;
+							:hasName ?teamAddName .
+						BIND(REPLACE(STR(?team), "^.*/", "") AS ?idTeam)
+						BIND(REPLACE(REPLACE(STR(?competition), "^.*[/#]", ""), "_", " ") AS ?competitionName)
+						FILTER(CONTAINS(?competitionName, "$competitionName"))
+					}
+					}
+					SPARQL;
 
-					<div class="team-card">
-						<div class="team-header">TWIS
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/ph.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-twisted.png" alt="Twisted"></div>
-					</div>
-				</div>
-			</section>
-		
-			<!-- MPL MY S15 Section -->
-			<section class="league-section" id="mpl-my-s15">
-				<div class="league-header">
-					<img src="./img/mpl-my.png" alt="MPL MY" class="league-logo">
-					<div class="league-title">MPL MY S15</div>
-				</div>
-		
-				<div class="teams-container">
-					<div class="team-card">
-						<div class="team-header">AERO
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-aero.png" alt="Aero Esport"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">CG
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-cg.png" alt="CG Esport"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">GMXK
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-gamesmy.png" alt="GamesmyKelantan"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">HB
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-homebois.png" alt="Homebois"></div>
-					</div>
-		
-					<div class="team-card">
-						<div class="team-header">MV
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo dark-logo">
-							<img src="./img/logo-mv.png" alt="Movicius">
-						</div>
-					</div>
+					$response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQueryTeamsPerCompetitions) . "&format=json");
+					$data = json_decode($response, true);
+					$teamArr = [];
 
-					<div class="team-card">
-						<div class="team-header">TR
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-teamrey.png" alt="TEAM Rey"></div>
-					</div>
+					echo '	<section class="league-section" id="' . $idCompetition . '">
+								<div class="league-header">
+									<a href="/localpediaanan/Competitions/details/detailCompetitions.php#' . $idCompetition . '" style="text-decoration:none; color:inherit;">' . 
+										'<img src="./img/' . $idCompetition . '.png" class="league-logo" onerror="this.src=' . "'img/alternative.png'" . ';">
+									</a>';
+					echo '			<a href="/localpediaanan/Competitions/details/detailCompetitions.php#' . $idCompetition . '" style="text-decoration:none; color:inherit;">' . '
+										<div class="league-title">' . $competitionName . '</div>
+									</a>
+								</div>
 
-					<div class="team-card">
-						<div class="team-header">SRG
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-srg.png" alt="Selangor Red Giants OG"></div>
-					</div>
+								<div class="teams-container">';
 
-					<div class="team-card">
-						<div class="team-header">TDK
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo dark-logo">
-							<img src="./img/logo-todak.png" alt="TODAK">
-						</div>
-					</div>
+					foreach ($data['results']['bindings'] as $row) {
+						// Ambil semua field
+						$teamArr[] = [
+							'idTeam' => $row['idTeam']['value'] ?? '',
+							'teamName' => $row['teamName']['value'] ?? '',
+							'teamFront' => $row['teamFront']['value'] ?? '',
+							'teamAddName' => $row['teamAddName']['value'] ?? '',
+							'region' => strtolower($row['region']['value'] ?? ''),
+						];
+					
+					}
+					foreach($teamArr as $t){
+						$idTeam = htmlspecialchars($t['idTeam']);
+						$teamName = htmlspecialchars($t['teamName']);
+						$teamFront = htmlspecialchars($t['teamFront']);
+						$teamAddName = htmlspecialchars($t['teamAddName']);
+						$region = htmlspecialchars($t['region']);
 
-					<div class="team-card">
-						<div class="team-header">VMS
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo"><img src="./img/logo-vamos.png" alt="Team vamos"></div>
-					</div>
+						echo '	<a href="/localpediaanan/Teams/details/detailTeams.php#' . $idTeam . '" style="text-decoration:none; color:inherit;">' . 
+								'	<div class="team-card">
+										<div class="team-header">' . $teamName . 
+										'	<img src="https://flagcdn.com/w40/' . $region . '.png" class="team-flag" onerror="this.src=' . "'img/alternative.png'" . ';">  
+										</div>
+										<div class="team-logo"><img src="./img/' . $teamFront . '.png" onerror="this.src=' . "'img/alternative.png'" . ';"></div>
+									</div>
+								</a>';
+						}
 
-					<div class="team-card">
-						<div class="team-header">UNT
-							<div class="team-flag" style="background-image: url('https://flagcdn.com/w40/my.png');"></div>
-						</div>
-						<div class="team-logo dark-logo">
-							<img src="./img/logo-untitled.png" alt="Untitled">
-						</div>
-					</div>
-				</div>
-			</section>
+					echo '</section>';
+
+				}
+			?>
 		</div>
 	</div>
 
 	<!-- FOOTER -->
-	<footer id="footer">
-		<!-- top footer -->
-		<div class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<div class="col-md-3 col-xs-6">
-						<div class="footer">
-							<h3 class="footer-title">About Us</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
-							<ul class="footer-links">
-								<li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-								<li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
-								<li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-md-3 col-xs-6">
-						<div class="footer">
-							<h3 class="footer-title">Categories</h3>
-							<ul class="footer-links">
-								<li><a href="#">Hot deals</a></li>
-								<li><a href="#">Laptops</a></li>
-								<li><a href="#">Smartphones</a></li>
-								<li><a href="#">Cameras</a></li>
-								<li><a href="#">Accessories</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="clearfix visible-xs"></div>
-
-					<div class="col-md-3 col-xs-6">
-						<div class="footer">
-							<h3 class="footer-title">Information</h3>
-							<ul class="footer-links">
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Orders and Returns</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-md-3 col-xs-6">
-						<div class="footer">
-							<h3 class="footer-title">Service</h3>
-							<ul class="footer-links">
-								<li><a href="#">My Account</a></li>
-								<li><a href="#">View Cart</a></li>
-								<li><a href="#">Wishlist</a></li>
-								<li><a href="#">Track My Order</a></li>
-								<li><a href="#">Help</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /top footer -->
-
-		<!-- bottom footer -->
-		<div id="bottom-footer" class="section">
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<ul class="footer-payments">
-							<li><img style="width: 20%;" src="./img/logoLokalpedia.png"></img></li>
-						</ul>
-						<span class="copyright">
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						</span>
-					</div>
-				</div>
-					<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /bottom footer -->
-	</footer>
+	<?php include 'footer.php'?>
 
 	<!-- jQuery Plugins -->
 	<script src="js/jquery.min.js"></script>

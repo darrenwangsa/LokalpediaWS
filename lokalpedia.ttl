@@ -117,12 +117,6 @@
      rdfs:domain :Esports .
 
 
-###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSC
-:MSC rdf:type owl:DatatypeProperty ;
-     rdfs:subPropertyOf :Trophy ;
-     rdfs:domain :Esports .
-
-
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSeries
 :MSeries rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf :Trophy ;
@@ -192,11 +186,6 @@
                rdfs:subClassOf :Roster .
 
 
-###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/EWC_25
-:EWC_25 rdf:type owl:Class ;
-        rdfs:subClassOf :MSC .
-
-
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Esports
 :Esports rdf:type owl:Class .
 
@@ -260,10 +249,6 @@
 :MPL_SG10 rdf:type owl:Class ;
           rdfs:subClassOf :MPL_SG .
 
-
-###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSC
-:MSC rdf:type owl:Class ;
-     rdfs:subClassOf :InternationalTour .
 
 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/MSeries

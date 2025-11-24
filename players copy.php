@@ -1,6 +1,40 @@
 <?php
+$error = "";
+$searchInput = "";
+$category = 0; // default 0
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+
+    // Ambil dan trim input
+    $searchInput = isset($_POST['search']) ? trim($_POST['search']) : "";
+
+    // Validasi search
+    if ($searchInput === "") {
+        $error = "Search tidak boleh kosong!";
+    } else {
+        // Pastikan category selalu angka 0-3
+        $category = isset($_POST['category']) ? (int)$_POST['category'] : 0;
+
+        // Optional: jika category diluar range
+        if ($category < 0 || $category > 3) {
+            $category = 0;
+        }
+    }
+}
+
+$keyword = strtolower($searchInput);
 // connect JENA
 $endpoint = "http://localhost:3030/lokalpedia22/sparql";
+
+###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Kyy
+// :Kyy rdf:type owl:NamedIndividual ;
+//      :Roles "Roamer" ;
+//      :alternateIds "Super Kyy" ;
+//      :hasAge 23 ;
+//      :hasName "Hengky Gunawan" ;
+//      :hasNationality "Indonesia" ;
+//      :playerInfo "Hengky \"Kyy\" Gunawan (born November 9, 2003) is an Indonesian player who is currently playing as a Roamer for EVOS." .
+
 
 // Query for PLAYERS
 $sparqlQueryPlayers = <<<SPARQL
@@ -77,6 +111,27 @@ WHERE {{
 }
 SPARQL;
 
+
+
+// foreach ($results as $r) {
+
+// // if($count >= $limit){
+// //     break;
+// // }
+//     echo "<div style='margin-bottom:10px; padding:5px; border:1px solid #000;'>";
+
+//     if (!empty($r['playerNickname'])) {
+//         echo "<strong>Player:</strong> " . htmlspecialchars($r['playerNickname']);
+//         if (!empty($r['realName'])) {
+//             echo " (" . htmlspecialchars($r['realName']) . ")";
+//         }
+//         echo " <br><em>Team: " . $r['team'] . "</em>";
+//         echo "<br>Ages: " . $r['ages'];
+//     }
+
+//     // echo "<strong>Score:</strong> " . $r['minScore'];
+//     echo "</div>";
+// }
 ?>
 
 
@@ -412,14 +467,13 @@ SPARQL;
                 foreach ($results as $r){
 
                     echo '<div class="player-card">
-                    <img src="playerimg/' . htmlspecialchars($r['playerNickname']) . '.png" class="player-image" style="object-fit: contain;  " onerror="' . "this.src='img/alternative.png';" . '"></img>
+                    <img src="playerimg/' . htmlspecialchars($r['playerNickname']) . '.png" class="player-image" style="object-fit: contain;  " onerror="' . "this.src='img/unavailable.png';" . '></img>
                         <div class="player-info">
                             <div>
                                 <div class="player-name">' . htmlspecialchars($r['playerNickname']) . '</div>';
                     if (!empty($r['role'])){
                     echo '      <div class="player-role">' . htmlspecialchars($r['role']) . '</div>';
                     }
-                    echo'   </div>';
 
                     echo '  <div class="player-details">';
 
@@ -450,7 +504,7 @@ SPARQL;
                                     <span class="detail-value">' . htmlspecialchars($r['ages']) . '</span>
                                 </div>';
                     }
-                    echo '<a href="/lokalpediaanan/Players/details/detailPlayers.php#' . htmlspecialchars($r['playerNickname']) . '">
+                    echo '<a href="detail-player.html"">
                                 <div class=" detail-row">
                                     <span class="more-detail-label">More Details</span>
                                     </div>
@@ -461,8 +515,256 @@ SPARQL;
                             </div>';
                 }
                 ?>
-            </div>
-                <!-- <div class="player-card">
+                <!-- 'playerNickname' => $row['playerNickname']['value'] ?? '',
+                'realName' => $row['realName']['value'] ?? '',
+                'team' => $row['team']['value'] ?? '',
+                'role' => $row['role']['value'] ?? '',
+                'nationality' => $row['nationality']['value'] ?? '',
+                'ages' => $row['ages']['value'] ?? '',
+                'individualsTeam' => $row['individualsTeam']['value'] ?? '', -->
+                <div class="player-card">    
+                    <!-- <div class="player-image"></div> -->
+                    <img src="playerimg/Kyyy.png" class="player-image" style="object-fit: contain;  " onerror="this.src='img/unavailable.png';"></img>
+                    <div class="player-info">
+                        <div>
+                            <div class="player-name">KYY</div>
+                            <div class="player-role">ROAMER</div>
+                        </div>
+                        <div class="player-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Real Name</span>
+                                <span class="detail-value">Hengky Gunawan</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Alternate Ids</span>
+                                <span class="detail-value">Super Kyy</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Region</span>
+                                <span class="detail-value">🇮🇩 Indonesia</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Age</span>
+                                <span class="detail-value">21</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Birthday</span>
+                                <span class="detail-value">Nov 9, 2003</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Join Date</span>
+                                <span class="detail-value">2025</span>
+                            </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="player-image" style="--img: url('playerimg/Alberttt.png')"></div>
+                    <div class="player-info">
+                        <div>
+                            <div class="player-name">ALBERTTT</div>
+                            <div class="player-role">JUNGLER</div>
+                        </div>
+                        <div class="player-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Real Name</span>
+                                <span class="detail-value">Albert Neilsen Iskandar</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Region</span>
+                                <span class="detail-value">🇮🇩 Indonesia</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Age</span>
+                                <span class="detail-value">21</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Birthday</span>
+                                <span class="detail-value">Jan 8, 2004</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Join Date</span>
+                                <span class="detail-value">2024</span>
+                            </div>
+                            <a href="detail-player.html"">
+                                <div class="detail-row">
+                                    <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="player-image" style="--img: url('playerimg/ERLAN.png')"></div>
+                    <div class="player-info">
+                        <div>
+                            <div class="player-name">ERLAN</div>
+                            <div class="player-role">GOLD LANER</div>
+                        </div>
+                        <div class="player-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Real Name</span>
+                                <span class="detail-value">Erland Saputra</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Alternate Ids</span>
+                                <span class="detail-value">Douma</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Region</span>
+                                <span class="detail-value">🇮🇩 Indonesia</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Join Date</span>
+                                <span class="detail-value">2025</span>
+                            </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="player-image" style="--img: url('playerimg/SWAYLOW.png')"></div>
+                    <div class="player-info">
+                        <div>
+                            <div class="player-name">SWAYLOW</div>
+                            <div class="player-role">MID LANER</div>
+                        </div>
+                        <div class="player-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Real Name</span>
+                                <span class="detail-value">Attanasius David H. Sihaloho</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Region</span>
+                                <span class="detail-value">🇮🇩 Indonesia</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Join Date</span>
+                                <span class="detail-value">2025</span>
+                            </div>
+                            <a href="detail-player.html"">
+                                <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="player-image" style="--img: url('playerimg/Branz.png')"></div>
+                    <div class="player-info">
+                        <div>
+                            <div class="player-name">BRANZ</div>
+                            <div class="player-role">GOLD LANER</div>
+                        </div>
+                        <div class="player-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Real Name</span>
+                                <span class="detail-value">Jabran Bagus Wiloko</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Region</span>
+                                <span class="detail-value">🇮🇩 Indonesia</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Age</span>
+                                <span class="detail-value">25</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Join Date</span>
+                                <span class="detail-value">2025</span>
+                            </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="player-image" style="--img: url('playerimg/Roundel.png')"></div>
+                    <div class="player-info">
+                        <div>
+                            <div class="player-name">ROUNDEL</div>
+                            <div class="player-role">MID LANER</div>
+                        </div>
+                        <div class="player-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Real Name</span>
+                                <span class="detail-value">Faiskal Khadafi</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Region</span>
+                                <span class="detail-value">🇮🇩 Indonesia</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Age</span>
+                                <span class="detail-value">21</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Join Date</span>
+                                <span class="detail-value">2025</span>
+                            </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
+                    <div class="player-image" style="--img: url('playerimg/Xorizo.png')"></div>
+                    <div class="player-info">
+                        <div>
+                            <div class="player-name">XORIZO</div>
+                            <div class="player-role">EXP LANER</div>
+                        </div>
+                        <div class="player-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Real Name</span>
+                                <span class="detail-value">I Gusti Made Indra Dwipayana</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Region</span>
+                                <span class="detail-value">🇮🇩 Indonesia</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Age</span>
+                                <span class="detail-value">22</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Join Date</span>
+                                <span class="detail-value">2025</span>
+                            </div>
+                            <a href="detail-player.html"">
+                                                            <div class=" detail-row">
+                                <span class="more-detail-label">More Details</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card">
                     <div class="player-image" style="--img: url('playerimg/Rendyy_mid.png')"></div>
                     <div class="player-info">
                         <div>
@@ -488,93 +790,19 @@ SPARQL;
                                 </div>
                             </a>
                         </div>
-                    </div>  
-                </div> -->
+                    </div>
+                    
+                </div>
 
+            </div>
             <!-- SECTION: COACHING STAFF -->
             <div class="con" style="margin-top: 80px;">
                 <h2 class="section-title">Coaching Staff</h2>
             
                 <div class="roster-grid">
-
-                    <?php 
-                    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQueryStaff) . "&format=json");
-                    $data = json_decode($response, true);
-                    $results = [];
-                    foreach ($data['results']['bindings'] as $row) {
-                        // Ambil semua field
-                        $results[] = [
-                            'playerNickname' => $row['playerNickname']['value'] ?? '',
-                            'realName' => $row['realName']['value'] ?? '',
-                            'team' => $row['team']['value'] ?? '',
-                            'role' => $row['role']['value'] ?? '',
-                            'nationality' => $row['nationality']['value'] ?? '',
-                            'ages' => $row['ages']['value'] ?? '',
-                            'individualsTeam' => $row['individualsTeam']['value'] ?? '',
-                        ];
-                    
-                    }
-                    
-                    usort($results, function($a, $b) {
-                        return $a['playerNickname'] <=> $b['playerNickname'];
-                    });
-
-                    $count = 1;
-                    $limit = 4;
-                    foreach ($results as $r){
-
-                        echo '<div class="player-card">
-                        <img src="playerimg/' . htmlspecialchars($r['playerNickname']) . '.png" class="player-image" style="object-fit: contain;  " onerror="' . "this.src='img/alternative.png';" . '"></img>
-                            <div class="player-info">
-                                <div>
-                                    <div class="player-name">' . htmlspecialchars($r['playerNickname']) . '</div>';
-                        if (!empty($r['role'])){
-                        echo '      <div class="player-role">' . htmlspecialchars($r['role']) . '</div>';
-                        }
-                        echo'   </div>';
-
-                        echo '  <div class="player-details">';
-
-                        if (!empty($r['team'])){
-                            echo '  <div class="detail-row">
-                                        <span class="detail-label">Playing At</span>
-                                        <span class="detail-value">' . htmlspecialchars($r['team']) . '</span>
-                                    </div>';
-                        }
-
-                        if (!empty($r['realName'])){
-                            echo '  <div class="detail-row">
-                                        <span class="detail-label">Real Name</span>
-                                        <span class="detail-value">' . htmlspecialchars($r['realName']) . '</span>
-                                    </div>';
-                        }
-
-                        if (!empty($r['nationality'])){
-                            echo '  <div class="detail-row">
-                                        <span class="detail-label">Nationality</span>
-                                        <span class="detail-value">' . htmlspecialchars($r['nationality']) . '</span>
-                                    </div>';
-                        }
-
-                        if (!empty($r['ages'])){
-                            echo '  <div class="detail-row">
-                                        <span class="detail-label">Age</span>
-                                        <span class="detail-value">' . htmlspecialchars($r['ages']) . '</span>
-                                    </div>';
-                        }
-                        echo '<a href="/lokalpediaanan/Players/details/detailPlayers.php#' . htmlspecialchars($r['playerNickname']) . '">
-                                <div class=" detail-row">
-                                    <span class="more-detail-label">More Details</span>
-                                    </div>
-                                </a>
-                                
-                                    </div>
-                                </div>
-                            </div>';
-                    }
-                    ?>
+            
                     <!-- 1 STAFF -->
-                    <!-- <div class="player-card">
+                    <div class="player-card">
                         <div class="player-image" style="--img: url('playerimg/Vyn.png')"></div>
                         <div class="player-info">
                             <div>
@@ -620,7 +848,7 @@ SPARQL;
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
                     
             
