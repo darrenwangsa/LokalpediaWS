@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            color: #f3aa36;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .search-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .result-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 30px 0 15px;
+            text-transform: none;
+            letter-spacing: 0;
+            display: block;
+            color: #f3aa36;
+        }
+
+        .main-result {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .other-result {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .player-card {
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: none;
+            transition: 0.3s ease;
+            background: transparent;
+            backdrop-filter: none;
+            border: none;
+            width: 180px;
+        }
+
+        .player-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .player-card img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        .not-found {
+            text-align: center;
+            padding: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="search-header">
+            <div class="search-query">🔍 <strong id="search-term"></strong></div>
+        </div>
+
+        <h2 class="result-title">Hasil Dicari</h2>
+        <div id="main-result" class="main-result"></div>
+
+        <h2 class="result-title">Hasil Lainnya</h2>
+        <div id="other-result" class="other-result"></div>
+
+    </div>
+
+    <script>
+        // Ambil query dari URL
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get('q')?.toLowerCase() || "";
+
+        document.getElementById('search-term').textContent = q.toUpperCase() || 'NONE';
+
+        // Data dummy — tinggal diganti dari SPARQL RDF
+        const data = {
+            teams: {
+                "evos": {
+                    mainImage: "img/results/evos_main.png",
+                    otherImages: [
+                        "img/results/evos_1.png",
+                        "img/results/evos_2.png",
+                        "img/results/evos_3.png"
+                    ]
+                },
+
+                "rrq": {
+                    mainImage: "img/results/rrq_main.png",
+                    otherImages: [
+                        "img/results/rrq_1.png",
+                        "img/results/rrq_2.png",
+                        "img/results/rrq_3.png"
+                    ]
+                }
+            }
+        };
+
+        // CARI DATA
+        let found = data.teams[q];
+
+        if (found) {
+            // Hasil utama
+            document.getElementById("main-result").innerHTML = `
+                <div class="player-card">
+                    <img src="${found.mainImage}" alt="Main Image">
+                </div>
+            `;
+
+            // Hasil lainnya
+            let imgList = "";
+            found.otherImages.forEach(img => {
+                imgList += `
+                    <div class="player-card">
+                        <img src="${img}" alt="Other Result">
+                    </div>
+                `;
+            });
+
+            document.getElementById("other-result").innerHTML = imgList;
+
+        } else {
+            // Jika tidak ditemukan
+            document.getElementById("main-result").innerHTML = `
+                <div class="not-found">
+                    <h2>Tidak ditemukan hasil untuk "${q}"</h2>
+                </div>
+            `;
+            document.getElementById("other-result").innerHTML = "";
+        }
+    </script>
+
+</body>
+
+</html>
