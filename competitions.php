@@ -84,6 +84,22 @@
             gap: 20px;
         }
 
+        .card-footer {
+    padding: 15px 20px;
+}
+
+.more-info {
+    color: #3498db;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.more-info:hover {
+    text-decoration: underline;
+}
+
+
         .tier-badge {
             background: linear-gradient(135deg, #f3aa36 0%, #f4e5b8 100%);
             color: #333;
@@ -266,6 +282,7 @@
                     <div class="tagline">"let the world see us"</div>
                 </div>
             </div>
+            
 
             <div class="content-grid">
                 <div class="info-section">
@@ -324,6 +341,10 @@
                     </div>
                 </div>
             </div>
+            <div class="card-footer">
+                <a href="detail-competitions.html" class="more-info">More Info</a>
+            </div>
+
         </div>
 
         <h1>  Regional Competitions</h1>
@@ -373,10 +394,13 @@
                 <div class="info-section">
                     <h3>  Venue</h3>
                     <div class="venue-item">
-                        <strong>Green sun Hotel</strong>
-                        <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                            Regular Season
-                        </div>
+                        <a href="https://maps.app.goo.gl/BTQQFRK8EmEUn4Ss5" style="text-decoration: none; color: inherit;">
+                            <strong>Green sun Hotel</strong>
+                            <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
+                                Regular Season
+                            </div>
+                        </a>
+
                     </div>
                     <div class="venue-item">
                         <strong>CUneta Astrodome</strong>
@@ -402,7 +426,11 @@
                     </div>
                 </div>
             </div>
+            <div class="card-footer">
+                <a href="detail-competitions.html" class="more-info">More Info</a>
+            </div>
         </div>
+        
     </div>
     <?php include 'footer.php';?>
 </body>

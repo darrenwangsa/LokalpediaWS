@@ -1,0 +1,549 @@
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MPL ID Season - Professional League</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+                min-height: 100vh;
+                padding: 20px;
+            }
+
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+
+            .header {
+                background: rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(10px);
+                border-radius: 20px;
+                padding: 30px;
+                margin-bottom: 30px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .header-left h1 {
+                color: #2c3e50;
+                font-size: 2.5em;
+                margin-bottom: 10px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .location {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #555;
+                font-size: 1.1em;
+            }
+
+            .flag {
+                width: 30px;
+                height: 20px;
+            }
+
+            .logo-section {
+                text-align: center;
+            }
+
+            .logo-section img {
+                width: 150px;
+                height: 150px;
+                object-fit: contain;
+            }
+
+            .tagline {
+                color: #2c3e50;
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-top: 10px;
+            }
+
+            .main-content {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+
+            .card {
+                background: rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(10px);
+                border-radius: 20px;
+                padding: 30px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            }
+
+            .card h2 {
+                color: #2c3e50;
+                font-size: 1.8em;
+                margin-bottom: 20px;
+                border-bottom: 3px solid #3498db;
+                padding-bottom: 10px;
+            }
+
+            .venue-info, .format-info {
+                line-height: 2;
+            }
+
+            .venue-info p, .format-info p {
+                color: #555;
+                font-size: 1.1em;
+                margin-bottom: 10px;
+            }
+
+            .venue-info strong, .format-info strong {
+                color: #2c3e50;
+                display: inline-block;
+                width: 150px;
+            }
+
+            .league-info {
+                background: rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(10px);
+                border-radius: 20px;
+                padding: 30px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                margin-bottom: 30px;
+            }
+
+            .league-info h2 {
+                color: #2c3e50;
+                font-size: 1.8em;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .info-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+            }
+
+            .info-item {
+                background: rgba(52, 152, 219, 0.1);
+                padding: 15px;
+                border-radius: 10px;
+                border-left: 4px solid #3498db;
+            }
+
+            .info-item strong {
+                color: #2c3e50;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .info-item span {
+                color: #555;
+            }
+
+            .participants {
+                background: rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(10px);
+                border-radius: 20px;
+                padding: 30px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                margin-bottom: 30px;
+            }
+
+            .participants h2 {
+                color: #2c3e50;
+                font-size: 1.8em;
+                margin-bottom: 25px;
+                text-align: center;
+            }
+
+            .teams-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .team-card {
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 15px;
+                padding: 20px;
+                text-align: center;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .team-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+
+            .team-card img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+                margin-bottom: 10px;
+            }
+
+            .team-name {
+                color: #2c3e50;
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+
+            .standings {
+                background: rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(10px);
+                border-radius: 20px;
+                padding: 30px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+            }
+
+            .standings h2 {
+                color: #2c3e50;
+                font-size: 1.8em;
+                margin-bottom: 25px;
+                text-align: center;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            thead {
+                background: linear-gradient(135deg, #F3AA36 0%, #ff9d00 100%);
+                color: white;
+            }
+
+            th {
+                padding: 15px;
+                text-align: left;
+                font-weight: 600;
+            }
+
+            tbody tr {
+                background: rgba(124, 255, 101, 0.426);
+                transition: all 0.3s ease;
+            }
+
+            tbody tr:nth-child(even) {
+                background: rgba(124, 255, 101, 0.426);
+            }
+
+            tbody tr:hover {
+                background: rgba(52, 152, 219, 0.2);
+                transform: scale(1.01);
+            }
+
+            tbody tr.playoff-zone {
+                border-left: 5px solid #008bfd;
+            }
+
+            tbody tr.elimination-zone {
+                border-left: 5px solid #e74c3c;
+                background: rgba(255, 25, 0, 0.1);
+            }
+
+            td {
+                padding: 15px;
+                color: #2c3e50;
+            }
+
+            .rank {
+                font-weight: bold;
+                font-size: 1.2em;
+                color: #000000;
+            }
+
+            .team-logo {
+                width: 30px;
+                height: 30px;
+                object-fit: contain;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+
+            .positive {
+                color: #27ae60;
+                font-weight: bold;
+            }
+
+            .negative {
+                color: #e74c3c;
+                font-weight: bold;
+            }
+
+            @media (max-width: 768px) {
+                .header {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .header-left h1 {
+                    font-size: 1.8em;
+                }
+
+                .main-content {
+                    grid-template-columns: 1fr;
+                }
+
+                .teams-grid {
+                    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1>MPL ID Season</h1>
+                    <div class="location">
+                        <span> Location: Jakarta</span>
+                        <img src="https://flagcdn.com/w40/id.png" alt="Indonesia Flag" class="flag">
+                    </div>
+                </div>
+                <div class="logo-section" style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 40px;
+                ">
+                
+                    <!-- Champions & Runner-up (KIRI) -->
+                    <div style="display: flex; flex-direction: column; gap: 15px; font-size: 1em; color:#2c3e50; text-align:left;">
+                
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong>Champions:</strong>
+                            <img src="img/logo-onic.png" alt="Champions" style="width:60px; height:60px; object-fit:contain;">
+                        </div>
+                
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong>Runner-up:</strong>
+                            <img src="img/logo-ae.png" alt="Runner-up" style="width:60px; height:60px; object-fit:contain;">
+                        </div>
+                
+                    </div>
+                
+                    <!-- Logo MPL (KANAN) -->
+                    <div style="text-align: center;">
+                        <img src="img/mpl_id.png" alt="MPL Logo" style="width:150px; height:150px; object-fit:contain;">
+                        <div class="tagline">"We Own This"</div>
+                    </div>
+                
+                </div>
+
+            </div>
+
+            <div class="league-info">
+                <h2>League Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>Series:</strong>
+                        <span>MPL ID</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Organizers:</strong>
+                        <span>Moonton, Mineski Global</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Prize Pool:</strong>
+                        <span>Rp4,860,000,000 IDR (≈ $292,110 USD)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Start Date:</strong>
+                        <span>2025-08-22</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>End Date:</strong>
+                        <span>2025-11-02</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Official Device:</strong>
+                        <span>Samsung S25 Ultra</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Patch:</strong>
+                        <span>1.9.99 - 2.1.18</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Type:</strong>
+                        <span>Offline - Hybrid Elimination</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+            
+                <div class="card">
+                    <h2>Venue</h2>
+                    <div class="venue-info">
+                        <p><strong>Regular Season:</strong> XO Hall (MPL Arena)</p>
+                        <p><strong>Playoffs:</strong> Nusantara International Convention Exhibition (NICE PIK 2)</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Format</h2>
+                    <div class="format-info">
+                        <p><strong>Regular Season:</strong> Double Round Robin</p>
+                        <p><strong>Playoffs:</strong> Hybrid Elimination</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="participants">
+                <h2>Participants</h2>
+                <div class="teams-grid">
+                    <div class="team-card">
+                        <img src="img/logo-ae.png" alt="Alter Ego">
+                        <div class="team-name">Alter Ego</div>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/logo-btr.png" alt="Bigetron by Vitality">
+                        <div class="team-name">Bigetron by Vitality</div>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/logo-dewa.png" alt="Dewa United Esports">
+                        <div class="team-name">Dewa United Esports</div>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/logo-evos.png" alt="EVOS">
+                        <div class="team-name">EVOS</div>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/logo-geek.png" alt="Geek Fam ID">
+                        <div class="team-name">Geek Fam ID</div>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/logo-navi.png" alt="Natus Vincere">
+                        <div class="team-name">Natus Vincere</div>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/logo-onic.png" alt="ONIC">
+                        <div class="team-name">ONIC</div>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/logo-rrq.png" alt="RRQ Hoshi">
+                        <div class="team-name">RRQ Hoshi</div>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/logo-tlph.png" alt="Team Liquid ID">
+                        <div class="team-name">Team Liquid ID</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="standings">
+                <h2>Regular Season Standings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Team</th>
+                            <th>Match Points</th>
+                            <th>Match W-L</th>
+                            <th>Net Game Win</th>
+                            <th>Game W-L</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="playoff-zone">
+                            <td class="rank">1</td>
+                            <td><img src="img/logo-onic.png" alt="ONIC" class="team-logo">ONIC</td>
+                            <td><strong>14</strong></td>
+                            <td>14 - 2</td>
+                            <td class="positive">+22</td>
+                            <td>29 - 7</td>
+                        </tr>
+                        <tr class="playoff-zone">
+                            <td class="rank">2</td>
+                            <td><img src="img/logo-btr.png" alt="BIGETRON" class="team-logo">BIGETRON BY VIT</td>
+                            <td><strong>12</strong></td>
+                            <td>12 - 4</td>
+                            <td class="positive">+11</td>
+                            <td>25 - 14</td>
+                        </tr>
+                        <tr class="playoff-zone">
+                            <td class="rank">3</td>
+                            <td><img src="img/logo-ae.png" alt="ALTER EGO" class="team-logo">ALTER EGO ESPORTS</td>
+                            <td><strong>9</strong></td>
+                            <td>9 - 7</td>
+                            <td class="positive">+4</td>
+                            <td>23 - 19</td>
+                        </tr>
+                        <tr class="playoff-zone">
+                            <td class="rank">4</td>
+                            <td><img src="img/logo-evos.png" alt="EVOS" class="team-logo">EVOS</td>
+                            <td><strong>8</strong></td>
+                            <td>8 - 8</td>
+                            <td class="positive">+1</td>
+                            <td>20 - 19</td>
+                        </tr>
+                        <tr class="playoff-zone">
+                            <td class="rank">5</td>
+                            <td><img src="img/logo-dewa.png" alt="DEWA" class="team-logo">DEWA UNITED</td>
+                            <td><strong>8</strong></td>
+                            <td>8 - 8</td>
+                            <td class="negative">-1</td>
+                            <td>17 - 18</td>
+                        </tr>
+                        <tr class="playoff-zone">
+                            <td class="rank">6</td>
+                            <td><img src="img/logo-navi.png" alt="NAVI" class="team-logo">NAVI</td>
+                            <td><strong>6</strong></td>
+                            <td>6 - 10</td>
+                            <td class="negative">-6</td>
+                            <td>16 - 22</td>
+                        </tr>
+                        <tr class="elimination-zone">
+                            <td class="rank">7</td>
+                            <td><img src="img/logo-rrq.png" alt="RRQ" class="team-logo">RRQ HOSHI</td>
+                            <td><strong>6</strong></td>
+                            <td>6 - 10</td>
+                            <td class="negative">-7</td>
+                            <td>15 - 22</td>
+                        </tr>
+                        <tr class="elimination-zone">
+                            <td class="rank">8</td>
+                            <td><img src="img/logo-geek.png" alt="GEEK FAM" class="team-logo">GEEK FAM</td>
+                            <td><strong>5</strong></td>
+                            <td>5 - 11</td>
+                            <td class="negative">-11</td>
+                            <td>12 - 23</td>
+                        </tr>
+                        <tr class="elimination-zone">
+                            <td class="rank">9</td>
+                            <td><img src="img/logo-liquid.png" alt="TL" class="team-logo">TEAM LIQUID ID</td>
+                            <td><strong>4</strong></td>
+                            <td>4 - 12</td>
+                            <td class="negative">-13</td>
+                            <td>13 - 26</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </body>
+    </html>
