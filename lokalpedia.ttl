@@ -3341,7 +3341,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
 ###  http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/Theo
 :Theo rdf:type owl:NamedIndividual ;
       :Roles "Head Coach" ;
-      :hasFoto "https://cdn5.vistek.id/season16/foto%20player/unt/Coach%20Theo%20%28Coach%29_Full%20Body_Crop_02.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO00ECUAXGCNWBJAD992%2F20251123%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20251123T053100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Signature=36779638463e5386a4c48fbac08049a4d9f8541ec858151b6e2eeeebdfc7c1b8" ;
+      :hasFoto "https://liquipedia.net/commons/images/b/b2/DXS_Theo_S15.png" ;
       :hasNationality "Philippines" ;
       :hasRealName "John Theo Guinto Eusebio" ;
       :playerInfo "John \"Theo\" Eusebio is a Filipino Coach who is currently working for Untitled Esports as a Coach." .
