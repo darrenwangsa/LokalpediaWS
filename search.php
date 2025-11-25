@@ -23,8 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 }
 
 $keyword = strtolower($searchInput);
-// Ambil hasil SPARQL
+// connect JENA
 $endpoint = "http://localhost:3030/lokalpedia22/sparql";
+
+// Query for ALL CATEGORIES
 $sparqlQuery0 = <<<SPARQL
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -32,22 +34,34 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
 
 SELECT DISTINCT 
-?team
+(REPLACE(STR(?team), "^.*/", "") AS ?teams)
 ?teamName 
-?hasName
-(REPLACE(STR(?player), "^.*/", "") AS ?playerShort)
+?teamAddName
+?linkFoto
+(REPLACE(STR(?player), "^.*/", "") AS ?playerNickname)
 ?realName
-(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionShort) WHERE {{
+(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionName) WHERE {{
   ?team a ?competition ;
         :teamName ?teamName ;
-        :hasName ?hasName .
+        :hasName ?teamAddName .
+    OPTIONAL {
+    ?team :hasFoto ?linkFoto .
+    }
   }
   UNION
   {
-    ?player :hasRealName ?realName .
+    {
+    ?player :playerOf ?p .
+    }UNION
+    {
+    ?player :staffOf ?p .
+  	}
     OPTIONAL{
-    ?player :hasFoto ?linkFoto .
+    ?player :hasRealName ?realName .
     }
+  	OPTIONAL {
+  	?player :hasFoto ?linkFoto .
+    } 
   }
   UNION
   {
@@ -55,26 +69,108 @@ SELECT DISTINCT
       ?headTour rdfs:subClassOf :InternationalTour .
       ?competitions rdfs:subClassOf ?headTour .
     
-      FILTER NOT EXISTS {
-        ?child rdfs:subClassOf ?competitions .
-        FILTER(?child != ?competitions)
-      }
-    } UNION
+      
+      } UNION
     {
       ?regionTour rdfs:subClassOf :RegionalTour .
       ?headTour rdfs:subClassOf ?regionTour .
       ?competitions rdfs:subClassOf ?headTour .
-    
-    	FILTER NOT EXISTS {
+    } FILTER NOT EXISTS {
         ?child rdfs:subClassOf ?competitions .
         FILTER(?child != ?competitions)
-    }
-  }
+  		}
 }
 }
 SPARQL;
 
-$response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery0) . "&format=json");
+// Query for TEAMS
+$sparqlQuery1 = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+SELECT DISTINCT 
+(REPLACE(STR(?team), "^.*/", "") AS ?teams)
+?teamName 
+?teamAddName
+?linkFoto
+WHERE {{
+  ?team a ?competition ;
+        :teamName ?teamName ;
+        :hasName ?teamAddName .
+    OPTIONAL {
+    ?team :hasFoto ?linkFoto .
+    }
+  }
+}
+SPARQL;
+
+// Query for PLAYERS
+$sparqlQuery2 = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+SELECT DISTINCT 
+?linkFoto
+(REPLACE(STR(?player), "^.*/", "") AS ?playerNickname)
+?realName
+WHERE {{
+    ?player :playerOf ?p .
+    }UNION
+    {
+    ?player :staffOf ?p .
+  	}
+    OPTIONAL{
+    ?player :hasRealName ?realName .
+    }
+  	OPTIONAL {
+  	?player :hasFoto ?linkFoto .
+  	}
+  
+}
+SPARQL;
+
+//  Query utk COMPETITIONS
+$sparqlQuery3 = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+SELECT DISTINCT 
+(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionName) WHERE {
+    {
+      ?headTour rdfs:subClassOf :InternationalTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    
+     
+      } UNION
+    {
+      ?regionTour rdfs:subClassOf :RegionalTour .
+      ?headTour rdfs:subClassOf ?regionTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    } FILTER NOT EXISTS {
+        ?child rdfs:subClassOf ?competitions .
+        FILTER(?child != ?competitions)
+}
+}
+SPARQL;
+
+
+if ($category == 0){
+    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery0) . "&format=json");
+} elseif ($category == 1){
+    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery1) . "&format=json");
+} elseif ($category == 2){
+    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery2) . "&format=json");
+} elseif ($category == 3){
+    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery3) . "&format=json");
+} else{
+    $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQuery0) . "&format=json");
+}
 $data = json_decode($response, true);
 
 // Hitung skor berurut
@@ -82,10 +178,11 @@ $results = [];
 foreach ($data['results']['bindings'] as $row) {
     // Ambil semua field
     $teamName = strtolower($row['teamName']['value'] ?? '');
-    $hasName = strtolower($row['hasName']['value'] ?? '');
-    $playerShort = strtolower($row['playerShort']['value'] ?? '');
+    $teamAddName = strtolower($row['teamAddName']['value'] ?? '');
+    $playerNickname = strtolower($row['playerNickname']['value'] ?? '');
     $realName = strtolower($row['realName']['value'] ?? '');
-    $competitionShort = strtolower($row['competitionShort']['value'] ?? '');
+    $competitionName = strtolower($row['competitionName']['value'] ?? '');
+    $linkFoto = strtolower($row['linkFoto']['value'] ?? '');
 
     // Fungsi hitung skor berdasarkan posisi huruf (case-insensitive)
     $calculateScore = function($fieldValue) use ($keyword) {
@@ -106,23 +203,24 @@ foreach ($data['results']['bindings'] as $row) {
 
     // Hitung skor tiap field
     $scoreTeamName = $calculateScore($teamName);
-    $scoreHasName = $calculateScore($hasName);
-    $scorePlayer = $calculateScore($playerShort);
+    $scoreteamAddName = $calculateScore($teamAddName);
+    $scorePlayer = $calculateScore($playerNickname);
     $scoreRealName = $calculateScore($realName);
-    $scoreCompetition = $calculateScore($competitionShort);
+    $scoreCompetition = $calculateScore($competitionName);
 
     // Skor maksimum yang akan digunakan untuk urutan
-    $scores = [$scoreTeamName, $scoreHasName, $scorePlayer, $scoreRealName, $scoreCompetition];
+    $scores = [$scoreTeamName, $scoreteamAddName, $scorePlayer, $scoreRealName, $scoreCompetition];
     $minScore = min(array_filter($scores, fn($s) => $s >= 0)); // abaikan field kosong (-1)
 
     $results[] = [
         'teamName' => $row['teamName']['value'] ?? '',
-        'hasName' => $row['hasName']['value'] ?? '',
-        'playerShort' => $row['playerShort']['value'] ?? '',
+        'teamAddName' => $row['teamAddName']['value'] ?? '',
+        'playerNickname' => $row['playerNickname']['value'] ?? '',
         'realName' => $row['realName']['value'] ?? '',
-        'competitionShort' => $row['competitionShort']['value'] ?? '',
+        'competitionName' => $row['competitionName']['value'] ?? '',
+        'linkFoto' => $row['linkFoto']['value'] ?? '',
         'scoreTeamName' => $scoreTeamName,
-        'scoreHasName' => $scoreHasName,
+        'scoreteamAddName' => $scoreteamAddName,
         'scorePlayer' => $scorePlayer,
         'scoreRealName' => $scoreRealName,
         'scoreCompetition' => $scoreCompetition,
@@ -135,21 +233,25 @@ usort($results, function($a, $b) {
     return $a['minScore'] <=> $b['minScore'];
 });
 
-// Tampilkan hasil
 foreach ($results as $r) {
+    
+
+// if($count >= $limit){
+//     break;
+// }
     echo "<div style='margin-bottom:10px; padding:5px; border:1px solid #000;'>";
 
     if (!empty($r['teamName'])) {
         echo "<strong>Team:</strong> " . htmlspecialchars($r['teamName']);
         echo " <em>(score: " . $r['scoreTeamName'] . ")</em>";
-        if (!empty($r['hasName'])) {
-            echo " (" . htmlspecialchars($r['hasName']) . " <em>score: " . $r['scoreHasName'] . "</em>)";
+        if (!empty($r['teamAddName'])) {
+            echo " (" . htmlspecialchars($r['teamAddName']) . " <em>score: " . $r['scoreteamAddName'] . "</em>)";
         }
         echo "<br>";
     }
 
-    if (!empty($r['playerShort'])) {
-        echo "<strong>Player:</strong> " . htmlspecialchars($r['playerShort']);
+    if (!empty($r['playerNickname'])) {
+        echo "<strong>Player:</strong> " . htmlspecialchars($r['playerNickname']);
         if (!empty($r['realName'])) {
             echo " (" . htmlspecialchars($r['realName']) . ")";
         }
@@ -157,9 +259,13 @@ foreach ($results as $r) {
         echo "<br>";
     }
 
-    if (!empty($r['competitionShort'])) {
-        echo "<strong>Competition:</strong> " . htmlspecialchars($r['competitionShort']);
+    if (!empty($r['competitionName'])) {
+        echo "<strong>Competition:</strong> " . htmlspecialchars($r['competitionName']);
         echo " <em>score: " . $r['scoreCompetition'] . "</em>";
+        echo "<br>";
+    }
+    if (!empty($r['linkFoto'])) {
+        echo "<strong>Link:</strong> " . htmlspecialchars($r['linkFoto']);
         echo "<br>";
     }
 
@@ -214,8 +320,8 @@ foreach ($results as $r) {
 									<select class="input-select" name="category">
 										<option value="0">All Categories</option>
 										<option value="1">Teams</option>
-										<option value="2">Competition</option>
-										<option value="3">Players</option>
+										<option value="2">Players & Staff</option>
+										<option value="3">Competition</option>
 									</select>
 									<input class="input" name="search" placeholder="Search here">
 									<button class="search-btn" type="submit">Search</button>
