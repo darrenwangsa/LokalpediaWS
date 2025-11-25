@@ -3195,7 +3195,7 @@ Sanji is the third player to win M World Championship in his debut season. (the 
                    :SaintDeLucaz ;
          :RankMPL 9 ;
          :hasFoto "https://liquipedia.net/commons/images/thumb/0/0d/Team_Liquid_Aura_full_darkmode.png/900px-Team_Liquid_Aura_full_darkmode.png" ;
-         :hasRealName "Team Liquid ID" ;
+         :hasName "Team Liquid ID" ;
          :teamName "Team Liquid ID" .
 
 
