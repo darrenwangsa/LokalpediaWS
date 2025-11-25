@@ -52,7 +52,7 @@ foreach ($data['results']['bindings'] as $row) {
     $competitionPng = $row['competitionPng']['value'] ?? '';
     $typeCompetition = $row['typeCompetition']['value'] ?? '';
 }
-echo $idCompetition . $competitionName . $competitionPng . $typeCompetition;
+// echo $idCompetition . $competitionName . $competitionPng . $typeCompetition;
 
 $sparqlQueryTeamsPerCompetitions = <<<SPARQL
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -497,8 +497,8 @@ usort($results, function($a, $b) {
                             usort($results, function($a, $b) {
                                 return $a['rankMPL'] <=> $b['rankMPL'];
                             });
+                            echo '  <div style="display: flex; flex-direction: column; gap: 15px; font-size: 1em; color:#2c3e50; text-align:left;">';
                             foreach($results as $r){
-                                echo '  <div style="display: flex; flex-direction: column; gap: 15px; font-size: 1em; color:#2c3e50; text-align:left;">';
                                 if ($r['rankMPL'] == "1" || $r['rankMPL'] == "2"){
                                     if($r['rankMPL'] == "1"){
                                     echo '    <div style="display: flex; align-items: center; gap: 10px;">
@@ -512,8 +512,8 @@ usort($results, function($a, $b) {
                                             </div>';
                                         }
                                     }
-                                echo    '</div>';
-                            }
+                                }
+                            echo    '</div>';
                         }
 
                         echo '  <div style="text-align: center;">
@@ -613,7 +613,54 @@ usort($results, function($a, $b) {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="playoff-zone">
+
+                        <?php
+                        if($typeCompetition == "InternationalTour"){
+                            usort($results, function($a, $b) {
+
+                                // Ambil angka pertama dari string
+                                preg_match('/\d+/', $a['rankInternational'], $matchA);
+                                preg_match('/\d+/', $b['rankInter'], $matchB);
+                            
+                                $numA = isset($matchA[0]) ? intval($matchA[0]) : PHP_INT_MAX;
+                                $numB = isset($matchB[0]) ? intval($matchB[0]) : PHP_INT_MAX;
+                            
+                                return $numA <=> $numB;
+                            });
+                        } elseif ($typeCompetition == "RegionalTour") {
+                            usort($results, function($a, $b) {
+
+                                // Ambil angka pertama dari string
+                                preg_match('/\d+/', $a['rankMPL'], $matchA);
+                                preg_match('/\d+/', $b['rankMPL'], $matchB);
+                            
+                                $numA = isset($matchA[0]) ? intval($matchA[0]) : PHP_INT_MAX;
+                                $numB = isset($matchB[0]) ? intval($matchB[0]) : PHP_INT_MAX;
+                            
+                                return $numA <=> $numB;
+                            });                            
+                            foreach($results as $r){
+                                if(!empty($r['rankMPL'])){
+                                    if ($r['rankMPL'] < "7") {
+                                        echo '  <tr class="playoff-zone">
+                                                    <td class="rank">' . htmlspecialchars($r['rankMPL']) . '</td>
+                                                    <td><img src="img/' . htmlspecialchars($r['teamFront']) . '.png" alt="' . htmlspecialchars($r['teamName']) . ' Logo" class="team-logo">' . htmlspecialchars($r['teamFront']) . '</td>
+                                                </tr>';
+                                    }
+                                    elseif ($r['rankMPL'] > "6") {
+                                        echo '  <tr class="elimination-zone">
+                                                    <td class="rank">' . htmlspecialchars($r['rankMPL']) . '</td>
+                                                    <td><img src="img/' . htmlspecialchars($r['teamFront']) . '.png" alt="' . htmlspecialchars($r['teamName']) . ' Logo" class="team-logo">' . htmlspecialchars($r['teamFront']) . '</td>
+                                                </tr>';
+                                    }
+                                }
+                            }
+                        }
+
+                        
+                        ?>
+
+                        <!-- <tr class="playoff-zone">
                             <td class="rank">1</td>
                             <td><img src="img/logo-onic.png" alt="ONIC" class="team-logo">ONIC</td>
                         </tr>
@@ -648,7 +695,9 @@ usort($results, function($a, $b) {
                         <tr class="elimination-zone">
                             <td class="rank">9</td>
                             <td><img src="img/logo-liquid.png" alt="TL" class="team-logo">TEAM LIQUID ID</td>
-                        </tr>
+                        </tr> -->
+
+
                     </tbody>
                 </table>
             </div>

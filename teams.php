@@ -563,7 +563,7 @@ usort($results, function($a, $b) {
                                             <span class="detail-label">Playing At</span>
                                             <span class="detail-value">' . $competitionNames . '</span>
                                         </div>
-                                        <a href="/lokalpediaanan/Teams/details/detailTeams.php#' . htmlspecialchars($r['idTeam']) . '">
+                                        <a href="/lokalpediaanan/detailTeams.php#' . htmlspecialchars($r['idTeam']) . '">
                                             <div class ="detail-row">
                                                 <span class="more-detail-label">More Details</span>
                                             </div>

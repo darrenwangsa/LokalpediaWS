@@ -1,5 +1,6 @@
 <?php
 $idSubject = $_GET['id'] ?? null;
+$competitionName = "";
 
 // connect JENA
 $endpoint = "http://localhost:3030/lokalpedia22/sparql";

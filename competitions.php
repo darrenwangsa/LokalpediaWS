@@ -369,10 +369,10 @@ $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQueryComp
 
 					echo '	<section class="league-section" id="' . $idCompetition . '">
 								<div class="league-header">
-									<a href="/localpediaanan/Competitions/details/detailCompetitions.php#' . $idCompetition . '" style="text-decoration:none; color:inherit;">' . 
+									<a href="/localpediaanan/detailCompetitions.php#' . $idCompetition . '" style="text-decoration:none; color:inherit;">' . 
 										'<img src="./img/' . $idCompetition . '.png" class="league-logo" onerror="this.src=' . "'img/alternative.png'" . ';">
 									</a>';
-					echo '			<a href="/localpediaanan/Competitions/details/detailCompetitions.php#' . $idCompetition . '" style="text-decoration:none; color:inherit;">' . '
+					echo '			<a href="/localpediaanan/detailCompetitions.php#' . $idCompetition . '" style="text-decoration:none; color:inherit;">' . '
 										<div class="league-title">' . $competitionName . '</div>
 									</a>
 								</div>
@@ -397,7 +397,7 @@ $response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQueryComp
 						$teamAddName = htmlspecialchars($t['teamAddName']);
 						$region = htmlspecialchars($t['region']);
 
-						echo '	<a href="/localpediaanan/Teams/details/detailTeams.php#' . $idTeam . '" style="text-decoration:none; color:inherit;">' . 
+						echo '	<a href="/localpediaanan/detailTeams.php#' . $idTeam . '" style="text-decoration:none; color:inherit;">' . 
 								'	<div class="team-card">
 										<div class="team-header">' . $teamName . 
 										'	<img src="https://flagcdn.com/w40/' . $region . '.png" class="team-flag" onerror="this.src=' . "'img/alternative.png'" . ';">  

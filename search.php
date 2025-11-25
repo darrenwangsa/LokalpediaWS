@@ -42,7 +42,8 @@ SELECT DISTINCT
 (REPLACE(STR(?player), "^.*/", "") AS ?playerNickname)
 ?realName
 (REPLACE(STR(?competitions), "^.*/", "") AS ?idCompetition)
-(REPLACE(REPLACE(STR(?competitions), "^.*[/#]", ""), "_", " ") AS ?competitionName) WHERE {{
+(REPLACE(REPLACE(STR(?competitions), "^.*[/#]", ""), "_", " ") AS ?competitionName)
+(REPLACE(STR(?idCompetition), "[0-9]+$", "") AS ?competitionFront) WHERE {{
   ?team a ?competition ;
         :teamName ?teamName ;
         :hasName ?teamAddName .
@@ -146,7 +147,8 @@ PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-1
 
 SELECT DISTINCT 
 (REPLACE(STR(?competitions), "^.*/", "") AS ?idCompetition)
-(REPLACE(REPLACE(STR(?competitions), "^.*[/#]", ""), "_", " ") AS ?competitionName) WHERE {
+(REPLACE(REPLACE(STR(?competitions), "^.*[/#]", ""), "_", " ") AS ?competitionName)
+(REPLACE(STR(?idCompetition), "[0-9]+$", "") AS ?competitionFront) WHERE {
     {
       ?headTour rdfs:subClassOf :InternationalTour .
       ?competitions rdfs:subClassOf ?headTour .
@@ -190,7 +192,7 @@ foreach ($data['results']['bindings'] as $row) {
     $realName = strtolower($row['realName']['value'] ?? '');
     $idCompetition = strtolower($row['idCompetition']['value'] ?? '');
     $competitionName = strtolower($row['competitionName']['value'] ?? '');
-    $linkFoto = strtolower($row['linkFoto']['value'] ?? '');
+    $competitionFront = strtolower($row['competitionFront']['value'] ?? '');
 
     // Fungsi hitung skor berdasarkan posisi huruf (case-insensitive)
     $calculateScore = function($fieldValue) use ($keyword) {
@@ -229,6 +231,7 @@ foreach ($data['results']['bindings'] as $row) {
         'realName' => $row['realName']['value'] ?? '',
         'idCompetition' => $row['idCompetition']['value'] ?? '',
         'competitionName' => $row['competitionName']['value'] ?? '',
+        'competitionFront' => $row['competitionFront']['value'] ?? '',
         'scoreTeamName' => $scoreTeamName,
         'scoreteamAddName' => $scoreteamAddName,
         'scorePlayer' => $scorePlayer,
@@ -444,7 +447,7 @@ usort($results, function($a, $b) {
                             }
                         
                             if (!empty($r['idCompetition'])) {
-                                echo htmlspecialchars($r['idCompetition']);
+                                echo htmlspecialchars($r['competitionFront']);
                             }
                         echo '.png" alt="Thumbnail Image" style="width: 100%; height: 100%; object-fit: contain;">
                             </div>';
