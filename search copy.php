@@ -34,19 +34,16 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
 
 SELECT DISTINCT 
-?teams
-(REPLACE(STR(?teams), "_.*$", "")AS ?teamFront)
+(REPLACE(STR(?team), "^.*/", "") AS ?teams)
 ?teamName 
 ?teamAddName
 ?linkFoto
 (REPLACE(STR(?player), "^.*/", "") AS ?playerNickname)
 ?realName
-(REPLACE(STR(?competitions), "^.*/", "") AS ?idCompetition)
-(REPLACE(REPLACE(STR(?competitions), "^.*[/#]", ""), "_", " ") AS ?competitionName) WHERE {{
+(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionName) WHERE {{
   ?team a ?competition ;
         :teamName ?teamName ;
         :hasName ?teamAddName .
-  BIND(REPLACE(STR(?team), "^.*/", "") AS ?teams)
     OPTIONAL {
     ?team :hasFoto ?linkFoto .
     }
@@ -94,15 +91,14 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
 
 SELECT DISTINCT 
-?teams
-(REPLACE(STR(?teams), "_.*$", "")AS ?teamFront)
+(REPLACE(STR(?team), "^.*/", "") AS ?teams)
 ?teamName 
 ?teamAddName
+?linkFoto
 WHERE {{
   ?team a ?competition ;
         :teamName ?teamName ;
         :hasName ?teamAddName .
-  BIND(REPLACE(STR(?team), "^.*/", "") AS ?teams)
     OPTIONAL {
     ?team :hasFoto ?linkFoto .
     }
@@ -145,8 +141,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
 
 SELECT DISTINCT 
-(REPLACE(STR(?competitions), "^.*/", "") AS ?idCompetition)
-(REPLACE(REPLACE(STR(?competitions), "^.*[/#]", ""), "_", " ") AS ?competitionName) WHERE {
+(REPLACE(STR(?competitions), "^.*/", "") AS ?competitionName) WHERE {
     {
       ?headTour rdfs:subClassOf :InternationalTour .
       ?competitions rdfs:subClassOf ?headTour .
@@ -183,12 +178,10 @@ $results = [];
 foreach ($data['results']['bindings'] as $row) {
     // Ambil semua field
     $teams = strtolower($row['teams']['value'] ?? '');
-    $teamFront = strtolower($row['teamFront']['value'] ?? '');
     $teamName = strtolower($row['teamName']['value'] ?? '');
     $teamAddName = strtolower($row['teamAddName']['value'] ?? '');
     $playerNickname = strtolower($row['playerNickname']['value'] ?? '');
     $realName = strtolower($row['realName']['value'] ?? '');
-    $idCompetition = strtolower($row['idCompetition']['value'] ?? '');
     $competitionName = strtolower($row['competitionName']['value'] ?? '');
     $linkFoto = strtolower($row['linkFoto']['value'] ?? '');
 
@@ -214,7 +207,7 @@ foreach ($data['results']['bindings'] as $row) {
     $scoreteamAddName = $calculateScore($teamAddName);
     $scorePlayer = $calculateScore($playerNickname);
     $scoreRealName = $calculateScore($realName);
-    $scoreCompetition = $calculateScore($idCompetition);
+    $scoreCompetition = $calculateScore($competitionName);
 
     // Skor maksimum yang akan digunakan untuk urutan
     $scores = [$scoreTeamName, $scoreteamAddName, $scorePlayer, $scoreRealName, $scoreCompetition];
@@ -222,13 +215,12 @@ foreach ($data['results']['bindings'] as $row) {
 
     $results[] = [
         'teams' => $row['teams']['value'] ?? '',
-        'teamFront' => $row['teamFront']['value'] ?? '',
         'teamName' => $row['teamName']['value'] ?? '',
         'teamAddName' => $row['teamAddName']['value'] ?? '',
         'playerNickname' => $row['playerNickname']['value'] ?? '',
         'realName' => $row['realName']['value'] ?? '',
-        'idCompetition' => $row['idCompetition']['value'] ?? '',
         'competitionName' => $row['competitionName']['value'] ?? '',
+        'linkFoto' => $row['linkFoto']['value'] ?? '',
         'scoreTeamName' => $scoreTeamName,
         'scoreteamAddName' => $scoreteamAddName,
         'scorePlayer' => $scorePlayer,
@@ -394,90 +386,19 @@ usort($results, function($a, $b) {
             <div class="search-query"><h2>🔍<strong id="search-term"> <?php echo "Hasil Pencarian untuk '$searchInput'" ?> </strong> </h2></div>
         </div>
 
-        <h2 class="result-title">Closest Match</h2>
+
         <div id="main-resultt">
-
-
-            <?php 
-                $limit = 1;
-                $count = 0;
-                foreach ($results as $r) {
-                    if($count >= $limit){
-                        break;
-                    }
-                    $categories = "All Categories";
-                    if (!empty($r['teamName'])) {
-                        $categories = "Teams";
-                    }
-                
-                    if (!empty($r['playerNickname'])) {
-                        $categories = "Players";
-                    }
-                
-                    if (!empty($r['idCompetition'])) {
-                        $categories = "Competitions";
-                    }
-
-                    echo '<a href="/lokalpediaanan/detail' . $categories . '.php#';
-                    if (!empty($r['teamName'])) {
-                        echo htmlspecialchars($r['teams']);
-                    }
-                
-                    if (!empty($r['playerNickname'])) {
-                        echo htmlspecialchars($r['playerNickname']);
-                    }
-                
-                    if (!empty($r['idCompetition'])) {
-                        echo htmlspecialchars($r['idCompetition']);
-                    }
-                        echo '" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 20px; padding: 0; overflow: hidden; font-family: Arial, sans-serif;">';
-                        echo'<div style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 20px; padding: 0; overflow: hidden; font-family: Arial, sans-serif;">';
-
-                        echo '<div style="width: 100%; height: 25vh;">
-                            <img src="./img/'; 
-                            if (!empty($r['teamName'])) {
-                                echo htmlspecialchars($r['teamFront']);
-                            }
-                        
-                            if (!empty($r['playerNickname'])) {
-                                echo htmlspecialchars($r['playerNickname']);
-                            }
-                        
-                            if (!empty($r['idCompetition'])) {
-                                echo htmlspecialchars($r['idCompetition']);
-                            }
-                        echo '.png" alt="Thumbnail Image" style="width: 100%; height: 100%; object-fit: contain;">
-                            </div>';
-
-                        if (!empty($r['teamName'])) {
-                            echo '<div style="padding: 15px; background-color: #f0f0f0;">
-                            <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #333;">' . htmlspecialchars($r['teamName']) . '</h3>
-                            <p style="margin: 0; font-size: 14px; color: #666; line-height: 1.5;">' . $categories . '</p>
-                            </div>'; 
-                        }
-                    
-                        if (!empty($r['playerNickname'])) {
-                            echo '<div style="padding: 15px; background-color: #f0f0f0;">
-                                <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #333;">' . htmlspecialchars($r['playerNickname']) . '</h3>
-                                <p style="margin: 0; font-size: 14px; color: #666; line-height: 1.5;">' . $categories . '</p>
-                                </div>'; 
-                        }
-                    
-                        if (!empty($r['competitionName'])) {
-                            echo '<div style="padding: 15px; background-color: #f0f0f0;">
-                            <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #333;">' . htmlspecialchars($r['competitionName']) . '</h3>
-                            <p style="margin: 0; font-size: 14px; color: #666; line-height: 1.5;">' . $categories . '</p>
-                            </div>'; 
-                        }
-
-                        
-                    
-                        // echo "<strong>Score:</strong> " . $r['minScore'];
-                        echo "</div></a>";
-                        $count++;
-                    }
-            ?>
-
+            <a href="/lokalpediaanan/Competitions/details/detailCompetitions.php#M7" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 20px; padding: 0; overflow: hidden; font-family: Arial, sans-serif;">
+            <div style="width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 20px; padding: 0; overflow: hidden; font-family: Arial, sans-serif;">
+                <div style="width: 100%; height: 25vh;">
+                    <img src="./img/M7.png" alt="Thumbnail Image" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div style="padding: 15px; background-color: #f0f0f0;">
+                    <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #333;">M7</h3>
+                        <p style="margin: 0; font-size: 14px; color: #666; line-height: 1.5;">Competitions</p>
+                </div>
+            </div>
+            </a>
         </div>
 
         <h2 class="result-title">Hasil Lainnya</h2>
@@ -513,7 +434,7 @@ usort($results, function($a, $b) {
                 }
 
                 // Sesuaikan width kartu agar 5 kartu muat horizontal (misalnya 18% untuk margin)
-                echo '<a href="/lokalpediaanan/detail' . $categories . '.php#';
+                echo '<a href="/lokalpediaanan/' . $categories . '/details/detail' . $categories . '.php#';
                     if (!empty($r['teamName'])) {
                         echo htmlspecialchars($r['teams']);
                     }
@@ -522,8 +443,8 @@ usort($results, function($a, $b) {
                         echo htmlspecialchars($r['playerNickname']);
                     }
                 
-                    if (!empty($r['idCompetition'])) {
-                        echo htmlspecialchars($r['idCompetition']);
+                    if (!empty($r['competitionName'])) {
+                        echo htmlspecialchars($r['competitionName']);
                     }
                     echo '" style="text-decoration: none; color: inherit; display: inline-block; flex: 1 1 18%; margin: 10px;">'; // Gunakan flex untuk kontrol lebar
                     
@@ -531,20 +452,8 @@ usort($results, function($a, $b) {
                     echo '<div style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 0; overflow: hidden; font-family: Arial, sans-serif;">';
 
                     echo '<div style="width: 100%; height: 25vh;">
-                            <img src="./img/'; 
-                            if (!empty($r['teamName'])) {
-                                echo htmlspecialchars($r['teamFront']);
-                            }
-                        
-                            if (!empty($r['playerNickname'])) {
-                                echo htmlspecialchars($r['playerNickname']);
-                            }
-                        
-                            if (!empty($r['idCompetition'])) {
-                                echo htmlspecialchars($r['idCompetition']);
-                            }
-                        echo '.png" alt="Thumbnail Image" style="width: 100%; height: 100%; object-fit: contain;">
-                            </div>';
+                        <img src="./img/' . htmlspecialchars($r['teams']) . '.png" alt="Thumbnail Image" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>';
 
                     if (!empty($r['teamName'])) {
                         echo '<div style="padding: 15px; background-color: #f0f0f0;">

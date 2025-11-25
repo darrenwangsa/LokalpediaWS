@@ -1,10 +1,118 @@
+<?php
+$idSubject = $_GET['id'] ?? null;
+
+// connect JENA
+$endpoint = "http://localhost:3030/lokalpedia22/sparql";
+
+$sparqlQueryDetailPlayers = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+SELECT DISTINCT 
+?idPlayer
+?realName
+(REPLACE(STR(?idTeam), "_.*$", "") AS ?teamFront)
+?teamName
+?role
+?desc
+?nationality
+(REPLACE(STR(?age), "^.*/", "") AS ?ages)
+WHERE {{
+    ?player :playerOf ?team .
+    
+    }
+    ?team :teamName ?teamName
+    OPTIONAL{
+    ?player :hasRealName ?realName .
+    }
+  	OPTIONAL{
+    ?player :playerInfo ?desc .
+    }
+  	OPTIONAL {
+  	?player :Roles ?role .
+  	}
+    OPTIONAL {
+  	?player :hasName ?role .
+  	}
+    OPTIONAL {
+  	?player :hasNationality ?nationality .
+  	}
+    OPTIONAL {
+  	?player :hasAge ?age .
+  	}
+  BIND(REPLACE(STR(?team), "^.*/", "") AS ?idTeam)
+  BIND(REPLACE(STR(?player), "^.*/", "") AS ?idPlayer)
+  FILTER(CONTAINS(?idPlayer,"Moreno"))
+}
+SPARQL;
+
+$response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQueryDetailPlayers) . "&format=json");
+$data = json_decode($response, true);
+
+foreach ($data['results']['bindings'] as $row) {
+    // Ambil semua field
+    $idPlayer = $row['idPlayer']['value'] ?? '';
+    $realName = $row['realName']['value'] ?? '';
+    $teamFront = $row['teamFront']['value'] ?? '';
+    $teamName = $row['teamName']['value'] ?? '';
+    $role = $row['role']['value'] ?? '';
+    $desc = $row['desc']['value'] ?? '';
+    $nationality = $row['nationality']['value'] ?? '';
+    $ages = $row['ages']['value'] ?? '';
+}
+
+$sparqlQueryTeamsPerCompetitions = <<<SPARQL
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+    SELECT DISTINCT 
+    ?idTeam
+    ?teamName 
+    (REPLACE(STR(?idTeam), "_.*$", "")AS ?teamFront)
+    ?teamAddName
+    (REPLACE(REPLACE(STR(?idTeam), "^.*_", ""),  "[0-9]+", "")AS ?region)
+    WHERE {{
+    ?team a ?competition ;
+            :teamName ?teamName ;
+            :hasName ?teamAddName .
+        BIND(REPLACE(STR(?team), "^.*/", "") AS ?idTeam)
+        BIND(REPLACE(REPLACE(STR(?competition), "^.*[/#]", ""), "_", " ") AS ?competitionName)
+        FILTER(CONTAINS(?competitionName, "$competitionName"))
+    }
+    }
+SPARQL;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RInz - Player Profile</title>
+    <title>Player Profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="css/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+
     <style>
         * {
             margin: 0;
@@ -15,7 +123,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            padding: 60px 40px;
+            /* padding: 60px 40px; */
             min-height: 100vh;
             position: relative;
         }
@@ -34,12 +142,13 @@
             z-index: 0;
         }
 
-        .container {
+        .con {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 420px;
             gap: 80px;
+            padding : 60px 40px;
             align-items: start;
             position: relative;
             z-index: 1;
@@ -233,7 +342,7 @@
             letter-spacing: 1px;
         }
 
-        .player-image-container {
+        .player-image-con {
             background:
                 linear-gradient(to bottom,
                     transparent 0%,
@@ -259,7 +368,7 @@
             position: relative;
         }
 
-        .player-image-container::before {
+        .player-image-con::before {
             content: '';
             position: absolute;
             top: 0;
@@ -277,7 +386,7 @@
             transition: transform 0.5s ease;
         }
 
-        .player-image-container:hover .player-image {
+        .player-image-con:hover .player-image {
             transform: scale(1.05);
         }
 
@@ -291,7 +400,7 @@
         }
 
         @media (max-width: 1200px) {
-            .container {
+            .con {
                 grid-template-columns: 1fr;
                 gap: 60px;
             }
@@ -331,7 +440,7 @@
                 font-size: 16px;
             }
 
-            .player-image-container {
+            .player-image-con {
                 height: 450px;
             }
 
@@ -356,46 +465,73 @@
     </style>
 </head>
 
+<script>
+const hash = window.location.hash.substring(1); // ambil setelah "#"
+
+if (hash) {
+    // redirect ulang dengan parameter GET
+    window.location.href = "?id=" + encodeURIComponent(hash);
+}
+</script>
+
 <body>
-    <div class="container">
+    <?php include'header.php' ?>
+    <div class="con">
+        <?php
+        
+        ?>
         <div class="info-section">
             <div class="decorative-line"></div>
 
             <p class="intro-text">
-                Hajirin "Rinz" Arafat (born January 28, 2004) is an <span class="highlight">Indonesian</span> player who
-                is currently playing as a Mid Laner for <span class="highlight">RRQ Hoshi</span>.
+                <?php
+                    if(!empty($desc)){
+                        echo $desc;
+                    } else{
+                        echo "The Description of this player is unavailable.";
+                    }
+
+                ?>
             </p>
 
             <div class="details-list">
-                <div class="detail-row">
-                    <span class="detail-label">Name</span>
-                    <span class="detail-value">Hajirin Arafat</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Nationality</span>
-                    <span class="detail-value highlight">Indonesia</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Age</span>
-                    <span class="detail-value">21</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Role</span>
-                    <span class="detail-value highlight">Mid Laner</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Team</span>
-                    <span class="detail-value highlight">
-                        RRQ Hoshi
-                        <span class="logo-icon">
-                            <img src="img/logo-rrq.png" alt="RRQ Logo">
-                        </span>
-                    </span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Alternate IDs</span>
-                    <span class="detail-value">Rinz Ya</span>
-                </div>
+                <?php
+                    if(!empty($realName)){
+                        echo '  <div class="detail-row">
+                                    <span class="detail-label">Name</span>
+                                    <span class="detail-value">' . $realName . '</span>
+                                </div>';
+                    }
+                    if(!empty($nationality)){
+                        echo '  <div class="detail-row">
+                                    <span class="detail-label">Name</span>
+                                    <span class="detail-value">' . $nationality . '</span>
+                                </div>';
+                    }
+                    if(!empty($ages)){
+                        echo '  <div class="detail-row">
+                                    <span class="detail-label">Name</span>
+                                    <span class="detail-value">' . $ages . '</span>
+                                </div>';
+                    }
+                    if(!empty($role)){
+                        echo '  <div class="detail-row">
+                                    <span class="detail-label">Name</span>
+                                    <span class="detail-value">' . $role . '</span>
+                                </div>';
+                    }
+                    if(!empty($teamName)){
+                        echo '  <div class="detail-row">
+                                    <span class="detail-label">Team</span>
+                                    <span class="detail-value highlight">' .
+                                        $teamName
+                                        . '<span class="logo-icon">
+                                            <img src="img/' . $teamFront . '.png" alt="Team Logo" onerror="' . "this.src='img/alternative.png';" . '">
+                                        </span>
+                                    </span>
+                                </div>';
+                    }
+                ?>
             </div>
         </div>
 
@@ -403,16 +539,27 @@
             <div class="image-header">
                 <div class="logo-box">
                     <span class="logo-symbol">
-                        <img src="img/logo-rrq.png" alt="RRQ Logo">
+                        <?php
+                            echo '<img src="img/' . $teamFront . '.png" alt="Team Logo" onerror="' . "this.src='img/alternative.png';" . '"> </img>';
+                        ?>
                     </span>
                 </div>
-                <span class="player-tag">RInz</span>
+                <span class="player-tag">
+                    <?php
+                        echo $idPlayer;
+                    ?>
+                </span>
             </div>
-            <div class="player-image-container">
-                <img src="playerimg/Alberttt.png" alt="RInz Player Photo" class="player-image">
+            <div class="player-image-con">
+                <?php
+                    echo '<img src="img/' . $idPlayer . '.png" class="player-image" alt="Team Logo" onerror="' . "this.src='img/alternative.png';" . '"> </img>';
+                ?>
             </div>
         </div>
+
+
     </div>
+    <?php include'footer.php' ?>
 </body>
 
 </html>

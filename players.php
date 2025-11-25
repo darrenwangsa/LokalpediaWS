@@ -10,6 +10,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
 
 SELECT DISTINCT 
+?idPlayer
 (REPLACE(STR(?player), "^.*/", "") AS ?playerNickname)
 ?realName
 ?team
@@ -131,7 +132,7 @@ SPARQL;
                 radial-gradient(circle at 20% 30%, rgba(200, 150, 160, 0.1), transparent 50%),
                 radial-gradient(circle at 80% 70%, rgba(200, 150, 160, 0.1), transparent 50%);
             pointer-events: none;
-            z-index: 0;
+            z-index: 0; 
         }
 
         /* #header {
@@ -278,8 +279,6 @@ SPARQL;
             padding-bottom: 8px;
             border-bottom: 1px solid #e0e0e0;
         }
-
-        
 
         .detail-row:last-child {
             border-bottom: none;

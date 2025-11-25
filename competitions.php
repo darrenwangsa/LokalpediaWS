@@ -1,438 +1,429 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+// connect JENA
+$endpoint = "http://localhost:3030/lokalpedia22/sparql";
+$competitionName = "";
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M7 World Championship</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+// Query for searching all Competitions
+$sparqlQueryCompetitions = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
 
-		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-
-		<!-- Slick -->
-		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
-		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
-
-		<!-- nouislider -->
-		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
-
-		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-
-		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-    <style>
-
-        .flag {
-            font-size: 1.2em;
-            margin-right: 8px;
-        }
-
-
-        /* * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        } */
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            /* padding: 40px 20px; */
-            min-height: 100vh;
-        }
-
-        .con {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            color: #f3aa36;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgb(255, 255, 255);
-        }
-
-        .competition-card {
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .competition-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #f3aa36, #f4e5b8, #c9a961);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .card-footer {
-    padding: 15px 20px;
+SELECT DISTINCT 
+(REPLACE(STR(?competitions), "^.*[/#]", "") AS ?idCompetition)
+(REPLACE(REPLACE(STR(?competitions), "^.*[/#]", ""), "_", " ") AS ?competitionName) WHERE {
+    {
+      ?headTour rdfs:subClassOf :InternationalTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    
+     
+      } UNION
+    {
+      ?regionTour rdfs:subClassOf :RegionalTour .
+      ?headTour rdfs:subClassOf ?regionTour .
+      ?competitions rdfs:subClassOf ?headTour .
+    } FILTER NOT EXISTS {
+        ?child rdfs:subClassOf ?competitions .
+        FILTER(?child != ?competitions)
 }
-
-.more-info {
-    color: #3498db;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
 }
+SPARQL;
 
-.more-info:hover {
-    text-decoration: underline;
-}
-
-
-        .tier-badge {
-            background: linear-gradient(135deg, #f3aa36 0%, #f4e5b8 100%);
-            color: #333;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.2em;
-            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
-        }
-
-        .logoImg-section {
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        .logoImg {
-            width: 150px;
-            height: 150px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 10px;
-            box-shadow: 0 8px 20px rgba(201, 169, 97, 0.5);
-            overflow: hidden;
-            padding: 10px;
-        }
-
-        .logoImg img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .tagline {
-            font-style: italic;
-            color: #666;
-            font-size: 0.95em;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .info-section {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .info-section h3 {
-            color: #f3aa36;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-            border-bottom: 2px solid #c9a961;
-            padding-bottom: 8px;
-        }
-
-        .info-item {
-            display: flex;
-            margin-bottom: 12px;
-            line-height: 1.6;
-            align-items: center;
-        }
-
-        .info-label {
-            font-weight: 600;
-            color: #333;
-            min-width: 140px;
-        }
-
-        .info-value {
-            color: #555;
-            flex: 1;
-        }
-
-        .venue-item {
-            background: #f8f9fa;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border-left: 4px solid #f3aa36;
-        }
-
-        .prize-highlight {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #f3aa36;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        .date-highlight {
-            font-weight: 600;
-            color: #f3aa36;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
-            }
-
-            .competition-card {
-                padding: 25px;
-            }
-
-            .logoImg {
-                width: 120px;
-                height: 120px;
-                font-size: 2.5em;
-            }
-
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-        const flagMap = {
-            "id": "🇮🇩",
-            "ph": "🇵🇭",
-            "my": "🇲🇾",
-            "sg": "🇸🇬",
-            "th": "🇹🇭",
-            "vn": "🇻🇳",
-            "mm": "🇲🇲",
-            "kh": "🇰🇭",
-            "la": "🇱🇦"
-        };
-
-        document.querySelectorAll('.info-value').forEach(v => {
-            let text = v.textContent.trim();
-
-            // split berdasarkan koma → dukung banyak lokasi
-            let parts = text.split(',').map(p => p.trim());
-
-            let converted = parts.map(p => {
-                // ambil 2 huruf pertama sebagai kode negara
-                let code = p.slice(0, 2).toLowerCase();
-
-                // ambil teks setelah kode negara
-                let place = p.slice(2).trim();
-
-                // kalau kode ada di flagMap → ubah ke emoji
-                if (flagMap[code]) {
-                    return `<span class="flag">${flagMap[code]}</span> ${place}`;
+$response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQueryCompetitions) . "&format=json");
+                $data = json_decode($response, true);
+                $competitions = [];
+                foreach ($data['results']['bindings'] as $row) {
+                    // Ambil semua field
+                    $competitions[] = [
+                        'idCompetition' => $row['idCompetition']['value'] ?? '',
+                        'competitionName' => $row['competitionName']['value'] ?? ''
+                    ];
+                
                 }
 
-                // kalau tidak dikenal → kembalikan apa adanya
-                return p;
-            });
+				usort($competitions, function($a, $b) {
+                    return $a['competitionName'] <=> $b['competitionName'];
+                });
 
-            // gabungkan ulang pakai koma
-            v.innerHTML = converted.join(', ');
-        });
 
-    });
-</script>
+// foreach ($results as $r) {
+    
+
+// // if($count >= $limit){
+// //     break;
+// // }
+//     echo "<div style='margin-bottom:10px; padding:5px; border:1px solid #000;'>";
+
+//     if (!empty($r['teamName'])) {
+//         echo "<strong>Team:</strong> " . htmlspecialchars($r['teamName']);
+//         echo " <em>(score: " . $r['scoreTeamName'] . ")</em>";
+//         if (!empty($r['teamAddName'])) {
+//             echo " (" . htmlspecialchars($r['teamAddName']) . " <em>score: " . $r['scoreteamAddName'] . "</em>)";
+//         }
+//         echo "<br>";
+//     }
+
+//     if (!empty($r['playerNickname'])) {
+//         echo "<strong>Player:</strong> " . htmlspecialchars($r['playerNickname']);
+//         if (!empty($r['realName'])) {
+//             echo " (" . htmlspecialchars($r['realName']) . ")";
+//         }
+//         echo " <em>score: " . $r['scorePlayer'] . "</em>";
+//         echo "<br>";
+//     }
+
+//     if (!empty($r['competitionName'])) {
+//         echo "<strong>Competition:</strong> " ;
+// 		$competitionName = htmlspecialchars($r['competitionName']);
+// 		$competition = htmlspecialchars($r['idCompetition']);
+// 		echo $competition . "<br>" . $competitionName;
+//         echo "<br>";
+//     }
+//     if (!empty($r['linkFoto'])) {
+//         echo "<strong>Link:</strong> " . htmlspecialchars($r['linkFoto']);
+//         echo "<br>";
+//     }
+
+//     // echo "<strong>Score:</strong> " . $r['minScore'];
+//     echo "</div>";
+// }
+
+?>
+
+<!DOCTYPE html>
+<e lang="id">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lokalpedia - Competitions</title>
+
+	<!-- Styles dari file pertama -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/slick.css" />
+	<link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+	<link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+			background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			overflow-x: hidden;
+		}
+
+		body::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image:
+				radial-gradient(circle at 20% 30%, rgba(255, 200, 200, 0.06) 0%, transparent 50%),
+				radial-gradient(circle at 80% 70%, rgba(200, 180, 200, 0.04) 0%, transparent 50%);
+			pointer-events: none;
+			z-index: 0;
+		}
+
+		/* Header Override */
+		#header {
+			background: #1c1c1c;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			position: relative;
+			z-index: 10;
+		}
+
+		#navigation {
+			background: #1e1f29;
+			position: relative;
+			z-index: 10;
+		}
+
+		/* Main Content Area */
+		.main-content {
+			flex: 1;
+			width: 100%;
+			padding: 40px 20px;
+			position: relative;
+			z-index: 1;
+		}
+
+		.all-leagues {
+			width: 100%;
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+
+		.league-section {
+			margin-bottom: 40px;
+			padding: 20px;
+			background: rgba(255, 255, 255, 0.6);
+			border-radius: 12px;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+		}
+
+		.league-header {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			margin-bottom: 18px;
+		}
+
+		.league-title {
+			font-size: 36px;
+			font-weight: 900;
+			color: #2c1810;
+			letter-spacing: -2px;
+		}
+
+		.dark-logo img {
+			filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.75));
+		}
+
+		.league-logo {
+			width: 110px;
+			height: auto;
+			position: relative;
+			top: -6px;
+		}
+
+		.teams-container {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.team-card {
+			width: 110px;
+			height: 38vh;
+			background: white;
+			border-radius: 8px 8px 0 0;
+			box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			overflow: visible;
+			position: relative;
+		}
+
+		.team-card:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 12px 28px rgba(0, 0, 0, 0.20);
+		}
+
+		.team-header {
+			background: #F3AA36;
+			height: 30%;
+			color: white;
+			padding: 12px;
+			text-align: center;
+			font-size: 16px;
+			font-weight: 900;
+			letter-spacing: 2px;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.team-flag {
+			position: absolute;
+			top: -10px;
+			right: -10px;
+			width: 18px;
+			height: 18px;
+			border-radius: 12px;
+			background-size: cover;
+			background-position: center;
+			border: 2px solid white;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+			z-index: 10;
+		}
+
+		.team-logo {
+			height: 180px;
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 30px;
+			clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+		}
+
+		.team-logo img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+
+		/* Footer Override */
+		#footer {
+			position: relative;
+			z-index: 10;
+			margin-top: auto;
+		}
+
+		@media (max-width: 1024px) {
+			.league-title {
+				font-size: 30px;
+			}
+
+			.league-logo {
+				width: 90px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.league-header {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 8px;
+			}
+
+			.league-title {
+				font-size: 26px;
+			}
+
+			.league-logo {
+				width: 70px;
+				top: 0;
+			}
+
+			.team-card {
+				width: 120px;
+			}
+
+			.team-logo {
+				height: 200px;
+				padding: 20px;
+			}
+		}
+	</style>
+</head>
 
 <body>
-    <?php include 'header.php';?>
-    <div class="con">
-        <h1>  M7 World Championship</h1>
+	<!-- HEADER -->
+	<?php include 'header.php'; ?>
 
-        <!-- International Competitions -->
-        <div class="competition-card">
-            <div class="card-header">
-                <div class="tier-badge">Tier: S</div>
-                <div class="logoImg-section">
-                    <div class="logoImg">
-                        <img src="img/m7.png" alt="M7 World Championship logoImg"
-                            onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-size:3em;font-weight:bold;color:#c9a961;display:flex;align-items:center;justify-content:center;height:100%;\'>M7</div>';">
-                    </div>
-                    <div class="tagline">"let the world see us"</div>
-                </div>
-            </div>
-            
+	<!-- NAVIGATION -->
+	<nav id="navigation">
+		<div class="container">
+			<div id="responsive-nav">
+				<!-- Navigation content -->
+			</div>
+		</div>
+	</nav>
+	
+	
+	<div class="main-content">
+		<div class="all-leagues">
+			<!-- MAIN CONTENT -->
+			<?php
+				foreach($competitions as $c){
+					$idCompetition = htmlspecialchars($c['idCompetition']);
+					$competitionName = htmlspecialchars($c['competitionName']);
+					// echo $competitionName;
+					// echo htmlspecialchars($c['competitionName']) . htmlspecialchars($c['idCompetition']);
+					// echo '<br>';
 
-            <div class="content-grid">
-                <div class="info-section">
-                    <h3>  General Information</h3>
-                    <div class="info-item">
-                        <span class="info-label">Organizer:</span>
-                        <span class="info-value">Moonton</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Sponsor:</span>
-                        <span class="info-value">Realme, Visa</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Official Device:</span>
-                        <span class="info-value">Realme 15 pro</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Type:</span>
-                        <span class="info-value">Offline</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Location:</span>
-                        <span class="info-value">id Jakarta</span>
-                    </div>
-                </div>
+					$sparqlQueryTeamsPerCompetitions = <<<SPARQL
+					PREFIX owl: <http://www.w3.org/2002/07/owl#>
+					PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+					PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+					PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
 
-                <div class="info-section">
-                    <h3>  Venue</h3>
-                    <div class="venue-item">
-                        <strong>XO Hall (MPL Arena)</strong>
-                        <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                            Wildcard, Swiss Stage, Knockout Stage Day 1
-                        </div>
-                    </div>
-                    <div class="venue-item">
-                        <strong>Tennis Indoor Stadium Senayan</strong>
-                        <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                            The Rest of Knockout Stage
-                        </div>
-                    </div>
-                </div>
+					SELECT DISTINCT 
+					?idTeam
+					?teamName 
+					(REPLACE(STR(?idTeam), "_.*$", "")AS ?teamFront)
+					?teamAddName
+					(REPLACE(REPLACE(STR(?idTeam), "^.*_", ""),  "[0-9]+", "")AS ?region)
+					WHERE {{
+					?team a ?competition ;
+							:teamName ?teamName ;
+							:hasName ?teamAddName .
+						BIND(REPLACE(STR(?team), "^.*/", "") AS ?idTeam)
+						BIND(REPLACE(REPLACE(STR(?competition), "^.*[/#]", ""), "_", " ") AS ?competitionName)
+						FILTER(CONTAINS(?competitionName, "$competitionName"))
+					}
+					}
+					SPARQL;
 
-                <div class="info-section">
-                    <h3>  Tournament Details</h3>
-                    <div class="info-item">
-                        <span class="info-label">Prize Pool:</span>
-                        <span class="info-value prize-highlight">$1,000,000 USD</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Start Date:</span>
-                        <span class="info-value date-highlight">2026-01-03</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">End Date:</span>
-                        <span class="info-value date-highlight">2026-01-25</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer">
-                <a href="detail-competitions.html" class="more-info">More Info</a>
-            </div>
+					$response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQueryTeamsPerCompetitions) . "&format=json");
+					$data = json_decode($response, true);
+					$teamArr = [];
 
-        </div>
+					echo '	<section class="league-section" id="' . $idCompetition . '">
+								<div class="league-header">
+									<a href="/localpediaanan/Competitions/details/detailCompetitions.php#' . $idCompetition . '" style="text-decoration:none; color:inherit;">' . 
+										'<img src="./img/' . $idCompetition . '.png" class="league-logo" onerror="this.src=' . "'img/alternative.png'" . ';">
+									</a>';
+					echo '			<a href="/localpediaanan/Competitions/details/detailCompetitions.php#' . $idCompetition . '" style="text-decoration:none; color:inherit;">' . '
+										<div class="league-title">' . $competitionName . '</div>
+									</a>
+								</div>
 
-        <h1>  Regional Competitions</h1>
+								<div class="teams-container">';
 
-        <!-- Regional Competitions -->
-        <div class="competition-card">
-            <div class="card-header">
-                <div class="tier-badge">Tier: A</div>
-                <div class="logoImg-section">
-                    <div class="logoImg">
-                        <img src="img/mpl-ph.png" alt="MPL PH logoImg"
-                            onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'font-size:3em;font-weight:bold;color:#c9a961;display:flex;align-items:center;justify-content:center;height:100%;\'>M7</div>';">
-                    </div>
-                    <div class="tagline">"Lakas ng Pinas"</div>
-                </div>
-            </div>
+					foreach ($data['results']['bindings'] as $row) {
+						// Ambil semua field
+						$teamArr[] = [
+							'idTeam' => $row['idTeam']['value'] ?? '',
+							'teamName' => $row['teamName']['value'] ?? '',
+							'teamFront' => $row['teamFront']['value'] ?? '',
+							'teamAddName' => $row['teamAddName']['value'] ?? '',
+							'region' => strtolower($row['region']['value'] ?? ''),
+						];
+					
+					}
+					foreach($teamArr as $t){
+						$idTeam = htmlspecialchars($t['idTeam']);
+						$teamName = htmlspecialchars($t['teamName']);
+						$teamFront = htmlspecialchars($t['teamFront']);
+						$teamAddName = htmlspecialchars($t['teamAddName']);
+						$region = htmlspecialchars($t['region']);
 
-            <div class="content-grid">
-                <div class="info-section">
-                    <h3>  General Information</h3>
-                    <div class="info-item">
-                        <span class="info-label">Organizer:</span>
-                        <span class="info-value">Moonton,mineski global</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Sponsor:</span>
-                        <span class="info-value">Smart, Infinix, Bpi, Clearman, Knorr, Go Hotels</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Official Device:</span>
-                        <span class="info-value">Infinix GT30 pro</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Patch </span>
-                        <span class="info-value">1.9.99-2.1.18</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Type:</span>
-                        <span class="info-value">Offline</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Location:</span>
-                        <span class="info-value">ph Makati City, ph pasay city</span>
-                    </div>
-                </div>
+						echo '	<a href="/localpediaanan/Teams/details/detailTeams.php#' . $idTeam . '" style="text-decoration:none; color:inherit;">' . 
+								'	<div class="team-card">
+										<div class="team-header">' . $teamName . 
+										'	<img src="https://flagcdn.com/w40/' . $region . '.png" class="team-flag" onerror="this.src=' . "'img/alternative.png'" . ';">  
+										</div>
+										<div class="team-logo"><img src="./img/' . $teamFront . '.png" onerror="this.src=' . "'img/alternative.png'" . ';"></div>
+									</div>
+								</a>';
+						}
 
-                <div class="info-section">
-                    <h3>  Venue</h3>
-                    <div class="venue-item">
-                        <a href="https://maps.app.goo.gl/BTQQFRK8EmEUn4Ss5" style="text-decoration: none; color: inherit;">
-                            <strong>Green sun Hotel</strong>
-                            <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                                Regular Season
-                            </div>
-                        </a>
+					echo '</section>';
 
-                    </div>
-                    <div class="venue-item">
-                        <strong>CUneta Astrodome</strong>
-                        <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
-                            Playoff
-                        </div>
-                    </div>
-                </div>
+				}
+			?>
+		</div>
+	</div>
 
-                <div class="info-section">
-                    <h3>  Tournament Details</h3>
-                    <div class="info-item">
-                        <span class="info-label">Prize Pool:</span>
-                        <span class="info-value prize-highlight">$1,000,000 USD</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Start Date:</span>
-                        <span class="info-value date-highlight">2026-01-03</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">End Date:</span>
-                        <span class="info-value date-highlight">2026-01-25</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer">
-                <a href="detail-competitions.html" class="more-info">More Info</a>
-            </div>
-        </div>
-        
-    </div>
-    <?php include 'footer.php';?>
+	<!-- FOOTER -->
+	<?php include 'footer.php'?>
+
+	<!-- jQuery Plugins -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/jquery.zoom.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

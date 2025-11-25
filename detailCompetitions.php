@@ -1,9 +1,137 @@
+<?php
+$idSubject = $_GET['id'] ?? null;
+$competitionName = "";
+$typeCompetition = "";
+
+// connect JENA
+$endpoint = "http://localhost:3030/lokalpedia22/sparql";
+
+$sparqlQueryDetailCompetitions = <<<SPARQL
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+SELECT DISTINCT 
+  ?idCompetition
+  ?competitionName
+  (REPLACE(STR(?idCompetition), "[0-9]+$", "") AS ?competitionPng)
+  (REPLACE(STR(?typeCompetitions), "^.*/", "") AS ?typeCompetition)
+WHERE {
+    {
+        BIND(:InternationalTour AS ?typeCompetitions)
+        ?headTour rdfs:subClassOf :InternationalTour .
+        ?competitions rdfs:subClassOf ?headTour .
+    }
+    UNION
+    {
+        BIND(:RegionalTour AS ?typeCompetitions)
+        ?regionTour rdfs:subClassOf :RegionalTour .
+        ?headTour rdfs:subClassOf ?regionTour .
+        ?competitions rdfs:subClassOf ?headTour .
+    }
+    BIND(REPLACE(STR(?competitions), "^.*/", "") AS ?idCompetition)
+	BIND(REPLACE(REPLACE(STR(?competitions), "^.*[/#]", ""), "_", " ") AS ?competitionName)
+    FILTER(CONTAINS(?idCompetition, "$idSubject"))
+
+    FILTER NOT EXISTS {
+        ?child rdfs:subClassOf ?competitions .
+        FILTER(?child != ?competitions)
+    }
+}
+
+SPARQL;
+
+$response = file_get_contents($endpoint . "?query=" . urlencode($sparqlQueryDetailCompetitions) . "&format=json");
+$data = json_decode($response, true);
+
+foreach ($data['results']['bindings'] as $row) {
+    // Ambil semua field
+    $idCompetition = $row['idCompetition']['value'] ?? '';
+    $competitionName = $row['competitionName']['value'] ?? '';
+    $competitionPng = $row['competitionPng']['value'] ?? '';
+    $typeCompetition = $row['typeCompetition']['value'] ?? '';
+}
+echo $idCompetition . $competitionName . $competitionPng . $typeCompetition;
+
+$sparqlQueryTeamsPerCompetitions = <<<SPARQL
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX : <http://www.semanticweb.org/acer/ontologies/2025/10/untitled-ontology-19/>
+
+    SELECT DISTINCT 
+    ?idTeam
+    ?teamName 
+    (REPLACE(STR(?idTeam), "_.*$", "")AS ?teamFront)
+    ?teamAddName
+	(REPLACE(STR(?rankRegional), "\"", "") AS ?rankMPL)
+	(REPLACE(STR(?rankInter), "\"", "") AS ?rankInternational)
+    (REPLACE(REPLACE(STR(?idTeam), "^.*_", ""),  "[0-9]+", "")AS ?region)
+    WHERE {{
+    ?team a ?competition ;
+            :teamName ?teamName ;
+            :hasName ?teamAddName .
+    OPTIONAL{
+    	?team :RankMPL ?rankRegional
+    }
+    OPTIONAL{
+    	?team :RankInter ?rankInter
+    }
+        BIND(REPLACE(STR(?team), "^.*/", "") AS ?idTeam)
+        BIND(REPLACE(REPLACE(STR(?competition), "^.*[/#]", ""), "_", " ") AS ?competitionName)
+        FILTER(CONTAINS(?competitionName, "$competitionName"))
+    }
+    }
+SPARQL;
+
+$responses = file_get_contents($endpoint . "?query=" . urlencode($sparqlQueryTeamsPerCompetitions) . "&format=json");
+$datas = json_decode($responses, true);
+$results = [];
+
+foreach ($datas['results']['bindings'] as $row) {
+    // Ambil semua field
+    $results[] = [
+        'idTeam' => $row['idTeam']['value'] ?? '',
+        'teamName' => $row['teamName']['value'] ?? '',
+        'teamFront' => $row['teamFront']['value'] ?? '',
+        'rankMPL' => $row['rankMPL']['value'] ?? '',
+        'rankInternational' => $row['rankInternational']['value'] ?? '',
+        'teamAddName' => $row['teamAddName']['value'] ?? '',
+        'region' => $row['region']['value'] ?? '',
+    ];
+
+}
+
+usort($results, function($a, $b) {
+    return $a['teamName'] <=> $b['teamName'];
+});
+?>
+
+
     <!DOCTYPE html>
     <html lang="id">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MPL ID Season - Professional League</title>
+        <title>Detail Competitions</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+        <!-- Slick -->
+        <link type="text/css" rel="stylesheet" href="css/slick.css"/>
+        <link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+
+        <!-- nouislider -->
+        <link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+
+        <!-- Font Awesome Icon -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!-- Custom stlylesheet -->
+        <link type="text/css" rel="stylesheet" href="css/style.css"/>
         <style>
             * {
                 margin: 0;
@@ -15,15 +143,15 @@
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
                 min-height: 100vh;
-                padding: 20px;
+                /* padding: 20px; */
             }
 
-            .container {
+            .con {
                 max-width: 1400px;
-                margin: 0 auto;
+                margin: 5vh auto;
             }
 
-            .header {
+            .headerr {
                 background: rgba(255, 255, 255, 0.6);
                 backdrop-filter: blur(10px);
                 border-radius: 20px;
@@ -37,7 +165,7 @@
                 gap: 20px;
             }
 
-            .header-left h1 {
+            .headerr-left h1 {
                 color: #2c3e50;
                 font-size: 2.5em;
                 margin-bottom: 10px;
@@ -292,12 +420,12 @@
             }
 
             @media (max-width: 768px) {
-                .header {
+                .headerr {
                     flex-direction: column;
                     text-align: center;
                 }
 
-                .header-left h1 {
+                .headerr-left h1 {
                     font-size: 1.8em;
                 }
 
@@ -311,17 +439,27 @@
             }
         </style>
     </head>
+
+    <script>
+    const hash = window.location.hash.substring(1); // ambil setelah "#"
+
+    if (hash) {
+        // redirect ulang dengan parameter GET
+        window.location.href = "?id=" + encodeURIComponent(hash);
+    }
+    </script>
+
     <body>
-        <div class="container">
-            <!-- Header -->
-            <div class="header">
-                <div class="header-left">
-                    <h1>MPL ID Season</h1>
-                    <div class="location">
-                        <span> Location: Jakarta</span>
-                        <img src="https://flagcdn.com/w40/id.png" alt="Indonesia Flag" class="flag">
-                    </div>
+        <?php include 'header.php'?>
+        <div class="con">
+            <!-- headerr -->
+            <div class="headerr">
+                <div class="headerr-left">
+                    <?php
+                        echo '<h1>' . $competitionName . '</h1>';
+                    ?>
                 </div>
+                
                 <div class="logo-section" style="
                     display: flex;
                     align-items: center;
@@ -329,8 +467,64 @@
                     gap: 40px;
                 ">
                 
+                    <?php
+                    $champs = 0;
+                    $champsLimit = 1;
+                    $runnerUp = 1;
+                    $runnerUpLimit = 2;
+                        if($typeCompetition == "InternationalTour"){
+                            usort($results, function($a, $b) {
+                                return $a['rankInternational'] <=> $b['rankInternational'];
+                            });
+                            foreach($results as $r){
+                                echo '  <div style="display: flex; flex-direction: column; gap: 15px; font-size: 1em; color:#2c3e50; text-align:left;">';
+                                if ($r['rankInternational'] == "1" || $r['rankInternational'] == "2"){
+                                    if($r['rankInternational'] == "1"){
+                                    echo '    <div style="display: flex; align-items: center; gap: 10px;">
+                                                <strong>Champions:</strong>
+                                                <img src="img/' . htmlspecialchars($r['teamFront']) . '.png" alt="Champions" style="width:60px; height:60px; object-fit:contain;">
+                                            </div>';
+                                    } elseif($r['rankInternational'] == "2"){
+                                    echo    '<div style="display: flex; align-items: center; gap: 10px;">
+                                                <strong>Runner-up:</strong>
+                                                <img src="img/' . htmlspecialchars($r['teamFront']) . '.png" alt="Runner-up" style="width:60px; height:60px; object-fit:contain;">
+                                            </div>';
+                                        }
+                                    }
+                                echo    '</div>';
+                            }
+                        } elseif($typeCompetition == "RegionalTour"){
+                            usort($results, function($a, $b) {
+                                return $a['rankMPL'] <=> $b['rankMPL'];
+                            });
+                            foreach($results as $r){
+                                echo '  <div style="display: flex; flex-direction: column; gap: 15px; font-size: 1em; color:#2c3e50; text-align:left;">';
+                                if ($r['rankMPL'] == "1" || $r['rankMPL'] == "2"){
+                                    if($r['rankMPL'] == "1"){
+                                    echo '    <div style="display: flex; align-items: center; gap: 10px;">
+                                                <strong>Champions:</strong>
+                                                <img src="img/' . htmlspecialchars($r['teamFront']) . '.png" alt="Champions" style="width:60px; height:60px; object-fit:contain;">
+                                            </div>';
+                                    } elseif($r['rankMPL'] == "2"){
+                                    echo    '<div style="display: flex; align-items: center; gap: 10px;">
+                                                <strong>Runner-up:</strong>
+                                                <img src="img/' . htmlspecialchars($r['teamFront']) . '.png" alt="Runner-up" style="width:60px; height:60px; object-fit:contain;">
+                                            </div>';
+                                        }
+                                    }
+                                echo    '</div>';
+                            }
+                        }
+
+                        echo '  <div style="text-align: center;">
+                                    <img src="img/' . $competitionPng . '.png" alt ="' . $competitionName . ' Logo" style="width:150px; height:150px; object-fit:contain;">
+                                </div>';
+
+                        
+                    ?>
+
                     <!-- Champions & Runner-up (KIRI) -->
-                    <div style="display: flex; flex-direction: column; gap: 15px; font-size: 1em; color:#2c3e50; text-align:left;">
+                    <!-- <div style="display: flex; flex-direction: column; gap: 15px; font-size: 1em; color:#2c3e50; text-align:left;">
                 
                         <div style="display: flex; align-items: center; gap: 10px;">
                             <strong>Champions:</strong>
@@ -342,80 +536,33 @@
                             <img src="img/logo-ae.png" alt="Runner-up" style="width:60px; height:60px; object-fit:contain;">
                         </div>
                 
-                    </div>
+                    </div> -->
                 
                     <!-- Logo MPL (KANAN) -->
-                    <div style="text-align: center;">
-                        <img src="img/mpl_id.png" alt="MPL Logo" style="width:150px; height:150px; object-fit:contain;">
-                        <div class="tagline">"We Own This"</div>
-                    </div>
                 
                 </div>
 
             </div>
 
-            <div class="league-info">
-                <h2>League Information</h2>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <strong>Series:</strong>
-                        <span>MPL ID</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Organizers:</strong>
-                        <span>Moonton, Mineski Global</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Prize Pool:</strong>
-                        <span>Rp4,860,000,000 IDR (≈ $292,110 USD)</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Start Date:</strong>
-                        <span>2025-08-22</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>End Date:</strong>
-                        <span>2025-11-02</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Official Device:</strong>
-                        <span>Samsung S25 Ultra</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Patch:</strong>
-                        <span>1.9.99 - 2.1.18</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Type:</strong>
-                        <span>Offline - Hybrid Elimination</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="main-content">
             
-                <div class="card">
-                    <h2>Venue</h2>
-                    <div class="venue-info">
-                        <p><strong>Regular Season:</strong> XO Hall (MPL Arena)</p>
-                        <p><strong>Playoffs:</strong> Nusantara International Convention Exhibition (NICE PIK 2)</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h2>Format</h2>
-                    <div class="format-info">
-                        <p><strong>Regular Season:</strong> Double Round Robin</p>
-                        <p><strong>Playoffs:</strong> Hybrid Elimination</p>
-                    </div>
-                </div>
-            </div>
-
-
             <div class="participants">
                 <h2>Participants</h2>
                 <div class="teams-grid">
-                    <div class="team-card">
+
+                    <?php
+                    usort($results, function($a, $b) {
+                        return $a['teamName'] <=> $b['teamName'];
+                    });
+
+                    foreach($results as $r){
+                        
+                    echo '  <div class="team-card">
+                                <img src="img/' . htmlspecialchars($r['teamFront']) . '.png" alt="' . htmlspecialchars($r['teamName']) . ' Logo" onerror="' . "this.src='img/alternative.png';" . '"></img>
+                                <div class="team-name">' . htmlspecialchars($r['teamName']) . '</div>
+                            </div>';
+                    }
+                    ?>
+                    <!-- <div class="team-card">
                         <img src="img/logo-ae.png" alt="Alter Ego">
                         <div class="team-name">Alter Ego</div>
                     </div>
@@ -450,7 +597,9 @@
                     <div class="team-card">
                         <img src="img/logo-tlph.png" alt="Team Liquid ID">
                         <div class="team-name">Team Liquid ID</div>
-                    </div>
+                    </div> -->
+
+
                 </div>
             </div>
 
@@ -461,89 +610,50 @@
                         <tr>
                             <th>#</th>
                             <th>Team</th>
-                            <th>Match Points</th>
-                            <th>Match W-L</th>
-                            <th>Net Game Win</th>
-                            <th>Game W-L</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="playoff-zone">
                             <td class="rank">1</td>
                             <td><img src="img/logo-onic.png" alt="ONIC" class="team-logo">ONIC</td>
-                            <td><strong>14</strong></td>
-                            <td>14 - 2</td>
-                            <td class="positive">+22</td>
-                            <td>29 - 7</td>
                         </tr>
                         <tr class="playoff-zone">
                             <td class="rank">2</td>
                             <td><img src="img/logo-btr.png" alt="BIGETRON" class="team-logo">BIGETRON BY VIT</td>
-                            <td><strong>12</strong></td>
-                            <td>12 - 4</td>
-                            <td class="positive">+11</td>
-                            <td>25 - 14</td>
                         </tr>
                         <tr class="playoff-zone">
                             <td class="rank">3</td>
                             <td><img src="img/logo-ae.png" alt="ALTER EGO" class="team-logo">ALTER EGO ESPORTS</td>
-                            <td><strong>9</strong></td>
-                            <td>9 - 7</td>
-                            <td class="positive">+4</td>
-                            <td>23 - 19</td>
                         </tr>
                         <tr class="playoff-zone">
                             <td class="rank">4</td>
                             <td><img src="img/logo-evos.png" alt="EVOS" class="team-logo">EVOS</td>
-                            <td><strong>8</strong></td>
-                            <td>8 - 8</td>
-                            <td class="positive">+1</td>
-                            <td>20 - 19</td>
                         </tr>
                         <tr class="playoff-zone">
                             <td class="rank">5</td>
                             <td><img src="img/logo-dewa.png" alt="DEWA" class="team-logo">DEWA UNITED</td>
-                            <td><strong>8</strong></td>
-                            <td>8 - 8</td>
-                            <td class="negative">-1</td>
-                            <td>17 - 18</td>
                         </tr>
                         <tr class="playoff-zone">
                             <td class="rank">6</td>
                             <td><img src="img/logo-navi.png" alt="NAVI" class="team-logo">NAVI</td>
-                            <td><strong>6</strong></td>
-                            <td>6 - 10</td>
-                            <td class="negative">-6</td>
-                            <td>16 - 22</td>
                         </tr>
                         <tr class="elimination-zone">
                             <td class="rank">7</td>
                             <td><img src="img/logo-rrq.png" alt="RRQ" class="team-logo">RRQ HOSHI</td>
-                            <td><strong>6</strong></td>
-                            <td>6 - 10</td>
-                            <td class="negative">-7</td>
-                            <td>15 - 22</td>
                         </tr>
                         <tr class="elimination-zone">
                             <td class="rank">8</td>
                             <td><img src="img/logo-geek.png" alt="GEEK FAM" class="team-logo">GEEK FAM</td>
-                            <td><strong>5</strong></td>
-                            <td>5 - 11</td>
-                            <td class="negative">-11</td>
-                            <td>12 - 23</td>
                         </tr>
                         <tr class="elimination-zone">
                             <td class="rank">9</td>
                             <td><img src="img/logo-liquid.png" alt="TL" class="team-logo">TEAM LIQUID ID</td>
-                            <td><strong>4</strong></td>
-                            <td>4 - 12</td>
-                            <td class="negative">-13</td>
-                            <td>13 - 26</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             
         </div>
+        <?php include 'footer.php' ?>
     </body>
     </html>
